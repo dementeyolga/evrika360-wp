@@ -1,0 +1,59 @@
+/*
+Theme Name: Evrika360
+Author: Olga Dementey
+Description: A custom theme for Evrika360.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: evrika
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-family: "DM Sans", sans-serif;
+    --second-family: "Caveat", sans-serif;
+
+    --general-white-100: #fff;
+    --general-grey-100: #ececec;
+    --general-grey-200: #e4e4e8;
+    --general-grey-300: #c0d5e9;
+    --general-grey-400: #768396;
+    --general-light-blue-100: #effbff;
+    --general-light-blue-200: #d5ecf4;
+    --general-light-blue-300: #dff3fa;
+    --general-blue-100: #01a8db;
+    --general-blue-200: #2090ce;
+    --general-blue-200-32: rgba(140, 170, 220, 0.32);
+    --general-dark-blue-300: #01548f;
+    --general-dark-blue-400: #1a3563;
+    --general-dark-blue-500: #162a4b;
+    --general-dark-blue-600: #0e2244;
+    --additionals-red-500: #fe0000;
+    --additionals-orange-400: #fe4c00;
+    --additionals-orange-500: #d03e00;
+    --additionals-orange-100: #f1eae6;
+    --additionals-orange-200: #f0e1d2;
+    --additionals-yellow-500: #efaa1a;
+    --additionals-green-500: #25d366;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1 {
+  }
+  h2 {
+  }
+}
+
+@layer components {
+  btn {
+  }
+}
