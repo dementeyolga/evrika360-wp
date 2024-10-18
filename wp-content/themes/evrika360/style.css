@@ -134,7 +134,7 @@ Text Domain: evrika
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -564,20 +564,102 @@ video {
   display: none;
 }
 
-h1 {
+:root {
+  --main-font: "DM Sans", sans-serif;
+  --accent-font: "Caveat", sans-serif;
+  --white-100: #fff;
+  --grey-100: #ececec;
+  --grey-200: #e4e4e8;
+  --grey-300: #c0d5e9;
+  --grey-400: #768396;
+  --light-blue-100: #effbff;
+  --light-blue-200: #d5ecf4;
+  --light-blue-300: #dff3fa;
+  --blue-100: #01a8db;
+  --blue-200: #2090ce;
+  --blue-200-32: rgba(140, 170, 220, 0.32);
+  --dark-blue-300: #01548f;
+  --dark-blue-400: #1a3563;
+  --dark-blue-500: #162a4b;
+  --dark-blue-600: #0e2244;
+  --red-500: #fe0000;
+  --orange-400: #fe4c00;
+  --orange-500: #d03e00;
+  --orange-100: #f1eae6;
+  --orange-200: #f0e1d2;
+  --yellow-500: #efaa1a;
+  --green-500: #25d366;
+  --dark-inset-shadow: inset 4px 4px 8px 0 #ffffff3d,
+      inset -4px -4px 8px 0 #112444;
+  --light-inset-shadow: inset 4px 4px 8px 0 #dbf6ff,
+      inset -4px -4px 8px 0 #8ed8f080;
+  --radius-2xs: 0.125rem;
+  /* 2px */
+  --radius-xs: 0.25rem;
+  /* 4px */
+  --radius-sm: 0.5rem;
+  /* 8px */
+  --radius-md: 1rem;
+  /* 16px */
+  --radius-lg: 1.25rem;
+  /* 20px */
+  --radius-xl: 1.5rem;
+  /* 24px */
+  --radius-2xl: 2.5rem;
+  /* 40px */
+  --radius-3xl: 3rem;
+  /* 48px */
+}
+
+body {
+  background-color: var(--white-100);
+  font-family: var(--main-font);
+  color: var(--dark-blue-500);
 }
 
 h2 {
+  font-size: 32px;
+  line-height: 130%;
+  font-weight: 700;
 }
 
-btn {
+h3 {
+  font-size: 1.5rem;
+  line-height: 130%;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 120%;
+}
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 130%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.btn {
+  font-size: 1rem;
+  line-height: 130%;
 }
 
 .static {
   position: static;
 }
 
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-16 {
+  gap: 4rem;
 }

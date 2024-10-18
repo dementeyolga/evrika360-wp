@@ -14,46 +14,100 @@ Text Domain: evrika
 
 @layer base {
   :root {
-    --font-family: "DM Sans", sans-serif;
-    --second-family: "Caveat", sans-serif;
+    --main-font: "DM Sans", sans-serif;
+    --accent-font: "Caveat", sans-serif;
 
-    --general-white-100: #fff;
-    --general-grey-100: #ececec;
-    --general-grey-200: #e4e4e8;
-    --general-grey-300: #c0d5e9;
-    --general-grey-400: #768396;
-    --general-light-blue-100: #effbff;
-    --general-light-blue-200: #d5ecf4;
-    --general-light-blue-300: #dff3fa;
-    --general-blue-100: #01a8db;
-    --general-blue-200: #2090ce;
-    --general-blue-200-32: rgba(140, 170, 220, 0.32);
-    --general-dark-blue-300: #01548f;
-    --general-dark-blue-400: #1a3563;
-    --general-dark-blue-500: #162a4b;
-    --general-dark-blue-600: #0e2244;
-    --additionals-red-500: #fe0000;
-    --additionals-orange-400: #fe4c00;
-    --additionals-orange-500: #d03e00;
-    --additionals-orange-100: #f1eae6;
-    --additionals-orange-200: #f0e1d2;
-    --additionals-yellow-500: #efaa1a;
-    --additionals-green-500: #25d366;
+    --white-100: #fff;
+    --grey-100: #ececec;
+    --grey-200: #e4e4e8;
+    --grey-300: #c0d5e9;
+    --grey-400: #768396;
+    --light-blue-100: #effbff;
+    --light-blue-200: #d5ecf4;
+    --light-blue-300: #dff3fa;
+    --blue-100: #01a8db;
+    --blue-200: #2090ce;
+    --blue-200-32: rgba(140, 170, 220, 0.32);
+    --dark-blue-300: #01548f;
+    --dark-blue-400: #1a3563;
+    --dark-blue-500: #162a4b;
+    --dark-blue-600: #0e2244;
+    --red-500: #fe0000;
+    --orange-400: #fe4c00;
+    --orange-500: #d03e00;
+    --orange-100: #f1eae6;
+    --orange-200: #f0e1d2;
+    --yellow-500: #efaa1a;
+    --green-500: #25d366;
+
+    --dark-inset-shadow: inset 4px 4px 8px 0 #ffffff3d,
+      inset -4px -4px 8px 0 #112444;
+    --light-inset-shadow: inset 4px 4px 8px 0 #dbf6ff,
+      inset -4px -4px 8px 0 #8ed8f080;
+
+    --radius-2xs: 0.125rem; /* 2px */
+    --radius-xs: 0.25rem; /* 4px */
+    --radius-sm: 0.5rem; /* 8px */
+    --radius-md: 1rem; /* 16px */
+    --radius-lg: 1.25rem; /* 20px */
+    --radius-xl: 1.5rem; /* 24px */
+    --radius-2xl: 2.5rem; /* 40px */
+    --radius-3xl: 3rem; /* 48px */
   }
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-dark-blue-500 font-main;
   }
 
-  h1 {
-  }
   h2 {
+    @apply text-[32px]/[130%] font-bold;
+  }
+
+  h3 {
+    @apply text-2xl/[130%];
+  }
+
+  h4 {
+    @apply text-xl/[120%];
+  }
+
+  h5 {
+    @apply text-lg/[130%];
+  }
+
+  p {
+    @apply text-base/[150%];
   }
 }
 
 @layer components {
-  btn {
+  .wrapper {
+    @apply max-w-[1261px] px-[6.4%]:;
+  }
+
+  .subtitle {
+    @apply text-xl/[150%];
+  }
+
+  .description {
+    @apply text-sm/[150%];
+  }
+
+  .accent {
+    @apply text-2xl/[160%];
+  }
+
+  .accent-sm {
+    @apply text-xl/[110%];
+  }
+
+  .badge {
+    @apply text-sm/[140%];
+  }
+
+  .btn {
+    @apply text-base/[130%];
   }
 }
