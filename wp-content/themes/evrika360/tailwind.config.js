@@ -60,7 +60,18 @@ module.exports = {
       "dark-inset": "var(--dark-inset-shadow)",
       "light-inset": "var(--light-inset-shadow)",
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        chat: [
+          "1.125rem",
+          {
+            lineHeight: "140%",
+            letterSpacing: "-0.41px",
+            fontWeight: "400",
+          },
+        ],
+      },
+    },
   },
   plugins: [],
 };

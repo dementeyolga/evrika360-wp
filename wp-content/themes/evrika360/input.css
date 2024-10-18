@@ -116,7 +116,7 @@ Text Domain: evrika
 
 @layer components {
   .wrapper {
-    @apply max-w-[1261px] w-full px-[6.4%] m-auto;
+    @apply max-w-[1261px] w-full px-[6.4%] m-auto flex flex-col;
   }
 
   .subtitle {
@@ -128,7 +128,7 @@ Text Domain: evrika
   }
 
   .accent {
-    @apply text-2xl/[160%];
+    @apply text-2xl/[160%] font-accent;
   }
 
   .accent-sm {
@@ -136,10 +136,18 @@ Text Domain: evrika
   }
 
   .badge {
-    @apply text-sm/[140%];
+    @apply h-8 px-4 w-fit flex justify-center items-center rounded-2xl bg-blue-200-32 text-sm/[140%] text-dark-blue-500;
   }
 
   .btn {
-    @apply h-12 py-3 px-4 rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset;
+    @apply h-12 py-3 px-4 flex justify-center items-center rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset;
+  }
+
+  .chat {
+    @apply py-[15px] px-3 w-fit rounded-lg bg-blue-200 text-chat text-white;
+  }
+
+  .chat.secondary {
+    @apply bg-grey-100 text-dark-blue-500;
   }
 }
