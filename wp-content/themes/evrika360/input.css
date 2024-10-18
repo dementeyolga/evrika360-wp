@@ -13,6 +13,38 @@ Text Domain: evrika
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: "Caveat";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/wp-content/themes/evrika360/assets/fonts/Caveat-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/wp-content/themes/evrika360/assets/fonts/DMSans-Regular.ttf);
+  }
+  @font-face {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/wp-content/themes/evrika360/assets/fonts/DMSans-Medium.ttf);
+  }
+  @font-face {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/wp-content/themes/evrika360/assets/fonts/DMSans-Bold.ttf);
+  }
+}
+
+@layer base {
   :root {
     --main-font: "DM Sans", sans-serif;
     --accent-font: "Caveat", sans-serif;
@@ -84,7 +116,7 @@ Text Domain: evrika
 
 @layer components {
   .wrapper {
-    @apply max-w-[1261px] px-[6.4%]:;
+    @apply max-w-[1261px] w-full px-[6.4%] m-auto;
   }
 
   .subtitle {
@@ -108,6 +140,6 @@ Text Domain: evrika
   }
 
   .btn {
-    @apply text-base/[130%];
+    @apply h-12 py-3 px-4 rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset;
   }
 }
