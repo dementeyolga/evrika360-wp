@@ -71,6 +71,9 @@ module.exports = {
           },
         ],
       },
+      content: {
+        flash: 'url("./assets/images/flash-icon.png")',
+      },
     },
   },
   plugins: [],

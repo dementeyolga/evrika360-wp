@@ -49,14 +49,21 @@
 
     <div class="relative w-fit m-auto mb-[50px]">
       <span class="accent text-center">Листай ниже, чтобы узнать!</span>
-      <div class="absolute -right-2 bottom-[11px] translate-y-full translate-x-full rotate-1">
+      <div class="absolute -right-[3px] bottom-[11px] translate-y-full translate-x-full">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.png" alt="">
       </div>
     </div>
   </section>
 
   <!-- DEPARTMENTS section -->
-  <section></section>
+  <section class="bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+    <div class="wrapper pt-10 pb-[75px] space-y-10">
+      <h3>
+        💡 Эврика360 — один сервис для большинства отделов в компании
+      </h3>
+      <?php include 'parts/dept-slider.php' ?>
+    </div>
+  </section>
 
   <!-- IN DETAIL section -->
   <section></section>
