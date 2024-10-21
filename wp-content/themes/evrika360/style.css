@@ -732,6 +732,9 @@ p {
   font-size: 0.875rem;
   line-height: 140%;
   color: var(--dark-blue-500);
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .btn {
@@ -751,6 +754,14 @@ p {
   --tw-shadow: var(--light-inset-shadow);
   --tw-shadow-colored: var(--light-inset-shadow);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.character-bg {
+  z-index: -10;
+  height: 130px;
+  width: 130px;
+  border-radius: 9999px;
+  background-color: var(--light-blue-100);
 }
 
 .chat {
@@ -917,6 +928,10 @@ p {
   right: 11px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .top-\[15px\] {
   top: 15px;
 }
@@ -925,8 +940,44 @@ p {
   top: 6px;
 }
 
-.-z-10 {
-  z-index: -10;
+.-bottom-2\.5 {
+  bottom: -0.625rem;
+}
+
+.-bottom-\[22px\] {
+  bottom: -22px;
+}
+
+.top-\[10px\] {
+  top: 10px;
+}
+
+.top-\[30px\] {
+  top: 30px;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
+.left-\[calc\(50\%_-_6px\)\] {
+  left: calc(50% - 6px);
+}
+
+.left-\[calc\(50\%_-_8px\)\] {
+  left: calc(50% - 8px);
+}
+
+.left-\[calc\(50\%_-_10px\)\] {
+  left: calc(50% - 10px);
+}
+
+.-bottom-8 {
+  bottom: -2rem;
 }
 
 .z-40 {
@@ -935,6 +986,11 @@ p {
 
 .m-auto {
   margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mb-4 {
@@ -969,6 +1025,14 @@ p {
   margin-top: 74px;
 }
 
+.mb-\[22px\] {
+  margin-bottom: 22px;
+}
+
+.mb-\[54px\] {
+  margin-bottom: 54px;
+}
+
 .flex {
   display: flex;
 }
@@ -977,16 +1041,16 @@ p {
   display: none;
 }
 
-.h-\[130px\] {
-  height: 130px;
-}
-
 .h-\[173px\] {
   height: 173px;
 }
 
-.w-\[130px\] {
-  width: 130px;
+.h-\[120px\] {
+  height: 120px;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .w-fit {
@@ -1003,9 +1067,21 @@ p {
   width: max-content;
 }
 
+.w-\[120px\] {
+  width: 120px;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
+}
+
+.max-w-\[86\%\] {
+  max-width: 86%;
 }
 
 .-translate-x-1\/2 {
@@ -1040,6 +1116,10 @@ p {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -1048,10 +1128,30 @@ p {
   gap: 4rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .self-end {
@@ -1062,12 +1162,12 @@ p {
   overflow: hidden;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded-xl {
   border-radius: var(--radius-xl);
+}
+
+.rounded-sm {
+  border-radius: var(--radius-sm);
 }
 
 .rounded-b-2xl {
@@ -1100,12 +1200,12 @@ p {
   padding-bottom: 22px;
 }
 
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
 .pb-\[329px\] {
   padding-bottom: 329px;
+}
+
+.pb-\[75px\] {
+  padding-bottom: 75px;
 }
 
 .pt-10 {
@@ -1116,16 +1216,8 @@ p {
   padding-top: 123px;
 }
 
-.pb-16 {
-  padding-bottom: 4rem;
-}
-
-.pb-\[76px\] {
-  padding-bottom: 76px;
-}
-
-.pb-\[75px\] {
-  padding-bottom: 75px;
+.pb-\[22px\] {
+  padding-bottom: 22px;
 }
 
 .text-center {
@@ -1134,6 +1226,10 @@ p {
 
 .text-white {
   color: var(--white-100);
+}
+
+.text-grey-400 {
+  color: var(--grey-400);
 }
 
 .bg-pattern {

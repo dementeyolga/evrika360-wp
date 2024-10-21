@@ -31,7 +31,7 @@
       — Привет 👋 <br>
       Меня зовут Эврика360, и сейчас я познакомлю тебя с речевой аналитикой для бизнеса!
 
-      <div class="absolute right-0 top-[6px] -translate-y-full w-[130px] h-[130px] rounded-full bg-light-blue-100 -z-10"></div>
+      <div class="character-bg absolute right-0 top-[6px] -translate-y-full"></div>
       <div class="absolute right-[11px] top-[15px] -translate-y-full">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.png" alt="">
       </div>
@@ -66,7 +66,68 @@
   </section>
 
   <!-- IN DETAIL section -->
-  <section></section>
+  <section class="wrapper">
+    <div class="flex flex-col gap-6">
+      <div class="relative mx-auto mb-[22px] w-fit">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
+        <div class="character-bg absolute w-[120px] h-[120px] top-5 left-[calc(50%_-_8px)] -translate-x-1/2"></div>
+        <div class="badge absolute -bottom-[22px] left-1/2 -translate-x-1/2">Эврика360</div>
+      </div>
+
+      <div class="chat self-end max-w-[86%]">
+        — Можно подробнее? Какие есть возможности?
+      </div>
+
+      <div class="chat secondary">
+        — Рассказываю!
+      </div>
+
+      <div>
+        <h3 class="relative mb-[54px]">
+          Всё нужное для принятия эффективных бизнес-решений в одном месте
+
+          <div class="absolute right-0 -bottom-8" aria-hidden="true">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.png" alt="">
+          </div>
+        </h3>
+
+        <div class="space-y-6">
+          <div class="space-y-2">
+            <div class="flex gap-4 items-center">
+              <div class="w-12 h-12 flex justify-center items-center rounded-sm bg-light-blue-100">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/manager-emoji.png" alt="">
+              </div>
+              <p>Руководителю</p>
+            </div>
+            <p class="text-grey-400">отчёты и динамику изменений</p>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex gap-4 items-center">
+              <div class="w-12 h-12 flex justify-center items-center rounded-sm bg-light-blue-100">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/sales-head-emoji.png" alt="">
+              </div>
+              <p>РОПу</p>
+            </div>
+            <p class="text-grey-400">причины слива лидов и базу знаний
+              для обучения</p>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex gap-4 items-center">
+              <div class="w-12 h-12 flex justify-center items-center rounded-sm bg-light-blue-100">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/marketing-specialist-emoji.png" alt="">
+              </div>
+              <p>Маркетологу</p>
+            </div>
+            <p class="text-grey-400">данные по эффективности рекламных кампаний и информацию для исследования ЦА</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
 
   <!-- FEATURES section -->
   <section></section>
