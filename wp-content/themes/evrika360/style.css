@@ -678,7 +678,7 @@ h3 {
 
 h4 {
   font-size: 1.25rem;
-  line-height: 120%;
+  line-height: 130%;
 }
 
 h5 {
@@ -992,6 +992,14 @@ p {
   bottom: -22px;
 }
 
+.-bottom-\[42px\] {
+  bottom: -42px;
+}
+
+.-bottom-\[92px\] {
+  bottom: -92px;
+}
+
 .-right-\[3px\] {
   right: -3px;
 }
@@ -1022,6 +1030,14 @@ p {
 
 .right-0 {
   right: 0px;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.right-8 {
+  right: 2rem;
 }
 
 .right-\[11px\] {
@@ -1065,6 +1081,10 @@ p {
   margin-bottom: 1.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -1095,6 +1115,14 @@ p {
 
 .mt-\[74px\] {
   margin-top: 74px;
+}
+
+.mb-\[56px\] {
+  margin-bottom: 56px;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .flex {
@@ -1234,6 +1262,12 @@ p {
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-16 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1252,16 +1286,16 @@ p {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .self-end {
@@ -1272,12 +1306,20 @@ p {
   overflow: hidden;
 }
 
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
 .rounded-sm {
   border-radius: var(--radius-sm);
 }
 
 .rounded-xl {
   border-radius: var(--radius-xl);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
 }
 
 .rounded-b-2xl {
@@ -1313,6 +1355,10 @@ p {
   background-color: var(--blue-100);
 }
 
+.bg-blue-200 {
+  background-color: var(--blue-200);
+}
+
 .bg-light-blue-100 {
   background-color: var(--light-blue-100);
 }
@@ -1334,6 +1380,16 @@ p {
   padding-right: 0.75rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .py-\[22px\] {
   padding-top: 22px;
   padding-bottom: 22px;
@@ -1342,6 +1398,11 @@ p {
 .py-\[60px\] {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pb-\[263px\] {
@@ -1398,6 +1459,10 @@ p {
 
 .text-white {
   color: var(--white-100);
+}
+
+.text-dark-blue-500 {
+  color: var(--dark-blue-500);
 }
 
 .bg-pattern {

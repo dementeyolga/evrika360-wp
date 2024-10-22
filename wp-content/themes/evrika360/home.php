@@ -352,7 +352,96 @@
   </section>
 
   <!-- EXAMPLE CASE section -->
-  <section></section>
+  <section>
+    <div class="wrapper mb-[56px] space-y-16">
+      <div class="relative">
+        <div class="absolute -bottom-[42px] right-8">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted.png" alt="">
+        </div>
+
+        <div class="mb-6">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/case-client.png" alt="клиент">
+        </div>
+
+        <div class="mb-4 py-2 px-5 rounded-lg text-white bg-blue-200">
+          <h5>
+            <b>01.</b> Знакомьтесь, это Антон
+          </h5>
+        </div>
+
+        <p class="description">
+          Антон долго выбирал товар, <br>
+          заказал доставку, но <b> заказ пришел <br>
+            с опозданием и браком </b>. <br>
+          Он звонит в колл-центр магазина.
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -bottom-[92px] right-6">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral.png" alt="">
+        </div>
+
+        <div class="mb-6">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/case-operator.png" alt="оператор">
+        </div>
+
+        <div class="mb-4 py-2 px-5 rounded-lg text-white bg-blue-200">
+          <h5>
+            <b>02.</b> А это Марина, оператор колл-центра
+          </h5>
+        </div>
+
+        <p class="description">
+          Она приняла звонок, не поздоровалась,<br> послушала Антона и сказала, <br>
+          что это <b>его проблемы</b>, после чего повесила трубку.
+        </p>
+      </div>
+
+      <div>
+        <div class="mb-6">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/case-manager.png" alt="руководитель">
+        </div>
+
+        <div class="mb-4 py-2 px-5 rounded-lg text-white bg-blue-200">
+          <h5>
+            <b>03.</b> А это Вы, руководитель компании
+          </h5>
+        </div>
+
+        <p class="description">
+          Вы не знаете об этой ситуации и вряд ли узнаете, если <b>только Антон не напишет жалобу</b>. <br>
+          Но вы точно потеряли <b><i>клиента</i></b>
+          и возможность заработать на его рекомендациях своим друзьям и знакомым.
+        </p>
+      </div>
+    </div>
+
+    <div class="mb-10 pt-12 bg-dark-linear border border-light-blue-200">
+      <div class="wrapper">
+        <div class="mb-8 py-3 px-5 rounded-md text-dark-blue-500 bg-white">
+          <h4>
+            <b>04.</b> А это речевая аналитика
+          </h4>
+        </div>
+
+        <p class="mb-6 text-white">
+          Сразу после разговора она определит ошибку Марины и пришлёт вам уведомление.
+        </p>
+        <p class="mb-10 text-white">
+          Так вы сохраните клиента, деньги и улучшите скрипты общения, чтобы таких ситуаций больше не возникало.
+        </p>
+
+        <div>
+          <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <button class="btn primary">Это интересно, хочу протестировать</button>
+    </div>
+  </section>
 
   <!-- USEFUL section -->
   <section></section>
