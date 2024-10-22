@@ -661,7 +661,22 @@
   </section>
 
   <!-- FREE DEMO section -->
-  <section></section>
+  <section class="relative wrapper mt-[75px] pb-[72px] bg-pattern border border-light-blue-200 text-white">
+    <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
+
+    <div class="-mt-[75px] mb-[46px] scale-105">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/images/conference.png" alt="онлайн-демо">
+    </div>
+
+    <div class="mb-10 space-y-6">
+      <h3>Записывайтесь на <b>бесплатную демонстрацию</b> с экспертом</h3>
+      <p>
+        За 30 минут на примере звонков вашей компании эксперт покажет, чем будет полезна речевая аналитика, и рассчитает стоимость внедрения.
+      </p>
+    </div>
+
+    <button class="btn primary">Записаться на демо</button>
+  </section>
 
   <!-- DATA SECURITY section -->
   <section></section>
