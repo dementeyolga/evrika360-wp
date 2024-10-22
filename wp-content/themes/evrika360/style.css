@@ -996,6 +996,10 @@ p {
   bottom: -42px;
 }
 
+.-bottom-\[48px\] {
+  bottom: -48px;
+}
+
 .-bottom-\[92px\] {
   bottom: -92px;
 }
@@ -1056,6 +1060,10 @@ p {
   top: 6px;
 }
 
+.-bottom-\[38px\] {
+  bottom: -38px;
+}
+
 .-z-20 {
   z-index: -20;
 }
@@ -1071,6 +1079,14 @@ p {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-4 {
@@ -1113,16 +1129,28 @@ p {
   margin-bottom: 54px;
 }
 
-.mt-\[74px\] {
-  margin-top: 74px;
-}
-
 .mb-\[56px\] {
   margin-bottom: 56px;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.mt-\[74px\] {
+  margin-top: 74px;
+}
+
+.-mb-1 {
+  margin-bottom: -0.25rem;
+}
+
+.mb-\[46px\] {
+  margin-bottom: 46px;
+}
+
+.mb-\[26px\] {
+  margin-bottom: 26px;
+}
+
+.mb-\[30px\] {
+  margin-bottom: 30px;
 }
 
 .flex {
@@ -1153,6 +1181,14 @@ p {
   height: 58px;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -1173,6 +1209,14 @@ p {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-\[150px\] {
+  width: 150px;
 }
 
 .min-w-max {
@@ -1286,16 +1330,22 @@ p {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .self-end {
@@ -1310,16 +1360,16 @@ p {
   border-radius: var(--radius-lg);
 }
 
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
 .rounded-sm {
   border-radius: var(--radius-sm);
 }
 
 .rounded-xl {
   border-radius: var(--radius-xl);
-}
-
-.rounded-md {
-  border-radius: var(--radius-md);
 }
 
 .rounded-b-2xl {
@@ -1390,6 +1440,11 @@ p {
   padding-bottom: 0.5rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-\[22px\] {
   padding-top: 22px;
   padding-bottom: 22px;
@@ -1400,17 +1455,16 @@ p {
   padding-bottom: 60px;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .pb-\[263px\] {
   padding-bottom: 263px;
 }
 
 .pb-\[329px\] {
   padding-bottom: 329px;
+}
+
+.pb-\[56px\] {
+  padding-bottom: 56px;
 }
 
 .pb-\[66px\] {
@@ -1453,16 +1507,16 @@ p {
   color: var(--dark-blue-300);
 }
 
+.text-dark-blue-500 {
+  color: var(--dark-blue-500);
+}
+
 .text-grey-400 {
   color: var(--grey-400);
 }
 
 .text-white {
   color: var(--white-100);
-}
-
-.text-dark-blue-500 {
-  color: var(--dark-blue-500);
 }
 
 .bg-pattern {
@@ -1477,6 +1531,11 @@ p {
 
 .bg-white-wave-bottom {
   background-image: url(./assets/images/bg-white-wave-bottom.png);
+  background-size: cover;
+}
+
+.bg-light-wave-to-top {
+  background-image: url(./assets/images/bg-curve-to-top.png);
   background-size: cover;
 }
 

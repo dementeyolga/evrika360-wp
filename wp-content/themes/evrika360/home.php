@@ -444,7 +444,47 @@
   </section>
 
   <!-- USEFUL section -->
-  <section></section>
+  <section class="wrapper pt-10 pb-[56px] bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
+    <h3 class="relative mb-20">
+      — Я правильно понимаю, что речевая аналитика <b>полезна</b>, когда...
+      <div class="absolute left-0 -bottom-[38px]">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-left.png" alt="">
+      </div>
+    </h3>
+
+    <div class="mb-[30px] space-y-5">
+      <div class="flex gap-6 items-center">
+        <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/chats-icon.png" alt="">
+        </div>
+        <p>Нет полного контроля за звонками, чатами или встречами</p>
+      </div>
+
+      <div class="flex gap-6 items-center">
+        <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/trend-down-icon.png" alt="">
+        </div>
+        <p>Менеджеры сливают клиентов</p>
+      </div>
+
+      <div class="flex gap-6 items-center">
+        <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/chart-icon.png" alt="">
+        </div>
+        <p>Непонятно, какого качества приходят лиды с разных каналов рекламы</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="-mb-1">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-hand.png" alt="">
+      </div>
+
+      <div class="chat">
+        — Да, и не только в этом!
+      </div>
+    </div>
+  </section>
 
   <!-- IMMEDIATE ASSESMENT section -->
   <section></section>
