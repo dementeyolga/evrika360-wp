@@ -327,7 +327,29 @@
   </section>
 
   <!-- HOW IT WORKS section -->
-  <section></section>
+  <section class="wrapper py-[60px] pb-[66px] space-y-10 border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
+    <div class="chat secondary">— И как работает речевая аналитика?</div>
+
+    <div class="space-y-4">
+      <h3>
+        Речевая аналитика умеет слушать <b>100% звонков</b> и мгновенно анализировать их!
+      </h3>
+
+      <div class="relative accent small">
+        А также онлайн-встреч, коммуникаций в <br> торговом зале и переписок в соцсетях или <br>мессенджерах
+        <div class="absolute -bottom-10 left-0">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <button class="btn primary w-full flex gap-2">
+      <div>
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.png" alt="">
+      </div>
+      Смотреть видео
+    </button>
+  </section>
 
   <!-- EXAMPLE CASE section -->
   <section></section>

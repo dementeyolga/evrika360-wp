@@ -637,8 +637,8 @@ video {
   --orange-200: #f0e1d2;
   --yellow-500: #efaa1a;
   --green-500: #25d366;
-  --dark-inset-shadow: inset 4px 4px 8px 0 #ffffff3d,
-      inset -4px -4px 8px 0 #112444;
+  --dark-inset-shadow: inset 4px 4px 8px 0 rgba(255, 255, 255, 0.24),
+      inset -4px -4px 8px 0 #418db7, 0 4px 10px 0 rgba(179, 172, 201, 0.25);
   --light-inset-shadow: inset 4px 4px 8px 0 #dbf6ff,
       inset -4px -4px 8px 0 #8ed8f080;
   --radius-2xs: 0.125rem;
@@ -712,6 +712,7 @@ p {
 }
 
 .accent {
+  text-align: center;
   font-family: var(--accent-font);
   font-size: 1.5rem;
   line-height: 160%;
@@ -758,6 +759,14 @@ p {
   color: var(--dark-blue-300);
   --tw-shadow: var(--light-inset-shadow);
   --tw-shadow-colored: var(--light-inset-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.btn.primary {
+  background-color: var(--blue-100);
+  color: var(--white-100);
+  --tw-shadow: var(--dark-inset-shadow);
+  --tw-shadow-colored: var(--dark-inset-shadow);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -963,12 +972,20 @@ p {
   inset: 0px;
 }
 
+.-bottom-10 {
+  bottom: -2.5rem;
+}
+
 .-bottom-8 {
   bottom: -2rem;
 }
 
 .-bottom-\[152px\] {
   bottom: -152px;
+}
+
+.-bottom-\[210px\] {
+  bottom: -210px;
 }
 
 .-bottom-\[22px\] {
@@ -989,6 +1006,10 @@ p {
 
 .bottom-\[11px\] {
   bottom: 11px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .left-1\/2 {
@@ -1019,28 +1040,12 @@ p {
   top: 6px;
 }
 
-.-bottom-\[200px\] {
-  bottom: -200px;
-}
-
-.-bottom-\[205px\] {
-  bottom: -205px;
-}
-
-.-bottom-\[210px\] {
-  bottom: -210px;
-}
-
-.left-0 {
-  left: 0px;
+.-z-20 {
+  z-index: -20;
 }
 
 .z-40 {
   z-index: 40;
-}
-
-.-z-20 {
-  z-index: -20;
 }
 
 .m-auto {
@@ -1207,6 +1212,10 @@ p {
   gap: 4rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -1241,6 +1250,12 @@ p {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1324,8 +1339,21 @@ p {
   padding-bottom: 22px;
 }
 
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.pb-\[263px\] {
+  padding-bottom: 263px;
+}
+
 .pb-\[329px\] {
   padding-bottom: 329px;
+}
+
+.pb-\[66px\] {
+  padding-bottom: 66px;
 }
 
 .pb-\[72px\] {
@@ -1340,16 +1368,12 @@ p {
   padding-top: 2.5rem;
 }
 
-.pt-\[123px\] {
-  padding-top: 123px;
-}
-
 .pt-12 {
   padding-top: 3rem;
 }
 
-.pb-\[263px\] {
-  padding-bottom: 263px;
+.pt-\[123px\] {
+  padding-top: 123px;
 }
 
 .text-center {
@@ -1358,6 +1382,10 @@ p {
 
 .font-medium {
   font-weight: 500;
+}
+
+.text-blue-100 {
+  color: var(--blue-100);
 }
 
 .text-dark-blue-300 {
@@ -1372,10 +1400,6 @@ p {
   color: var(--white-100);
 }
 
-.text-blue-100 {
-  color: var(--blue-100);
-}
-
 .bg-pattern {
   background-image: url(./assets/images/evrika-bg-pattern.png);
   background-repeat: repeat;
@@ -1383,6 +1407,11 @@ p {
 
 .bg-light-wave {
   background-image: url(./assets/images/bg-light-wave.png);
+  background-size: cover;
+}
+
+.bg-white-wave-bottom {
+  background-image: url(./assets/images/bg-white-wave-bottom.png);
   background-size: cover;
 }
 

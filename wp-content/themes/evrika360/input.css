@@ -72,8 +72,8 @@ Text Domain: evrika
     --yellow-500: #efaa1a;
     --green-500: #25d366;
 
-    --dark-inset-shadow: inset 4px 4px 8px 0 #ffffff3d,
-      inset -4px -4px 8px 0 #112444;
+    --dark-inset-shadow: inset 4px 4px 8px 0 rgba(255, 255, 255, 0.24),
+      inset -4px -4px 8px 0 #418db7, 0 4px 10px 0 rgba(179, 172, 201, 0.25);
     --light-inset-shadow: inset 4px 4px 8px 0 #dbf6ff,
       inset -4px -4px 8px 0 #8ed8f080;
 
@@ -128,7 +128,7 @@ Text Domain: evrika
   }
 
   .accent {
-    @apply text-2xl/[160%] font-accent text-grey-400;
+    @apply text-2xl/[160%] font-accent text-grey-400 text-center;
   }
 
   .accent.small {
@@ -141,6 +141,10 @@ Text Domain: evrika
 
   .btn {
     @apply h-12 py-3 px-4 flex justify-center items-center rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset;
+  }
+
+  .btn.primary {
+    @apply text-white shadow-dark-inset bg-blue-100;
   }
 
   .character-bg {
@@ -196,6 +200,11 @@ Text Domain: evrika
 
   .bg-light-wave {
     background-image: url(./assets/images/bg-light-wave.png);
+    background-size: cover;
+  }
+
+  .bg-white-wave-bottom {
+    background-image: url(./assets/images/bg-white-wave-bottom.png);
     background-size: cover;
   }
 
