@@ -155,6 +155,14 @@ Text Domain: evrika
     @apply bg-grey-100 text-dark-blue-500;
   }
 
+  .flash-li {
+    @apply relative pl-8 description before:w-4 before:h-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-flash;
+  }
+
+  .flash-li-disabled {
+    @apply flash-li text-grey-400 before:content-flash-disabled;
+  }
+
   .dept-slide {
     @apply border border-grey-300 bg-white rounded-md overflow-hidden;
 
@@ -173,7 +181,7 @@ Text Domain: evrika
         @apply space-y-2 text-grey-400;
 
         li {
-          @apply relative pl-6 before:w-4 before:h-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-flash;
+          @apply flash-li pl-6 text-base/[150%];
         }
       }
     }
@@ -185,6 +193,11 @@ Text Domain: evrika
     background-image: url(./assets/images/evrika-bg-pattern.png);
     background-repeat: repeat;
   }
+
+  .bg-light-wave {
+    background-image: url(./assets/images/bg-light-wave.png);
+    background-size: cover;
+  }
 }
 
 .embla {
@@ -193,12 +206,19 @@ Text Domain: evrika
   --slide-spacing: 1rem;
   --slide-size: 95%;
 }
+.feature-tabs-embla {
+  --slide-spacing: 12px;
+  --slide-size: 200px;
+}
 .embla__container {
   display: flex;
   align-items: flex-start;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
   transition: height 0.2s;
+}
+.feature-tabs-embla__container {
+  margin-left: 0;
 }
 .embla__slide {
   transform: translate3d(0, 0, 0);

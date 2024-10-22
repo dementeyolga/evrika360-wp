@@ -1,16 +1,27 @@
-const OPTIONS = { align: "start", loop: true };
+const deptSliderOptions = { align: "start", loop: true };
 
-const emblaNode = document.querySelector(".embla");
-const viewportNode = emblaNode.querySelector(".embla__viewport");
-const prevBtnNode = emblaNode.querySelector(".embla__button--prev");
-const nextBtnNode = emblaNode.querySelector(".embla__button--next");
-const dotsNode = emblaNode.querySelector(".embla__dots");
+const deptSliderEmblaNode = document.querySelector(".dept-embla");
+const deptSliderViewportNode = deptSliderEmblaNode.querySelector(
+  ".dept-embla__viewport",
+);
+const deptSliderPrevBtnNode = deptSliderEmblaNode.querySelector(
+  ".dept-embla__button--prev",
+);
+const deptSliderNextBtnNode = deptSliderEmblaNode.querySelector(
+  ".dept-embla__button--next",
+);
+const deptSliderDotsNode =
+  deptSliderEmblaNode.querySelector(".dept-embla__dots");
 
-const plugins = [EmblaCarouselAutoHeight()];
+const deptSliderPlugins = [EmblaCarouselAutoHeight()];
 
-const emblaApi = EmblaCarousel(viewportNode, OPTIONS, plugins);
+const deptSliderEmblaApi = EmblaCarousel(
+  deptSliderViewportNode,
+  deptSliderOptions,
+  deptSliderPlugins,
+);
 
-const addTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
+const deptSliderAddTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
   const togglePrevNextBtnsState = () => {
     if (emblaApi.canScrollPrev()) prevBtn.removeAttribute("disabled");
     else prevBtn.setAttribute("disabled", "disabled");
@@ -30,7 +41,7 @@ const addTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
   };
 };
 
-const addPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
+const deptSliderAddPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
   const scrollPrev = () => {
     emblaApi.scrollPrev();
   };
@@ -40,7 +51,7 @@ const addPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
   prevBtn.addEventListener("click", scrollPrev, false);
   nextBtn.addEventListener("click", scrollNext, false);
 
-  const removeTogglePrevNextBtnsActive = addTogglePrevNextBtnsActive(
+  const removeTogglePrevNextBtnsActive = deptSliderAddTogglePrevNextBtnsActive(
     emblaApi,
     prevBtn,
     nextBtn,
@@ -53,7 +64,7 @@ const addPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
   };
 };
 
-const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
+const deptSliderAddDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
   let dotNodes = [];
 
   const addDotBtnsWithClickHandlers = () => {
@@ -91,15 +102,14 @@ const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
   };
 };
 
-const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
-  emblaApi,
-  prevBtnNode,
-  nextBtnNode,
-);
-const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
-  emblaApi,
-  dotsNode,
-);
+const deptSliderRemovePrevNextBtnsClickHandlers =
+  deptSliderAddPrevNextBtnsClickHandlers(
+    deptSliderEmblaApi,
+    deptSliderPrevBtnNode,
+    deptSliderNextBtnNode,
+  );
+const deptSliderRemoveDotBtnsAndClickHandlers =
+  deptSliderAddDotBtnsAndClickHandlers(deptSliderEmblaApi, deptSliderDotsNode);
 
-emblaApi.on("destroy", removePrevNextBtnsClickHandlers);
-emblaApi.on("destroy", removeDotBtnsAndClickHandlers);
+deptSliderEmblaApi.on("destroy", deptSliderRemovePrevNextBtnsClickHandlers);
+deptSliderEmblaApi.on("destroy", deptSliderRemoveDotBtnsAndClickHandlers);

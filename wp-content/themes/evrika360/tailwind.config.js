@@ -73,6 +73,7 @@ module.exports = {
       },
       content: {
         flash: 'url("./assets/images/flash-icon.png")',
+        "flash-disabled": 'url("./assets/images/flash-disabled-icon.png")',
       },
     },
   },

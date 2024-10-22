@@ -17,7 +17,8 @@ class Evrika360_Theme {
   public function enqueue_scripts() {
     wp_enqueue_script('embla-carousel', get_template_directory_uri() . '/assets/js/slider/embla-carousel.umd.js');
     wp_enqueue_script('embla-carousel-autoheight', get_template_directory_uri() . '/assets/js/slider/embla-carousel-auto-height.umd.js', array('embla-carousel'),);
-    wp_enqueue_script('slider', get_template_directory_uri() . '/assets/js/slider/index.js', array('embla-carousel', 'embla-carousel-autoheight'), false, true);
+    wp_enqueue_script('dept-slider', get_template_directory_uri() . '/assets/js/slider/dept-slider.js', array('embla-carousel', 'embla-carousel-autoheight'), false, true);
+    wp_enqueue_script('feature-tabs-slider', get_template_directory_uri() . '/assets/js/slider/feature-tabs-slider.js', array('embla-carousel'), false, true);
   }
 
   public static function get_instance() {
