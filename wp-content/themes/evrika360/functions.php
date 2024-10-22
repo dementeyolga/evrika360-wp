@@ -19,6 +19,7 @@ class Evrika360_Theme {
     wp_enqueue_script('embla-carousel-autoheight', get_template_directory_uri() . '/assets/js/slider/embla-carousel-auto-height.umd.js', array('embla-carousel'),);
     wp_enqueue_script('dept-slider', get_template_directory_uri() . '/assets/js/slider/dept-slider.js', array('embla-carousel', 'embla-carousel-autoheight'), false, true);
     wp_enqueue_script('feature-tabs-slider', get_template_directory_uri() . '/assets/js/slider/feature-tabs-slider.js', array('embla-carousel'), false, true);
+    wp_enqueue_script('assessment-tabs-slider', get_template_directory_uri() . '/assets/js/slider/assessment-tabs-slider.js', array('embla-carousel'), false, true);
   }
 
   public static function get_instance() {

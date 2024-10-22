@@ -65,10 +65,11 @@ Text Domain: evrika
     --dark-blue-500: #162a4b;
     --dark-blue-600: #0e2244;
     --red-500: #fe0000;
-    --orange-400: #fe4c00;
-    --orange-500: #d03e00;
+    --orange-50: #fffaf8;
     --orange-100: #f1eae6;
     --orange-200: #f0e1d2;
+    --orange-400: #fe4c00;
+    --orange-500: #d03e00;
     --yellow-500: #efaa1a;
     --green-500: #25d366;
 
@@ -220,7 +221,8 @@ Text Domain: evrika
 
 .embla {
   max-width: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   --slide-spacing: 1rem;
   --slide-size: 95%;
 }

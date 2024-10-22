@@ -134,27 +134,27 @@
     <div class="peer embla feature-tabs-embla">
       <div class="wrapper embla__viewport feature-tabs-embla__viewport">
         <div class="embla__container feature-tabs-embla__container">
-          <label class="px-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
             Отчет для <br> руководителя
             <input class="hidden" name="feature-tabs" type="radio" checked>
           </label>
 
-          <label class="px-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
             Мониторинг <br> упущенных лидов
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="px-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
             Контроль соблюдения <br> регламентов и скриптов
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="px-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
             Замена ручного <br> контроля качества
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="px-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
             Увеличение продаж
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
@@ -487,7 +487,140 @@
   </section>
 
   <!-- IMMEDIATE ASSESMENT section -->
-  <section></section>
+  <section class="overflow-hidden">
+    <div class="wrapper mt-[26px] mb-[56px] space-y-6">
+      <h3 class="relative">
+        <b>Эврика360</b> даёт мгновенную объективную оценку работы компании
+
+        <div class="absolute -top-[30px] -left-[21px]">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown.png" alt="">
+        </div>
+      </h3>
+      <p>Речевая аналитика минимизирует ручную работу, дополняет ваши текущие отчёты новыми данными и упрощает управление компанией</p>
+    </div>
+
+    <div class="peer embla assessment-tabs-embla mb-4">
+      <div class="wrapper embla__viewport assessment-tabs-embla__viewport">
+        <div class="embla__container assessment-tabs-embla__container">
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+            Определение <br> причин слива лидов
+            <input class="hidden" name="assessment-tabs" type="radio" checked>
+          </label>
+
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+            HR-помощник
+            <input class="hidden" name="assessment-tabs" type="radio">
+          </label>
+
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+            Изучение ЦА, рынка <br>
+            и конкурентов
+            <input class="hidden" name="assessment-tabs" type="radio">
+          </label>
+
+          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+            Обучение менеджеров
+            <input class="hidden" name="assessment-tabs" type="radio">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- #1 assesment tab -->
+    <div class="hidden peer-has-[label:nth-child(1)_:checked]:block bg-orange-50 border border-orange-200 pt-10 pb-[90px] overflow-hidden">
+      <div class="flex flex-col gap-y-8">
+        <h3 class="wrapper">Получайте объективную оценку причин отказа без эмоций менеджера</h3>
+
+        <div class="w-fit max-w-[93%] self-end">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
+        </div>
+
+        <ul class="wrapper space-y-4">
+          <li class="flash-li">
+            Убедитесь, что все <b>возражения клиента</b> были обработаны
+          </li>
+          <li class="flash-li">
+            Автоматизируйте проверку качества общения, чтобы быстрее находить <b>ошибки в диалогах</b>  
+          </li>
+          <li class="flash-li">
+            Отслеживайте <b>длительные сделки</b>, чтобы помочь менеджеру, когда это нужно
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- #2 assesment tab -->
+    <div class="hidden peer-has-[label:nth-child(2)_:checked]:block bg-orange-50 border border-orange-200 pt-10 pb-[90px] overflow-hidden">
+      <div class="flex flex-col gap-y-8">
+        <h3 class="wrapper">Повышайте эффективность рекрутеров</h3>
+
+        <div class="w-fit max-w-[93%] self-end">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
+        </div>
+
+        <ul class="wrapper space-y-4">
+          <li class="flash-li">
+            <b>Предотвращайте</b> выгорание сотрудников с помощью контроля эмоций через речевую аналитику
+          </li>
+          <li class="flash-li">
+            <b>Экономьте время</b> на оценке итогов собеседований с каждым кандидатом
+          </li>
+          <li class="flash-li">
+            Отслеживайте <b>динамику изменений</b> сотрудников и назначайте премии на основе точных данных
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- #3 assesment tab -->
+    <div class="hidden peer-has-[label:nth-child(3)_:checked]:block bg-orange-50 border border-orange-200 pt-10 pb-[90px] overflow-hidden">
+      <div class="flex flex-col gap-y-8">
+        <h3 class="wrapper">Знайте боли, потребности и возражения своей аудитории</h3>
+
+        <div class="w-fit max-w-[93%] self-end">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-dictionary.png" alt="словарь">
+        </div>
+
+        <ul class="wrapper space-y-4">
+          <li class="flash-li">
+            Отслеживайте <b>частоту упоминаний</b> тем и вопросов, чтобы корректировать контент для аудитории
+          </li>
+          <li class="flash-li">
+            Оценивайте <b>качество заявок</b> с каждого рекламного канала и перераспределяйте бюджет на самые эффективные
+          </li>
+          <li class="flash-li">
+            Анализируйте <b>эффективность</b> акций и корректируйте стратегию
+          </li>
+          <li class="flash-li">
+            <b>Узнавайте</b> о новых запросах клиентов и трендах быстрее конкурентов
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- #4 assesment tab -->
+    <div class="hidden peer-has-[label:nth-child(4)_:checked]:block bg-orange-50 border border-orange-200 pt-10 pb-[90px] overflow-hidden">
+      <div class="flex flex-col gap-y-8">
+        <h3 class="wrapper">Ускоряйте обучение и адаптацию новых менеджеров</h3>
+
+        <div class="w-fit max-w-[93%] self-end">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+        </div>
+
+        <ul class="wrapper space-y-4">
+          <li class="flash-li">
+            Создавайте базу <b>успешных продаж</b> для обучения новичков
+          </li>
+          <li class="flash-li">
+            <b>Отслеживайте</b> все коммуникации и давайте обратную связь сотрудникам
+          </li>
+          <li class="flash-li">
+            Снижайте текучку и расходы на найм с помощью <b>эффективного онбординга</b>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- REVIEW section -->
   <section></section>
