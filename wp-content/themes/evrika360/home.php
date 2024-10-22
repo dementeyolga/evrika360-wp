@@ -312,7 +312,19 @@
   </section>
 
   <!-- TEST section -->
-  <section></section>
+  <section class="relative wrapper pt-12 pb-[263px] bg-pattern border border-light-blue-200 text-white overflow-hidden text-center">
+    <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
+    <div class="absolute -bottom-[210px] left-0 right-0 flex justify-center">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-demo.png" alt="">
+    </div>
+
+    <p class="mb-4 font-medium">Пройдите простой тест и определите</p>
+    <h4 class="mb-8">
+      насколько <span class="text-blue-100">речевая аналитика</span>
+      подходит вашему бизнесу
+    </h4>
+    <button class="btn">Пройти тест</button>
+  </section>
 
   <!-- HOW IT WORKS section -->
   <section></section>

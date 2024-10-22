@@ -959,6 +959,10 @@ p {
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
 .-bottom-8 {
   bottom: -2rem;
 }
@@ -1015,8 +1019,28 @@ p {
   top: 6px;
 }
 
+.-bottom-\[200px\] {
+  bottom: -200px;
+}
+
+.-bottom-\[205px\] {
+  bottom: -205px;
+}
+
+.-bottom-\[210px\] {
+  bottom: -210px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .z-40 {
   z-index: 40;
+}
+
+.-z-20 {
+  z-index: -20;
 }
 
 .m-auto {
@@ -1191,10 +1215,6 @@ p {
   gap: 1.5rem;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-y-8 {
   row-gap: 2rem;
 }
@@ -1324,8 +1344,20 @@ p {
   padding-top: 123px;
 }
 
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pb-\[263px\] {
+  padding-bottom: 263px;
+}
+
 .text-center {
   text-align: center;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .text-dark-blue-300 {
@@ -1340,6 +1372,10 @@ p {
   color: var(--white-100);
 }
 
+.text-blue-100 {
+  color: var(--blue-100);
+}
+
 .bg-pattern {
   background-image: url(./assets/images/evrika-bg-pattern.png);
   background-repeat: repeat;
@@ -1348,6 +1384,10 @@ p {
 .bg-light-wave {
   background-image: url(./assets/images/bg-light-wave.png);
   background-size: cover;
+}
+
+.bg-dark-linear {
+  background: linear-gradient(177deg, #1d3660 0%, #09172e 100%);
 }
 
 .embla {
