@@ -160,6 +160,10 @@ Text Domain: evrika
     @apply bg-grey-100 text-dark-blue-500;
   }
 
+  .tab {
+    @apply description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold;
+  }
+
   .flash-li {
     @apply relative pl-8 description before:w-4 before:h-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-flash;
   }

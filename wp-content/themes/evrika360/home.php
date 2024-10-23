@@ -134,27 +134,27 @@
     <div class="peer embla feature-tabs-embla">
       <div class="wrapper embla__viewport feature-tabs-embla__viewport">
         <div class="embla__container feature-tabs-embla__container">
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             Отчет для <br> руководителя
             <input class="hidden" name="feature-tabs" type="radio" checked>
           </label>
 
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             Мониторинг <br> упущенных лидов
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             Контроль соблюдения <br> регламентов и скриптов
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             Замена ручного <br> контроля качества
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             Увеличение продаж
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
@@ -502,23 +502,23 @@
     <div class="peer embla assessment-tabs-embla mb-4">
       <div class="wrapper embla__viewport assessment-tabs-embla__viewport">
         <div class="embla__container assessment-tabs-embla__container">
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             Определение <br> причин слива лидов
             <input class="hidden" name="assessment-tabs" type="radio" checked>
           </label>
 
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             HR-помощник
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
 
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             Изучение ЦА, рынка <br>
             и конкурентов
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
 
-          <label class="description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold">
+          <label class="tab">
             Обучение менеджеров
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
@@ -808,7 +808,129 @@
   </section>
 
   <!-- AUTOMATIZATION section -->
-  <section></section>
+  <section>
+    <div class="pt-[46px] space-y-[58px]">
+      <div class="wrapper flex flex-col gap-6">
+        <div class="chat secondary">— Что-нибудь ещё?</div>
+        <div class="chat self-end">— Да, есть ещё кое-что...</div>
+      </div>
+
+      <div class="wrapper space-y-[22px]">
+        <h3>
+          <b>Эврика360</b> <br> автоматизирует рутину
+        </h3>
+
+        <p class="text-grey-400">
+          Делегируйте важные, но скучные задачи речевой аналитике и освободите больше времени для принятия важных управленческих решений
+        </p>
+      </div>
+
+      <!-- Automatization tabs -->
+      <div class="space-y-4">
+        <div class="peer embla automatization-tabs-embla">
+          <div class="wrapper embla__viewport automatization-tabs-embla__viewport">
+            <div class="embla__container automatization-tabs-embla__container">
+              <label class="tab">
+                Готовые <br> интеграции
+                <input class="hidden" name="feature-tabs" type="radio" checked>
+              </label>
+
+              <label class="tab">
+                Заполнение CRM
+                <input class="hidden" name="feature-tabs" type="radio">
+              </label>
+
+              <label class="tab">
+                Уведомления о <br> критических ситациях
+                <input class="hidden" name="feature-tabs" type="radio">
+              </label>
+
+              <label class="tab">
+                Отчёты и аналитика <br> коммуникаций
+                <input class="hidden" name="feature-tabs" type="radio">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- #1 automatization tab -->
+        <div class="hidden peer-has-[label:nth-child(1)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
+          <div class="flex flex-col gap-y-8">
+            <div class="wrapper space-y-4">
+              <h3>Простая интеграция с действующими системами и сервисами</h3>
+              <div class="p-2 description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
+            </div>
+
+            <div class="w-fit max-w-[93%] self-end">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps.png" alt="главный экран">
+            </div>
+
+            <ul class="wrapper space-y-4">
+              <li class="flash-li">CRM</li>
+              <li class="flash-li">Чаты и мессенджеры</li>
+              <li class="flash-li">Телефония</li>
+              <li class="flash-li">Индивидуальные интеграции по API</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #2 automatization tab -->
+        <div class="hidden peer-has-[label:nth-child(2)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
+          <div class="flex flex-col gap-y-8">
+            <h3 class="wrapper">Автоматическое заполнение CRM по итогам звонка</h3>
+
+            <div class="w-fit max-w-[93%] self-end">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/bitrix-24.png" alt=",битрикс-24">
+            </div>
+
+            <ul class="wrapper space-y-4">
+              <li class="flash-li">Экономьте время менеджера на <b>внесении данных</b> после звонка</li>
+              <li class="flash-li"><b>Минимизируйте</b> ошибки и пропуски в CRM</li>
+              <li class="flash-li">Повышайте <b>эффективность менеджера</b> и шансы на закрытие сделки</li>
+              <li class="flash-li"><b>Получайте выводы</b> и рекомендации по итогам звонка
+                с помощью ChatGPT</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- #3 automatization tab -->
+        <div class="hidden peer-has-[label:nth-child(3)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 overflow-hidden">
+          <div class="flex flex-col gap-y-8">
+            <h3 class="wrapper">Простая интеграция с действующими системами и сервисами</h3>
+
+            <ul class="wrapper space-y-4">
+              <li class="flash-li">Если менеджер произнес <b>«перезвоню с личного»</b>, вам придет мгновенное уведомление</li>
+              <li class="flash-li">Клиент пригрозил, что будет подавать в суд? <br>
+                <b>Узнайте об этом раньше</b>, чем менеджер положил трубку, и урегулируйте ситуацию
+              </li>
+            </ul>
+
+            <div class="w-fit max-w-[80%] self-center">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.png" alt="уведомления на телефон">
+            </div>
+          </div>
+        </div>
+
+        <!-- #4 automatization tab -->
+        <div class="hidden peer-has-[label:nth-child(4)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
+          <div class="flex flex-col gap-y-8">
+            <h3 class="wrapper">Готовые отчёты, адаптированные под вашу роль и потребности компании</h3>
+
+            <div class="w-fit max-w-[93%] self-end">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+            </div>
+
+            <ul class="wrapper space-y-4">
+              <li class="flash-li"><b>Подробная расшифровка</b> каждого звонка с разделением на реплики сотрудника и клиента</li>
+              <li class="flash-li"><b>Анализ звонка</b>: в каком тоне состоялся диалог, кто доминировал, кто перебивал и насколько часто</li>
+              <li class="flash-li">Узнавайте, как <b>сотрудник презентовал</b> компанию и предложил ли дополнительные товары</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- PRICES section -->
   <section></section>
