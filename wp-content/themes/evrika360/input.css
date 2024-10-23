@@ -168,9 +168,12 @@ Text Domain: evrika
     @apply flash-li text-grey-400 before:content-flash-disabled;
   }
 
-  .dept-slide {
+  .dept-slide,
+  .data-security-slide {
     @apply border border-grey-300 bg-white rounded-md overflow-hidden;
+  }
 
+  .dept-slide {
     .image-container {
       @apply h-[254px] rounded-b-md border-b border-b-light-blue-100 overflow-hidden;
 
@@ -190,6 +193,10 @@ Text Domain: evrika
         }
       }
     }
+  }
+
+  .data-security-slide {
+    @apply p-6 pb-10;
   }
 }
 
@@ -211,6 +218,11 @@ Text Domain: evrika
 
   .bg-light-wave-to-top {
     background-image: url(./assets/images/bg-curve-to-top.png);
+    background-size: cover;
+  }
+
+  .bg-light-wave-to-bottom {
+    background-image: url(./assets/images/bg-curve-to-bottom.png);
     background-size: cover;
   }
 

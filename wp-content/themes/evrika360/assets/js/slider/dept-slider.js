@@ -70,14 +70,17 @@ const deptSliderAddDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
   const addDotBtnsWithClickHandlers = () => {
     dotsNode.innerHTML = emblaApi
       .scrollSnapList()
-      .map(() => '<button class="embla__dot" type="button"></button>')
+      .map(
+        () =>
+          '<button class="embla__dot dept-embla__dot" type="button"></button>',
+      )
       .join("");
 
     const scrollTo = (index) => {
       emblaApi.scrollTo(index);
     };
 
-    dotNodes = Array.from(dotsNode.querySelectorAll(".embla__dot"));
+    dotNodes = Array.from(dotsNode.querySelectorAll(".dept-embla__dot"));
     dotNodes.forEach((dotNode, index) => {
       dotNode.addEventListener("click", () => scrollTo(index), false);
     });

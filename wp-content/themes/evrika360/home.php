@@ -679,7 +679,31 @@
   </section>
 
   <!-- DATA SECURITY section -->
-  <section></section>
+  <section class="overflow-hidden">
+    <div class="wrapper mt-[38px] space-y-11">
+      <h3 class="relative">
+        — А что у вас с <b>безопасностью данных</b>?
+
+        <div class="absolute -bottom-[28px] left-1">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.png" alt="">
+        </div>
+      </h3>
+
+      <div class="flex flex-col items-center">
+        <div>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared.png" alt="">
+        </div>
+
+        <div class="chat">
+          — Хороший вопрос. Ваши данные под защитой 24/7
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper -mt-[37px] pt-[85px] pb-[72px] bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-bottom">
+      <?php include 'parts/data-security-slider.php' ?>
+    </div>
+  </section>
 
   <!-- AUTOMATIZATION section -->
   <section></section>

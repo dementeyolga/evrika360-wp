@@ -847,12 +847,16 @@ p {
   content: var(--tw-content);
 }
 
-.dept-slide {
+.dept-slide,
+  .data-security-slide {
   overflow: hidden;
   border-radius: var(--radius-md);
   border-width: 1px;
   border-color: var(--grey-300);
   background-color: var(--white-100);
+}
+
+.dept-slide {
   .image-container {
     height: 254px;
   }
@@ -953,6 +957,11 @@ p {
   }
 }
 
+.data-security-slide {
+  padding: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .static {
   position: static;
 }
@@ -993,12 +1002,20 @@ p {
   bottom: -22px;
 }
 
+.-bottom-\[28px\] {
+  bottom: -28px;
+}
+
 .-bottom-\[38px\] {
   bottom: -38px;
 }
 
 .-bottom-\[42px\] {
   bottom: -42px;
+}
+
+.-bottom-\[64px\] {
+  bottom: -64px;
 }
 
 .-bottom-\[92px\] {
@@ -1033,6 +1050,10 @@ p {
   left: 0px;
 }
 
+.left-1 {
+  left: 0.25rem;
+}
+
 .left-1\/2 {
   left: 50%;
 }
@@ -1043,6 +1064,10 @@ p {
 
 .right-0 {
   right: 0px;
+}
+
+.right-10 {
+  right: 2.5rem;
 }
 
 .right-6 {
@@ -1069,34 +1094,6 @@ p {
   top: 6px;
 }
 
-.-bottom-\[58px\] {
-  bottom: -58px;
-}
-
-.right-\[34px\] {
-  right: 34px;
-}
-
-.bottom-\[8px\] {
-  bottom: 8px;
-}
-
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
-.-bottom-\[64px\] {
-  bottom: -64px;
-}
-
-.right-\[38px\] {
-  right: 38px;
-}
-
-.right-10 {
-  right: 2.5rem;
-}
-
 .-z-20 {
   z-index: -20;
 }
@@ -1116,6 +1113,14 @@ p {
 
 .-mb-1 {
   margin-bottom: -0.25rem;
+}
+
+.-mt-\[37px\] {
+  margin-top: -37px;
+}
+
+.-mt-\[75px\] {
+  margin-top: -75px;
 }
 
 .mb-10 {
@@ -1162,6 +1167,10 @@ p {
   margin-bottom: 30px;
 }
 
+.mb-\[46px\] {
+  margin-bottom: 46px;
+}
+
 .mb-\[50px\] {
   margin-bottom: 50px;
 }
@@ -1174,52 +1183,24 @@ p {
   margin-bottom: 56px;
 }
 
+.mb-\[86px\] {
+  margin-bottom: 86px;
+}
+
 .mt-\[26px\] {
   margin-top: 26px;
+}
+
+.mt-\[38px\] {
+  margin-top: 38px;
 }
 
 .mt-\[74px\] {
   margin-top: 74px;
 }
 
-.mb-\[86px\] {
-  margin-bottom: 86px;
-}
-
-.-mt-20 {
-  margin-top: -5rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.mb-\[42px\] {
-  margin-bottom: 42px;
-}
-
-.-mt-16 {
-  margin-top: -4rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
-}
-
-.-mt-\[75px\] {
-  margin-top: -75px;
-}
-
 .mt-\[75px\] {
   margin-top: 75px;
-}
-
-.mb-\[44px\] {
-  margin-bottom: 44px;
-}
-
-.mb-\[46px\] {
-  margin-bottom: 46px;
 }
 
 .flex {
@@ -1250,12 +1231,12 @@ p {
   height: 173px;
 }
 
-.h-\[58px\] {
-  height: 58px;
-}
-
 .h-\[56px\] {
   height: 56px;
+}
+
+.h-\[58px\] {
+  height: 58px;
 }
 
 .w-12 {
@@ -1270,6 +1251,10 @@ p {
   width: 120px;
 }
 
+.w-\[56px\] {
+  width: 56px;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1282,10 +1267,6 @@ p {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-\[56px\] {
-  width: 56px;
 }
 
 .min-w-max {
@@ -1375,10 +1356,22 @@ p {
   row-gap: 2rem;
 }
 
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-11 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.75rem * var(--tw-space-y-reverse));
 }
 
 .space-y-16 > :not([hidden]) ~ :not([hidden]) {
@@ -1415,12 +1408,6 @@ p {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .self-end {
@@ -1528,6 +1515,11 @@ p {
   padding-bottom: 0.75rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .py-\[22px\] {
   padding-top: 22px;
   padding-bottom: 22px;
@@ -1536,11 +1528,6 @@ p {
 .py-\[60px\] {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .pb-3 {
@@ -1585,6 +1572,10 @@ p {
 
 .pt-\[123px\] {
   padding-top: 123px;
+}
+
+.pt-\[85px\] {
+  padding-top: 85px;
 }
 
 .text-center {
@@ -1632,6 +1623,11 @@ p {
 
 .bg-light-wave-to-top {
   background-image: url(./assets/images/bg-curve-to-top.png);
+  background-size: cover;
+}
+
+.bg-light-wave-to-bottom {
+  background-image: url(./assets/images/bg-curve-to-bottom.png);
   background-size: cover;
 }
 
