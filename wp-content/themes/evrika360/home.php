@@ -92,7 +92,7 @@
         </h3>
 
         <div class="space-y-6">
-          <div class="space-y-2">
+          <div class="space-y-1">
             <div class="flex gap-4 items-center">
               <div class="w-12 h-12 flex justify-center items-center rounded-sm bg-light-blue-100">
                 <img src="<?php echo get_template_directory_uri() ?>/assets/images/manager-emoji.png" alt="">
@@ -702,6 +702,108 @@
 
     <div class="wrapper -mt-[37px] pt-[85px] pb-[72px] bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-bottom">
       <?php include 'parts/data-security-slider.php' ?>
+    </div>
+  </section>
+
+  <!-- CASES section -->
+  <section class="wrapper pt-[38px] space-y-8">
+    <div class="space-y-7">
+      <h3 class="relative">— Какие есть примеры <b>использования</b>?
+
+        <div class="absolute left-0 -bottom-8">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.png" alt="">
+        </div>
+      </h3>
+
+      <div class="flex flex-col items-center">
+        <div>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret.png" alt="">
+        </div>
+
+        <div class="chat">
+          — Речевая аналитика применима в любой сфере, где нужно общаться с клиентами
+        </div>
+      </div>
+
+      <div class="space-y-6 text-white">
+        <div class="px-4 pt-8 pb-14 rounded-xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
+          <div class="card-badge mb-4">Сфера: производство и продажа мебели</div>
+
+          <h4 class="mb-8">Взяли под контроль все звонки и подняли продажи на 27% <b>всего за 3 месяца</b></h4>
+
+          <div class="space-y-6">
+            <div class="space-y-1">
+              <h2 class="font-medium">
+                +27%
+              </h2>
+              <p>Рост выручки за 3 месяца</p>
+            </div>
+
+            <div class="space-y-1">
+              <div class="">
+                <h2 class="font-medium inline-block">
+                  +1900$
+                </h2>
+                <h4 class="inline-block">/мес</h4>
+              </div>
+
+              <p>Экономия на ФОТ отдела контроля качества</p>
+            </div>
+
+            <div class="space-y-1">
+              <h2 class="font-medium">
+                2 <span class="line-through opacity-40 font-normal">5</span>
+              </h2>
+              <p>Человека в контроле качества</p>
+            </div>
+
+            <div class="space-y-1">
+              <h2 class="font-medium">
+                100%
+              </h2>
+              <p>Звонков слушают</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-4 pt-8 pb-14 rounded-xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
+          <div class="card-badge mb-4">Сфера: натяжные потолки</div>
+
+          <h4 class="mb-8">За 1 день выявили халатность менеджеров, обновили штат и повысили конверсию в замер с 6 до 14%</b></h4>
+
+          <div class="space-y-6">
+            <div class="space-y-1">
+              <h2 class="font-medium">
+                +133%
+              </h2>
+              <p>Рост конверсии в замер</p>
+            </div>
+
+            <div class="space-y-1">
+              <h2 class="font-medium">
+                +118,8%
+              </h2>
+              <p>Рост среднемесячной выручки</p>
+            </div>
+
+            <div class="space-y-1">
+              <h2 class="font-medium">
+                1 чел
+              </h2>
+              <p>Контроль качества + речевая аналитика</p>
+            </div>
+
+            <div class="space-y-1">
+              <h2 class="font-medium">
+                -1900$
+              </h2>
+              <p>Снижение бюджета на рекламу</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn primary w-full">Протестировать на своих данных</button>
     </div>
   </section>
 
