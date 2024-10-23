@@ -7,10 +7,13 @@ module.exports = {
       current: "currentColor",
       white: "var(--white-100)",
       grey: {
+        50: "var(--grey-50)",
         100: "var(--grey-100)",
         200: "var(--grey-200)",
         300: "var(--grey-300)",
         400: "var(--grey-400)",
+        500: "var(--grey-500)",
+        600: "var(--grey-600)",
       },
       "light-blue": {
         100: "var(--light-blue-100)",
@@ -34,12 +37,22 @@ module.exports = {
         50: "var(--orange-50)",
         100: "var(--orange-100)",
         200: "var(--orange-200)",
+        250: "var(--orange-250)",
+        300: "var(--orange-300)",
         400: "var(--orange-400)",
         500: "var(--orange-500)",
       },
-      yellow: "var(--yellow-500)",
+      yellow: {
+        100: "var(--yellow-100)",
+        200: "var(--yellow-200)",
+        500: "var(--yellow-500)",
+      },
 
-      green: "var(--green-500)",
+      green: {
+        100: "var(--green-100)",
+        200: "var(--green-200)",
+        500: "var(--green-500)",
+      },
     },
     fontFamily: {
       main: "var(--main-font)",

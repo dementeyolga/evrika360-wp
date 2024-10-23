@@ -726,6 +726,7 @@
       </div>
 
       <div class="space-y-6 text-white">
+        <!-- Case #1 -->
         <div class="px-4 pt-8 pb-14 rounded-xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
           <div class="card-badge mb-4">Сфера: производство и продажа мебели</div>
 
@@ -766,7 +767,8 @@
           </div>
         </div>
 
-        <div class="px-4 pt-8 pb-14 rounded-xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
+        <!-- Case #2 -->
+        <div class="px-4 pt-8 pb-14 rounded-xl border border-orange-100 bg-dark-blue-400 bg-white-wave-top">
           <div class="card-badge mb-4">Сфера: натяжные потолки</div>
 
           <h4 class="mb-8">За 1 день выявили халатность менеджеров, обновили штат и повысили конверсию в замер с 6 до 14%</b></h4>
@@ -808,7 +810,7 @@
   </section>
 
   <!-- AUTOMATIZATION section -->
-  <section>
+  <section class="overflow-hidden">
     <div class="pt-[46px] space-y-[58px]">
       <div class="wrapper flex flex-col gap-6">
         <div class="chat secondary">— Что-нибудь ещё?</div>
@@ -933,7 +935,24 @@
   </section>
 
   <!-- PRICES section -->
-  <section></section>
+  <section class="wrapper pt-[19px] overflow-hidden">
+    <div class="mb-10">
+      <h3 class="mb-1 text-center">— Сколько стоит </h3>
+      <h3 class="text-center">
+        <b class="relative">
+          Эврика360?
+
+          <div class="absolute -inset-7 flex justify-center items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.png" alt="">
+          </div>
+        </b>
+      </h3>
+    </div>
+
+    <div class="mb-10">
+      <?php include 'parts/prices-slider.php' ?>
+    </div>
+  </section>
 
   <!-- ONLINE EXCURSION section -->
   <section></section>

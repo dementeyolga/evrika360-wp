@@ -616,10 +616,13 @@ video {
   --main-font: "DM Sans", sans-serif;
   --accent-font: "Caveat", sans-serif;
   --white-100: #fff;
+  --grey-50: #f4f3f042;
   --grey-100: #ececec;
   --grey-200: #e4e4e8;
   --grey-300: #c0d5e9;
   --grey-400: #768396;
+  --grey-500: #6c6e6f;
+  --grey-600: #525252;
   --light-blue-100: #effbff;
   --light-blue-200: #d5ecf4;
   --light-blue-300: #dff3fa;
@@ -634,9 +637,15 @@ video {
   --orange-50: #fffaf8;
   --orange-100: #f1eae6;
   --orange-200: #f0e1d2;
+  --orange-250: #ff4d001a;
+  --orange-300: #ff4d0029;
   --orange-400: #fe4c00;
   --orange-500: #d03e00;
+  --yellow-100: #efac1a1a;
+  --yellow-200: #efac1a1a;
   --yellow-500: #efaa1a;
+  --green-100: #e8fff0;
+  --green-200: #25d36529;
   --green-500: #25d366;
   --dark-inset-shadow: inset 4px 4px 8px 0 rgba(255, 255, 255, 0.24),
       inset -4px -4px 8px 0 #418db7, 0 4px 10px 0 rgba(179, 172, 201, 0.25);
@@ -999,6 +1008,23 @@ p {
   padding-bottom: 2.5rem;
 }
 
+.prices-slide > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.prices-slide {
+  border-radius: var(--radius-sm);
+  border-width: 1px;
+  border-color: var(--grey-200);
+  background-color: var(--grey-50);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
 .static {
   position: static;
 }
@@ -1013,6 +1039,10 @@ p {
 
 .relative {
   position: relative;
+}
+
+.-inset-7 {
+  inset: -1.75rem;
 }
 
 .inset-0 {
@@ -1158,6 +1188,10 @@ p {
 
 .-mt-\[75px\] {
   margin-top: -75px;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -1311,16 +1345,16 @@ p {
   min-width: max-content;
 }
 
+.max-w-\[80\%\] {
+  max-width: 80%;
+}
+
 .max-w-\[86\%\] {
   max-width: 86%;
 }
 
 .max-w-\[93\%\] {
   max-width: 93%;
-}
-
-.max-w-\[80\%\] {
-  max-width: 80%;
 }
 
 .shrink-0 {
@@ -1355,6 +1389,10 @@ p {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1483,10 +1521,6 @@ p {
   align-self: center;
 }
 
-.justify-self-center {
-  justify-self: center;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1516,6 +1550,10 @@ p {
   border-width: 1px;
 }
 
+.border-green-200 {
+  border-color: var(--green-200);
+}
+
 .border-grey-100 {
   border-color: var(--grey-100);
 }
@@ -1536,6 +1574,14 @@ p {
   border-color: var(--orange-200);
 }
 
+.border-yellow-200 {
+  border-color: var(--yellow-200);
+}
+
+.border-orange-300 {
+  border-color: var(--orange-300);
+}
+
 .bg-blue-100 {
   background-color: var(--blue-100);
 }
@@ -1548,6 +1594,18 @@ p {
   background-color: var(--dark-blue-400);
 }
 
+.bg-dark-blue-600 {
+  background-color: var(--dark-blue-600);
+}
+
+.bg-green-100 {
+  background-color: var(--green-100);
+}
+
+.bg-green-500 {
+  background-color: var(--green-500);
+}
+
 .bg-light-blue-100 {
   background-color: var(--light-blue-100);
 }
@@ -1558,6 +1616,14 @@ p {
 
 .bg-white {
   background-color: var(--white-100);
+}
+
+.bg-yellow-100 {
+  background-color: var(--yellow-100);
+}
+
+.bg-orange-250 {
+  background-color: var(--orange-250);
 }
 
 .p-2 {
@@ -1576,6 +1642,11 @@ p {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2 {
@@ -1651,6 +1722,10 @@ p {
   padding-top: 123px;
 }
 
+.pt-\[19px\] {
+  padding-top: 19px;
+}
+
 .pt-\[38px\] {
   padding-top: 38px;
 }
@@ -1665,6 +1740,19 @@ p {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-medium {
@@ -1687,12 +1775,32 @@ p {
   color: var(--dark-blue-500);
 }
 
+.text-green-500 {
+  color: var(--green-500);
+}
+
 .text-grey-400 {
   color: var(--grey-400);
 }
 
+.text-grey-500 {
+  color: var(--grey-500);
+}
+
+.text-grey-600 {
+  color: var(--grey-600);
+}
+
 .text-white {
   color: var(--white-100);
+}
+
+.text-yellow-500 {
+  color: var(--yellow-500);
+}
+
+.text-orange-400 {
+  color: var(--orange-400);
 }
 
 .line-through {
@@ -1715,6 +1823,11 @@ p {
 
 .bg-white-wave-bottom {
   background-image: url(./assets/images/bg-white-wave-bottom.png);
+  background-size: cover;
+}
+
+.bg-white-wave-top {
+  background-image: url(./assets/images/bg-white-wave-top.png);
   background-size: cover;
 }
 

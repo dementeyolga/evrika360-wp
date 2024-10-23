@@ -50,10 +50,13 @@ Text Domain: evrika
     --accent-font: "Caveat", sans-serif;
 
     --white-100: #fff;
+    --grey-50: #f4f3f042;
     --grey-100: #ececec;
     --grey-200: #e4e4e8;
     --grey-300: #c0d5e9;
     --grey-400: #768396;
+    --grey-500: #6c6e6f;
+    --grey-600: #525252;
     --light-blue-100: #effbff;
     --light-blue-200: #d5ecf4;
     --light-blue-300: #dff3fa;
@@ -68,9 +71,15 @@ Text Domain: evrika
     --orange-50: #fffaf8;
     --orange-100: #f1eae6;
     --orange-200: #f0e1d2;
+    --orange-250: #ff4d001a;
+    --orange-300: #ff4d0029;
     --orange-400: #fe4c00;
     --orange-500: #d03e00;
+    --yellow-100: #efac1a1a;
+    --yellow-200: #efac1a1a;
     --yellow-500: #efaa1a;
+    --green-100: #e8fff0;
+    --green-200: #25d36529;
     --green-500: #25d366;
 
     --dark-inset-shadow: inset 4px 4px 8px 0 rgba(255, 255, 255, 0.24),
@@ -206,6 +215,10 @@ Text Domain: evrika
   .data-security-slide {
     @apply p-6 pb-10;
   }
+
+  .prices-slide {
+    @apply px-4 pt-5 pb-10 space-y-6 rounded-sm border border-grey-200 bg-grey-50;
+  }
 }
 
 @layer utilities {
@@ -221,6 +234,11 @@ Text Domain: evrika
 
   .bg-white-wave-bottom {
     background-image: url(./assets/images/bg-white-wave-bottom.png);
+    background-size: cover;
+  }
+
+  .bg-white-wave-top {
+    background-image: url(./assets/images/bg-white-wave-top.png);
     background-size: cover;
   }
 
