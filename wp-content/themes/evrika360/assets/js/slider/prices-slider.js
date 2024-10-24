@@ -1,4 +1,4 @@
-const pricesSliderOptions = { align: "start", loop: true };
+const pricesSliderOptions = { align: "start" };
 
 const pricesSliderEmblaNode = document.querySelector(".prices-embla");
 const pricesSliderViewportNode = pricesSliderEmblaNode.querySelector(

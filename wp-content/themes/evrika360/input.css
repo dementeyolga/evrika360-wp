@@ -89,6 +89,7 @@ Text Domain: evrika
       inset -4px -4px 8px 0 #112444;
     --light-inset-shadow: inset 4px 4px 8px 0 #dbf6ff,
       inset -4px -4px 8px 0 #8ed8f080;
+    --card-shadow: 0 4px 8px 0 rgba(0, 84, 144, 0.1);
 
     --radius-2xs: 0.125rem; /* 2px */
     --radius-xs: 0.25rem; /* 4px */
@@ -250,9 +251,28 @@ Text Domain: evrika
   .embla__slide:nth-child(2) .feature-price-slide {
     width: 210px;
   }
-}
 
-@layer utilities {
+  .bg-circles {
+    background-image: url(./assets/images/bg-circles.png);
+    background-size: cover;
+  }
+
+  .bg-orange-circle {
+    background-image: url(./assets/images/bg-orange-circle.png);
+    background-size: cover;
+    background-position: center -10%;
+    background-repeat: no-repeat;
+    background-size: 200%;
+  }
+
+  .bg-lighter-orange-circle {
+    background-image: url(./assets/images/bg-lighter-orange-circle.png);
+    background-size: cover;
+    background-position: center -10%;
+    background-repeat: no-repeat;
+    background-size: 240%;
+  }
+
   .bg-pattern {
     background-image: url(./assets/images/evrika-bg-pattern.png);
     background-repeat: repeat;
@@ -278,7 +298,7 @@ Text Domain: evrika
     background-size: cover;
   }
 
-  .bg-light-wave-to-top {
+  .bg-light-curve-to-top {
     background-image: url(./assets/images/bg-curve-to-top.png);
     background-size: cover;
   }
@@ -296,6 +316,15 @@ Text Domain: evrika
   .bg-dark-linear {
     background: linear-gradient(177deg, #1d3660 0%, #09172e 100%);
   }
+
+  .bg-white-glass {
+    backdrop-filter: blur(16px);
+    box-shadow: 0 4px 4px 0 rgba(226, 232, 241, 0.32);
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@layer utilities {
 }
 
 .embla {
@@ -338,6 +367,9 @@ Text Domain: evrika
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.prices-embla__dots {
+  display: none;
 }
 .embla__dot {
   -webkit-appearance: none;

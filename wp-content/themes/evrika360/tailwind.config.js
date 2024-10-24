@@ -75,6 +75,7 @@ module.exports = {
       "dark-inset": "var(--dark-inset-shadow)",
       "ultra-dark-inset": "var(--ultra-dark-inset-shadow)",
       "light-inset": "var(--light-inset-shadow)",
+      card: "var(--card-shadow)",
     },
     extend: {
       fontSize: {

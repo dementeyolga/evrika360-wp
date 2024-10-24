@@ -1,6 +1,6 @@
 <?php wp_footer(); ?>
 
-<footer class="wrapper mt-[64px] pb-[64px] space-y-8">
+<footer class="wrapper mt-[64px] pb-10 space-y-8">
   <div>
     <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-logo-footer.png" alt="">
   </div>

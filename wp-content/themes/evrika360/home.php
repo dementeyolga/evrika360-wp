@@ -2,7 +2,7 @@
 
 <main class="flex flex-col gap-16">
   <!-- PROMO section -->
-  <section class="relative overflow-hidden pt-[123px] pb-[329px] rounded-b-2xl border border-grey-100 bg-blue-100 text-white">
+  <section class="relative overflow-hidden pt-[123px] pb-[329px] rounded-b-2xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper">
       <h2 class="mb-5">Автоматически контролируйте <br>
         все коммуникации <br> в компании:</h2>
@@ -12,23 +12,32 @@
       </button>
     </div>
 
-    <div class="absolute -bottom-[152px] left-1/2 -translate-x-1/2 w-max">
+    <div class="absolute -bottom-[152px] left-1/2 -translate-x-1/2 w-max z-10">
       <img class=" min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-dashboard-mobile.png" alt="">
     </div>
 
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-max">
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-grey-100">
+    </div>
+
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-max z-10">
       <img class=" min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
     </div>
   </section>
 
   <!-- GREETING section -->
-  <section class="wrapper overflow-hidden">
+  <section class="wrapper overflow-hidden bg-orange-circle">
     <div class="badge mt-[74px] mb-[18px]">
       Эврика360
     </div>
 
     <div class="relative chat secondary self-end mb-[20px]">
-      — Привет 👋 <br>
+      <div class="flex gap-1">
+        — Привет
+        <div>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/hi-icon.png" alt="">
+        </div>
+      </div>
+
       Меня зовут Эврика360, и сейчас я познакомлю тебя с речевой аналитикой для бизнеса!
 
       <div class="character-bg absolute right-0 top-[6px] -translate-y-full"></div>
@@ -58,15 +67,18 @@
   <!-- DEPARTMENTS section -->
   <section class="bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
     <div class="wrapper pt-10 pb-[75px] space-y-10">
-      <h3>
-        💡 Эврика360 — один сервис для большинства отделов в компании
-      </h3>
+      <div class="flex gap-1">
+        <div class="shrink-0">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/light-icon.png" alt="">
+        </div>
+        <h3><b>Эврика360</b> — один сервис для большинства отделов в компании</h3>
+      </div>
       <?php include 'parts/dept-slider.php' ?>
     </div>
   </section>
 
   <!-- IN DETAIL section -->
-  <section class="wrapper">
+  <section class="wrapper bg-orange-circle">
     <div class="flex flex-col gap-6">
       <div class="relative mx-auto mb-[22px] w-fit">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
@@ -444,9 +456,9 @@
   </section>
 
   <!-- USEFUL section -->
-  <section class="wrapper pt-10 pb-[56px] bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
+  <section class="wrapper pt-10 pb-[56px] bg-light-blue-100 border border-light-blue-200 bg-light-curve-to-top">
     <h3 class="relative mb-20">
-      — Я правильно понимаю, что речевая аналитика <b>полезна</b>, когда...
+      — Я правильно понимаю, что речевая аналитика <br> <b>полезна</b>, когда...
       <div class="absolute left-0 -bottom-[38px]">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-left.png" alt="">
       </div>
@@ -535,7 +547,7 @@
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
         </div>
 
-        <ul class="wrapper space-y-4">
+        <ul class="wrapper space-y-4 *:text-base/[150%]">
           <li class="flash-li">
             Убедитесь, что все <b>возражения клиента</b> были обработаны
           </li>
@@ -558,7 +570,7 @@
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
         </div>
 
-        <ul class="wrapper space-y-4">
+        <ul class="wrapper space-y-4 *:text-base/[150%]">
           <li class="flash-li">
             <b>Предотвращайте</b> выгорание сотрудников с помощью контроля эмоций через речевую аналитику
           </li>
@@ -581,7 +593,7 @@
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-dictionary.png" alt="словарь">
         </div>
 
-        <ul class="wrapper space-y-4">
+        <ul class="wrapper space-y-4 *:text-base/[150%]">
           <li class="flash-li">
             Отслеживайте <b>частоту упоминаний</b> тем и вопросов, чтобы корректировать контент для аудитории
           </li>
@@ -607,7 +619,7 @@
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
         </div>
 
-        <ul class="wrapper space-y-4">
+        <ul class="wrapper space-y-4 *:text-base/[150%]">
           <li class="flash-li">
             Создавайте базу <b>успешных продаж</b> для обучения новичков
           </li>
@@ -679,7 +691,7 @@
   </section>
 
   <!-- DATA SECURITY section -->
-  <section class="overflow-hidden">
+  <section class="overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle bg-[center_-40%]">
     <div class="wrapper mt-[38px] space-y-11">
       <h3 class="relative">
         — А что у вас с <b>безопасностью данных</b>?
@@ -706,7 +718,7 @@
   </section>
 
   <!-- CASES section -->
-  <section class="wrapper pt-[38px] space-y-8">
+  <section class="wrapper pt-[38px] space-y-8 pt-[64px] -mt-[64px] bg-lighter-orange-circle">
     <div class="space-y-7">
       <h3 class="relative">— Какие есть примеры <b>использования</b>?
 
@@ -834,22 +846,22 @@
             <div class="embla__container automatization-tabs-embla__container">
               <label class="tab">
                 Готовые <br> интеграции
-                <input class="hidden" name="feature-tabs" type="radio" checked>
+                <input class="hidden" name="automatization-tabs" type="radio" checked>
               </label>
 
               <label class="tab">
                 Заполнение CRM
-                <input class="hidden" name="feature-tabs" type="radio">
+                <input class="hidden" name="automatization-tabs" type="radio">
               </label>
 
               <label class="tab">
                 Уведомления о <br> критических ситациях
-                <input class="hidden" name="feature-tabs" type="radio">
+                <input class="hidden" name="automatization-tabs" type="radio">
               </label>
 
               <label class="tab">
                 Отчёты и аналитика <br> коммуникаций
-                <input class="hidden" name="feature-tabs" type="radio">
+                <input class="hidden" name="automatization-tabs" type="radio">
               </label>
             </div>
           </div>
@@ -898,7 +910,7 @@
         <!-- #3 automatization tab -->
         <div class="hidden peer-has-[label:nth-child(3)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 overflow-hidden">
           <div class="flex flex-col gap-y-8">
-            <h3 class="wrapper">Простая интеграция с действующими системами и сервисами</h3>
+            <h3 class="wrapper">Получайте мгновенные уведомления с пометкой «ВАЖНО» </h3>
 
             <ul class="wrapper space-y-4">
               <li class="flash-li">Если менеджер произнес <b>«перезвоню с личного»</b>, вам придет мгновенное уведомление</li>
@@ -935,7 +947,7 @@
   </section>
 
   <!-- PRICES section -->
-  <section class="wrapper pt-[19px] overflow-hidden">
+  <section class="wrapper pt-[19px] pt-[64px] -mt-[64px] overflow-hidden bg-lighter-orange-circle bg-[center_-40%]">
     <div class="mb-10">
       <h3 class="mb-1 text-center">— Сколько стоит </h3>
       <h3 class="text-center">
@@ -971,16 +983,16 @@
         А что еще?
       </label>
 
-      <div class="hidden peer-has-[:checked]:block mt-6 p-4 space-y-4 rounded-md bg-white">
+      <div class="hidden peer-has-[:checked]:block mt-6 p-4 space-y-4 rounded-md bg-white shadow-card">
         <div class="grid grid-cols-2 gap-2">
           <div class="space-y-2">
             <h5 class="font-bold">$0.015</h5>
-            <p class="text-grey-400">Перерасчет за минуту</p>
+            <p class="description text-grey-400">Перерасчет за минуту</p>
           </div>
 
           <div class="space-y-2">
             <h5 class="font-bold">$30</h5>
-            <p class="text-grey-400">Дополнительный пункт чек-листа</p>
+            <p class="description text-grey-400">Дополнительный пункт чек-листа</p>
           </div>
         </div>
 
