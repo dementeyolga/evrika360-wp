@@ -278,6 +278,11 @@ Text Domain: evrika
     background-size: cover;
   }
 
+  .bg-light-wave-to-top {
+    background-image: url(./assets/images/bg-wave-to-top.png);
+    background-size: cover;
+  }
+
   .bg-dark-linear {
     background: linear-gradient(177deg, #1d3660 0%, #09172e 100%);
   }

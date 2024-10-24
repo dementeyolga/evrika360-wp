@@ -999,7 +999,43 @@
   </section>
 
   <!-- ONLINE EXCURSION section -->
-  <section></section>
+  <section class="space-y-[60px]">
+    <div class="wrapper space-y-5">
+      <div class="flex flex-col items-center">
+        <div class="-mr-5">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy.png" alt="">
+        </div>
+
+        <div class="badge -mt-3">
+          Эврика360
+        </div>
+      </div>
+
+      <h3 class="leading-[150%]">— Я честно рассказала о <b>речевой аналитике</b>.
+        Предлагаю записаться на <b>онлайн-экскурсию</b>
+        с нашим менеджером</h3>
+    </div>
+
+    <div class="wrapper pt-12 pb-20 bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
+      <h3 class="mb-8 leading-[140%]">
+        Запишитесь на экскурсию по сервису <b>речевой аналитики</b> Эврика360
+      </h3>
+
+      <ul class="mb-10 space-y-3 *:text-base/[150%]">
+        <div class="flash-li">Покажем, <b>как работает сервис</b> изнутри</div>
+        <div class="flash-li">Расскажем, как речевая аналитика может быть полезна <b>вашей компании</b></div>
+        <div class="flash-li">Найдём, в каких коммуникациях <b>заморожены деньги прямо сейчас</b></div>
+      </ul>
+
+      <button class="btn primary flex items-center gap-2">
+        <div>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.png" alt="">
+        </div>
+
+        Записаться на экскурсию
+      </button>
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>
