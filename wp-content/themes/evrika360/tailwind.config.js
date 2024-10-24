@@ -31,6 +31,7 @@ module.exports = {
         400: "var(--dark-blue-400)",
         500: "var(--dark-blue-500)",
         600: "var(--dark-blue-600)",
+        "600-80": "var(--dark-blue-600-80)",
       },
       red: "var(--red-500)",
       orange: {

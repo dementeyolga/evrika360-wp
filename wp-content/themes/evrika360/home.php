@@ -65,7 +65,7 @@
   </section>
 
   <!-- DEPARTMENTS section -->
-  <section class="bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+  <section id="departments" class="pt-[80px] -mt-[80px] bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
     <div class="wrapper pt-10 pb-[75px] space-y-10">
       <div class="flex gap-1">
         <div class="shrink-0">
@@ -142,7 +142,7 @@
   </section>
 
   <!-- FEATURES section -->
-  <section class="overflow-hidden space-y-4">
+  <section id="features" class="pt-[110px] -mt-[110px] overflow-hidden space-y-4">
     <div class="peer embla feature-tabs-embla">
       <div class="wrapper embla__viewport feature-tabs-embla__viewport">
         <div class="embla__container feature-tabs-embla__container">
@@ -339,7 +339,7 @@
   </section>
 
   <!-- HOW IT WORKS section -->
-  <section class="wrapper py-[60px] pb-[66px] space-y-10 border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
+  <section id="how-it-works" class="pt-[128px] -mb-[64px] wrapper py-[60px] pb-[66px] space-y-10 border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
     <div class="chat secondary">— И как работает речевая аналитика?</div>
 
     <div class="space-y-4">
@@ -718,7 +718,7 @@
   </section>
 
   <!-- CASES section -->
-  <section class="wrapper pt-[38px] space-y-8 pt-[64px] -mt-[64px] bg-lighter-orange-circle">
+  <section id="cases" class="wrapper space-y-8 pt-[110px] -mt-[110px] bg-lighter-orange-circle">
     <div class="space-y-7">
       <h3 class="relative">— Какие есть примеры <b>использования</b>?
 
@@ -947,7 +947,7 @@
   </section>
 
   <!-- PRICES section -->
-  <section class="wrapper pt-[19px] pt-[64px] -mt-[64px] overflow-hidden bg-lighter-orange-circle bg-[center_-40%]">
+  <section id="prices" class="wrapper pt-[19px] pt-[110px] -mt-[110px] overflow-hidden bg-lighter-orange-circle bg-[center_-40%]">
     <div class="mb-10">
       <h3 class="mb-1 text-center">— Сколько стоит </h3>
       <h3 class="text-center">
