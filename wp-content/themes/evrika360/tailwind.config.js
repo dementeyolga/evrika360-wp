@@ -73,6 +73,7 @@ module.exports = {
     },
     boxShadow: {
       "dark-inset": "var(--dark-inset-shadow)",
+      "ultra-dark-inset": "var(--ultra-dark-inset-shadow)",
       "light-inset": "var(--light-inset-shadow)",
     },
     extend: {
@@ -89,6 +90,9 @@ module.exports = {
       content: {
         flash: 'url("./assets/images/flash-icon.png")',
         "flash-disabled": 'url("./assets/images/flash-disabled-icon.png")',
+      },
+      gridTemplateColumns: {
+        "2-1": "2fr 1fr",
       },
     },
   },
