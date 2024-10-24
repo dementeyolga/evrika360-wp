@@ -36,6 +36,7 @@ module.exports = {
       orange: {
         50: "var(--orange-50)",
         100: "var(--orange-100)",
+        "100-50": "var(--orange-100-50)",
         200: "var(--orange-200)",
         250: "var(--orange-250)",
         300: "var(--orange-300)",

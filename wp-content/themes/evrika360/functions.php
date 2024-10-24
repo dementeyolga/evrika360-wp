@@ -25,6 +25,8 @@ class Evrika360_Theme {
 
     wp_enqueue_script('prices-slider', get_template_directory_uri() . '/assets/js/slider/prices-slider.js', array('embla-carousel', 'embla-carousel-autoheight'), false, true);
 
+    wp_enqueue_script('feature-price-slider', get_template_directory_uri() . '/assets/js/slider/feature-price-slider.js', array('embla-carousel', 'embla-carousel-autoheight'), false, true);
+
     wp_enqueue_script('feature-tabs-slider', get_template_directory_uri() . '/assets/js/slider/feature-tabs-slider.js', array('embla-carousel'), false, true);
 
     wp_enqueue_script('assessment-tabs-slider', get_template_directory_uri() . '/assets/js/slider/assessment-tabs-slider.js', array('embla-carousel'), false, true);

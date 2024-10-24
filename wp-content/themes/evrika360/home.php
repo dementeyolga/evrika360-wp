@@ -952,6 +952,50 @@
     <div class="mb-10">
       <?php include 'parts/prices-slider.php' ?>
     </div>
+
+    <div class="mb-9 px-4 py-6 space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
+      <h4>Что входит в состав каждого пакета?</h4>
+
+      <ul class="space-y-2">
+        <div class="flash-li">Отчеты по показателям сотрудников</div>
+        <div class="flash-li">Отчет владельца/руководства</div>
+        <div class="flash-li">Поиск по ключевым словам</div>
+        <div class="flash-li">Обучение использованию сервиса</div>
+      </ul>
+
+      <label class="peer btn primary w-full flex items-center gap-2">
+        <div>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/help-circle-icon.png" alt="">
+        </div>
+        <input type="checkbox" class="hidden">
+        А что еще?
+      </label>
+
+      <div class="hidden peer-has-[:checked]:block mt-6 p-4 space-y-4 rounded-md bg-white">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="space-y-2">
+            <h5 class="font-bold">$0.015</h5>
+            <p class="text-grey-400">Перерасчет за минуту</p>
+          </div>
+
+          <div class="space-y-2">
+            <h5 class="font-bold">$30</h5>
+            <p class="text-grey-400">Дополнительный пункт чек-листа</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h5 class="font-bold">обсуждается индивидуально</h5>
+          <p class="description text-grey-400">
+            Дополнительная интеграция с системой по API
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <?php include 'parts/feature-price-slider.php' ?>
+    </div>
   </section>
 
   <!-- ONLINE EXCURSION section -->

@@ -636,6 +636,7 @@ video {
   --red-500: #fe0000;
   --orange-50: #fffaf8;
   --orange-100: #f1eae6;
+  --orange-100-50: #f0e9e580;
   --orange-200: #f0e1d2;
   --orange-250: #ff4d001a;
   --orange-300: #ff4d0029;
@@ -893,6 +894,26 @@ p {
   color: var(--white-100);
 }
 
+.table-unit {
+  font-size: 0.875rem;
+  line-height: 150%;
+  height: 46px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  &:nth-child(2n) {
+    background-color: var(--light-blue-100);
+  }
+}
+
+.table-unit.table-heading {
+  border-radius: var(--radius-2xs);
+  background-color: var(--blue-100);
+  font-weight: 700;
+  color: var(--white-100);
+}
+
 .dept-slide,
   .data-security-slide {
   overflow: hidden;
@@ -1023,6 +1044,14 @@ p {
   padding-right: 1rem;
   padding-top: 1.25rem;
   padding-bottom: 2.5rem;
+}
+
+.embla__slide:nth-child(1) .feature-price-slide {
+  width: 282px;
+}
+
+.embla__slide:nth-child(2) .feature-price-slide {
+  width: 210px;
 }
 
 .static {
@@ -1218,6 +1247,10 @@ p {
   margin-bottom: 2rem;
 }
 
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+
 .mb-\[116px\] {
   margin-bottom: 116px;
 }
@@ -1256,6 +1289,10 @@ p {
 
 .mb-\[86px\] {
   margin-bottom: 86px;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-\[26px\] {
@@ -1525,6 +1562,10 @@ p {
   overflow: hidden;
 }
 
+.text-clip {
+  text-overflow: clip;
+}
+
 .rounded-lg {
   border-radius: var(--radius-lg);
 }
@@ -1574,12 +1615,12 @@ p {
   border-color: var(--orange-200);
 }
 
-.border-yellow-200 {
-  border-color: var(--yellow-200);
-}
-
 .border-orange-300 {
   border-color: var(--orange-300);
+}
+
+.border-yellow-200 {
+  border-color: var(--yellow-200);
 }
 
 .bg-blue-100 {
@@ -1610,6 +1651,14 @@ p {
   background-color: var(--light-blue-100);
 }
 
+.bg-orange-100-50 {
+  background-color: var(--orange-100-50);
+}
+
+.bg-orange-250 {
+  background-color: var(--orange-250);
+}
+
 .bg-orange-50 {
   background-color: var(--orange-50);
 }
@@ -1622,12 +1671,12 @@ p {
   background-color: var(--yellow-100);
 }
 
-.bg-orange-250 {
-  background-color: var(--orange-250);
-}
-
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-6 {
@@ -1657,6 +1706,11 @@ p {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-8 {
@@ -1791,16 +1845,16 @@ p {
   color: var(--grey-600);
 }
 
+.text-orange-400 {
+  color: var(--orange-400);
+}
+
 .text-white {
   color: var(--white-100);
 }
 
 .text-yellow-500 {
   color: var(--yellow-500);
-}
-
-.text-orange-400 {
-  color: var(--orange-400);
 }
 
 .line-through {
@@ -1861,6 +1915,11 @@ p {
 .feature-tabs-embla {
   --slide-spacing: 12px;
   --slide-size: 200px;
+}
+
+.feature-price-embla {
+  --slide-spacing: 1px;
+  --slide-size: auto;
 }
 
 .embla__container {
@@ -1958,6 +2017,10 @@ p {
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.peer:has(:checked) ~ .peer-has-\[\:checked\]\:block {
+  display: block;
 }
 
 .peer:has(label:nth-child(1) :checked) ~ .peer-has-\[label\:nth-child\(1\)_\:checked\]\:block {

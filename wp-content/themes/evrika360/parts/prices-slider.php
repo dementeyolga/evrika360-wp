@@ -185,5 +185,5 @@
     </button>
   </div>
 
-  <div class="embla__dots prices-embla__dots"></div>
+  <div class="hidden embla__dots prices-embla__dots"></div>
 </section>

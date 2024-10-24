@@ -70,6 +70,7 @@ Text Domain: evrika
     --red-500: #fe0000;
     --orange-50: #fffaf8;
     --orange-100: #f1eae6;
+    --orange-100-50: #f0e9e580;
     --orange-200: #f0e1d2;
     --orange-250: #ff4d001a;
     --orange-300: #ff4d0029;
@@ -185,6 +186,18 @@ Text Domain: evrika
     @apply py-2 px-3 w-fit text-xs/[150%] text-white rounded-2xl bg-orange-400;
   }
 
+  .table-unit {
+    @apply h-[46px] py-[14px] px-4 description;
+
+    &:nth-child(2n) {
+      @apply bg-light-blue-100;
+    }
+  }
+
+  .table-unit.table-heading {
+    @apply text-white font-bold bg-blue-100 rounded-2xs;
+  }
+
   .dept-slide,
   .data-security-slide {
     @apply border border-grey-300 bg-white rounded-md overflow-hidden;
@@ -218,6 +231,14 @@ Text Domain: evrika
 
   .prices-slide {
     @apply px-4 pt-5 pb-10 space-y-6 rounded-sm border border-grey-200 bg-grey-50;
+  }
+
+  .embla__slide:nth-child(1) .feature-price-slide {
+    width: 282px;
+  }
+
+  .embla__slide:nth-child(2) .feature-price-slide {
+    width: 210px;
   }
 }
 
@@ -272,6 +293,10 @@ Text Domain: evrika
 .feature-tabs-embla {
   --slide-spacing: 12px;
   --slide-size: 200px;
+}
+.feature-price-embla {
+  --slide-spacing: 1px;
+  --slide-size: auto;
 }
 .embla__container {
   display: flex;
