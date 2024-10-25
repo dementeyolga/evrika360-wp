@@ -10,14 +10,14 @@
       Пн-Пт 10:00 — 18:00
     </p>
 
-    <div class="grid grid-cols-2 gap-2 font-bold">
+    <div class="flex gap-4 font-bold">
       <p>+7 495 662-18-73</p>
       <p> +375 29 388-55-12</p>
     </div>
   </div>
 
-  <div class="flex gap-4">
-    <button class="shrink-0 grow btn dark">Заказать звонок</button>
+  <div class="flex gap-8">
+    <button class="mx-0 xs:shrink xs:grow-0 grow btn dark">Заказать звонок</button>
 
     <div class="grow-0 flex gap-2 items-center justify-end">
       <a>

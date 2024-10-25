@@ -2,30 +2,42 @@
 
 <main class="flex flex-col gap-16">
   <!-- PROMO section -->
-  <section class="relative overflow-hidden pt-[123px] pb-[329px] rounded-b-2xl border border-grey-100 bg-blue-100 text-white bg-circles">
+  <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[329px] lg:pb-[169px] rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
+    <div class="wrapper mb-8 lg:mb-[104px]">
+      <h2 class="mb-5 md:mb-6">Автоматически контролируйте <br>
+        все коммуникации <br class="lg:hidden"> в компании:</h2>
+      <p class="subtitle">увеличивайте продажи и повышайте <br class="hidden lg:block"> качество сервиса</p>
+    </div>
+
+    <div class="hidden lg:block mb-[64px] bg-blue-fade-left">
+      <div class="wrapper py-5">
+        <p class="text-xl/[160%]">
+          Сервис речевой аналитики <b>на базе искусственного <br> интеллекта</b> для бизнеса, где есть <b>звонки, чаты или <br>записи оффлайн-общения</b>
+        </p>
+      </div>
+    </div>
+
     <div class="wrapper">
-      <h2 class="mb-5">Автоматически контролируйте <br>
-        все коммуникации <br> в компании:</h2>
-      <p class="subtitle mb-8">увеличивайте продажи и повышайте качество сервиса</p>
-      <button class="btn w-full">
+      <button class="btn ml-0">
         Получить видеообзор
       </button>
     </div>
 
-    <div class="absolute -bottom-[152px] left-1/2 -translate-x-1/2 w-max z-10">
+    <div class="lg:hidden absolute -bottom-[152px] left-1/2 -translate-x-1/2 w-max z-10">
       <img class=" min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-dashboard-mobile.png" alt="">
     </div>
 
-    <div class="absolute bottom-0 left-0 right-0 h-20 bg-grey-100">
+    <div class="lg:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-max z-10">
+      <img class=" min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
     </div>
 
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-max z-10">
-      <img class=" min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
+    <div class="hidden lg:block absolute bottom-0 right-0 max-w-[67%]">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/images/promo-dashboard-desktop.png" alt="">
     </div>
   </section>
 
   <!-- GREETING section -->
-  <section class="wrapper overflow-hidden bg-orange-circle">
+  <section class="wrapper overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle">
     <div class="badge mt-[74px] mb-[18px]">
       Эврика360
     </div>
@@ -51,8 +63,8 @@
     </div>
 
     <div class="relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
-      <div class="absolute -top-[54px] w-max">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-mobile.png" alt="">
+      <div class="absolute -top-[54px] w-max sm:w-full sm:flex sm:justify-center">
+        <img class="sm:translate-x-6" src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-mobile.png" alt="">
       </div>
     </div>
 
@@ -65,7 +77,7 @@
   </section>
 
   <!-- DEPARTMENTS section -->
-  <section id="departments" class="pt-[80px] -mt-[80px] bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+  <section id="departments" class="pt-[40px] -mt-[40px] bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
     <div class="wrapper pt-10 pb-[75px] space-y-10">
       <div class="flex gap-1">
         <div class="shrink-0">
@@ -78,7 +90,7 @@
   </section>
 
   <!-- IN DETAIL section -->
-  <section class="wrapper bg-orange-circle">
+  <section class="wrapper pt-[64px] -mt-[64px] bg-orange-circle">
     <div class="flex flex-col gap-6">
       <div class="relative mx-auto mb-[22px] w-fit">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
@@ -179,7 +191,7 @@
       <div class="flex flex-col gap-y-8">
         <div class="wrapper space-y-4">
           <h3>Контролируйте состояние компании на одном экране</h3>
-          <div class="p-2 description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
+          <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
         </div>
 
         <div class="w-fit max-w-[93%] self-end">
@@ -339,7 +351,7 @@
   </section>
 
   <!-- HOW IT WORKS section -->
-  <section id="how-it-works" class="pt-[128px] -mb-[64px] wrapper py-[60px] pb-[66px] space-y-10 border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
+  <section id="how-it-works" class="pt-[90px] wrapper py-[60px] pb-[80px] space-y-10 border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
     <div class="chat secondary">— И как работает речевая аналитика?</div>
 
     <div class="space-y-4">
@@ -355,7 +367,7 @@
       </div>
     </div>
 
-    <button class="btn primary w-full flex gap-2">
+    <button class="btn primary flex gap-2">
       <div>
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.png" alt="">
       </div>
@@ -365,26 +377,26 @@
 
   <!-- EXAMPLE CASE section -->
   <section>
-    <div class="wrapper mb-[56px] space-y-16">
+    <div class="wrapper mb-[56px] flex flex-col gap-16">
       <div class="relative">
-        <div class="absolute -bottom-[42px] right-8">
+        <div class="absolute -bottom-[70px] right-8">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted.png" alt="">
         </div>
 
         <div class="mb-6">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/case-client.png" alt="клиент">
+          <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/case-client.png" alt="клиент">
         </div>
 
-        <div class="mb-4 py-2 px-5 rounded-lg text-white bg-blue-200">
+        <div class="mb-4 py-2 px-5 xs:w-fit rounded-lg text-white bg-blue-200">
           <h5>
             <b>01.</b> Знакомьтесь, это Антон
           </h5>
         </div>
 
         <p class="description">
-          Антон долго выбирал товар, <br>
-          заказал доставку, но <b> заказ пришел <br>
-            с опозданием и браком </b>. <br>
+          Антон долго выбирал товар,
+          заказал доставку, но <b> заказ пришел
+            с опозданием и браком </b>.
           Он звонит в колл-центр магазина.
         </p>
       </div>
@@ -395,27 +407,27 @@
         </div>
 
         <div class="mb-6">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/case-operator.png" alt="оператор">
+          <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/case-operator.png" alt="оператор">
         </div>
 
-        <div class="mb-4 py-2 px-5 rounded-lg text-white bg-blue-200">
+        <div class="mb-4 py-2 px-5 xs:w-fit rounded-lg text-white bg-blue-200">
           <h5>
             <b>02.</b> А это Марина, оператор колл-центра
           </h5>
         </div>
 
         <p class="description">
-          Она приняла звонок, не поздоровалась,<br> послушала Антона и сказала, <br>
+          Она приняла звонок, не поздоровалась, послушала Антона и сказала,
           что это <b>его проблемы</b>, после чего повесила трубку.
         </p>
       </div>
 
       <div>
         <div class="mb-6">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/case-manager.png" alt="руководитель">
+          <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/case-manager.png" alt="руководитель">
         </div>
 
-        <div class="mb-4 py-2 px-5 rounded-lg text-white bg-blue-200">
+        <div class="mb-4 py-2 px-5 xs:w-fit rounded-lg text-white bg-blue-200">
           <h5>
             <b>03.</b> А это Вы, руководитель компании
           </h5>
@@ -431,7 +443,7 @@
 
     <div class="mb-10 pt-12 bg-dark-linear border border-light-blue-200">
       <div class="wrapper">
-        <div class="mb-8 py-3 px-5 rounded-md text-dark-blue-500 bg-white">
+        <div class="mb-8 mx-auto py-3 px-5 xs:w-fit rounded-md text-dark-blue-500 bg-white">
           <h4>
             <b>04.</b> А это речевая аналитика
           </h4>
@@ -444,8 +456,8 @@
           Так вы сохраните клиента, деньги и улучшите скрипты общения, чтобы таких ситуаций больше не возникало.
         </p>
 
-        <div>
-          <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
+        <div class="flex justify-center">
+          <img class="w-full max-w-[70%]" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
         </div>
       </div>
     </div>
@@ -676,7 +688,7 @@
   <section class="relative wrapper mt-[75px] pb-[72px] bg-pattern border border-light-blue-200 text-white">
     <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
 
-    <div class="-mt-[75px] mb-[46px] scale-105">
+    <div class="-mt-[75px] mb-[46px] scale-105 flex justify-center">
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/conference.png" alt="онлайн-демо">
     </div>
 
@@ -691,7 +703,7 @@
   </section>
 
   <!-- DATA SECURITY section -->
-  <section class="overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle bg-[center_-40%]">
+  <section class="overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle bg-[center_-40%] xs:bg-[center_top]">
     <div class="wrapper mt-[38px] space-y-11">
       <h3 class="relative">
         — А что у вас с <b>безопасностью данных</b>?
@@ -817,7 +829,7 @@
         </div>
       </div>
 
-      <button class="btn primary w-full">Протестировать на своих данных</button>
+      <button class="btn primary">Протестировать на своих данных</button>
     </div>
   </section>
 
@@ -872,7 +884,7 @@
           <div class="flex flex-col gap-y-8">
             <div class="wrapper space-y-4">
               <h3>Простая интеграция с действующими системами и сервисами</h3>
-              <div class="p-2 description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
+              <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
             </div>
 
             <div class="w-fit max-w-[93%] self-end">
@@ -947,8 +959,8 @@
   </section>
 
   <!-- PRICES section -->
-  <section id="prices" class="wrapper pt-[19px] pt-[110px] -mt-[110px] overflow-hidden bg-lighter-orange-circle bg-[center_-40%]">
-    <div class="mb-10">
+  <section id="prices" class="wrapper pt-[120px] -mt-[110px] overflow-hidden bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top]">
+    <div class="mb-10 mx-auto w-fit flex flex-col items-center">
       <h3 class="mb-1 text-center">— Сколько стоит </h3>
       <h3 class="text-center">
         <b class="relative">

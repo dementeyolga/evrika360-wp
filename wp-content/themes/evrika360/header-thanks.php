@@ -9,60 +9,14 @@
 </head>
 
 <body <?php body_class(); ?> class="m-auto">
-  <header class="group has-[:checked]:bg-white-glass w-full fixed z-40 transition-colors duration-200">
-    <input id="headerScrollToggle" class="hidden" type="checkbox">
-    <div class="lg:hidden wrapper flex-row py-[22px] flex justify-between items-center">
-      <a href="<?php get_home_url() ?>" class="text-white group-has-[:checked]:text-blue-100">
+  <header class="w-full fixed z-40 bg-white-glass">
+    <div class="wrapper flex-row py-[22px] flex justify-between items-center">
+      <a href="<?php get_home_url() ?>" class="text-blue-100">
         <?php include 'parts/evrika-logo.php' ?>
       </a>
 
-      <div id="burger-trigger" class="hover:curshor-pointer text-white group-has-[:checked]:text-grey-400">
+      <div id="burger-trigger" class="hover:cursor-pointer text-blue-100">
         <?php include 'parts/burger-menu-icon.php' ?>
-      </div>
-    </div>
-
-    <div class="hidden lg:flex wrapper flex-row py-[33px] justify-between items-center gap-[22%]">
-      <a href="<?php get_home_url() ?>" class="text-white group-has-[:checked]:text-blue-100">
-        <?php include 'parts/evrika-logo-desktop.php' ?>
-      </a>
-
-      <div class="flex gap-8 items-center text-white">
-        <div class="space-y-2">
-          <p class="small-text">Задайте нам <br>
-            вопрос напрямую!</p>
-          <div class="flex gap-2">
-            <a class="w-8 h-8">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
-            </a>
-            <a class="w-8 h-8">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
-            </a>
-          </div>
-        </div>
-
-        <div class="shrink-0 space-y-3">
-          <p class="small-text">
-            Пн-Пт 10:00 — 18:00
-          </p>
-
-          <div class="font-bold space-y-1">
-            <h5>
-              <a href="tel:+7 495 662-18-73">
-                +7 495 662-18-73
-              </a>
-            </h5>
-            <h5>
-              <a href="tel:+375 29 388-55-12">
-                +375 29 388-55-12
-              </a>
-            </h5>
-          </div>
-        </div>
-
-        <div class="flex gap-2">
-          <button class="btn">Заказать звонок</button>
-          <button class="btn dark">Войти</button>
-        </div>
       </div>
     </div>
   </header>

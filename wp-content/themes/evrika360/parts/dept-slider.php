@@ -94,7 +94,6 @@
     </div>
   </div>
 
-
   <div class="embla__buttons hidden">
     <button class="embla__button embla__button--prev dept-embla__button--prev" type="button">
     </button>
@@ -102,7 +101,6 @@
     <button class="embla__button embla__button--next dept-embla__button--next" type="button">
     </button>
   </div>
-
 
   <div class="embla__dots dept-embla__dots"></div>
 </section>

@@ -14,7 +14,7 @@ Text Domain: evrika
 
 @layer base {
   @font-face {
-    font-family: "Caveat";
+    font-family: 'Caveat';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -22,21 +22,21 @@ Text Domain: evrika
   }
 
   @font-face {
-    font-family: "DM Sans";
+    font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(/wp-content/themes/evrika360/assets/fonts/DMSans-Regular.ttf);
   }
   @font-face {
-    font-family: "DM Sans";
+    font-family: 'DM Sans';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
     src: url(/wp-content/themes/evrika360/assets/fonts/DMSans-Medium.ttf);
   }
   @font-face {
-    font-family: "DM Sans";
+    font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -46,8 +46,8 @@ Text Domain: evrika
 
 @layer base {
   :root {
-    --main-font: "DM Sans", sans-serif;
-    --accent-font: "Caveat", sans-serif;
+    --main-font: 'DM Sans', sans-serif;
+    --accent-font: 'Caveat', sans-serif;
 
     --white-100: #fff;
     --grey-50: #f4f3f042;
@@ -100,6 +100,7 @@ Text Domain: evrika
     --radius-xl: 1.5rem; /* 24px */
     --radius-2xl: 2.5rem; /* 40px */
     --radius-3xl: 3rem; /* 48px */
+    --radius-5xl: 5rem; /* 80px */
   }
 }
 
@@ -109,33 +110,33 @@ Text Domain: evrika
   }
 
   h2 {
-    @apply text-[32px]/[130%] font-bold;
+    @apply w-fit text-[32px]/[130%] md:text-[40px]/[140%] font-bold;
   }
 
   h3 {
-    @apply text-2xl/[130%];
+    @apply w-fit text-2xl/[130%];
   }
 
   h4 {
-    @apply text-xl/[130%];
+    @apply w-fit text-xl/[130%];
   }
 
   h5 {
-    @apply text-lg/[130%];
+    @apply w-fit text-lg/[130%];
   }
 
   p {
-    @apply text-base/[150%];
+    @apply w-fit text-base/[150%];
   }
 }
 
 @layer components {
   .wrapper {
-    @apply max-w-[1261px] w-full px-[6.4%] m-auto flex flex-col;
+    @apply max-w-[1261px] w-full px-[6.4%] m-auto flex flex-col xl:px-0 xl:max-w-[1100px];
   }
 
   .subtitle {
-    @apply text-xl/[150%];
+    @apply text-xl/[150%] md:text-[32px]/[150%];
   }
 
   .description {
@@ -147,7 +148,7 @@ Text Domain: evrika
   }
 
   .accent {
-    @apply text-2xl/[160%] font-accent text-grey-400 text-center;
+    @apply mx-auto w-fit text-2xl/[160%] font-accent text-grey-400 text-center;
   }
 
   .accent.small {
@@ -159,7 +160,7 @@ Text Domain: evrika
   }
 
   .btn {
-    @apply h-12 py-3 px-4 flex justify-center items-center rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset;
+    @apply h-12 py-3 px-5 mx-auto w-full sm:w-fit flex justify-center items-center rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset;
   }
 
   .btn.primary {
@@ -220,7 +221,7 @@ Text Domain: evrika
       @apply h-[254px] rounded-b-md border-b border-b-light-blue-100 overflow-hidden;
 
       img {
-        @apply h-full object-cover;
+        @apply h-full object-cover object-center;
       }
     }
 
@@ -246,16 +247,33 @@ Text Domain: evrika
   }
 
   .embla__slide:nth-child(1) .feature-price-slide {
-    width: 282px;
+    min-width: 282px;
+    flex-grow: 1;
   }
 
   .embla__slide:nth-child(2) .feature-price-slide {
-    width: 210px;
+    min-width: 210px;
+    flex-grow: 1;
+  }
+
+  .embla__slide:nth-child(1):has(.feature-price-slide) {
+    flex-grow: 1;
+  }
+
+  .embla__slide:nth-child(2):has(.feature-price-slide) {
+    flex-grow: 1;
   }
 
   .bg-circles {
     background-image: url(./assets/images/bg-circles.png);
     background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/bg-circles-desktop.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 
   .bg-orange-circle {
@@ -264,6 +282,10 @@ Text Domain: evrika
     background-position: center -10%;
     background-repeat: no-repeat;
     background-size: 200%;
+
+    @media (min-width: 500px) {
+      background-position: center;
+    }
   }
 
   .bg-lighter-orange-circle {
@@ -272,6 +294,18 @@ Text Domain: evrika
     background-position: center -10%;
     background-repeat: no-repeat;
     background-size: 240%;
+
+    @media (min-width: 500px) {
+      background-position: center;
+    }
+  }
+
+  .bg-blue-circle {
+    background-image: url(./assets/images/bg-blue-circle.png);
+    background-size: cover;
+    background-position: center 6%;
+    background-repeat: no-repeat;
+    background-size: 80%;
   }
 
   .bg-pattern {
@@ -318,6 +352,19 @@ Text Domain: evrika
     background: linear-gradient(177deg, #1d3660 0%, #09172e 100%);
   }
 
+  .bg-fade-bottom {
+    background: linear-gradient(180deg, rgba(22, 42, 75, 0) 0%, #162a4b 100%);
+  }
+
+  .bg-blue-fade-left {
+    background: linear-gradient(
+      to left,
+      rgba(1, 103, 149, 0.32) 40%,
+      rgba(1, 56, 96, 0.32) 68%,
+      rgba(1, 151, 204, 0.32) 100%
+    );
+  }
+
   .bg-white-glass {
     backdrop-filter: blur(16px);
     box-shadow: 0 4px 4px 0 rgba(226, 232, 241, 0.32);
@@ -334,6 +381,10 @@ Text Domain: evrika
   margin-right: auto;
   --slide-spacing: 1rem;
   --slide-size: 95%;
+
+  @media (min-width: 500px) {
+    --slide-size: 60%;
+  }
 }
 .feature-tabs-embla {
   --slide-spacing: 12px;
@@ -389,9 +440,13 @@ Text Domain: evrika
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+
+  &:only-child {
+    display: none;
+  }
 }
 .embla__dot:after {
-  content: "";
+  content: '';
   width: 5px;
   height: 5px;
   border-radius: 50%;
