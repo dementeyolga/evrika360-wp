@@ -114,7 +114,7 @@ Text Domain: evrika
   }
 
   h3 {
-    @apply w-fit text-2xl/[130%];
+    @apply w-fit text-2xl/[130%] md:text-[32px]/[130%];
   }
 
   h4 {
@@ -217,11 +217,30 @@ Text Domain: evrika
   }
 
   .dept-slide {
-    .image-container {
-      @apply h-[254px] rounded-b-md border-b border-b-light-blue-100 overflow-hidden;
+    @media (min-width: 1280px) {
+      height: 242px;
+      display: flex;
 
       img {
         @apply h-full object-cover object-center;
+      }
+    }
+
+    .image-container {
+      @apply h-[254px] rounded-b-md xl:rounded-md border-b border-b-light-blue-100 overflow-hidden;
+
+      img {
+        @apply h-full object-cover object-center;
+      }
+
+      @media (min-width: 640px) {
+        height: 320px;
+      }
+
+      @media (min-width: 1280px) {
+        width: 220px;
+        height: 100%;
+        flex-shrink: 0;
       }
     }
 
@@ -233,6 +252,19 @@ Text Domain: evrika
 
         li {
           @apply flash-li pl-6 text-base/[150%];
+        }
+      }
+
+      @media (min-width: 1280px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px 16px 24px 32px;
+
+        h3 {
+          font-size: 24px;
+
+          line-height: 140%;
         }
       }
     }
@@ -285,6 +317,10 @@ Text Domain: evrika
 
     @media (min-width: 500px) {
       background-position: center;
+    }
+
+    @media (min-width: 768px) {
+      background-size: 100%;
     }
 
     @media (min-width: 1024px) {
@@ -381,14 +417,20 @@ Text Domain: evrika
 }
 
 .embla {
+  position: relative;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   --slide-spacing: 1rem;
   --slide-size: 95%;
 
-  @media (min-width: 500px) {
-    --slide-size: 60%;
+  @media (min-width: 450px) {
+    --slide-size: 70%;
+  }
+
+  @media (min-width: 1280px) {
+    --slide-size: 562px;
+    --slide-spacing: 24px;
   }
 }
 .feature-tabs-embla {
@@ -398,6 +440,16 @@ Text Domain: evrika
 .feature-price-embla {
   --slide-spacing: 1px;
   --slide-size: auto;
+}
+.dept-embla {
+  @media (min-width: 768px) {
+    --slide-size: 450px;
+  }
+
+  @media (min-width: 1280px) {
+    --slide-size: 562px;
+    --slide-spacing: 24px;
+  }
 }
 .embla__container {
   display: flex;
@@ -415,8 +467,40 @@ Text Domain: evrika
   min-width: 0;
   padding-left: var(--slide-spacing);
 }
+.embla__buttons {
+  display: none;
+
+  @media (min-width: 1280px) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.embla__button {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-100);
+  background-color: var(--orange-400);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
 .embla__button:disabled {
-  opacity: 50%;
+  color: var(--orange-400);
+  background-color: var(--orange-100);
+  border: 1px solid var(--orange-200);
+}
+.embla__button--prev {
+  transform: translateX(-48px) rotate(180deg);
+}
+.embla__button--next {
+  transform: translateX(48px);
 }
 .embla__dots {
   margin-top: 20px;
@@ -424,6 +508,10 @@ Text Domain: evrika
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 1280px) {
+    display: none;
+  }
 }
 .prices-embla__dots {
   display: none;

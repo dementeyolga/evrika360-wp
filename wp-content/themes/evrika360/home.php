@@ -37,19 +37,19 @@
   </section>
 
   <!-- GREETING section -->
-  <section class="wrapper overflow-hidden lg:overflow-visible pt-[64px] -mt-[64px] lg:mb-10 bg-orange-circle lg:bg-none lg:flex-row lg:gap-11">
-    <div class="hidden lg:block lg:mt-[22px] lg:shrink-0 lg:w-[591px] relative h-[173px] lg:h-[588px] rounded-xl lg:rounded-2xl bg-light-blue-100 border border-light-blue-200">
+  <section class="wrapper overflow-hidden xl:overflow-visible pt-[64px] -mt-[64px] xl:mb-10 bg-orange-circle xl:bg-none xl:flex-row xl:gap-11">
+    <div class="hidden xl:block xl:mt-[22px] xl:shrink-0 xl:w-[591px] relative h-[173px] xl:h-[588px] rounded-xl xl:rounded-2xl bg-light-blue-100 border border-light-blue-200">
       <div class="absolute top-[83px] left-0 w-max">
         <img class="min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-desktop.png" alt="">
       </div>
     </div>
 
-    <div class="bg-orange-circle flex flex-col lg:shrink-0 lg:grow">
-      <div class="badge mt-[74px] lg:mt-[86px] mb-[18px]">
+    <div class="bg-orange-circle flex flex-col xl:shrink-0 xl:grow">
+      <div class="badge mt-[74px] xl:mt-[86px] mb-[18px]">
         Эврика360
       </div>
 
-      <div class="relative chat secondary mb-5 lg:mb-8 lg:max-w-[400px]">
+      <div class="relative chat secondary mb-5 xl:mb-8 xl:max-w-[400px]">
         <div class="flex gap-1">
           — Привет
           <div>
@@ -59,39 +59,44 @@
 
         Меня зовут Эврика360, и сейчас я познакомлю тебя с речевой аналитикой для бизнеса!
 
-        <div class="character-bg lg:w-[190px] lg:h-[190px] absolute right-0 lg:-right-[112px] top-[6px] lg:top-[47px] -translate-y-full"></div>
-        <div class="absolute right-[11px] lg:-right-[90px] top-[15px] lg:top-[71px] -translate-y-full">
-          <img class="lg:w-[209px] lg:h-[209px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.png" alt="">
+        <div class="character-bg xl:w-[190px] xl:h-[190px] absolute right-0 xl:-right-[112px] top-[6px] xl:top-[47px] -translate-y-full"></div>
+        <div class="absolute right-[11px] xl:-right-[90px] top-[15px] xl:top-[71px] -translate-y-full">
+          <img class="xl:w-[209px] xl:h-[209px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.png" alt="">
         </div>
       </div>
 
-      <div class="chat self-end mb-[116px] lg:mb-5">
+      <div class="chat self-end mb-[116px] xl:mb-5">
         — Что это такое?
       </div>
 
-      <div class="lg:hidden relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
+      <div class="xl:hidden relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
         <div class="absolute -top-[54px] w-max sm:w-full sm:flex sm:justify-center">
           <img class="sm:translate-x-6" src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-mobile.png" alt="">
         </div>
       </div>
 
-      <div class="relative w-fit mx-auto mb-[50px] lg:mr-0">
+      <div class="relative w-fit mx-auto mb-[50px] xl:mr-0">
         <span class="accent text-center">Листай ниже, чтобы узнать!</span>
-        <div class="absolute -right-[3px] lg:right-[111px] bottom-[11px] lg:-bottom-[11px] translate-y-full translate-x-full">
-          <img class="lg:h-[88px]" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.png" alt="">
+        <div class="absolute -right-[3px] xl:right-[111px] bottom-[11px] xl:-bottom-[11px] translate-y-full translate-x-full">
+          <img class="xl:h-[88px]" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.png" alt="">
         </div>
       </div>
     </div>
   </section>
 
   <!-- DEPARTMENTS section -->
-  <section id="departments" class="pt-[40px] -mt-[40px] bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-    <div class="wrapper pt-10 pb-[75px] space-y-10">
-      <div class="flex gap-1">
-        <div class="shrink-0">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/light-icon.png" alt="">
+  <section id="departments" class="pt-[40px] -mt-[40px] xl:mx-10 lg:rounded-2xl bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+    <div class="wrapper pt-10 pb-[75px] xl:pb-[150px] space-y-10 xl:space-y-[64px]">
+      <div>
+        <div class="flex gap-2">
+          <div class="shrink-0 flex items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/light-icon.png" alt="">
+          </div>
+          <h3><b>Эврика360</b> — один сервис для большинства</h3>
         </div>
-        <h3><b>Эврика360</b> — один сервис для большинства отделов в компании</h3>
+        <h3>
+          отделов в компании
+        </h3>
       </div>
       <?php include 'parts/dept-slider.php' ?>
     </div>
