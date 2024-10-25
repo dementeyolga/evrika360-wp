@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="flex flex-col gap-16">
+<main class="flex flex-col gap-16 lg:gap-[140px]">
   <!-- PROMO section -->
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[329px] lg:pb-[169px] rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper mb-8 lg:mb-[104px]">
@@ -37,41 +37,49 @@
   </section>
 
   <!-- GREETING section -->
-  <section class="wrapper overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle">
-    <div class="badge mt-[74px] mb-[18px]">
-      Эврика360
+  <section class="wrapper overflow-hidden lg:overflow-visible pt-[64px] -mt-[64px] lg:mb-10 bg-orange-circle lg:bg-none lg:flex-row lg:gap-11">
+    <div class="hidden lg:block lg:mt-[22px] lg:shrink-0 lg:w-[591px] relative h-[173px] lg:h-[588px] rounded-xl lg:rounded-2xl bg-light-blue-100 border border-light-blue-200">
+      <div class="absolute top-[83px] left-0 w-max">
+        <img class="min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-desktop.png" alt="">
+      </div>
     </div>
 
-    <div class="relative chat secondary self-end mb-[20px]">
-      <div class="flex gap-1">
-        — Привет
-        <div>
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/hi-icon.png" alt="">
+    <div class="bg-orange-circle flex flex-col lg:shrink-0 lg:grow">
+      <div class="badge mt-[74px] lg:mt-[86px] mb-[18px]">
+        Эврика360
+      </div>
+
+      <div class="relative chat secondary mb-5 lg:mb-8 lg:max-w-[400px]">
+        <div class="flex gap-1">
+          — Привет
+          <div>
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/hi-icon.png" alt="">
+          </div>
+        </div>
+
+        Меня зовут Эврика360, и сейчас я познакомлю тебя с речевой аналитикой для бизнеса!
+
+        <div class="character-bg lg:w-[190px] lg:h-[190px] absolute right-0 lg:-right-[112px] top-[6px] lg:top-[47px] -translate-y-full"></div>
+        <div class="absolute right-[11px] lg:-right-[90px] top-[15px] lg:top-[71px] -translate-y-full">
+          <img class="lg:w-[209px] lg:h-[209px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.png" alt="">
         </div>
       </div>
 
-      Меня зовут Эврика360, и сейчас я познакомлю тебя с речевой аналитикой для бизнеса!
-
-      <div class="character-bg absolute right-0 top-[6px] -translate-y-full"></div>
-      <div class="absolute right-[11px] top-[15px] -translate-y-full">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.png" alt="">
+      <div class="chat self-end mb-[116px] lg:mb-5">
+        — Что это такое?
       </div>
-    </div>
 
-    <div class="chat self-end mb-[116px]">
-      — Что это такое?
-    </div>
-
-    <div class="relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
-      <div class="absolute -top-[54px] w-max sm:w-full sm:flex sm:justify-center">
-        <img class="sm:translate-x-6" src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-mobile.png" alt="">
+      <div class="lg:hidden relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
+        <div class="absolute -top-[54px] w-max sm:w-full sm:flex sm:justify-center">
+          <img class="sm:translate-x-6" src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-mobile.png" alt="">
+        </div>
       </div>
-    </div>
 
-    <div class="relative w-fit m-auto mb-[50px]">
-      <span class="accent text-center">Листай ниже, чтобы узнать!</span>
-      <div class="absolute -right-[3px] bottom-[11px] translate-y-full translate-x-full">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.png" alt="">
+      <div class="relative w-fit mx-auto mb-[50px] lg:mr-0">
+        <span class="accent text-center">Листай ниже, чтобы узнать!</span>
+        <div class="absolute -right-[3px] lg:right-[111px] bottom-[11px] lg:-bottom-[11px] translate-y-full translate-x-full">
+          <img class="lg:h-[88px]" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.png" alt="">
+        </div>
       </div>
     </div>
   </section>

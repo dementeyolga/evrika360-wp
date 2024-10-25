@@ -176,7 +176,7 @@ Text Domain: evrika
   }
 
   .chat {
-    @apply py-[15px] px-3 w-fit rounded-lg bg-blue-200 text-chat text-white;
+    @apply py-[15px] px-3 w-fit rounded-lg bg-blue-200 text-chat md:text-chat-desktop text-white;
   }
 
   .chat.secondary {
@@ -285,6 +285,11 @@ Text Domain: evrika
 
     @media (min-width: 500px) {
       background-position: center;
+    }
+
+    @media (min-width: 1024px) {
+      background-position: center 40%;
+      background-size: contain;
     }
   }
 

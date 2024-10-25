@@ -870,6 +870,15 @@ p {
   color: var(--white-100);
 }
 
+@media (min-width: 768px) {
+  .chat {
+    font-size: 1.25rem;
+    line-height: 140%;
+    letter-spacing: -0.41px;
+    font-weight: 400;
+  }
+}
+
 .chat.secondary {
   background-color: var(--grey-100);
   color: var(--dark-blue-500);
@@ -1156,6 +1165,11 @@ p {
   @media (min-width: 500px) {
     background-position: center;
   }
+  @media (min-width: 1024px) {
+    background-position: center 40%;
+
+    background-size: contain;
+  }
 }
 
 .bg-lighter-orange-circle {
@@ -1383,6 +1397,10 @@ p {
 
 .top-\[6px\] {
   top: 6px;
+}
+
+.top-\[83px\] {
+  top: 83px;
 }
 
 .-z-20 {
@@ -2503,8 +2521,60 @@ p {
 }
 
 @media (min-width: 1024px) {
+  .lg\:-right-\[112px\] {
+    right: -112px;
+  }
+
+  .lg\:top-\[47px\] {
+    top: 47px;
+  }
+
+  .lg\:-right-\[90px\] {
+    right: -90px;
+  }
+
+  .lg\:top-\[71px\] {
+    top: 71px;
+  }
+
+  .lg\:-right-\[111px\] {
+    right: -111px;
+  }
+
+  .lg\:right-\[111px\] {
+    right: 111px;
+  }
+
+  .lg\:-bottom-\[11px\] {
+    bottom: -11px;
+  }
+
+  .lg\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .lg\:mb-\[104px\] {
     margin-bottom: 104px;
+  }
+
+  .lg\:mr-0 {
+    margin-right: 0px;
+  }
+
+  .lg\:mt-\[86px\] {
+    margin-top: 86px;
+  }
+
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .lg\:mt-\[22px\] {
+    margin-top: 22px;
+  }
+
+  .lg\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .lg\:block {
@@ -2519,9 +2589,73 @@ p {
     display: none;
   }
 
+  .lg\:h-\[588px\] {
+    height: 588px;
+  }
+
+  .lg\:h-\[209px\] {
+    height: 209px;
+  }
+
+  .lg\:h-\[190px\] {
+    height: 190px;
+  }
+
+  .lg\:h-\[88px\] {
+    height: 88px;
+  }
+
+  .lg\:w-\[591px\] {
+    width: 591px;
+  }
+
+  .lg\:w-\[209px\] {
+    width: 209px;
+  }
+
+  .lg\:w-\[190px\] {
+    width: 190px;
+  }
+
+  .lg\:max-w-\[400px\] {
+    max-width: 400px;
+  }
+
+  .lg\:shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .lg\:grow {
+    flex-grow: 1;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:gap-11 {
+    gap: 2.75rem;
+  }
+
+  .lg\:gap-\[140px\] {
+    gap: 140px;
+  }
+
+  .lg\:overflow-visible {
+    overflow: visible;
+  }
+
+  .lg\:rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+
   .lg\:rounded-b-5xl {
     border-bottom-right-radius: var(--radius-5xl);
     border-bottom-left-radius: var(--radius-5xl);
+  }
+
+  .lg\:bg-none {
+    background-image: none;
   }
 
   .lg\:pb-\[169px\] {

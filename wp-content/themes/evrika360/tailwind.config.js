@@ -92,6 +92,14 @@ module.exports = {
             fontWeight: '400',
           },
         ],
+        'chat-desktop': [
+          '1.25rem',
+          {
+            lineHeight: '140%',
+            letterSpacing: '-0.41px',
+            fontWeight: '400',
+          },
+        ],
       },
       content: {
         flash: 'url("./assets/images/flash-icon.png")',
