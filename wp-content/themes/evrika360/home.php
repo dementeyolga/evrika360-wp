@@ -103,7 +103,7 @@
   </section>
 
   <!-- IN DETAIL section -->
-  <section class="wrapper pt-[64px] -mt-[64px] bg-orange-circle lg:bg-none">
+  <section class="wrapper pt-[64px] -mt-[64px] lg:mb-[52px] bg-orange-circle lg:bg-none">
     <div class="flex flex-col gap-6 lg:flex-row lg:gap-[100px]">
       <div class="ml-3 flex flex-col gap-6 lg:bg-orange-circle lg:w-[448px] lg:shrink-0">
         <div class="relative mx-auto mb-[22px] w-fit">
@@ -182,7 +182,7 @@
   </section>
 
   <!-- FEATURES section -->
-  <section id="features" class="pt-[110px] -mt-[110px] overflow-hidden space-y-4">
+  <section id="features" class="pt-[110px] -mt-[110px] overflow-hidden space-y-4 lg:space-y-12">
     <div class="peer embla feature-tabs-embla">
       <div class="wrapper embla__viewport feature-tabs-embla__viewport">
         <div class="embla__container feature-tabs-embla__container">
@@ -215,18 +215,18 @@
     </div>
 
     <!-- #1 feature tab -->
-    <div class="hidden peer-has-[label:nth-child(1)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
-      <div class="flex flex-col gap-y-8">
+    <div class="relative lg:wrapper-no-flex hidden pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 peer-has-[label:nth-child(1)_:checked]:block lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
         <div class="wrapper space-y-4">
           <h3>Контролируйте состояние компании на одном экране</h3>
           <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
         </div>
 
-        <div class="w-fit max-w-[93%] self-end">
+        <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
         </div>
 
-        <ul class="wrapper space-y-4">
+        <ul class="wrapper space-y-4 lg:space-y-5">
           <li class="flash-li"><b>Отслеживайте изменения</b> по филиалам, отделам и сотрудникам  </li>
           <li class="flash-li"><b>Будьте уверены</b> в точности данных <b>на 100%</b></li>
           <li class="flash-li">Выявляйте проблемы в собеседованиях, <b>повышайте эффективность работы рекрутеров и ускоряйте найм</b></li>
@@ -236,15 +236,15 @@
     </div>
 
     <!-- #2 feature tab -->
-    <div class="hidden peer-has-[label:nth-child(2)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
-      <div class="flex flex-col gap-y-8">
+    <div class="relative hidden lg:wrapper-no-flex pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 peer-has-[label:nth-child(2)_:checked]:block lg:wrapper-no-flex lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
         <h3 class="wrapper">Выжимайте максимум из каждого обращения</h3>
 
-        <div class="w-fit max-w-[93%] self-end">
+        <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-calls.png" alt="главный экран">
         </div>
 
-        <ul class="wrapper space-y-4">
+        <ul class="wrapper space-y-4 lg:space-y-5">
           <li class="flash-li">
             Помогайте менеджерам <b>увеличивать продажи</b> и средний чек
           </li>
@@ -263,15 +263,15 @@
     </div>
 
     <!-- #3 feature tab -->
-    <div class="hidden peer-has-[label:nth-child(3)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
-      <div class="flex flex-col gap-y-8">
+    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[525px] pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 peer-has-[label:nth-child(3)_:checked]:block lg:wrapper-no-flex lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
         <h3 class="wrapper">Будьте спокойны за качество обработки обращений</h3>
 
-        <div class="w-fit max-w-[93%] self-end">
+        <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-call-info.png" alt="главный экран">
         </div>
 
-        <ul class="wrapper space-y-4">
+        <ul class="wrapper space-y-4 lg:space-y-5">
           <li class="flash-li">
             Получайте отчёты о процентах выполнения скриптов, чек-листов или регламентов
           </li>
@@ -286,11 +286,11 @@
     </div>
 
     <!-- #4 feature tab -->
-    <div class="hidden peer-has-[label:nth-child(4)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
-      <div class="wrapper grid grid-cols-1 gap-6">
-        <div class="p-6 space-y-4 bg-white rounded-xl border border-grey-300 bg-light-wave">
+    <div class="hidden lg:wrapper-no-flex pt-10 pb-[72px] lg:p-6 peer-has-[label:nth-child(4)_:checked]:block lg:wrapper-no-flex lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+      <div class="wrapper grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+        <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-grey-300 bg-light-wave">
           <h3>С Эврика360</h3>
-          <ul class="space-y-3">
+          <ul class="space-y-3 lg:space-y-4">
             <li class="flash-li">
               Анализ всех коммуникаций в цепочке продаж
             </li>
@@ -312,9 +312,9 @@
           </ul>
         </div>
 
-        <div class="p-6 space-y-4 bg-white rounded-xl border border-light-blue-200">
+        <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
           <h3 class="text-grey-400">Без Эврика360</h3>
-          <ul class="space-y-3">
+          <ul class="space-y-3 lg:space-y-4">
             <li class="flash-li-disabled">
               Анализ только 1-2 этапов в воронке продаж
             </li>
@@ -339,15 +339,15 @@
     </div>
 
     <!-- #5 feature tab -->
-    <div class="hidden peer-has-[label:nth-child(5)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
-      <div class="flex flex-col gap-y-8">
+    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[525px] pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 peer-has-[label:nth-child(5)_:checked]:block lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
         <h3 class="wrapper">Повышайте средний чек без доп.вложений в рекламу</h3>
 
-        <div class="w-fit max-w-[93%] self-end">
+        <div class="lg:absolute lg:right-lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-call-analysis.png" alt="главный экран">
         </div>
 
-        <ul class="wrapper space-y-4">
+        <ul class="wrapper space-y-4 lg:space-y-5">
           <li class="flash-li">
             Получайте точную информацию о запрашиваемых товарах и планируйте закупки
           </li>
