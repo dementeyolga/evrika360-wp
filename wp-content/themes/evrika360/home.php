@@ -364,18 +364,25 @@
   </section>
 
   <!-- TEST section -->
-  <section class="relative wrapper pt-12 pb-[263px] bg-pattern border border-light-blue-200 text-white overflow-hidden text-center">
-    <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
-    <div class="absolute -bottom-[210px] left-0 right-0 flex justify-center">
-      <img src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-demo.png" alt="">
-    </div>
+  <section class="relative pt-12 pb-[263px] lg:py-0 lg:mx-10 lg:h-[288px] lg:rounded-2xl bg-pattern border border-light-blue-200 text-white overflow-hidden text-center">
+    <div class="wrapper lg:flex-row lg:items-center lg:h-full">
+      <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
+      <div class="lg:static lg:w-1/4 lg:pt-[29px] lg:self-start absolute -bottom-[210px] left-0 right-0 flex justify-center lg:justify-start">
+        <img class="lg:max-w-[170px]" src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-demo.png" alt="">
+      </div>
 
-    <p class="mb-4 font-medium">Пройдите простой тест и определите</p>
-    <h4 class="mb-8">
-      насколько <span class="text-blue-100">речевая аналитика</span>
-      подходит вашему бизнесу
-    </h4>
-    <button class="btn">Пройти тест</button>
+      <div class="lg:w-1/2">
+        <p class="mb-4 lg:mb-5 mx-auto font-medium lg:text-2xl/[130%]">Пройдите простой тест и определите</p>
+        <h4 class="mb-8 lg:mb-0 mx-auto lg:text-[32px]/[120%]">
+          насколько <span class="text-blue-100">речевая аналитика</span> <br class="hidden lg:block">
+          подходит вашему бизнесу
+        </h4>
+      </div>
+
+      <div class="lg:w-1/4 lg:flex lg:justify-end">
+        <button class="btn lg:m-0">Пройти тест</button>
+      </div>
+    </div>
   </section>
 
   <!-- HOW IT WORKS section -->
