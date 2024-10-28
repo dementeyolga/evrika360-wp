@@ -1639,6 +1639,10 @@ p {
   margin-top: 75px;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -2554,6 +2558,27 @@ p {
   background: rgba(255, 255, 255, 0.8);
 }
 
+@media (min-width: 1024px) {
+  .lg\:bg-orange-circle {
+    background-image: url(./assets/images/bg-orange-circle.png);
+    background-size: cover;
+    background-position: center -10%;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    @media (min-width: 500px) {
+      background-position: center;
+    }
+    @media (min-width: 768px) {
+      background-size: 100%;
+    }
+    @media (min-width: 1024px) {
+      background-position: center 40%;
+
+      background-size: contain;
+    }
+  }
+}
+
 .\*\:text-base\/\[150\%\] > * {
   font-size: 1rem;
   line-height: 150%;
@@ -2640,8 +2665,28 @@ p {
 }
 
 @media (min-width: 1024px) {
+  .lg\:-bottom-1 {
+    bottom: -0.25rem;
+  }
+
+  .lg\:right-6 {
+    right: 1.5rem;
+  }
+
+  .lg\:top-10 {
+    top: 2.5rem;
+  }
+
   .lg\:mb-\[104px\] {
     margin-bottom: 104px;
+  }
+
+  .lg\:mt-\[18px\] {
+    margin-top: 18px;
+  }
+
+  .lg\:mb-10 {
+    margin-bottom: 2.5rem;
   }
 
   .lg\:block {
@@ -2656,17 +2701,85 @@ p {
     display: none;
   }
 
+  .lg\:h-\[190px\] {
+    height: 190px;
+  }
+
+  .lg\:h-\[250px\] {
+    height: 250px;
+  }
+
+  .lg\:h-20 {
+    height: 5rem;
+  }
+
+  .lg\:w-\[190px\] {
+    width: 190px;
+  }
+
+  .lg\:w-\[250px\] {
+    width: 250px;
+  }
+
+  .lg\:w-\[263px\] {
+    width: 263px;
+  }
+
+  .lg\:w-\[446px\] {
+    width: 446px;
+  }
+
+  .lg\:w-\[444px\] {
+    width: 444px;
+  }
+
+  .lg\:w-\[448px\] {
+    width: 448px;
+  }
+
+  .lg\:w-20 {
+    width: 5rem;
+  }
+
+  .lg\:w-10 {
+    width: 2.5rem;
+  }
+
+  .lg\:shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:gap-\[100px\] {
+    gap: 100px;
+  }
+
   .lg\:gap-\[140px\] {
     gap: 140px;
+  }
+
+  .lg\:gap-6 {
+    gap: 1.5rem;
   }
 
   .lg\:rounded-2xl {
     border-radius: var(--radius-2xl);
   }
 
+  .lg\:rounded-md {
+    border-radius: var(--radius-md);
+  }
+
   .lg\:rounded-b-5xl {
     border-bottom-right-radius: var(--radius-5xl);
     border-bottom-left-radius: var(--radius-5xl);
+  }
+
+  .lg\:bg-none {
+    background-image: none;
   }
 
   .lg\:pb-\[169px\] {

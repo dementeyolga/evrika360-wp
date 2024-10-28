@@ -103,61 +103,76 @@
   </section>
 
   <!-- IN DETAIL section -->
-  <section class="wrapper pt-[64px] -mt-[64px] bg-orange-circle">
-    <div class="flex flex-col gap-6">
-      <div class="relative mx-auto mb-[22px] w-fit">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
-        <div class="character-bg absolute w-[120px] h-[120px] top-5 left-[calc(50%_-_8px)] -translate-x-1/2"></div>
-        <div class="badge absolute -bottom-[22px] left-1/2 -translate-x-1/2">Эврика360</div>
-      </div>
+  <section class="wrapper pt-[64px] -mt-[64px] bg-orange-circle lg:bg-none">
+    <div class="flex flex-col gap-6 lg:flex-row lg:gap-[100px]">
+      <div class="ml-3 flex flex-col gap-6 lg:bg-orange-circle lg:w-[448px] lg:shrink-0">
+        <div class="relative mx-auto mb-[22px] w-fit">
+          <img class="lg:w-[250px] lg:h-[250px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
+          <div class="character-bg lg:w-[190px] lg:h-[190px] absolute w-[120px] h-[120px] top-5 lg:top-10 left-[calc(50%_-_8px)] -translate-x-1/2"></div>
+          <div class="badge absolute -bottom-[22px] left-1/2 -translate-x-1/2">Эврика360</div>
+        </div>
 
-      <div class="chat self-end max-w-[86%]">
-        — Можно подробнее? Какие есть возможности?
-      </div>
+        <div class="chat self-end max-w-[86%]">
+          — Можно подробнее? Какие есть возможности?
+        </div>
 
-      <div class="chat secondary">
-        — Рассказываю!
+        <div class="chat secondary">
+          — Рассказываю!
+        </div>
       </div>
 
       <div>
-        <h3 class="relative mb-[54px]">
-          Всё нужное для принятия эффективных бизнес-решений в одном месте
+        <h3 class="relative mb-[54px] lg:mt-[18px] lg:mb-10">
+          Всё нужное для принятия эффективных бизнес-решений <br class="hidden lg:block"> в одном месте
 
-          <div class="absolute right-0 -bottom-8" aria-hidden="true">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.png" alt="">
+          <div class="absolute right-0 -bottom-8 lg:right-6 lg:-bottom-1" aria-hidden="true">
+            <img class="lg:w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.png" alt="">
           </div>
         </h3>
 
         <div class="space-y-6">
           <div class="space-y-1">
-            <div class="flex gap-4 items-center">
-              <div class="w-12 h-12 flex justify-center items-center rounded-sm bg-light-blue-100">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/manager-emoji.png" alt="">
+            <div class="flex gap-4 lg:gap-6 items-center">
+              <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
+                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/manager-emoji.png" alt="">
+                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/manager-emoji-desktop.png" alt="">
               </div>
-              <p>Руководителю</p>
+              <div class="flex flex-col gap-1">
+                <p>Руководителю</p>
+                <p class="hidden lg:block text-grey-400">отчёты и динамику изменений</p>
+              </div>
             </div>
-            <p class="text-grey-400">отчёты и динамику изменений</p>
+            <p class="lg:hidden text-grey-400">отчёты и динамику изменений</p>
           </div>
 
           <div class="space-y-2">
-            <div class="flex gap-4 items-center">
-              <div class="w-12 h-12 flex justify-center items-center rounded-sm bg-light-blue-100">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/sales-head-emoji.png" alt="">
+            <div class="flex gap-4 lg:gap-6 items-center">
+              <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
+                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/sales-head-emoji.png" alt="">
+                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/sales-head-emoji-desktop.png" alt="">
               </div>
-              <p>РОПу</p>
+              <div class="flex flex-col gap-1">
+                <p>РОПу</p>
+                <p class="hidden lg:block text-grey-400">причины слива лидов и базу знаний
+                  для обучения</p>
+              </div>
             </div>
-            <p class="text-grey-400">причины слива лидов и базу знаний
+            <p class="lg:hidden text-grey-400">причины слива лидов и базу знаний
               для обучения</p>
           </div>
 
           <div class="space-y-2">
-            <div class="flex gap-4 items-center">
-              <div class="w-12 h-12 flex justify-center items-center rounded-sm bg-light-blue-100">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/marketing-specialist-emoji.png" alt="">
+            <div class="flex gap-4 lg:gap-6 items-center">
+              <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
+                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/marketing-specialist-emoji.png" alt="">
+                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/marketing-specialist-emoji-desktop.png" alt="">
               </div>
-              <p>Маркетологу</p>
+              <div class="flex flex-col gap-1">
+                <p>Маркетологу</p>
+                <p class="hidden lg:block text-grey-400">данные по эффективности рекламных кампаний и информацию для исследования ЦА</p>
+              </div>
             </div>
-            <p class="text-grey-400">данные по эффективности рекламных кампаний и информацию для исследования ЦА</p>
+            <p class="lg:hidden text-grey-400">данные по эффективности рекламных кампаний и информацию для исследования ЦА</p>
           </div>
         </div>
       </div>
