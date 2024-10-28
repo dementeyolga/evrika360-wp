@@ -369,6 +369,10 @@ Text Domain: evrika
   .bg-white-wave-bottom {
     background-image: url(./assets/images/bg-white-wave-bottom.png);
     background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/bg-white-wave-bottom-desktop.png);
+    }
   }
 
   .bg-white-wave-top {

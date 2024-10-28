@@ -386,28 +386,38 @@
   </section>
 
   <!-- HOW IT WORKS section -->
-  <section id="how-it-works" class="pt-[90px] wrapper py-[60px] pb-[80px] space-y-10 border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
-    <div class="chat secondary">— И как работает речевая аналитика?</div>
+  <section id="how-it-works" class="lg:mx-10 lg:rounded-2xl border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
+    <div class="wrapper relative pt-[90px] pb-20 space-y-10 lg:space-y-10 lg:pt-20 lg:pb-[110px]">
+      <div class="chat secondary lg:mb-[37px]">— И как работает речевая аналитика?</div>
 
-    <div class="space-y-4">
-      <h3>
-        Речевая аналитика умеет слушать <b>100% звонков</b> и мгновенно анализировать их!
-      </h3>
+      <div class="relative space-y-4 lg:w-fit">
+        <h3>
+          Речевая аналитика умеет слушать <br class="hidden lg:block"> <b>100% звонков</b> и мгновенно <br class="hidden lg:block"> анализировать их!
+        </h3>
 
-      <div class="relative accent small">
-        А также онлайн-встреч, коммуникаций в <br> торговом зале и переписок в соцсетях или <br>мессенджерах
-        <div class="absolute -bottom-10 left-0">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.png" alt="">
+        <div class="relative accent small lg:absolute lg:-top-[124px] lg:-right-[369px] text-end">
+          А также онлайн-встреч, коммуникаций в <br> торговом зале и переписок в соцсетях или <br>мессенджерах
+          <div class="lg:hidden absolute -bottom-10 left-0">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.png" alt="">
+          </div>
+          <div class="hidden lg:block absolute -bottom-[100px] -left-10">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-top-spiral.png" alt="">
+          </div>
         </div>
       </div>
-    </div>
 
-    <button class="btn primary flex gap-2">
-      <div>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.png" alt="">
+      <button class="btn primary flex gap-2 lg:ml-0">
+        <div>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.png" alt="">
+        </div>
+        Смотреть видео
+      </button>
+
+      <div class="hidden lg:block absolute -right-3 top-[84px] z-0">
+        <img class="mb-2" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-laptop.png" alt="">
+        <div class="badge mx-auto">Эврика360</div>
       </div>
-      Смотреть видео
-    </button>
+    </div>
   </section>
 
   <!-- EXAMPLE CASE section -->
