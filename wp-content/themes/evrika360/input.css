@@ -187,7 +187,7 @@ Text Domain: evrika
   }
 
   .tab {
-    @apply description flex items-center px-3 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold;
+    @apply description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] border-b border-b-grey-300 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold;
   }
 
   .flash-li {
@@ -448,7 +448,8 @@ Text Domain: evrika
     --slide-spacing: 24px;
   }
 }
-.feature-tabs-embla {
+.feature-tabs-embla,
+.assessment-tabs-embla {
   --slide-spacing: 12px;
   --slide-size: 200px;
 }
@@ -473,7 +474,8 @@ Text Domain: evrika
   margin-left: calc(var(--slide-spacing) * -1);
   transition: height 0.2s;
 }
-.feature-tabs-embla__container {
+.feature-tabs-embla__container,
+.assessment-tabs-embla__container {
   margin-left: 0;
 }
 .embla__slide {

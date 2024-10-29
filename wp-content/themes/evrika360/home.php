@@ -605,18 +605,21 @@
 
   <!-- IMMEDIATE ASSESMENT section -->
   <section class="overflow-hidden">
-    <div class="wrapper mt-[26px] mb-[56px] space-y-6">
-      <h3 class="relative">
-        <b>Эврика360</b> даёт мгновенную объективную оценку работы компании
+    <div class="wrapper mt-[26px] mb-[56px] lg:mb-20 space-y-6 lg:space-y-10">
+      <h3 class="relative lg:mx-auto lg:text-center">
+        <b>Эврика360</b> даёт мгновенную объективную оценку <br class="hidden lg:block"> работы компании
 
         <div class="absolute -top-[30px] -left-[21px]">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown.png" alt="">
         </div>
+        <div class="hidden lg:block absolute -top-4 -right-6">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown-right.png" alt="">
+        </div>
       </h3>
-      <p>Речевая аналитика минимизирует ручную работу, дополняет ваши текущие отчёты новыми данными и упрощает управление компанией</p>
+      <p class="lg:mx-auto lg:text-center">Речевая аналитика минимизирует ручную работу, дополняет ваши <br class="hidden lg:block"> текущие отчёты новыми данными и упрощает управление компанией</p>
     </div>
 
-    <div class="peer embla assessment-tabs-embla mb-4">
+    <div class="peer embla assessment-tabs-embla mb-4 lg:mb-12">
       <div class="wrapper embla__viewport assessment-tabs-embla__viewport">
         <div class="embla__container assessment-tabs-embla__container">
           <label class="tab">
@@ -644,11 +647,11 @@
     </div>
 
     <!-- #1 assesment tab -->
-    <div class="hidden peer-has-[label:nth-child(1)_:checked]:block bg-orange-50 border border-orange-200 pt-10 pb-[90px] overflow-hidden">
-      <div class="flex flex-col gap-y-8">
-        <h3 class="wrapper">Получайте объективную оценку причин отказа без эмоций менеджера</h3>
+    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[488px] pt-10 pb-[90px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(1)_:checked]:block bg-orange-50 border border-orange-200 overflow-hidden">
+      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+        <h3 class="wrapper lg:text-2xl/[130%]">Получайте объективную оценку причин отказа без эмоций менеджера</h3>
 
-        <div class="w-fit max-w-[93%] self-end">
+        <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
         </div>
 
@@ -667,11 +670,11 @@
     </div>
 
     <!-- #2 assesment tab -->
-    <div class="hidden peer-has-[label:nth-child(2)_:checked]:block bg-orange-50 border border-orange-200 pt-10 pb-[90px] overflow-hidden">
-      <div class="flex flex-col gap-y-8">
-        <h3 class="wrapper">Повышайте эффективность рекрутеров</h3>
+    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[488px] pt-10 pb-[90px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(2)_:checked]:block bg-orange-50 border border-orange-200 overflow-hidden">
+      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+        <h3 class="wrapper lg:text-2xl/[130%]">Повышайте эффективность рекрутеров</h3>
 
-        <div class="w-fit max-w-[93%] self-end">
+        <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
         </div>
 
@@ -690,11 +693,11 @@
     </div>
 
     <!-- #3 assesment tab -->
-    <div class="hidden peer-has-[label:nth-child(3)_:checked]:block bg-orange-50 border border-orange-200 pt-10 pb-[90px] overflow-hidden">
-      <div class="flex flex-col gap-y-8">
-        <h3 class="wrapper">Знайте боли, потребности и возражения своей аудитории</h3>
+    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[488px] pt-10 pb-[90px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(3)_:checked]:block bg-orange-50 border border-orange-200 overflow-hidden">
+      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+        <h3 class="wrapper lg:text-2xl/[130%]">Знайте боли, потребности и возражения своей аудитории</h3>
 
-        <div class="w-fit max-w-[93%] self-end">
+        <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-dictionary.png" alt="словарь">
         </div>
 
@@ -716,11 +719,11 @@
     </div>
 
     <!-- #4 assesment tab -->
-    <div class="hidden peer-has-[label:nth-child(4)_:checked]:block bg-orange-50 border border-orange-200 pt-10 pb-[90px] overflow-hidden">
-      <div class="flex flex-col gap-y-8">
-        <h3 class="wrapper">Ускоряйте обучение и адаптацию новых менеджеров</h3>
+    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[488px] pt-10 pb-[90px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(4)_:checked]:block bg-orange-50 border border-orange-200 overflow-hidden">
+      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+        <h3 class="wrapper lg:text-2xl/[130%]">Ускоряйте обучение и адаптацию новых менеджеров</h3>
 
-        <div class="w-fit max-w-[93%] self-end">
+        <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
         </div>
 
