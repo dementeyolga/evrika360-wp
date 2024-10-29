@@ -782,21 +782,26 @@
   </section>
 
   <!-- FREE DEMO section -->
-  <section class="relative wrapper mt-[75px] pb-[72px] bg-pattern border border-light-blue-200 text-white">
-    <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
+  <section class="relative mt-[75px] pb-[72px] lg:pb-0 lg:mx-10 lg:rounded-2xl bg-pattern border border-light-blue-200 text-white">
+    <div class="absolute inset-0 -z-20 bg-dark-linear lg:rounded-2xl"></div>
 
-    <div class="-mt-[75px] mb-[46px] scale-105 flex justify-center">
-      <img src="<?php echo get_template_directory_uri() ?>/assets/images/conference.png" alt="онлайн-демо">
+    <div class="wrapper lg:flex-row lg:gap-20">
+      <div class="-mt-[75px] lg:-mt-12 mb-[46px] scale-105 lg:scale-100 lg:-ml-24 shrink-0 flex justify-center items-start">
+        <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/conference.png" alt="онлайн-демо">
+        <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/conference-desktop.png" alt="онлайн-демо">
+      </div>
+
+      <div class="lg:pt-[72px] lg:pb-[90px]">
+        <div class="mb-10 lg:mb-[56px] space-y-6 lg:space-y-8">
+          <h3>Записывайтесь на <b>бесплатную демонстрацию</b> с экспертом</h3>
+          <p>
+            За 30 минут на примере звонков вашей компании эксперт покажет, чем будет полезна речевая аналитика, и рассчитает стоимость внедрения.
+          </p>
+        </div>
+
+        <button class="btn primary lg:ml-0">Записаться на демо</button>
+      </div>
     </div>
-
-    <div class="mb-10 space-y-6">
-      <h3>Записывайтесь на <b>бесплатную демонстрацию</b> с экспертом</h3>
-      <p>
-        За 30 минут на примере звонков вашей компании эксперт покажет, чем будет полезна речевая аналитика, и рассчитает стоимость внедрения.
-      </p>
-    </div>
-
-    <button class="btn primary">Записаться на демо</button>
   </section>
 
   <!-- DATA SECURITY section -->
