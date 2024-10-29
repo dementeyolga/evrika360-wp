@@ -118,7 +118,7 @@ Text Domain: evrika
   }
 
   h4 {
-    @apply w-fit text-xl/[130%];
+    @apply w-fit text-xl/[130%] lg:text-2xl/[140%];
   }
 
   h5 {

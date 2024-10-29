@@ -718,6 +718,13 @@ h4 {
   line-height: 130%;
 }
 
+@media (min-width: 1024px) {
+  h4 {
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+}
+
 h5 {
   width: -moz-fit-content;
   width: fit-content;
@@ -2894,6 +2901,14 @@ p {
     top: 2.5rem;
   }
 
+  .lg\:-bottom-9 {
+    bottom: -2.25rem;
+  }
+
+  .lg\:-right-\[136px\] {
+    right: -136px;
+  }
+
   .lg\:z-10 {
     z-index: 10;
   }
@@ -2922,6 +2937,10 @@ p {
 
   .lg\:mb-10 {
     margin-bottom: 2.5rem;
+  }
+
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
   }
 
   .lg\:mb-14 {
@@ -2980,8 +2999,16 @@ p {
     margin-top: 76px;
   }
 
-  .lg\:mb-12 {
-    margin-bottom: 3rem;
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:mb-\[122px\] {
+    margin-bottom: 122px;
+  }
+
+  .lg\:ml-\[93px\] {
+    margin-left: 93px;
   }
 
   .lg\:block {
@@ -2990,6 +3017,10 @@ p {
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:grid {
+    display: grid;
   }
 
   .lg\:hidden {
@@ -3016,12 +3047,12 @@ p {
     height: 100%;
   }
 
-  .lg\:min-h-\[525px\] {
-    min-height: 525px;
-  }
-
   .lg\:min-h-\[488px\] {
     min-height: 488px;
+  }
+
+  .lg\:min-h-\[525px\] {
+    min-height: 525px;
   }
 
   .lg\:w-1\/2 {
@@ -3105,8 +3136,16 @@ p {
     flex-direction: column;
   }
 
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
   .lg\:items-center {
     align-items: center;
+  }
+
+  .lg\:items-baseline {
+    align-items: baseline;
   }
 
   .lg\:justify-start {
@@ -3123,6 +3162,10 @@ p {
 
   .lg\:gap-12 {
     gap: 3rem;
+  }
+
+  .lg\:gap-5 {
+    gap: 1.25rem;
   }
 
   .lg\:gap-6 {
@@ -3202,6 +3245,10 @@ p {
 
   .lg\:p-6 {
     padding: 1.5rem;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
   }
 
   .lg\:px-10 {

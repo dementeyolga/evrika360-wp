@@ -743,27 +743,28 @@
   </section>
 
   <!-- REVIEW section -->
-  <section>
-    <div class="wrapper flex flex-col items-center">
-      <div class="mb-6">
+  <section class="lg:wrapper-no-flex lg:grid lg:grid-cols-2 lg:items-start lg:gap-5">
+    <div class="wrapper flex flex-col items-center lg:items-start lg:mt-0">
+      <div class="mb-6 lg:mb-10">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-transparent.png" alt="">
       </div>
 
-      <h3 class="mb-5">
+      <h3 class="mb-5 lg:mb-[122px]">
         — Звучит интересно. <br>
         Как можно <b>протестировать</b>?
       </h3>
 
-      <div class="mb-[86px] w-fit relative accent small">
+      <div class="mb-[86px] lg:mb-0 lg:ml-[93px] w-fit relative accent small">
         У нас есть предложение!
 
-        <div class="absolute -bottom-[64px] right-10">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy.png" alt="">
+        <div class="absolute -bottom-[64px] right-10 lg:-bottom-9 lg:-right-[136px]">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy.png" alt="">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-desktop.png" alt="">
         </div>
       </div>
     </div>
 
-    <div class="wrapper py-8 bg-light-blue-100 border border-light-blue-200">
+    <div class="wrapper py-8 lg:p-8 lg:rounded-md bg-light-blue-100 border border-light-blue-200">
       <h4 class="mb-8">«Ваш отчёт по эффективности менеджеров <b>просто бомба</b>»</h4>
       <p class="mb-10">Раньше у меня просто не было этих данных, сейчас сократил количество МОПов с 8 до 6, а продажи только выросли. Мне нравится всё. Жду новых обновлений. </p>
 
