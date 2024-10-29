@@ -422,87 +422,127 @@
 
   <!-- EXAMPLE CASE section -->
   <section>
-    <div class="wrapper mb-[56px] flex flex-col gap-16">
-      <div class="relative">
-        <div class="absolute -bottom-[70px] right-8">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted.png" alt="">
+    <div class="wrapper mb-[56px] lg:mb-[120px] flex flex-col gap-16 lg:gap-[94px]">
+      <div class="relative flex flex-col lg:flex-row lg:gap-12">
+        <div class="absolute -bottom-[70px] right-8 lg:right-32 lg:-bottom-[62px]">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted.png" alt="">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-desktop.png" alt="">
         </div>
 
-        <div class="mb-6">
-          <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/case-client.png" alt="клиент">
+        <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0">
+          <img class="w-full lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/case-client.png" alt="клиент">
+          <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/case-client-desktop.png" alt="клиент">
         </div>
 
-        <div class="mb-4 py-2 px-5 xs:w-fit rounded-lg text-white bg-blue-200">
-          <h5>
-            <b>01.</b> Знакомьтесь, это Антон
-          </h5>
-        </div>
+        <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
+          <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
+            <h5>
+              <b>01.</b> Знакомьтесь, это Антон
+            </h5>
+          </div>
 
-        <p class="description">
-          Антон долго выбирал товар,
-          заказал доставку, но <b> заказ пришел
-            с опозданием и браком </b>.
-          Он звонит в колл-центр магазина.
-        </p>
+          <div class="relative">
+            <div class="hidden lg:block absolute -top-[25px] -left-[22px]">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.png" alt="">
+            </div>
+
+            <p class="description">
+              Антон долго выбирал товар,
+              заказал доставку, но <b> заказ пришел
+                с опозданием и браком </b>.
+              <br> Он звонит в колл-центр магазина.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="relative">
-        <div class="absolute -bottom-[92px] right-6">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral.png" alt="">
+      <div class="relative flex flex-col lg:flex-row lg:gap-12 lg:justify-end">
+        <div class="absolute -bottom-[92px] right-6 lg:left-[109px] lg:-bottom-[61px]">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral.png" alt="">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-right.png" alt="">
         </div>
 
-        <div class="mb-6">
-          <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/case-operator.png" alt="оператор">
+        <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0 lg:order-2">
+          <img class="w-full lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/case-operator.png" alt="оператор">
+          <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/case-operator-desktop.png" alt="оператор">
         </div>
 
-        <div class="mb-4 py-2 px-5 xs:w-fit rounded-lg text-white bg-blue-200">
-          <h5>
-            <b>02.</b> А это Марина, оператор колл-центра
-          </h5>
-        </div>
+        <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
+          <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
+            <h5>
+              <b>02.</b> А это Марина, оператор колл-центра
+            </h5>
+          </div>
 
-        <p class="description">
-          Она приняла звонок, не поздоровалась, послушала Антона и сказала,
-          что это <b>его проблемы</b>, после чего повесила трубку.
-        </p>
+          <div class="relative">
+            <div class="hidden lg:block absolute -top-[25px] right-0">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-right.png" alt="">
+            </div>
+
+            <p class="description">
+              Она приняла звонок, не поздоровалась, послушала Антона и сказала,
+              что это <b>его проблемы</b>, после чего повесила трубку.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <div class="mb-6">
-          <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/case-manager.png" alt="руководитель">
+      <div class="relative flex flex-col lg:flex-row lg:gap-12">
+        <div class="hidden lg:block absolute -bottom-20 right-[154px]">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-2.png" alt="">
         </div>
 
-        <div class="mb-4 py-2 px-5 xs:w-fit rounded-lg text-white bg-blue-200">
-          <h5>
-            <b>03.</b> А это Вы, руководитель компании
-          </h5>
+        <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0">
+          <img class="w-full lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/case-manager.png" alt="руководитель">
+          <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/case-manager-desktop.png" alt="руководитель">
         </div>
 
-        <p class="description">
-          Вы не знаете об этой ситуации и вряд ли узнаете, если <b>только Антон не напишет жалобу</b>. <br>
-          Но вы точно потеряли <b><i>клиента</i></b>
-          и возможность заработать на его рекомендациях своим друзьям и знакомым.
-        </p>
+        <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
+          <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
+            <h5>
+              <b>03.</b> А это Вы, руководитель компании
+            </h5>
+          </div>
+
+          <div class="relative">
+            <div class="hidden lg:block absolute -top-[20px] -left-[22px]">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.png" alt="">
+            </div>
+
+            <p class="description">
+              Вы не знаете об этой ситуации и вряд ли узнаете, если <b>только Антон не напишет жалобу</b>.
+              Но вы точно потеряли <b><i>клиента</i></b>
+              и возможность заработать на его рекомендациях своим друзьям и знакомым.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="mb-10 pt-12 bg-dark-linear border border-light-blue-200">
-      <div class="wrapper">
-        <div class="mb-8 mx-auto py-3 px-5 xs:w-fit rounded-md text-dark-blue-500 bg-white">
-          <h4>
-            <b>04.</b> А это речевая аналитика
-          </h4>
+    <div class="mb-10 pt-12 lg:pt-9 lg:mx-10 lg:rounded-2xl bg-dark-linear border border-light-blue-200">
+      <div class="relative wrapper lg:flex-row lg:justify-between">
+        <div class="hidden lg:block absolute -right-[84px] -top-5 z-0">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/bg-chat.png" alt="">
         </div>
 
-        <p class="mb-6 text-white">
-          Сразу после разговора она определит ошибку Марины и пришлёт вам уведомление.
-        </p>
-        <p class="mb-10 text-white">
-          Так вы сохраните клиента, деньги и улучшите скрипты общения, чтобы таких ситуаций больше не возникало.
-        </p>
+        <div class="lg:w-[340px] lg:pb-[57px]">
+          <div class="mb-8 lg:mb-[68px] mx-auto lg:ml-0 py-3 px-5 xs:w-fit rounded-md text-dark-blue-500 bg-white">
+            <h4>
+              <b>04.</b> А это речевая аналитика
+            </h4>
+          </div>
 
-        <div class="flex justify-center">
-          <img class="w-full max-w-[70%]" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
+          <p class="mb-6 text-white">
+            Сразу после разговора она определит ошибку Марины и пришлёт вам уведомление.
+          </p>
+          <p class="mb-10 lg:mb-0 text-white">
+            Так вы сохраните клиента, деньги и улучшите скрипты общения, чтобы таких ситуаций больше не возникало.
+          </p>
+        </div>
+
+        <div class="flex justify-center lg:w-[439px] lg:mt-8 lg:mr-[113px] lg:z-10">
+          <img class="w-full max-w-[70%] lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
+          <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo-desktop.png" alt="">
         </div>
       </div>
     </div>
