@@ -837,42 +837,47 @@
 
   <!-- CASES section -->
   <section id="cases" class="wrapper space-y-8 pt-[110px] -mt-[110px] bg-lighter-orange-circle">
-    <div class="space-y-7">
-      <h3 class="relative">— Какие есть примеры <b>использования</b>?
+    <div class="space-y-7 lg:space-y-9">
+      <div class="flex flex-col gap-7 lg:flex-row lg:justify-between lg:gap-5">
+        <h3 class="relative h-fit lg:mt-[120px]">— Какие есть примеры <br class="hidden lg:block"> <b>использования</b>?
 
-        <div class="absolute left-0 -bottom-8">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.png" alt="">
-        </div>
-      </h3>
+          <div class="absolute left-0 -bottom-8 lg:-bottom-6 lg:left-3">
+            <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.png" alt="">
+            <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-2.png" alt="">
+          </div>
+        </h3>
 
-      <div class="flex flex-col items-center">
-        <div>
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret.png" alt="">
-        </div>
+        <div class="flex flex-col items-center lg:max-w-[636px]">
+          <div>
+            <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret.png" alt="">
+            <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret-desktop.png" alt="">
+          </div>
 
-        <div class="chat">
-          — Речевая аналитика применима в любой сфере, где нужно общаться с клиентами
+          <div class="chat">
+            — Речевая аналитика применима в любой сфере, где нужно общаться с клиентами
+          </div>
         </div>
       </div>
 
       <div class="space-y-6 text-white">
         <!-- Case #1 -->
-        <div class="px-4 pt-8 pb-14 rounded-xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
-          <div class="card-badge mb-4">Сфера: производство и продажа мебели</div>
+        <div class="px-4 pt-8 pb-14 lg:px-10 lg:pt-8 lg:pb-[58px] lg:grid lg:grid-cols-2 lg:gap-[150px] rounded-xl lg:rounded-2xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
+          <div>
+            <div class="card-badge mb-4 lg:mb-8">Сфера: производство и продажа мебели</div>
+            <h4 class="mb-8">Взяли под контроль все звонки и подняли продажи на 27% <b>всего за 3 месяца</b></h4>
+          </div>
 
-          <h4 class="mb-8">Взяли под контроль все звонки и подняли продажи на 27% <b>всего за 3 месяца</b></h4>
-
-          <div class="space-y-6">
+          <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6">
             <div class="space-y-1">
-              <h2 class="font-medium">
+              <h2 class="font-medium md:text-[32px]/[130%]">
                 +27%
               </h2>
               <p>Рост выручки за 3 месяца</p>
             </div>
 
             <div class="space-y-1">
-              <div class="">
-                <h2 class="font-medium inline-block">
+              <div>
+                <h2 class="font-medium md:text-[32px]/[130%] inline-block">
                   +1900$
                 </h2>
                 <h4 class="inline-block">/мес</h4>
@@ -882,14 +887,14 @@
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium">
+              <h2 class="font-medium md:text-[32px]/[130%]">
                 2 <span class="line-through opacity-40 font-normal">5</span>
               </h2>
               <p>Человека в контроле качества</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium">
+              <h2 class="font-medium md:text-[32px]/[130%]">
                 100%
               </h2>
               <p>Звонков слушают</p>
@@ -898,35 +903,36 @@
         </div>
 
         <!-- Case #2 -->
-        <div class="px-4 pt-8 pb-14 rounded-xl border border-orange-100 bg-dark-blue-400 bg-white-wave-top">
-          <div class="card-badge mb-4">Сфера: натяжные потолки</div>
+        <div class="px-4 pt-8 pb-14 lg:px-10 lg:pt-8 lg:pb-[58px] lg:grid lg:grid-cols-2 lg:gap-[150px] rounded-xl lg:rounded-2xl border border-orange-100 bg-dark-blue-400 bg-white-wave-top">
+          <div class="lg:order-2">
+            <div class="card-badge mb-4 lg:mb-8">Сфера: натяжные потолки</div>
+            <h4 class="mb-8">За 1 день выявили халатность менеджеров, обновили штат и повысили конверсию в замер с 6 до 14%</b></h4>
+          </div>
 
-          <h4 class="mb-8">За 1 день выявили халатность менеджеров, обновили штат и повысили конверсию в замер с 6 до 14%</b></h4>
-
-          <div class="space-y-6">
+          <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6">
             <div class="space-y-1">
-              <h2 class="font-medium">
+              <h2 class="font-medium md:text-[32px]/[130%]">
                 +133%
               </h2>
               <p>Рост конверсии в замер</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium">
+              <h2 class="font-medium md:text-[32px]/[130%]">
                 +118,8%
               </h2>
               <p>Рост среднемесячной выручки</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium">
+              <h2 class="font-medium md:text-[32px]/[130%]">
                 1 чел
               </h2>
               <p>Контроль качества + речевая аналитика</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium">
+              <h2 class="font-medium md:text-[32px]/[130%]">
                 -1900$
               </h2>
               <p>Снижение бюджета на рекламу</p>
@@ -935,7 +941,10 @@
         </div>
       </div>
 
-      <button class="btn primary">Протестировать на своих данных</button>
+      <div>
+        <button class="btn primary lg:mt-[100px]">Протестировать на своих данных</button>
+      </div>
+
     </div>
   </section>
 

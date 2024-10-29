@@ -199,7 +199,7 @@ Text Domain: evrika
   }
 
   .card-badge {
-    @apply py-2 px-3 w-fit text-xs/[150%] text-white rounded-2xl bg-orange-400;
+    @apply py-2 px-3 w-fit text-xs/[150%] lg:text-base/[150%] text-white rounded-2xl bg-orange-400;
   }
 
   .table-unit {
@@ -378,11 +378,19 @@ Text Domain: evrika
   .bg-white-wave-top {
     background-image: url(./assets/images/bg-white-wave-top.png);
     background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/high-arc.png);
+    }
   }
 
   .bg-white-wave-bottom-left {
     background-image: url(./assets/images/bg-white-wave-bottom-left.png);
     background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/white-wave-right-desktop.png);
+    }
   }
 
   .bg-light-curve-to-top {
