@@ -461,7 +461,8 @@ Text Domain: evrika
   }
 }
 .feature-tabs-embla,
-.assessment-tabs-embla {
+.assessment-tabs-embla,
+.automatization-tabs-embla {
   --slide-spacing: 12px;
   --slide-size: 200px;
 }
@@ -495,7 +496,8 @@ Text Domain: evrika
   }
 }
 .feature-tabs-embla__container,
-.assessment-tabs-embla__container {
+.assessment-tabs-embla__container,
+.automatization-tabs-embla__container {
   margin-left: 0;
 }
 .embla__slide {

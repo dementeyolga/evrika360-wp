@@ -950,29 +950,32 @@
 
   <!-- AUTOMATIZATION section -->
   <section class="overflow-hidden">
-    <div class="pt-[46px] space-y-[58px]">
-      <div class="wrapper flex flex-col gap-6">
-        <div class="chat secondary">— Что-нибудь ещё?</div>
-        <div class="chat self-end">— Да, есть ещё кое-что...</div>
+    <div class="pt-[46px] space-y-[58px] lg:space-y-20">
+      <div class="lg:wrapper-no-flex flex flex-col gap-y-[58px] lg:flex-row lg:justify-between">
+        <div class="max-md:wrapper flex flex-col gap-6 lg:w-[440px]">
+          <div class="chat secondary">— Что-нибудь ещё?</div>
+          <div class="chat self-end">— Да, есть ещё кое-что...</div>
+        </div>
+
+        <div class="max-md:wrapper space-y-[22px] lg:max-w-[565px]">
+          <h3>
+            <b>Эврика360</b> <br class="lg:hidden"> автоматизирует рутину
+          </h3>
+
+          <p class="text-grey-400">
+            Делегируйте важные, но скучные задачи речевой аналитике и освободите больше времени для принятия важных управленческих решений
+          </p>
+        </div>
       </div>
 
-      <div class="wrapper space-y-[22px]">
-        <h3>
-          <b>Эврика360</b> <br> автоматизирует рутину
-        </h3>
-
-        <p class="text-grey-400">
-          Делегируйте важные, но скучные задачи речевой аналитике и освободите больше времени для принятия важных управленческих решений
-        </p>
-      </div>
 
       <!-- Automatization tabs -->
-      <div class="space-y-4">
+      <div class="space-y-4 lg:space-y-12">
         <div class="peer embla automatization-tabs-embla">
           <div class="wrapper embla__viewport automatization-tabs-embla__viewport">
             <div class="embla__container automatization-tabs-embla__container">
               <label class="tab">
-                Готовые <br> интеграции
+                Готовые <br class="lg:hidden"> интеграции
                 <input class="hidden" name="automatization-tabs" type="radio" checked>
               </label>
 
@@ -995,18 +998,19 @@
         </div>
 
         <!-- #1 automatization tab -->
-        <div class="hidden peer-has-[label:nth-child(1)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
-          <div class="flex flex-col gap-y-8">
-            <div class="wrapper space-y-4">
-              <h3>Простая интеграция с действующими системами и сервисами</h3>
-              <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
+        <div class="relative lg:wrapper-no-flex lg:min-h-[488px] hidden pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(1)_:checked]:block bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <div class="wrapper space-y-4 lg:mt-[30px]">
+              <h3 class="md:text-2xl/[130%]">Простая интеграция с действующими системами и сервисами</h3>
+              <div class="p-2 w-fit description  text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Настраиваем самостоятельно или с минимальным участие ваших тех.специалистов</div>
             </div>
 
-            <div class="w-fit max-w-[93%] self-end">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps.png" alt="главный экран">
+            <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps.png" alt="главный экран">
+              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps-desktop.png" alt="главный экран">
             </div>
 
-            <ul class="wrapper space-y-4">
+            <ul class="wrapper space-y-4 lg:space-y-3">
               <li class="flash-li">CRM</li>
               <li class="flash-li">Чаты и мессенджеры</li>
               <li class="flash-li">Телефония</li>
@@ -1016,52 +1020,54 @@
         </div>
 
         <!-- #2 automatization tab -->
-        <div class="hidden peer-has-[label:nth-child(2)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
-          <div class="flex flex-col gap-y-8">
-            <h3 class="wrapper">Автоматическое заполнение CRM по итогам звонка</h3>
+        <div class="relative lg:wrapper-no-flex lg:min-h-[488px] hidden pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(2)_:checked]:block bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <h3 class="wrapper md:text-2xl/[130%]">Автоматическое заполнение CRM по итогам звонка</h3>
 
-            <div class="w-fit max-w-[93%] self-end">
+            <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/bitrix-24.png" alt=",битрикс-24">
             </div>
 
-            <ul class="wrapper space-y-4">
+            <ul class="wrapper space-y-4 lg:space-y-3">
               <li class="flash-li">Экономьте время менеджера на <b>внесении данных</b> после звонка</li>
               <li class="flash-li"><b>Минимизируйте</b> ошибки и пропуски в CRM</li>
               <li class="flash-li">Повышайте <b>эффективность менеджера</b> и шансы на закрытие сделки</li>
-              <li class="flash-li"><b>Получайте выводы</b> и рекомендации по итогам звонка
-                с помощью ChatGPT</li>
+              <li class="flash-li relative"><b>Получайте выводы</b> и рекомендации по итогам звонка
+                с помощью ChatGPT
+                <p class="badge absolute right-[3px] -top-[18px] translate-x-full bg-blue-100 text-white">New</p>
+              </li>
             </ul>
           </div>
         </div>
 
         <!-- #3 automatization tab -->
-        <div class="hidden peer-has-[label:nth-child(3)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 overflow-hidden">
-          <div class="flex flex-col gap-y-8">
-            <h3 class="wrapper">Получайте мгновенные уведомления с пометкой «ВАЖНО» </h3>
+        <div class="relative lg:wrapper-no-flex lg:min-h-[488px] hidden lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(3)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 overflow-hidden">
+          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <h3 class="wrapper md:text-2xl/[130%]">Получайте мгновенные уведомления с пометкой «ВАЖНО» </h3>
 
-            <ul class="wrapper space-y-4">
+            <ul class="wrapper space-y-4 lg:space-y-3">
               <li class="flash-li">Если менеджер произнес <b>«перезвоню с личного»</b>, вам придет мгновенное уведомление</li>
               <li class="flash-li">Клиент пригрозил, что будет подавать в суд? <br>
                 <b>Узнайте об этом раньше</b>, чем менеджер положил трубку, и урегулируйте ситуацию
               </li>
             </ul>
 
-            <div class="w-fit max-w-[80%] self-center">
+            <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[80%] self-center">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.png" alt="уведомления на телефон">
             </div>
           </div>
         </div>
 
         <!-- #4 automatization tab -->
-        <div class="hidden peer-has-[label:nth-child(4)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 pb-[72px] overflow-hidden">
-          <div class="flex flex-col gap-y-8">
-            <h3 class="wrapper">Готовые отчёты, адаптированные под вашу роль и потребности компании</h3>
+        <div class="relative lg:wrapper-no-flex lg:min-h-[488px] hidden pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(4)_:checked]:block bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <h3 class="wrapper md:text-2xl/[130%]">Готовые отчёты, адаптированные под вашу роль и потребности компании</h3>
 
-            <div class="w-fit max-w-[93%] self-end">
+            <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
             </div>
 
-            <ul class="wrapper space-y-4">
+            <ul class="wrapper space-y-4 lg:space-y-3">
               <li class="flash-li"><b>Подробная расшифровка</b> каждого звонка с разделением на реплики сотрудника и клиента</li>
               <li class="flash-li"><b>Анализ звонка</b>: в каком тоне состоялся диалог, кто доминировал, кто перебивал и насколько часто</li>
               <li class="flash-li">Узнавайте, как <b>сотрудник презентовал</b> компанию и предложил ли дополнительные товары</li>
