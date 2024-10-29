@@ -388,6 +388,10 @@ Text Domain: evrika
   .bg-light-curve-to-top {
     background-image: url(./assets/images/bg-curve-to-top.png);
     background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/bg-curve-to-top-desktop.png);
+    }
   }
 
   .bg-light-wave-to-bottom {
