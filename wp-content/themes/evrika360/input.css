@@ -397,6 +397,10 @@ Text Domain: evrika
   .bg-light-wave-to-bottom {
     background-image: url(./assets/images/bg-curve-to-bottom.png);
     background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/bg-curve-to-bottom-desktop.png);
+    }
   }
 
   .bg-light-wave-to-top {
@@ -473,6 +477,14 @@ Text Domain: evrika
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
   transition: height 0.2s;
+
+  @media (min-width: 1024px) {
+    align-items: stretch;
+
+    .data-security-slide {
+      height: 100%;
+    }
+  }
 }
 .feature-tabs-embla__container,
 .assessment-tabs-embla__container {

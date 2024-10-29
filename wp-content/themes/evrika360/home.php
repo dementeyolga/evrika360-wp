@@ -805,19 +805,21 @@
   </section>
 
   <!-- DATA SECURITY section -->
-  <section class="overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle bg-[center_-40%] xs:bg-[center_top]">
-    <div class="wrapper mt-[38px] space-y-11">
-      <h3 class="relative">
+  <section class="overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle bg-[center_-40%] lg:bg-[center_-85px] lg:bg-[length:600px] xs:bg-[center_top]">
+    <div class="wrapper relative mt-[38px] lg:mt-[50px] lg:pb-[68px] space-y-11 lg:items-end">
+      <h3 class="relative lg:mr-[169px]">
         — А что у вас с <b>безопасностью данных</b>?
 
-        <div class="absolute -bottom-[28px] left-1">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.png" alt="">
+        <div class="absolute -bottom-[28px] w-full flex justify-center">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.png" alt="">
+          <img class="hidden lg:block relative -right-10" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-desktop.png" alt="">
         </div>
       </h3>
 
       <div class="flex flex-col items-center">
-        <div>
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared.png" alt="">
+        <div class="lg:absolute left-0 bottom-0">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared.png" alt="">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared-desktop.png" alt="">
         </div>
 
         <div class="chat">
@@ -826,8 +828,10 @@
       </div>
     </div>
 
-    <div class="wrapper -mt-[37px] pt-[85px] pb-[72px] bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-bottom">
-      <?php include 'parts/data-security-slider.php' ?>
+    <div class="-mt-[37px] lg:mt-0 pt-[85px] pb-[72px] lg:pt-[100px] lg:pb-[110px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-bottom">
+      <div class="wrapper">
+        <?php include 'parts/data-security-slider.php' ?>
+      </div>
     </div>
   </section>
 

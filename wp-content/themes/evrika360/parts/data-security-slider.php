@@ -65,11 +65,13 @@
     </div>
   </div>
 
-  <div class="embla__buttons hidden">
-    <button class="embla__button embla__button--prev data-security-embla__button--prev" type="button">
+  <div class="embla__buttons">
+    <button class="rotate-180 embla__button embla__button--prev data-security-embla__button--prev" type="button">
+      <?php include 'arrow-right.php' ?>
     </button>
 
     <button class="embla__button embla__button--next data-security-embla__button--next" type="button">
+      <?php include 'arrow-right.php' ?>
     </button>
   </div>
 
