@@ -14,7 +14,7 @@
     <input id="headerScrollToggle" class="hidden" type="checkbox">
 
     <div class="lg:hidden wrapper flex-row py-[22px] flex justify-between items-center">
-      <a href="<?php get_home_url() ?>" class="text-white group-has-[:checked]:text-blue-100">
+      <a href="/" class="text-white group-has-[:checked]:text-blue-100">
         <?php include 'parts/evrika-logo.php' ?>
       </a>
 
@@ -24,7 +24,7 @@
     </div>
 
     <div class="hidden lg:flex wrapper flex-row py-[33px] justify-between items-center gap-[22%] group-has-[:checked]:gap-3">
-      <a href="<?php get_home_url(null, '') ?>" class="text-white group-has-[:checked]:text-blue-100">
+      <a href="/" class="text-white group-has-[:checked]:text-blue-100">
         <div class="group-has-[:checked]:hidden">
           <?php include 'parts/evrika-logo-desktop.php' ?>
         </div>

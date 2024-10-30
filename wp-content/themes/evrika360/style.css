@@ -2890,16 +2890,17 @@ p {
   opacity: 0.5;
 }
 
-.embla__dot:first-child:has(+ .embla__dot--selected:last-child) {
+/* Styles for loop sliders (to highlight first dot when the last dot is selected) */
+
+/* .embla__dot:first-child:has(+ .embla__dot--selected:last-child) {
   width: 16px;
   height: 16px;
 }
-
 .embla__dot:first-child:has(~ .embla__dot--selected:last-child)::after {
   height: 8px;
   width: 8px;
   opacity: 0.5;
-}
+} */
 
 .\*\:small-text > * {
   font-size: 0.75rem;
@@ -3119,6 +3120,10 @@ p {
 
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:max-w-\[70\%\] {
+    max-width: 70%;
   }
 
   .sm\:translate-x-6 {
@@ -3548,6 +3553,16 @@ p {
     flex-grow: 1;
   }
 
+  .lg\:-translate-x-1\/2 {
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:translate-y-full {
+    --tw-translate-y: 100%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .lg\:scale-100 {
     --tw-scale-x: 1;
     --tw-scale-y: 1;
@@ -3748,20 +3763,16 @@ p {
     background-image: none;
   }
 
-  .lg\:bg-\[length\:600px\] {
-    background-size: 600px;
-  }
-
   .lg\:bg-\[length\:40\%\] {
     background-size: 40%;
   }
 
-  .lg\:bg-\[center_-85px\] {
-    background-position: center -85px;
+  .lg\:bg-\[length\:600px\] {
+    background-size: 600px;
   }
 
-  .lg\:bg-\[40\%\] {
-    background-position: 40%;
+  .lg\:bg-\[center_-85px\] {
+    background-position: center -85px;
   }
 
   .lg\:bg-\[left_top\] {

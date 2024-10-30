@@ -541,7 +541,7 @@
         </div>
 
         <div class="flex justify-center lg:w-[439px] lg:h-fit lg:self-end lg:mt-8 lg:mr-[113px] lg:z-10">
-          <img class="w-full max-w-[70%] lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
+          <img class="w-full sm:max-w-[70%] lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
           <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo-desktop.png" alt="">
         </div>
       </div>
@@ -1080,7 +1080,7 @@
   </section>
 
   <!-- PRICES section -->
-  <section id="prices" class="wrapper pt-[120px] -mt-[110px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top]">
+  <section id="prices" class="wrapper pt-[120px] -mt-[110px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top] overflow-hidden">
     <div class="lg:mb-[130px] lg:mt-[35px] lg:flex lg:justify-center lg:items-center">
       <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
         <h3 class="mb-1 text-center">— Сколько стоит </h3>
@@ -1212,7 +1212,7 @@
           А что еще?
         </label>
 
-        <div class="hidden max-lg:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 -translate-x-1/2 lg:bottom-6 translate-y-full lg:w-[380px]">
+        <div class="hidden max-lg:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-6 lg:translate-y-full lg:w-[380px]">
           <div class="grid grid-cols-2 gap-2">
             <div class="space-y-2">
               <h5 class="font-bold">$0.015</h5>

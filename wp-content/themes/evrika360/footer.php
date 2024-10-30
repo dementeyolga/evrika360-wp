@@ -1,7 +1,7 @@
 <?php wp_footer(); ?>
 
 <footer class="wrapper mt-[64px] pb-10 space-y-8 lg:space-y-10">
-  <div class="flex flex-col gap:8 lg:flex-row lg:justify-between lg:items-center">
+  <div class="flex flex-col gap-8 lg:flex-row lg:justify-between lg:items-center">
     <div>
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-logo-footer.png" alt="">
     </div>
@@ -21,11 +21,11 @@
       <button class="mx-0 xs:shrink xs:grow-0 grow btn dark">Заказать звонок</button>
 
       <div class="grow-0 flex gap-2 items-center justify-end">
-        <a>
+        <a class="shrink-0">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon.png" alt="">
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon-desktop.png" alt="">
         </a>
-        <a>
+        <a class="shrink-0">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon.png" alt="">
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon-desktop.png" alt="">
         </a>

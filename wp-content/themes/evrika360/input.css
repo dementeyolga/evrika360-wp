@@ -650,7 +650,9 @@ Text Domain: evrika
   width: 8px;
   opacity: 0.5;
 }
-.embla__dot:first-child:has(+ .embla__dot--selected:last-child) {
+
+/* Styles for loop sliders (to highlight first dot when the last dot is selected) */
+/* .embla__dot:first-child:has(+ .embla__dot--selected:last-child) {
   width: 16px;
   height: 16px;
 }
@@ -658,4 +660,4 @@ Text Domain: evrika
   height: 8px;
   width: 8px;
   opacity: 0.5;
-}
+} */

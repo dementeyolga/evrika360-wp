@@ -11,7 +11,7 @@
 <body <?php body_class(); ?> class="m-auto">
   <header class="w-full max-md:fixed z-40 max-md:bg-white-glass">
     <div class="lg:hidden wrapper flex-row py-[22px] flex justify-between items-center">
-      <a href="<?php get_home_url() ?>" class="text-blue-100">
+      <a href="/" class="text-blue-100">
         <?php include 'parts/evrika-logo.php' ?>
       </a>
 
@@ -21,7 +21,7 @@
     </div>
 
     <div class="hidden lg:flex wrapper flex-row py-[33px] justify-between items-center gap-[22%]">
-      <a href="<?php get_home_url(null, '') ?>" class="text-blue-100">
+      <a href="/" class="text-blue-100">
         <?php include 'parts/evrika-logo-desktop.php' ?>
       </a>
 
@@ -78,19 +78,19 @@
 
       <ul class="mb-[55px] space-y-4 text-white">
         <li>
-          <a href="#departments">Для кого</a>
+          <a href="/#departments">Для кого</a>
         </li>
         <li>
-          <a href="#features">Возможности</a>
+          <a href="/#features">Возможности</a>
         </li>
         <li>
-          <a href="#how-it-works">Как работает</a>
+          <a href="/#how-it-works">Как работает</a>
         </li>
         <li>
-          <a href="#cases">Кейсы</a>
+          <a href="/#cases">Кейсы</a>
         </li>
         <li>
-          <a href="#prices">Стоимость</a>
+          <a href="/#prices">Стоимость</a>
         </li>
       </ul>
 
