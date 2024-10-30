@@ -1080,66 +1080,76 @@
   </section>
 
   <!-- PRICES section -->
-  <section id="prices" class="wrapper pt-[120px] -mt-[110px] overflow-hidden bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top]">
-    <div class="mb-10 mx-auto w-fit flex flex-col items-center">
-      <h3 class="mb-1 text-center">— Сколько стоит </h3>
-      <h3 class="text-center">
-        <b class="relative">
-          Эврика360?
+  <section id="prices" class="wrapper pt-[120px] -mt-[110px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top]">
+    <div class="lg:mb-[73px] lg:mt-[35px] lg:flex lg:justify-center lg:items-center">
+      <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
+        <h3 class="mb-1 text-center">— Сколько стоит </h3>
+        <h3 class="text-center">
+          <b class="relative">
+            Эврика360?
 
-          <div class="absolute -inset-7 flex justify-center items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.png" alt="">
-          </div>
-        </b>
-      </h3>
-    </div>
+            <div class="absolute -inset-7 lg:-inset-4 lg:-bottom-1 lg:-left-2 flex justify-center items-center">
+              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.png" alt="">
+              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle-desktop.png" alt="">
+            </div>
+          </b>
+        </h3>
+      </div>
 
-    <div class="mb-10">
-      <?php include 'parts/prices-slider.php' ?>
-    </div>
-
-    <div class="mb-9 px-4 py-6 space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
-      <h4>Что входит в состав каждого пакета?</h4>
-
-      <ul class="space-y-2">
-        <div class="flash-li">Отчеты по показателям сотрудников</div>
-        <div class="flash-li">Отчет владельца/руководства</div>
-        <div class="flash-li">Поиск по ключевым словам</div>
-        <div class="flash-li">Обучение использованию сервиса</div>
-      </ul>
-
-      <label class="peer btn primary w-full flex items-center gap-2">
-        <div>
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/help-circle-icon.png" alt="">
-        </div>
-        <input type="checkbox" class="hidden">
-        А что еще?
-      </label>
-
-      <div class="hidden peer-has-[:checked]:block mt-6 p-4 space-y-4 rounded-md bg-white shadow-card">
-        <div class="grid grid-cols-2 gap-2">
-          <div class="space-y-2">
-            <h5 class="font-bold">$0.015</h5>
-            <p class="description text-grey-400">Перерасчет за минуту</p>
-          </div>
-
-          <div class="space-y-2">
-            <h5 class="font-bold">$30</h5>
-            <p class="description text-grey-400">Дополнительный пункт чек-листа</p>
-          </div>
-        </div>
-
-        <div class="space-y-4">
-          <h5 class="font-bold">обсуждается индивидуально</h5>
-          <p class="description text-grey-400">
-            Дополнительная интеграция с системой по API
-          </p>
-        </div>
+      <div class="hidden lg:block">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-logo-258.png" alt="">
       </div>
     </div>
 
-    <div>
-      <?php include 'parts/feature-price-slider.php' ?>
+
+    <div class="mb-10 lg:hidden">
+      <?php include 'parts/prices-slider.php' ?>
+    </div>
+
+    <div class="lg:flex lg:gap-6">
+      <div class="relative mb-9 px-4 py-6 h-fit lg:order-2 space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
+        <h4 class="lg:text-xl/[130%]">Что входит в состав каждого пакета?</h4>
+
+        <ul class="space-y-2">
+          <div class="flash-li">Отчеты по показателям сотрудников</div>
+          <div class="flash-li">Отчет владельца/руководства</div>
+          <div class="flash-li">Поиск по ключевым словам</div>
+          <div class="flash-li">Обучение использованию сервиса</div>
+        </ul>
+
+        <label class="peer btn primary w-full flex items-center gap-2 hover:cursor-pointer">
+          <div>
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/help-circle-icon.png" alt="">
+          </div>
+          <input type="checkbox" class="hidden">
+          А что еще?
+        </label>
+
+        <div class="hidden max-md:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 -translate-x-1/2 lg:bottom-6 translate-y-full lg:w-[380px]">
+          <div class="grid grid-cols-2 gap-2">
+            <div class="space-y-2">
+              <h5 class="font-bold">$0.015</h5>
+              <p class="description text-grey-400">Перерасчет за минуту</p>
+            </div>
+
+            <div class="space-y-2">
+              <h5 class="font-bold">$30</h5>
+              <p class="description text-grey-400">Дополнительный пункт чек-листа</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h5 class="font-bold">обсуждается индивидуально</h5>
+            <p class="description text-grey-400">
+              Дополнительная интеграция с системой по API
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:grow lg:shrink-0 lg:w-[720px]">
+        <?php include 'parts/feature-price-slider.php' ?>
+      </div>
     </div>
   </section>
 

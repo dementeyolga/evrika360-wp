@@ -20,8 +20,8 @@
       <!-- PRICING plan -->
       <div class="embla__slide">
         <div class="feature-price-slide">
-          <div class="table-unit table-heading">Абонплата в месяц</div>
-          <div class="flex flex-col font-bold">
+          <div class="table-unit table-heading lg:text-center">Абонплата в месяц</div>
+          <div class="flex flex-col font-bold lg:text-center">
             <div class="table-unit">$50</div>
             <div class="table-unit">$90</div>
             <div class="table-unit">$80</div>

@@ -518,6 +518,11 @@ Text Domain: evrika
     justify-content: space-between;
   }
 }
+.feature-price-embla .embla__buttons {
+  @media (min-width: 1280px) {
+    display: none;
+  }
+}
 .embla__button {
   width: 64px;
   height: 64px;
