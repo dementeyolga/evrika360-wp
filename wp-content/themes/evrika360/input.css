@@ -414,6 +414,10 @@ Text Domain: evrika
   .bg-light-wave-to-top {
     background-image: url(./assets/images/bg-wave-to-top.png);
     background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/bg-light-wave-to-top-desktop.png);
+    }
   }
 
   .bg-dark-linear {

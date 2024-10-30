@@ -1154,41 +1154,62 @@
   </section>
 
   <!-- ONLINE EXCURSION section -->
-  <section class="space-y-[60px]">
-    <div class="wrapper space-y-5">
-      <div class="flex flex-col items-center">
-        <div class="-mr-5">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy.png" alt="">
+  <section class="space-y-[60px] lg:space-y-[180px] ">
+    <div class="wrapper flex flex-col gap-5 lg:flex-row lg:gap-[58px] lg:items-center">
+      <div class="flex flex-col items-center shrink-0">
+        <div class="-mr-5 lg:mr-0 lg:ml-4">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy.png" alt="">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy-desktop.png" alt="">
         </div>
 
-        <div class="badge -mt-3">
+        <div class="badge -mt-3 lg:hidden">
           Эврика360
         </div>
       </div>
 
-      <h3 class="leading-[150%]">— Я честно рассказала о <b>речевой аналитике</b>.
-        Предлагаю записаться на <b>онлайн-экскурсию</b>
-        с нашим менеджером</h3>
-    </div>
-
-    <div class="wrapper pt-12 pb-20 bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
-      <h3 class="mb-8 leading-[140%]">
-        Запишитесь на экскурсию по сервису <b>речевой аналитики</b> Эврика360
-      </h3>
-
-      <ul class="mb-10 space-y-3 *:text-base/[150%]">
-        <div class="flash-li">Покажем, <b>как работает сервис</b> изнутри</div>
-        <div class="flash-li">Расскажем, как речевая аналитика может быть полезна <b>вашей компании</b></div>
-        <div class="flash-li">Найдём, в каких коммуникациях <b>заморожены деньги прямо сейчас</b></div>
-      </ul>
-
-      <button class="btn primary flex items-center gap-2">
-        <div>
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.png" alt="">
+      <div class="relative lg:grow">
+        <div class="badge hidden lg:flex mb-8">
+          Эврика360
         </div>
 
-        Записаться на экскурсию
-      </button>
+        <h3 class="leading-[150%]">— Я честно рассказала о <b>речевой аналитике</b>.
+          Предлагаю записаться на <b>онлайн-экскурсию</b>
+          с нашим менеджером</h3>
+
+        <div class="hidden lg:block absolute -bottom-[124px] right-[180px]">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-2.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-12 pb-20 lg:pt-20 lg:pb-[65px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
+      <div class="lg:wrapper-no-flex lg:grid lg:grid-cols-[632px_auto] lg:justify-between">
+        <div class="max-md:wrapper">
+          <h3 class="mb-8 lg:mb-12 leading-[140%]">
+            Запишитесь на экскурсию по сервису <b>речевой аналитики</b> Эврика360
+          </h3>
+
+          <ul class="mb-10 lg:mb-[64px] space-y-3 *:text-base/[150%] lg:*:text-xl/[150%]">
+            <div class="flash-li">Покажем, <b>как работает сервис</b> изнутри</div>
+            <div class="flash-li">Расскажем, как речевая аналитика может быть полезна <b>вашей компании</b></div>
+            <div class="flash-li">Найдём, в каких коммуникациях <b>заморожены деньги прямо сейчас</b></div>
+          </ul>
+
+          <button class="btn primary lg:ml-0 flex items-center gap-2">
+            <div>
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.png" alt="">
+            </div>
+
+            Записаться на экскурсию
+          </button>
+        </div>
+
+        <div class="hidden lg:block w-fit -mr-[127px] mt-10">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-excursion.png" alt="">
+        </div>
+      </div>
+
+
     </div>
   </section>
 </main>
