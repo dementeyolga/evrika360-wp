@@ -952,12 +952,12 @@
   <section class="overflow-hidden">
     <div class="pt-[46px] space-y-[58px] lg:space-y-20">
       <div class="lg:wrapper-no-flex flex flex-col gap-y-[58px] lg:flex-row lg:justify-between">
-        <div class="max-md:wrapper flex flex-col gap-6 lg:w-[440px]">
+        <div class="max-lg:wrapper flex flex-col gap-6 lg:w-[440px]">
           <div class="chat secondary">— Что-нибудь ещё?</div>
           <div class="chat self-end">— Да, есть ещё кое-что...</div>
         </div>
 
-        <div class="max-md:wrapper space-y-[22px] lg:max-w-[565px]">
+        <div class="max-lg:wrapper space-y-[22px] lg:max-w-[565px]">
           <h3>
             <b>Эврика360</b> <br class="lg:hidden"> автоматизирует рутину
           </h3>
@@ -1125,7 +1125,7 @@
           А что еще?
         </label>
 
-        <div class="hidden max-md:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 -translate-x-1/2 lg:bottom-6 translate-y-full lg:w-[380px]">
+        <div class="hidden max-lg:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 -translate-x-1/2 lg:bottom-6 translate-y-full lg:w-[380px]">
           <div class="grid grid-cols-2 gap-2">
             <div class="space-y-2">
               <h5 class="font-bold">$0.015</h5>
@@ -1184,7 +1184,7 @@
 
     <div class="pt-12 pb-20 lg:pt-20 lg:pb-[65px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
       <div class="lg:wrapper-no-flex lg:grid lg:grid-cols-[632px_auto] lg:justify-between">
-        <div class="max-md:wrapper">
+        <div class="max-lg:wrapper">
           <h3 class="mb-8 lg:mb-12 leading-[140%]">
             Запишитесь на экскурсию по сервису <b>речевой аналитики</b> Эврика360
           </h3>

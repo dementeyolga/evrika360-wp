@@ -334,7 +334,6 @@ Text Domain: evrika
 
   .bg-lighter-orange-circle {
     background-image: url(./assets/images/bg-lighter-orange-circle.png);
-    background-size: cover;
     background-position: center -10%;
     background-repeat: no-repeat;
     background-size: 240%;
@@ -346,10 +345,26 @@ Text Domain: evrika
 
   .bg-blue-circle {
     background-image: url(./assets/images/bg-blue-circle.png);
-    background-size: cover;
     background-position: center 6%;
     background-repeat: no-repeat;
     background-size: 80%;
+    /* 
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/bg-blue-circle-desktop.png);
+      background-position: right -10%;
+      background-size: contain;
+    }
+
+    @media (min-width: 1524px) {
+      background-position: 80% -10%;
+    } */
+  }
+
+  .bg-blue-circle-desktop {
+    background-image: url(./assets/images/bg-blue-circle-desktop.png);
+    background-position: right -10%;
+    background-repeat: no-repeat;
+    background-size: 500px;
   }
 
   .bg-pattern {
@@ -373,6 +388,11 @@ Text Domain: evrika
     @media (min-width: 1024px) {
       background-image: url(./assets/images/bg-white-wave-bottom-desktop.png);
     }
+  }
+
+  .bg-white-wave-right {
+    background-image: url(./assets/images/bg-white-wave-right.png);
+    background-size: cover;
   }
 
   .bg-white-wave-top {
