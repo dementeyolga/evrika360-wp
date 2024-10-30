@@ -2080,6 +2080,10 @@ p {
   row-gap: 58px;
 }
 
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -3439,6 +3443,10 @@ p {
 
   .lg\:gap-\[94px\] {
     gap: 94px;
+  }
+
+  .lg\:gap-4 {
+    gap: 1rem;
   }
 
   .lg\:gap-x-6 {
