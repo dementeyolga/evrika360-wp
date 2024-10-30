@@ -21,7 +21,7 @@
     </div>
 
     <div class="hidden lg:flex wrapper flex-row py-[33px] justify-between items-center gap-[22%]">
-      <a href="<?php get_home_url() ?>" class="text-blue-100">
+      <a href="<?php get_home_url(null, '') ?>" class="text-blue-100">
         <?php include 'parts/evrika-logo-desktop.php' ?>
       </a>
 

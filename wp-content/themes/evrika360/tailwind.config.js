@@ -17,10 +17,12 @@ module.exports = {
       },
       'light-blue': {
         100: 'var(--light-blue-100)',
+        150: 'var(--light-blue-150)',
         200: 'var(--light-blue-200)',
         300: 'var(--light-blue-300)',
       },
       blue: {
+        50: 'var(--blue-50)',
         100: 'var(--blue-100)',
         200: 'var(--blue-200)',
         '200-32': 'var(--blue-200-32)',

@@ -50,7 +50,7 @@ Text Domain: evrika
     --accent-font: 'Caveat', sans-serif;
 
     --white-100: #fff;
-    --grey-50: #f4f3f042;
+    --grey-50: #d4d4d442;
     --grey-100: #ececec;
     --grey-200: #e4e4e8;
     --grey-300: #c0d5e9;
@@ -58,8 +58,10 @@ Text Domain: evrika
     --grey-500: #6c6e6f;
     --grey-600: #525252;
     --light-blue-100: #effbff;
+    --light-blue-150: #e5f7fd;
     --light-blue-200: #d5ecf4;
     --light-blue-300: #dff3fa;
+    --blue-50: #01a8db26;
     --blue-100: #01a8db;
     --blue-200: #2090ce;
     --blue-200-32: rgba(140, 170, 220, 0.32);
@@ -212,6 +214,18 @@ Text Domain: evrika
 
   .table-unit.table-heading {
     @apply text-white font-bold bg-blue-100 rounded-2xs;
+  }
+
+  .price-table-unit {
+    @apply h-[41px] py-2 px-4 font-bold text-center flex justify-center items-center text-xl;
+  }
+
+  .price-table-unit.table-heading {
+    @apply h-[60px] text-2xl/[130%];
+  }
+
+  .price-table-unit.table-title {
+    @apply text-base font-normal text-left justify-start px-0;
   }
 
   .dept-slide,
@@ -442,6 +456,10 @@ Text Domain: evrika
 
   .bg-dark-linear {
     background: linear-gradient(177deg, #1d3660 0%, #09172e 100%);
+  }
+
+  .bg-green-linear {
+    background: linear-gradient(180deg, #36b37f3d 0%, #ffffff3d 100%);
   }
 
   .bg-fade-bottom {

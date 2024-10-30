@@ -519,13 +519,13 @@
       </div>
     </div>
 
-    <div class="mb-10 pt-12 lg:pt-9 lg:mx-10 lg:rounded-2xl bg-dark-linear border border-light-blue-200">
+    <div class="mb-10 pt-12 lg:pt-9 lg:mb-[56px] lg:mx-10 lg:rounded-2xl bg-dark-linear border border-light-blue-200">
       <div class="relative wrapper lg:flex-row lg:justify-between">
         <div class="hidden lg:block absolute -right-[84px] -top-5 z-0">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/bg-chat.png" alt="">
         </div>
 
-        <div class="lg:w-[340px] lg:pb-[57px]">
+        <div class="lg:w-[365px] lg:pb-[57px]">
           <div class="mb-8 lg:mb-[68px] mx-auto lg:ml-0 py-3 px-5 xs:w-fit rounded-md text-dark-blue-500 bg-white">
             <h4>
               <b>04.</b> А это речевая аналитика
@@ -540,7 +540,7 @@
           </p>
         </div>
 
-        <div class="flex justify-center lg:w-[439px] lg:mt-8 lg:mr-[113px] lg:z-10">
+        <div class="flex justify-center lg:w-[439px] lg:h-fit lg:self-end lg:mt-8 lg:mr-[113px] lg:z-10">
           <img class="w-full max-w-[70%] lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
           <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo-desktop.png" alt="">
         </div>
@@ -828,7 +828,7 @@
       </div>
     </div>
 
-    <div class="-mt-[37px] lg:mt-0 pt-[85px] pb-[72px] lg:pt-[100px] lg:pb-[110px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-bottom">
+    <div class="overflow-hidden -mt-[37px] lg:mt-0 pt-[85px] pb-[72px] lg:pt-[100px] lg:pb-[110px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-bottom">
       <div class="wrapper">
         <?php include 'parts/data-security-slider.php' ?>
       </div>
@@ -1080,8 +1080,8 @@
   </section>
 
   <!-- PRICES section -->
-  <section id="prices" class="wrapper pt-[120px] -mt-[110px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top]">
-    <div class="lg:mb-[73px] lg:mt-[35px] lg:flex lg:justify-center lg:items-center">
+  <section id="prices" class="wrapper pt-[120px] -mt-[110px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top]">
+    <div class="lg:mb-[130px] lg:mt-[35px] lg:flex lg:justify-center lg:items-center">
       <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
         <h3 class="mb-1 text-center">— Сколько стоит </h3>
         <h3 class="text-center">
@@ -1104,6 +1104,93 @@
 
     <div class="mb-10 lg:hidden">
       <?php include 'parts/prices-slider.php' ?>
+    </div>
+
+
+    <div class="mb-[88px] hidden lg:block">
+      <div class="grid grid-cols-[200px_auto] gap-[38px]">
+        <div class="grid grid-cols-1 gap-[3px]">
+          <div class="price-table-unit table-heading">
+          </div>
+          <div class="price-table-unit table-title">Пункты чек-листа</div>
+          <div class="price-table-unit table-title">Минут</div>
+          <div class="mt-2 price-table-unit table-title">Интеграция с системами по API</div>
+          <div class="price-table-unit table-heading">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-5 gap-[5px]">
+          <!-- BASIC plan -->
+          <div class="grid grid-cols-1 gap-[3px] text-grey-600">
+            <div class="price-table-unit table-heading">
+              BASIC
+            </div>
+            <div class="price-table-unit bg-grey-50">15</div>
+            <div class="price-table-unit bg-grey-50">10 000</div>
+            <div class="price-table-unit bg-grey-50">1</div>
+            <div class="price-table-unit table-heading">
+              280$
+            </div>
+          </div>
+
+          <!-- STANDART plan -->
+          <div class="grid grid-cols-1 gap-[3px] text-blue-100">
+            <div class="price-table-unit table-heading">
+              STANDART
+            </div>
+            <div class="price-table-unit bg-light-blue-150">30</div>
+            <div class="price-table-unit bg-light-blue-150">30 000</div>
+            <div class="price-table-unit bg-light-blue-150">1</div>
+            <div class="price-table-unit table-heading">
+              590$
+            </div>
+          </div>
+
+          <!-- SILVER plan -->
+          <div class="grid grid-cols-1 gap-[3px] text-green-500">
+            <div class="relative price-table-unit table-heading">
+              SILVER
+
+              <div class="absolute left-0 right-0 bottom-0 py-[9px] flex justify-center h-[120px] bg-green-linear text-dark-blue-500 text-xl -z-10">
+                POPULAR
+              </div>
+            </div>
+            <div class="price-table-unit text-white bg-green-500">45</div>
+            <div class="price-table-unit text-white bg-green-500">60 000</div>
+            <div class="price-table-unit text-white bg-green-500">2</div>
+            <div class="price-table-unit table-heading">
+              850$
+            </div>
+          </div>
+
+          <!-- GOLD plan -->
+          <div class="grid grid-cols-1 gap-[3px] text-yellow-500">
+            <div class="price-table-unit table-heading">
+              GOLD
+            </div>
+            <div class="price-table-unit text-white bg-yellow-500">16ч</div>
+            <div class="price-table-unit text-white bg-yellow-500">100 000</div>
+            <div class="price-table-unit text-white bg-yellow-500">3</div>
+            <div class="price-table-unit table-heading">
+              1 360$
+            </div>
+          </div>
+
+          <!-- SPECIAL plan -->
+          <div class="grid grid-cols-1 gap-[3px] text-orange-400">
+            <div class="price-table-unit table-heading">
+              SPECIAL
+            </div>
+            <div class="price-table-unit text-white bg-orange-400">∞</div>
+            <div class="price-table-unit text-white bg-orange-400">200 000+</div>
+            <div class="price-table-unit text-white bg-orange-400">∞</div>
+            <div class="price-table-unit table-heading !text-[17px]">
+              обсуждается
+              индивидуально
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="lg:flex lg:gap-6">

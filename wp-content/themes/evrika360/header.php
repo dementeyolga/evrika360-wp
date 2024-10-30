@@ -10,7 +10,9 @@
 
 <body <?php body_class(); ?> class="m-auto">
   <header class="group has-[:checked]:bg-white-glass w-full fixed z-40 transition-colors duration-200">
+    <!-- Header on scroll styles toggle  -->
     <input id="headerScrollToggle" class="hidden" type="checkbox">
+
     <div class="lg:hidden wrapper flex-row py-[22px] flex justify-between items-center">
       <a href="<?php get_home_url() ?>" class="text-white group-has-[:checked]:text-blue-100">
         <?php include 'parts/evrika-logo.php' ?>
@@ -21,13 +23,38 @@
       </div>
     </div>
 
-    <div class="hidden lg:flex wrapper flex-row py-[33px] justify-between items-center gap-[22%]">
-      <a href="<?php get_home_url() ?>" class="text-white group-has-[:checked]:text-blue-100">
-        <?php include 'parts/evrika-logo-desktop.php' ?>
+    <div class="hidden lg:flex wrapper flex-row py-[33px] justify-between items-center gap-[22%] group-has-[:checked]:gap-3">
+      <a href="<?php get_home_url(null, '') ?>" class="text-white group-has-[:checked]:text-blue-100">
+        <div class="group-has-[:checked]:hidden">
+          <?php include 'parts/evrika-logo-desktop.php' ?>
+        </div>
+        <div class="hidden group-has-[:checked]:block">
+          <?php include 'parts/evrika-logo-no-text.php' ?>
+        </div>
       </a>
 
+      <nav class="hidden group-has-[:checked]:block ">
+        <ul class="flex items-center gap-[6px] text-dark-blue-500">
+          <li class="shrink-0">
+            <a href="#departments" class="px-3 py-[6px] rounded-md hover:bg-blue-50 transition-colors duration-200">Для кого</a>
+          </li>
+          <li class="shrink-0">
+            <a href="#features" class="px-3 py-[6px] rounded-md hover:bg-blue-50 transition-colors duration-200">Возможности</a>
+          </li>
+          <li class="shrink-0">
+            <a href="#how-it-works" class="px-3 py-[6px] rounded-md hover:bg-blue-50 transition-colors duration-200">Как работает</a>
+          </li>
+          <li class="shrink-0">
+            <a href="#cases" class="px-3 py-[6px] rounded-md hover:bg-blue-50 transition-colors duration-200">Кейсы</a>
+          </li>
+          <li class="shrink-0">
+            <a href="#prices" class="px-3 py-[6px] rounded-md hover:bg-blue-50 transition-colors duration-200">Стоимость</a>
+          </li>
+        </ul>
+      </nav>
+
       <div class="flex gap-8 items-center text-white">
-        <div class="space-y-2">
+        <div class="space-y-2 shrink-0 group-has-[:checked]:hidden">
           <p class="small-text">Задайте нам <br>
             вопрос напрямую!</p>
           <div class="flex gap-2">
@@ -40,7 +67,7 @@
           </div>
         </div>
 
-        <div class="shrink-0 space-y-3">
+        <div class="shrink-0 space-y-3 group-has-[:checked]:hidden">
           <p class="small-text">
             Пн-Пт 10:00 — 18:00
           </p>
@@ -60,7 +87,7 @@
         </div>
 
         <div class="flex gap-2">
-          <button class="btn">Заказать звонок</button>
+          <button class="btn shrink-0 group-has-[:checked]:bg-light-blue-100">Заказать звонок</button>
           <button class="btn dark">Войти</button>
         </div>
       </div>
@@ -77,23 +104,25 @@
         </button>
       </div>
 
-      <ul class="mb-[55px] space-y-4 text-white">
-        <li>
-          <a href="#departments">Для кого</a>
-        </li>
-        <li>
-          <a href="#features">Возможности</a>
-        </li>
-        <li>
-          <a href="#how-it-works">Как работает</a>
-        </li>
-        <li>
-          <a href="#cases">Кейсы</a>
-        </li>
-        <li>
-          <a href="#prices">Стоимость</a>
-        </li>
-      </ul>
+      <nav>
+        <ul class="mb-[55px] space-y-4 text-white">
+          <li>
+            <a href="#departments">Для кого</a>
+          </li>
+          <li>
+            <a href="#features">Возможности</a>
+          </li>
+          <li>
+            <a href="#how-it-works">Как работает</a>
+          </li>
+          <li>
+            <a href="#cases">Кейсы</a>
+          </li>
+          <li>
+            <a href="#prices">Стоимость</a>
+          </li>
+        </ul>
+      </nav>
 
       <div class="mb-10 flex gap-8 text-white">
         <div class="space-y-2">

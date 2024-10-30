@@ -37,7 +37,7 @@
 
       <!-- STANDART plan -->
       <div class="embla__slide">
-        <div class="prices-slide  bg-light-blue-100 border border-light-blue-200">
+        <div class="prices-slide bg-light-blue-100 border border-light-blue-200">
           <h3 class="flex justify-between font-bold text-blue-100">
             <span>STANDART</span>
             <span>590$</span>

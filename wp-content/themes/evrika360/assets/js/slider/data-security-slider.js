@@ -15,13 +15,26 @@ const dataSecuritySliderDotsNode = dataSecuritySliderEmblaNode.querySelector(
   '.data-security-embla__dots',
 );
 
-const dataSecuritySliderPlugins = [EmblaCarouselAutoHeight()];
+let dataSecuritySliderPlugins;
 
-const dataSecuritySliderEmblaApi = EmblaCarousel(
-  dataSecuritySliderViewportNode,
-  dataSecuritySliderOptions,
-  dataSecuritySliderPlugins,
-);
+if (document.documentElement.clientWidth >= 1024) {
+  dataSecuritySliderPlugins = [EmblaCarouselAutoHeight()];
+}
+
+let dataSecuritySliderEmblaApi;
+
+if (dataSecuritySliderPlugins) {
+  dataSecuritySliderEmblaApi = EmblaCarousel(
+    dataSecuritySliderViewportNode,
+    dataSecuritySliderOptions,
+    dataSecuritySliderPlugins,
+  );
+} else {
+  dataSecuritySliderEmblaApi = EmblaCarousel(
+    dataSecuritySliderViewportNode,
+    dataSecuritySliderOptions,
+  );
+}
 
 const dataSecuritySliderAddTogglePrevNextBtnsActive = (
   emblaApi,
