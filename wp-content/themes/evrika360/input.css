@@ -209,6 +209,14 @@ Text Domain: evrika
     @apply flash-li text-grey-400 before:content-flash-disabled;
   }
 
+  .link-dark {
+    @apply text-dark-blue-500 border-b-2 border-b-transparent hover:border-b-dark-blue-300 hover:text-dark-blue-300 transition-all duration-200;
+  }
+
+  .link-white {
+    @apply text-white border-b-2 border-b-transparent hover:border-b-white transition-all duration-200;
+  }
+
   .card-badge {
     @apply py-2 px-3 w-fit text-xs/[150%] lg:text-base/[150%] text-white rounded-2xl bg-orange-400;
   }

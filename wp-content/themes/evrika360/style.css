@@ -1168,6 +1168,33 @@ input[type='text']:disabled {
   content: var(--tw-content);
 }
 
+.link-dark {
+  border-bottom-width: 2px;
+  border-bottom-color: transparent;
+  color: var(--dark-blue-500);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.link-dark:hover {
+  border-bottom-color: var(--dark-blue-300);
+  color: var(--dark-blue-300);
+}
+
+.link-white {
+  border-bottom-width: 2px;
+  border-bottom-color: transparent;
+  color: var(--white-100);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.link-white:hover {
+  border-bottom-color: var(--white-100);
+}
+
 .card-badge {
   width: -moz-fit-content;
   width: fit-content;

@@ -10,8 +10,8 @@
       </p>
 
       <div class="flex gap-4 lg:gap-8 font-bold">
-        <a href="tel:+7 495 662-18-73">+7 495 662-18-73</a>
-        <a href="tel:+375 29 388-55-12">+375 29 388-55-12</a>
+        <a class="link-dark" href="tel:+7 495 662-18-73">+7 495 662-18-73</a>
+        <a class="link-dark" href="tel:+375 29 388-55-12">+375 29 388-55-12</a>
       </div>
     </div>
 
@@ -31,15 +31,12 @@
     </div>
   </div>
 
-  <div class="py-4 flex flex-col gap-y-4 lg:flex-row lg:justify-between *:small-text border-t border-t-grey-100">
+  <div class="py-4 flex flex-col gap-y-4 lg:flex-row lg:gap-20 *:small-text border-t border-t-grey-100">
     <p class="text-grey-400">
       ООО «ИТ-Глобал» <br>
       223070, Минская область, Минский район, <br>
       Михановичский с/с, д. 51, район д. Михановичи <br>
       УНП 691844889
-    </p>
-    <p class="text-blue-200 underline">
-      Договор публичной оферты
     </p>
     <p class="text-blue-200 underline">
       Политика конфиденциальности

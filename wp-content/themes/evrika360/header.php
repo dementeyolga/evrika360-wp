@@ -98,12 +98,12 @@
 
           <div class="font-bold space-y-1">
             <h5>
-              <a href="tel:+7 495 662-18-73">
+              <a class="link-white" href="tel:+7 495 662-18-73">
                 +7 495 662-18-73
               </a>
             </h5>
             <h5>
-              <a href="tel:+375 29 388-55-12">
+              <a class="link-white" href="tel:+375 29 388-55-12">
                 +375 29 388-55-12
               </a>
             </h5>
