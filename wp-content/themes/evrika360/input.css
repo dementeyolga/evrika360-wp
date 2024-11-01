@@ -198,7 +198,7 @@ Text Domain: evrika
   }
 
   .tab {
-    @apply description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] hover:cursor-pointer hover:font-bold hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500 active:font-bold active:text-orange-500 active:border-b-2 active:border-b-orange-500 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold transition-colors duration-100;
+    @apply relative description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-bold border-b-2 border-b-transparent hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(text)] after:text-dark-blue-500 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
   }
 
   .flash-li {

@@ -391,27 +391,27 @@
     <div class="peer embla feature-tabs-embla">
       <div class="wrapper embla__viewport feature-tabs-embla__viewport">
         <div class="embla__container feature-tabs-embla__container">
-          <label class="tab">
+          <label class="tab" text="Отчет для руководителя">
             Отчет для <br> руководителя
             <input class="hidden" name="feature-tabs" type="radio" checked>
           </label>
 
-          <label class="tab">
+          <label class="tab" text="Мониторинг упущенных лидов">
             Мониторинг <br> упущенных лидов
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="tab">
+          <label class="tab" text="Контроль соблюдения регламентов и скриптов">
             Контроль соблюдения <br> регламентов и скриптов
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="tab">
+          <label class="tab" text="Замена ручного контроля качества">
             Замена ручного <br> контроля качества
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
 
-          <label class="tab">
+          <label class="tab" text="Увеличение продаж">
             Увеличение продаж
             <input class="hidden" name="feature-tabs" type="radio">
           </label>
@@ -836,23 +836,22 @@
     <div class="peer embla assessment-tabs-embla mb-4 lg:mb-12">
       <div class="wrapper embla__viewport assessment-tabs-embla__viewport">
         <div class="embla__container assessment-tabs-embla__container">
-          <label class="tab">
+          <label class="tab" text="Определение причин слива лидов">
             Определение <br> причин слива лидов
             <input class="hidden" name="assessment-tabs" type="radio" checked>
           </label>
 
-          <label class="tab">
+          <label class="tab" text="HR-помощник">
             HR-помощник
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
 
-          <label class="tab">
-            Изучение ЦА, рынка <br>
-            и конкурентов
+          <label class="tab" text="Изучение ЦА, рынка и конкурентов">
+            Изучение ЦА, рынка <br> и конкурентов
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
 
-          <label class="tab">
+          <label class="tab" text="Обучение менеджеров">
             Обучение менеджеров
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
@@ -1196,22 +1195,22 @@
         <div class="peer embla automatization-tabs-embla">
           <div class="wrapper embla__viewport automatization-tabs-embla__viewport">
             <div class="embla__container automatization-tabs-embla__container">
-              <label class="tab">
+              <label class="tab" text="Готовые интеграции">
                 Готовые <br class="lg:hidden"> интеграции
                 <input class="hidden" name="automatization-tabs" type="radio" checked>
               </label>
 
-              <label class="tab">
+              <label class="tab" text="Заполнение CRM">
                 Заполнение CRM
                 <input class="hidden" name="automatization-tabs" type="radio">
               </label>
 
-              <label class="tab">
+              <label class="tab" text="Уведомления о критических ситациях">
                 Уведомления о <br> критических ситациях
                 <input class="hidden" name="automatization-tabs" type="radio">
               </label>
 
-              <label class="tab">
+              <label class="tab" text="Отчёты и аналитика коммуникаций">
                 Отчёты и аналитика <br> коммуникаций
                 <input class="hidden" name="automatization-tabs" type="radio">
               </label>
