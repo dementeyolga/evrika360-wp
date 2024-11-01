@@ -174,15 +174,15 @@ Text Domain: evrika
   }
 
   .btn {
-    @apply h-12 py-3 px-5 mx-auto w-full sm:w-fit flex justify-center items-center rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset;
+    @apply h-12 py-3 px-5 mx-auto w-full sm:w-fit flex justify-center items-center rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset hover:bg-light-blue-100 active:bg-light-blue-300 disabled:bg-grey-100 disabled:text-grey-400 disabled:shadow-none transition-colors duration-200;
   }
 
   .btn.primary {
-    @apply text-white shadow-dark-inset bg-blue-100;
+    @apply text-white shadow-dark-inset bg-blue-100 hover:bg-blue-200 active:bg-dark-blue-300;
   }
 
   .btn.dark {
-    @apply text-white shadow-ultra-dark-inset bg-dark-blue-500;
+    @apply text-white shadow-ultra-dark-inset bg-dark-blue-500 hover:bg-dark-blue-400 active:bg-dark-blue-600;
   }
 
   .character-bg {
@@ -198,7 +198,7 @@ Text Domain: evrika
   }
 
   .tab {
-    @apply description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold;
+    @apply description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] hover:cursor-pointer hover:font-bold hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500 active:font-bold active:text-orange-500 active:border-b-2 active:border-b-orange-500 has-[:checked]:border-b-2 has-[:checked]:border-b-orange-400 has-[:checked]:text-orange-400 has-[:checked]:font-bold transition-colors duration-100;
   }
 
   .flash-li {

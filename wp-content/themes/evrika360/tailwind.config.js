@@ -76,12 +76,6 @@ module.exports = {
       '3xl': 'var(--radius-3xl)',
       '5xl': 'var(--radius-5xl)',
     },
-    boxShadow: {
-      'dark-inset': 'var(--dark-inset-shadow)',
-      'ultra-dark-inset': 'var(--ultra-dark-inset-shadow)',
-      'light-inset': 'var(--light-inset-shadow)',
-      card: 'var(--card-shadow)',
-    },
     extend: {
       screens: {
         xs: '500px',
@@ -103,6 +97,12 @@ module.exports = {
             fontWeight: '400',
           },
         ],
+      },
+      boxShadow: {
+        'dark-inset': 'var(--dark-inset-shadow)',
+        'ultra-dark-inset': 'var(--ultra-dark-inset-shadow)',
+        'light-inset': 'var(--light-inset-shadow)',
+        card: 'var(--card-shadow)',
       },
       content: {
         flash: 'url("./assets/images/flash-icon.png")',
