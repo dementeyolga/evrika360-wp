@@ -1286,7 +1286,14 @@ input[type='text']:disabled {
   background-color: var(--white-100);
 }
 
+.dept-embla {
+  .embla__container {
+    align-items: stretch;
+  }
+}
+
 .dept-slide {
+  height: 100%;
   @media (min-width: 1280px) {
     height: 242px;
 

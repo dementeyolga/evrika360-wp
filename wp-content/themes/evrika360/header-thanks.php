@@ -30,10 +30,10 @@
           <p class="small-text">Задайте нам <br>
             вопрос напрямую!</p>
           <div class="flex gap-2">
-            <a class="w-8 h-8">
+            <a class="w-8 h-8" href="https://t.me/troyan_sanq" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon.png" alt="">
             </a>
-            <a class="w-8 h-8">
+            <a class="w-8 h-8" href="https://api.whatsapp.com/send/?phone=375293885519" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon.png" alt="">
             </a>
           </div>
@@ -99,10 +99,10 @@
           <p class="small-text">Задайте нам
             вопрос напрямую!</p>
           <div class="flex gap-2">
-            <a>
+            <a href="https://t.me/troyan_sanq" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
             </a>
-            <a>
+            <a href="https://api.whatsapp.com/send/?phone=375293885519" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
             </a>
           </div>

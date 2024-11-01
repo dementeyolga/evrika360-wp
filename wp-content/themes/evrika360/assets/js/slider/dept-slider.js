@@ -13,12 +13,9 @@ const deptSliderNextBtnNode = deptSliderEmblaNode.querySelector(
 const deptSliderDotsNode =
   deptSliderEmblaNode.querySelector('.dept-embla__dots');
 
-const deptSliderPlugins = [EmblaCarouselAutoHeight()];
-
 const deptSliderEmblaApi = EmblaCarousel(
   deptSliderViewportNode,
   deptSliderOptions,
-  deptSliderPlugins,
 );
 
 const deptSliderAddTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {

@@ -19,11 +19,11 @@
       <button class="call-modal-toggle mx-0 xs:shrink xs:grow-0 grow btn dark">Заказать звонок</button>
 
       <div class="grow-0 flex gap-2 items-center justify-end">
-        <a class="shrink-0">
+        <a class="shrink-0" href="https://t.me/troyan_sanq" target="_blank">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon.png" alt="">
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon-desktop.png" alt="">
         </a>
-        <a class="shrink-0">
+        <a class="shrink-0" href="https://api.whatsapp.com/send/?phone=375293885519" target="_blank">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon.png" alt="">
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon-desktop.png" alt="">
         </a>

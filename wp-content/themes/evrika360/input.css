@@ -250,7 +250,15 @@ Text Domain: evrika
     @apply border border-grey-300 bg-white rounded-md overflow-hidden;
   }
 
+  .dept-embla {
+    .embla__container {
+      align-items: stretch;
+    }
+  }
+
   .dept-slide {
+    height: 100%;
+
     @media (min-width: 1280px) {
       height: 242px;
       display: flex;
