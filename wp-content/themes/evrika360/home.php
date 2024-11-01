@@ -1425,7 +1425,7 @@
     <div class="lg:wrapper">
       <div class="lg:flex lg:gap-6">
         <div class="max-lg:wrapper-no-flex lg:order-2">
-          <div class="relative mb-9 px-4 py-6 h-fit space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
+          <div class="relative mb-9 lg:mb-0 px-4 py-6 h-fit space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
             <h4 class="lg:text-xl/[130%]">Что входит в состав каждого пакета?</h4>
 
             <ul class="space-y-2">
@@ -1443,7 +1443,7 @@
               А что еще?
             </label>
 
-            <div class="hidden max-lg:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-6 lg:translate-y-full lg:w-[380px]">
+            <div class="hidden max-lg:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-[76px] lg:w-[380px]">
               <div class="grid grid-cols-2 gap-2">
                 <div class="space-y-2">
                   <h5 class="font-bold">$0.015</h5>
