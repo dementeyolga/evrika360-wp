@@ -4,7 +4,7 @@
       <!-- BASIC plan -->
       <div class="embla__slide">
         <div class="prices-slide">
-          <h3 class="flex justify-between font-bold text-grey-600">
+          <h3 class="w-full flex justify-between font-bold text-grey-600">
             <span>BASIC</span>
             <span>280$</span>
           </h3>
@@ -38,7 +38,7 @@
       <!-- STANDART plan -->
       <div class="embla__slide">
         <div class="prices-slide bg-light-blue-100 border border-light-blue-200">
-          <h3 class="flex justify-between font-bold text-blue-100">
+          <h3 class="w-full flex justify-between font-bold text-blue-100">
             <span>STANDART</span>
             <span>590$</span>
           </h3>
@@ -72,7 +72,7 @@
       <!-- SILVER plan -->
       <div class="embla__slide">
         <div class="prices-slide bg-green-100 borer border-green-200">
-          <div class="flex justify-between font-bold text-green-500">
+          <div class="w-full flex justify-between font-bold text-green-500">
             <div class="flex items-center gap-2">
               <h3>SILVER</h3>
               <div class="card-badge py-1 bg-dark-blue-600">Popular</div>
@@ -110,7 +110,7 @@
       <!-- GOLD plan -->
       <div class="embla__slide">
         <div class="prices-slide border border-yellow-200 bg-yellow-100">
-          <h3 class="flex justify-between font-bold text-yellow-500">
+          <h3 class="w-full flex justify-between font-bold text-yellow-500">
             <span>GOLD</span>
             <span>1 360$</span>
           </h3>
@@ -144,7 +144,7 @@
       <!-- SPECIAL plan -->
       <div class="embla__slide">
         <div class="prices-slide bg-orange-250 border border-orange-300">
-          <h3 class="flex justify-between font-bold text-orange-400">
+          <h3 class="w-full flex justify-between font-bold text-orange-400">
             <span>SPECIAL</span>
             <span class="text-xs text-right">обсуждается <br> индивидуально</span>
           </h3>

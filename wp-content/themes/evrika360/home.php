@@ -1,6 +1,205 @@
 <?php get_header(); ?>
 
 <main class="flex flex-col gap-16 lg:gap-[140px]">
+  <!-- Popup "Заказать консультацию" (большой) -->
+  <div id="popup-order-consultation" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+    <div class="relative wrapper lg:my-10 lg:p-12 lg:pr-[25px] lg:border lg:border-grey-300 lg:bg-pattern lg:rounded-xl">
+      <button class="close hidden lg:block absolute top-2 right-3 p-4">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
+      </button>
+      <div class="hidden lg:block absolute inset-0 -z-10 bg-dark-blue-500 rounded-xl"></div>
+      <div class="hidden lg:block absolute left-5 bottom-0">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-demo.png" alt="">
+      </div>
+
+      <h3 class="hidden lg:block mb-9 text-white">Запишитесь на <b class="text-yellow-500">онлайн-демонстрацию</b> возможностей речевой аналитики на примере вашей компании</h3>
+
+      <div class="lg:flex gap-[75px]">
+        <p class="hidden lg:block h-fit text-white px-10 py-4 w-1/2 shrink-0 bg-white-transparent backdrop-blur-sm rounded-sm">
+          Расскажем о возможностях сервиса и рассчитаем целесообразность применения в вашей компании
+        </p>
+
+        <div class="relative my-11 lg:my-0 px-4 py-6 w-full rounded-xl border border-grey-400 bg-white">
+          <button class="close lg:hidden absolute top-2 right-0 p-4">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
+          </button>
+
+          <h4 class="mb-8 max-lg:mr-7 md:text-xl/[130%]">
+            <b>Заполните форму</b> и закажите консультацию специалиста
+          </h4>
+
+          <form class="mb-4 flex flex-col gap-7" onsubmit="event.preventDefault(); window.location.pathname = '/thank-you'">
+            <div class="flex flex-col gap-2">
+              <label for="cons-name">Ваше имя*</label>
+              <input type="text" name="Имя" id="cons-name" placeholder="Введите имя" required>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="cons-role">Ваша роль в компании</label>
+              <input type="text" name="Роль" id="cons-role" placeholder="Например, СЕО">
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="cons-phone">Ваш номер телефона*</label>
+              <input type="text" name="Телефон" id="cons-phone" placeholder="+375 ( _ _ ) _ _ _-_ _-_ _" required>
+            </div>
+
+            <div class="flex gap-4 items-center">
+              <input type="checkbox" class="relative shrink-0 appearance-none w-6 h-6 after:absolute after:top-0 after:bottom-0 after:right-0 after:left-0 after:border after:border-grey-400 after:rounded-sm before:absolute before:inset-1 before:rounded-xs checked:before:bg-blue-100" name="Согласие на обработку персональных данных" id="cons-agree-personal-data">
+              <label for="cons-agree-personal-data" class="text-grey-400">Даю согласие на обработку персональных данных</label>
+            </div>
+
+            <button type="submit" class="btn primary w-full">Записаться</button>
+          </form>
+
+          <div class="p-4 small-text bg-light-blue-100">
+            Или звоните по номеру <a class="underline text-blue-200 font-bold" href="tel:+375 29 388-55-12">+375 29 388-55-12</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup "Заказать экскурсию" (большой) -->
+  <div id="popup-order-excursion" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+    <div class="relative wrapper lg:my-10 lg:p-12 lg:pr-[25px] lg:border lg:border-grey-300 lg:bg-pattern lg:rounded-xl">
+      <button class="close hidden lg:block absolute top-2 right-3 p-4">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
+      </button>
+      <div class="hidden lg:block absolute inset-0 -z-10 bg-dark-blue-500 rounded-xl"></div>
+      <div class="hidden lg:block absolute left-5 bottom-0">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-demo.png" alt="">
+      </div>
+
+      <h3 class="hidden lg:block mb-9 text-white">Запишитесь на <b class="text-yellow-500">онлайн-экскурсию</b> по сервису речевой аналитики и узнайте, как он может помочь в вашей компании</h3>
+
+      <div class="lg:flex gap-[75px]">
+        <p class="hidden lg:block h-fit text-white px-10 py-4 w-1/2 shrink-0 bg-white-transparent backdrop-blur-sm rounded-sm">
+          Расскажем о возможностях сервиса и рассчитаем целесообразность применения в вашей компании
+        </p>
+
+        <div class="relative my-11 lg:my-0 px-4 py-6 w-full rounded-xl border border-grey-400 bg-white">
+          <button class="close lg:hidden absolute top-2 right-0 p-4">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
+          </button>
+
+          <h4 class="mb-8 max-lg:mr-7 md:text-xl/[130%]">
+            <b>Заполните форму</b>, чтобы записаться на онлайн-экскурсию
+          </h4>
+
+          <form class="mb-4 flex flex-col gap-7" onsubmit="event.preventDefault(); window.location.pathname = '/thank-you'">
+            <div class="flex flex-col gap-2">
+              <label for="exc-name">Ваше имя*</label>
+              <input type="text" name="Имя" id="exc-name" placeholder="Введите имя" required>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="exc-role">Ваша роль в компании</label>
+              <input type="text" name="Роль" id="exc-role" placeholder="Например, СЕО">
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <label for="exc-phone">Ваш номер телефона*</label>
+              <input type="text" name="Телефон" id="exc-phone" placeholder="+375 ( _ _ ) _ _ _-_ _-_ _" required>
+            </div>
+
+            <div class="flex gap-4 items-center">
+              <input type="checkbox" class="relative shrink-0 appearance-none w-6 h-6 after:absolute after:top-0 after:bottom-0 after:right-0 after:left-0 after:border after:border-grey-400 after:rounded-sm before:absolute before:inset-1 before:rounded-xs checked:before:bg-blue-100" name="Согласие на обработку персональных данных" id="exc-agree-personal-data">
+              <label for="exc-agree-personal-data" class="text-grey-400">Даю согласие на обработку персональных данных</label>
+            </div>
+
+            <button type="submit" class="btn primary w-full">Записаться</button>
+          </form>
+
+          <div class="p-4 small-text bg-light-blue-100">
+            Или звоните по номеру <a class="underline text-blue-200 font-bold" href="tel:+375 29 388-55-12">+375 29 388-55-12</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup "Заказать Звонок" -->
+  <div id="popup-order-call" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+    <div class="wrapper max-w-[448px]">
+      <div class="relative my-11 px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
+        <button class="close absolute top-2 right-0 p-4">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
+        </button>
+
+        <h4 class="mb-8 mr-7 md:text-xl/[130%]">
+          <b>Заполните форму</b> и закажите консультацию специалиста
+        </h4>
+
+        <form class="mb-4 flex flex-col gap-6" onsubmit="event.preventDefault(); window.location.pathname = '/thank-you'">
+          <div class="flex flex-col gap-2">
+            <label for="call-name">Ваше имя*</label>
+            <input type="text" name="Имя" id="call-name" placeholder="Введите имя" required>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="call-phone">Ваш номер телефона*</label>
+            <input type="text" name="Телефон" id="call-phone" placeholder="+375 ( _ _ ) _ _ _-_ _-_ _" required>
+          </div>
+
+          <div class="flex gap-4 items-center">
+            <input type="checkbox" class="relative shrink-0 appearance-none w-6 h-6 after:absolute after:top-0 after:bottom-0 after:right-0 after:left-0 after:border after:border-grey-400 after:rounded-sm before:absolute before:inset-1 before:rounded-xs checked:before:bg-blue-100" name="Согласие на обработку персональных данных" id="call-agree-personal-data">
+            <label for="call-agree-personal-data" class="text-grey-400">Даю согласие на обработку персональных данных</label>
+          </div>
+
+          <button type="submit" class="btn primary w-full">Записаться</button>
+        </form>
+
+        <div class="p-4 small-text bg-light-blue-100">
+          Или звоните по номеру <a class="underline text-blue-200 font-bold" href="tel:+375 29 388-55-12">+375 29 388-55-12</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup "Протестировать сервис" -->
+  <div id="popup-order-test" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+    <div class="wrapper max-w-[448px]">
+      <div class="relative my-11 px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
+        <button class="close absolute top-2 right-0 p-4">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
+        </button>
+
+        <h4 class="mb-8 mr-7 md:text-xl/[130%]">
+          Чтобы протестировать сервис <b>на данных вашей компании</b>, заполните форму:
+        </h4>
+
+        <form class="mb-4 flex flex-col gap-6" onsubmit="event.preventDefault(); window.location.pathname = '/thank-you'">
+          <div class="flex flex-col gap-2">
+            <label for="test-name">Ваше имя*</label>
+            <input type="text" name="Имя" id="test-name" placeholder="Введите имя" required>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="test-phone">Ваш номер телефона*</label>
+            <input type="text" name="Телефон" id="test-phone" placeholder="+375 ( _ _ ) _ _ _-_ _-_ _" required>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="test-managers-quantity">Сколько у вас менеджеров / операторов</label>
+            <input type="text" name="Количество менеджеров" id="test-managers-quantity" placeholder="Введите количество">
+          </div>
+
+          <div class="flex gap-4 items-center">
+            <input type="checkbox" class="relative shrink-0 appearance-none w-6 h-6 after:absolute after:top-0 after:bottom-0 after:right-0 after:left-0 after:border after:border-grey-400 after:rounded-sm before:absolute before:inset-1 before:rounded-xs checked:before:bg-blue-100" name="Согласие на обработку персональных данных" id="test-agree-personal-data">
+            <label for="test-agree-personal-data" class="text-grey-400">Даю согласие на обработку персональных данных</label>
+          </div>
+
+          <button type="submit" class="btn primary w-full">Записаться</button>
+        </form>
+
+        <div class="p-4 small-text bg-light-blue-100">
+          Или звоните по номеру <a class="underline text-blue-200 font-bold" href="tel:+375 29 388-55-12">+375 29 388-55-12</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- PROMO section -->
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[329px] lg:pb-[169px] rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper mb-8 lg:mb-[104px]">
@@ -18,7 +217,7 @@
     </div>
 
     <div class="wrapper">
-      <button class="btn ml-0">
+      <button class="consultation-modal-toggle btn ml-0">
         Получить видеообзор
       </button>
     </div>
@@ -85,7 +284,7 @@
   </section>
 
   <!-- DEPARTMENTS section -->
-  <section id="departments" class="pt-[40px] -mt-[40px] xl:mx-10 lg:rounded-2xl bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+  <section id="departments" class="pt-[40px] -mt-[40px] lg:mx-10 lg:rounded-2xl bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
     <div class="wrapper pt-10 pb-[75px] xl:pb-[150px] space-y-10 xl:space-y-[64px]">
       <div>
         <div class="flex gap-2">
@@ -215,152 +414,161 @@
     </div>
 
     <!-- #1 feature tab -->
-    <div class="relative lg:wrapper-no-flex hidden pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 peer-has-[label:nth-child(1)_:checked]:block lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-        <div class="wrapper space-y-4">
-          <h3>Контролируйте состояние компании на одном экране</h3>
-          <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
-        </div>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
+      <div class="feature-tab">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+          <div class="wrapper space-y-4">
+            <h3>Контролируйте состояние компании на одном экране</h3>
+            <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
+          </div>
 
-        <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
-        </div>
+          <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+          </div>
 
-        <ul class="wrapper space-y-4 lg:space-y-5">
-          <li class="flash-li"><b>Отслеживайте изменения</b> по филиалам, отделам и сотрудникам  </li>
-          <li class="flash-li"><b>Будьте уверены</b> в точности данных <b>на 100%</b></li>
-          <li class="flash-li">Выявляйте проблемы в собеседованиях, <b>повышайте эффективность работы рекрутеров и ускоряйте найм</b></li>
-          <li class="flash-li">Получайте <b>объективную оценку качества делового общения</b>, исключая человеческий фактор</li>
-        </ul>
+          <ul class="wrapper space-y-4 lg:space-y-5">
+            <li class="flash-li"><b>Отслеживайте изменения</b> по филиалам, отделам и сотрудникам  </li>
+            <li class="flash-li"><b>Будьте уверены</b> в точности данных <b>на 100%</b></li>
+            <li class="flash-li">Выявляйте проблемы в собеседованиях, <b>повышайте эффективность работы рекрутеров и ускоряйте найм</b></li>
+            <li class="flash-li">Получайте <b>объективную оценку качества делового общения</b>, исключая человеческий фактор</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- #2 feature tab -->
-    <div class="relative hidden lg:wrapper-no-flex pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 peer-has-[label:nth-child(2)_:checked]:block lg:wrapper-no-flex lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-        <h3 class="wrapper">Выжимайте максимум из каждого обращения</h3>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
+      <div class="feature-tab">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+          <h3 class="wrapper">Выжимайте максимум из каждого обращения</h3>
 
-        <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-calls.png" alt="главный экран">
+          <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-calls.png" alt="главный экран">
+          </div>
+
+          <ul class="wrapper space-y-4 lg:space-y-5">
+            <li class="flash-li">
+              Помогайте менеджерам <b>увеличивать продажи</b> и средний чек
+            </li>
+            <li class="flash-li">
+              Направляйте внимание менеджеров только на теплых лидов с помощью <b>системы скоринга</b>
+            </li>
+            <li class="flash-li">
+              Экономьте на рекламе благодаря <b>эффективной работе</b>
+              с лидами
+            </li>
+            <li class="flash-li">
+              <b>Спасайте сделки</b>, где клиент был готов купить, но менеджер недоработал
+            </li>
+          </ul>
         </div>
-
-        <ul class="wrapper space-y-4 lg:space-y-5">
-          <li class="flash-li">
-            Помогайте менеджерам <b>увеличивать продажи</b> и средний чек
-          </li>
-          <li class="flash-li">
-            Направляйте внимание менеджеров только на теплых лидов с помощью <b>системы скоринга</b>
-          </li>
-          <li class="flash-li">
-            Экономьте на рекламе благодаря <b>эффективной работе</b>
-            с лидами
-          </li>
-          <li class="flash-li">
-            <b>Спасайте сделки</b>, где клиент был готов купить, но менеджер недоработал
-          </li>
-        </ul>
       </div>
     </div>
 
     <!-- #3 feature tab -->
-    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[525px] pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 peer-has-[label:nth-child(3)_:checked]:block lg:wrapper-no-flex lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-        <h3 class="wrapper">Будьте спокойны за качество обработки обращений</h3>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
+      <div class="feature-tab">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+          <h3 class="wrapper">Будьте спокойны за качество обработки обращений</h3>
 
-        <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-call-info.png" alt="главный экран">
+          <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-call-info.png" alt="главный экран">
+          </div>
+
+          <ul class="wrapper space-y-4 lg:space-y-5">
+            <li class="flash-li">
+              Получайте отчёты о процентах выполнения скриптов, чек-листов или регламентов
+            </li>
+            <li class="flash-li">
+              Выявляйте лучшие практики общения и переговоров для создания базы знаний
+            </li>
+            <li class="flash-li">
+              Контролируйте упоминания выгод по продукту или услуге
+            </li>
+          </ul>
         </div>
-
-        <ul class="wrapper space-y-4 lg:space-y-5">
-          <li class="flash-li">
-            Получайте отчёты о процентах выполнения скриптов, чек-листов или регламентов
-          </li>
-          <li class="flash-li">
-            Выявляйте лучшие практики общения и переговоров для создания базы знаний
-          </li>
-          <li class="flash-li">
-            Контролируйте упоминания выгод по продукту или услуге
-          </li>
-        </ul>
       </div>
     </div>
 
     <!-- #4 feature tab -->
-    <div class="hidden lg:wrapper-no-flex pt-10 pb-[72px] lg:p-6 peer-has-[label:nth-child(4)_:checked]:block lg:wrapper-no-flex lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-      <div class="wrapper grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-        <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-grey-300 bg-light-wave">
-          <h3>С Эврика360</h3>
-          <ul class="space-y-3 lg:space-y-4">
-            <li class="flash-li">
-              Анализ всех коммуникаций в цепочке продаж
-            </li>
-            <li class="flash-li">
-              Работает 24/7
-            </li>
-            <li class="flash-li">
-              Контроль 100% коммуникаций
-            </li>
-            <li class="flash-li">
-              Оплата за распознанные минуты, дешевле ручного метода в 2-10 раз
-            </li>
-            <li class="flash-li">
-              Оценка по заданным стандартам без человеческого фактора
-            </li>
-            <li class="flash-li">
-              Автоматическая система анализа и выводы по любому количеству критериев за считанные секунды
-            </li>
-          </ul>
-        </div>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
+      <div class="feature-tab">
+        <div class="wrapper grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+          <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-grey-300 bg-light-wave">
+            <h3>С Эврика360</h3>
+            <ul class="space-y-3 lg:space-y-4">
+              <li class="flash-li">
+                Анализ всех коммуникаций в цепочке продаж
+              </li>
+              <li class="flash-li">
+                Работает 24/7
+              </li>
+              <li class="flash-li">
+                Контроль 100% коммуникаций
+              </li>
+              <li class="flash-li">
+                Оплата за распознанные минуты, дешевле ручного метода в 2-10 раз
+              </li>
+              <li class="flash-li">
+                Оценка по заданным стандартам без человеческого фактора
+              </li>
+              <li class="flash-li">
+                Автоматическая система анализа и выводы по любому количеству критериев за считанные секунды
+              </li>
+            </ul>
+          </div>
 
-        <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
-          <h3 class="text-grey-400">Без Эврика360</h3>
-          <ul class="space-y-3 lg:space-y-4">
-            <li class="flash-li-disabled">
-              Анализ только 1-2 этапов в воронке продаж
-            </li>
-            <li class="flash-li-disabled">
-              Прослушка максимум 4-5 часов в день
-            </li>
-            <li class="flash-li-disabled">
-              Контроль до 15% коммуникаций
-            </li>
-            <li class="flash-li-disabled">
-              Постоянные затраты на персонал и организацию его рабочего места
-            </li>
-            <li class="flash-li-disabled">
-              Необъективность оценки
-            </li>
-            <li class="flash-li-disabled">
-              Огромное количество времени на сбор данных и формирование выводов
-            </li>
-          </ul>
+          <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
+            <h3 class="text-grey-400">Без Эврика360</h3>
+            <ul class="space-y-3 lg:space-y-4">
+              <li class="flash-li-disabled">
+                Анализ только 1-2 этапов в воронке продаж
+              </li>
+              <li class="flash-li-disabled">
+                Прослушка максимум 4-5 часов в день
+              </li>
+              <li class="flash-li-disabled">
+                Контроль до 15% коммуникаций
+              </li>
+              <li class="flash-li-disabled">
+                Постоянные затраты на персонал и организацию его рабочего места
+              </li>
+              <li class="flash-li-disabled">
+                Необъективность оценки
+              </li>
+              <li class="flash-li-disabled">
+                Огромное количество времени на сбор данных и формирование выводов
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- #5 feature tab -->
-    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[525px] pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 peer-has-[label:nth-child(5)_:checked]:block lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-        <h3 class="wrapper">Повышайте средний чек без доп.вложений в рекламу</h3>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(5)_:checked]:block">
+      <div class="feature-tab">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+          <h3 class="wrapper">Повышайте средний чек без доп.вложений в рекламу</h3>
 
-        <div class="lg:absolute lg:right-lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-call-analysis.png" alt="главный экран">
+          <div class="lg:absolute lg:right-lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-call-analysis.png" alt="главный экран">
+          </div>
+
+          <ul class="wrapper space-y-4 lg:space-y-5">
+            <li class="flash-li">
+              Получайте точную информацию о запрашиваемых товарах и планируйте закупки
+            </li>
+            <li class="flash-li">
+              Контролируйте переговоры с предложением дополнительных товаров и альтернатив
+            </li>
+            <li class="flash-li">
+              Экономьте время на разборе звонков благодаря автоматической системе подготовки резюме после каждой коммуникации
+            </li>
+          </ul>
         </div>
-
-        <ul class="wrapper space-y-4 lg:space-y-5">
-          <li class="flash-li">
-            Получайте точную информацию о запрашиваемых товарах и планируйте закупки
-          </li>
-          <li class="flash-li">
-            Контролируйте переговоры с предложением дополнительных товаров и альтернатив
-          </li>
-          <li class="flash-li">
-            Экономьте время на разборе звонков благодаря автоматической системе подготовки резюме после каждой коммуникации
-          </li>
-        </ul>
       </div>
     </div>
-
   </section>
 
   <!-- TEST section -->
@@ -380,7 +588,7 @@
       </div>
 
       <div class="lg:w-1/4 lg:flex lg:justify-end">
-        <button class="btn lg:m-0">Пройти тест</button>
+        <a href="#popup:marquiz_66e6d33b2fa5030026ac5480" class="btn lg:m-0">Пройти тест</a>
       </div>
     </div>
   </section>
@@ -519,13 +727,13 @@
       </div>
     </div>
 
-    <div class="mb-10 pt-12 lg:pt-9 lg:mb-[56px] lg:mx-10 lg:rounded-2xl bg-dark-linear border border-light-blue-200">
+    <div class="mb-10 pt-12 lg:pt-9 lg:mb-[56px] lg:mx-10 lg:rounded-2xl bg-dark-linear border border-light-blue-200 overflow-hidden">
       <div class="relative wrapper lg:flex-row lg:justify-between">
         <div class="hidden lg:block absolute -right-[84px] -top-5 z-0">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/bg-chat.png" alt="">
         </div>
 
-        <div class="lg:w-[365px] lg:pb-[57px]">
+        <div class="lg:w-[365px] lg:pb-[57px] z-10">
           <div class="mb-8 lg:mb-[68px] mx-auto lg:ml-0 py-3 px-5 xs:w-fit rounded-md text-dark-blue-500 bg-white">
             <h4>
               <b>04.</b> А это речевая аналитика
@@ -548,7 +756,7 @@
     </div>
 
     <div class="wrapper">
-      <button class="btn primary">Это интересно, хочу протестировать</button>
+      <button class="consultation-modal-toggle btn primary">Это интересно, хочу протестировать</button>
     </div>
   </section>
 
@@ -647,97 +855,105 @@
     </div>
 
     <!-- #1 assesment tab -->
-    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[488px] pt-10 pb-[90px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(1)_:checked]:block bg-orange-50 border border-orange-200 overflow-hidden">
-      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-        <h3 class="wrapper lg:text-2xl/[130%]">Получайте объективную оценку причин отказа без эмоций менеджера</h3>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
+      <div class="assessment-tab">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+          <h3 class="wrapper lg:text-2xl/[130%]">Получайте объективную оценку причин отказа без эмоций менеджера</h3>
 
-        <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
+          <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
+          </div>
+
+          <ul class="wrapper space-y-4 *:text-base/[150%]">
+            <li class="flash-li">
+              Убедитесь, что все <b>возражения клиента</b> были обработаны
+            </li>
+            <li class="flash-li">
+              Автоматизируйте проверку качества общения, чтобы быстрее находить <b>ошибки в диалогах</b>  
+            </li>
+            <li class="flash-li">
+              Отслеживайте <b>длительные сделки</b>, чтобы помочь менеджеру, когда это нужно
+            </li>
+          </ul>
         </div>
-
-        <ul class="wrapper space-y-4 *:text-base/[150%]">
-          <li class="flash-li">
-            Убедитесь, что все <b>возражения клиента</b> были обработаны
-          </li>
-          <li class="flash-li">
-            Автоматизируйте проверку качества общения, чтобы быстрее находить <b>ошибки в диалогах</b>  
-          </li>
-          <li class="flash-li">
-            Отслеживайте <b>длительные сделки</b>, чтобы помочь менеджеру, когда это нужно
-          </li>
-        </ul>
       </div>
     </div>
 
     <!-- #2 assesment tab -->
-    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[488px] pt-10 pb-[90px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(2)_:checked]:block bg-orange-50 border border-orange-200 overflow-hidden">
-      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-        <h3 class="wrapper lg:text-2xl/[130%]">Повышайте эффективность рекрутеров</h3>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
+      <div class="assessment-tab">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+          <h3 class="wrapper lg:text-2xl/[130%]">Повышайте эффективность рекрутеров</h3>
 
-        <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
+          <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
+          </div>
+
+          <ul class="wrapper space-y-4 *:text-base/[150%]">
+            <li class="flash-li">
+              <b>Предотвращайте</b> выгорание сотрудников с помощью контроля эмоций через речевую аналитику
+            </li>
+            <li class="flash-li">
+              <b>Экономьте время</b> на оценке итогов собеседований с каждым кандидатом
+            </li>
+            <li class="flash-li">
+              Отслеживайте <b>динамику изменений</b> сотрудников и назначайте премии на основе точных данных
+            </li>
+          </ul>
         </div>
-
-        <ul class="wrapper space-y-4 *:text-base/[150%]">
-          <li class="flash-li">
-            <b>Предотвращайте</b> выгорание сотрудников с помощью контроля эмоций через речевую аналитику
-          </li>
-          <li class="flash-li">
-            <b>Экономьте время</b> на оценке итогов собеседований с каждым кандидатом
-          </li>
-          <li class="flash-li">
-            Отслеживайте <b>динамику изменений</b> сотрудников и назначайте премии на основе точных данных
-          </li>
-        </ul>
       </div>
     </div>
 
     <!-- #3 assesment tab -->
-    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[488px] pt-10 pb-[90px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(3)_:checked]:block bg-orange-50 border border-orange-200 overflow-hidden">
-      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-        <h3 class="wrapper lg:text-2xl/[130%]">Знайте боли, потребности и возражения своей аудитории</h3>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
+      <div class="assessment-tab">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+          <h3 class="wrapper lg:text-2xl/[130%]">Знайте боли, потребности и возражения своей аудитории</h3>
 
-        <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-dictionary.png" alt="словарь">
+          <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-dictionary.png" alt="словарь">
+          </div>
+
+          <ul class="wrapper space-y-4 *:text-base/[150%]">
+            <li class="flash-li">
+              Отслеживайте <b>частоту упоминаний</b> тем и вопросов, чтобы корректировать контент для аудитории
+            </li>
+            <li class="flash-li">
+              Оценивайте <b>качество заявок</b> с каждого рекламного канала и перераспределяйте бюджет на самые эффективные
+            </li>
+            <li class="flash-li">
+              Анализируйте <b>эффективность</b> акций и корректируйте стратегию
+            </li>
+            <li class="flash-li">
+              <b>Узнавайте</b> о новых запросах клиентов и трендах быстрее конкурентов
+            </li>
+          </ul>
         </div>
-
-        <ul class="wrapper space-y-4 *:text-base/[150%]">
-          <li class="flash-li">
-            Отслеживайте <b>частоту упоминаний</b> тем и вопросов, чтобы корректировать контент для аудитории
-          </li>
-          <li class="flash-li">
-            Оценивайте <b>качество заявок</b> с каждого рекламного канала и перераспределяйте бюджет на самые эффективные
-          </li>
-          <li class="flash-li">
-            Анализируйте <b>эффективность</b> акций и корректируйте стратегию
-          </li>
-          <li class="flash-li">
-            <b>Узнавайте</b> о новых запросах клиентов и трендах быстрее конкурентов
-          </li>
-        </ul>
       </div>
     </div>
 
     <!-- #4 assesment tab -->
-    <div class="relative hidden lg:wrapper-no-flex lg:min-h-[488px] pt-10 pb-[90px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(4)_:checked]:block bg-orange-50 border border-orange-200 overflow-hidden">
-      <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-        <h3 class="wrapper lg:text-2xl/[130%]">Ускоряйте обучение и адаптацию новых менеджеров</h3>
+    <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
+      <div class="assessment-tab">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+          <h3 class="wrapper lg:text-2xl/[130%]">Ускоряйте обучение и адаптацию новых менеджеров</h3>
 
-        <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+          <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+          </div>
+
+          <ul class="wrapper space-y-4 *:text-base/[150%]">
+            <li class="flash-li">
+              Создавайте базу <b>успешных продаж</b> для обучения новичков
+            </li>
+            <li class="flash-li">
+              <b>Отслеживайте</b> все коммуникации и давайте обратную связь сотрудникам
+            </li>
+            <li class="flash-li">
+              Снижайте текучку и расходы на найм с помощью <b>эффективного онбординга</b>
+            </li>
+          </ul>
         </div>
-
-        <ul class="wrapper space-y-4 *:text-base/[150%]">
-          <li class="flash-li">
-            Создавайте базу <b>успешных продаж</b> для обучения новичков
-          </li>
-          <li class="flash-li">
-            <b>Отслеживайте</b> все коммуникации и давайте обратную связь сотрудникам
-          </li>
-          <li class="flash-li">
-            Снижайте текучку и расходы на найм с помощью <b>эффективного онбординга</b>
-          </li>
-        </ul>
       </div>
     </div>
   </section>
@@ -799,7 +1015,7 @@
           </p>
         </div>
 
-        <button class="btn primary lg:ml-0">Записаться на демо</button>
+        <button class="consultation-modal-toggle btn primary lg:ml-0">Записаться на демо</button>
       </div>
     </div>
   </section>
@@ -942,7 +1158,7 @@
       </div>
 
       <div>
-        <button class="btn primary lg:mt-[100px]">Протестировать на своих данных</button>
+        <button class="test-modal-toggle btn primary lg:mt-[100px]">Протестировать на своих данных</button>
       </div>
 
     </div>
@@ -998,244 +1214,258 @@
         </div>
 
         <!-- #1 automatization tab -->
-        <div class="relative lg:wrapper-no-flex lg:min-h-[488px] hidden pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(1)_:checked]:block bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-            <div class="wrapper space-y-4 lg:mt-[30px]">
-              <h3 class="md:text-2xl/[130%]">Простая интеграция с действующими системами и сервисами</h3>
-              <div class="p-2 w-fit description  text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Настраиваем самостоятельно или с минимальным участие ваших тех.специалистов</div>
-            </div>
+        <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
+          <div class="automatization-tab">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+              <div class="wrapper space-y-4 lg:mt-[30px]">
+                <h3 class="md:text-2xl/[130%]">Простая интеграция с действующими системами и сервисами</h3>
+                <div class="p-2 w-fit description  text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Настраиваем самостоятельно или с минимальным участие ваших тех.специалистов</div>
+              </div>
 
-            <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps.png" alt="главный экран">
-              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps-desktop.png" alt="главный экран">
-            </div>
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+                <img class="md:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps.png" alt="главный экран">
+                <img class="hidden md:block" src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps-desktop.png" alt="главный экран">
+              </div>
 
-            <ul class="wrapper space-y-4 lg:space-y-3">
-              <li class="flash-li">CRM</li>
-              <li class="flash-li">Чаты и мессенджеры</li>
-              <li class="flash-li">Телефония</li>
-              <li class="flash-li">Индивидуальные интеграции по API</li>
-            </ul>
+              <ul class="wrapper space-y-4 lg:space-y-3">
+                <li class="flash-li">CRM</li>
+                <li class="flash-li">Чаты и мессенджеры</li>
+                <li class="flash-li">Телефония</li>
+                <li class="flash-li">Индивидуальные интеграции по API</li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <!-- #2 automatization tab -->
-        <div class="relative lg:wrapper-no-flex lg:min-h-[488px] hidden pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(2)_:checked]:block bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-            <h3 class="wrapper md:text-2xl/[130%]">Автоматическое заполнение CRM по итогам звонка</h3>
+        <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
+          <div class="automatization-tab">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+              <h3 class="wrapper md:text-2xl/[130%]">Автоматическое заполнение CRM по итогам звонка</h3>
 
-            <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/bitrix-24.png" alt=",битрикс-24">
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/bitrix-24.png" alt=",битрикс-24">
+              </div>
+
+              <ul class="wrapper space-y-4 lg:space-y-3">
+                <li class="flash-li">Экономьте время менеджера на <b>внесении данных</b> после звонка</li>
+                <li class="flash-li"><b>Минимизируйте</b> ошибки и пропуски в CRM</li>
+                <li class="flash-li">Повышайте <b>эффективность менеджера</b> и шансы на закрытие сделки</li>
+                <li class="flash-li relative w-fit"><b>Получайте выводы</b> и рекомендации по итогам звонка
+                  с помощью ChatGPT
+                  <p class="badge absolute right-[3px] -top-[18px] translate-x-full bg-blue-100 text-white">New</p>
+                </li>
+              </ul>
             </div>
-
-            <ul class="wrapper space-y-4 lg:space-y-3">
-              <li class="flash-li">Экономьте время менеджера на <b>внесении данных</b> после звонка</li>
-              <li class="flash-li"><b>Минимизируйте</b> ошибки и пропуски в CRM</li>
-              <li class="flash-li">Повышайте <b>эффективность менеджера</b> и шансы на закрытие сделки</li>
-              <li class="flash-li relative"><b>Получайте выводы</b> и рекомендации по итогам звонка
-                с помощью ChatGPT
-                <p class="badge absolute right-[3px] -top-[18px] translate-x-full bg-blue-100 text-white">New</p>
-              </li>
-            </ul>
           </div>
         </div>
 
         <!-- #3 automatization tab -->
-        <div class="relative lg:wrapper-no-flex lg:min-h-[488px] hidden lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(3)_:checked]:block bg-light-blue-100 border border-light-blue-200 pt-10 overflow-hidden">
-          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-            <h3 class="wrapper md:text-2xl/[130%]">Получайте мгновенные уведомления с пометкой «ВАЖНО» </h3>
+        <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
+          <div class="automatization-tab max-lg:pb-0">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+              <h3 class="wrapper md:text-2xl/[130%]">Получайте мгновенные уведомления с пометкой «ВАЖНО» </h3>
 
-            <ul class="wrapper space-y-4 lg:space-y-3">
-              <li class="flash-li">Если менеджер произнес <b>«перезвоню с личного»</b>, вам придет мгновенное уведомление</li>
-              <li class="flash-li">Клиент пригрозил, что будет подавать в суд? <br>
-                <b>Узнайте об этом раньше</b>, чем менеджер положил трубку, и урегулируйте ситуацию
-              </li>
-            </ul>
+              <ul class="wrapper space-y-4 lg:space-y-3">
+                <li class="flash-li">Если менеджер произнес <b>«перезвоню с личного»</b>, вам придет мгновенное уведомление</li>
+                <li class="flash-li">Клиент пригрозил, что будет подавать в суд? <br>
+                  <b>Узнайте об этом раньше</b>, чем менеджер положил трубку, и урегулируйте ситуацию
+                </li>
+              </ul>
 
-            <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[80%] self-center">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.png" alt="уведомления на телефон">
+              <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[80%] self-center">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.png" alt="уведомления на телефон">
+              </div>
             </div>
           </div>
         </div>
 
         <!-- #4 automatization tab -->
-        <div class="relative lg:wrapper-no-flex lg:min-h-[488px] hidden pt-10 pb-[72px] lg:px-10 lg:pt-12 lg:pb-14 lg:rounded-2xl peer-has-[label:nth-child(4)_:checked]:block bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-            <h3 class="wrapper md:text-2xl/[130%]">Готовые отчёты, адаптированные под вашу роль и потребности компании</h3>
+        <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
+          <div class="automatization-tab">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+              <h3 class="wrapper md:text-2xl/[130%]">Готовые отчёты, адаптированные под вашу роль и потребности компании</h3>
 
-            <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+              </div>
+
+              <ul class="wrapper space-y-4 lg:space-y-3">
+                <li class="flash-li"><b>Подробная расшифровка</b> каждого звонка с разделением на реплики сотрудника и клиента</li>
+                <li class="flash-li"><b>Анализ звонка</b>: в каком тоне состоялся диалог, кто доминировал, кто перебивал и насколько часто</li>
+                <li class="flash-li">Узнавайте, как <b>сотрудник презентовал</b> компанию и предложил ли дополнительные товары</li>
+              </ul>
             </div>
-
-            <ul class="wrapper space-y-4 lg:space-y-3">
-              <li class="flash-li"><b>Подробная расшифровка</b> каждого звонка с разделением на реплики сотрудника и клиента</li>
-              <li class="flash-li"><b>Анализ звонка</b>: в каком тоне состоялся диалог, кто доминировал, кто перебивал и насколько часто</li>
-              <li class="flash-li">Узнавайте, как <b>сотрудник презентовал</b> компанию и предложил ли дополнительные товары</li>
-            </ul>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- PRICES section -->
-  <section id="prices" class="wrapper pt-[120px] -mt-[110px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top] overflow-hidden">
-    <div class="lg:mb-[130px] lg:mt-[35px] lg:flex lg:justify-center lg:items-center">
-      <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
-        <h3 class="mb-1 text-center">— Сколько стоит </h3>
-        <h3 class="text-center">
-          <b class="relative">
-            Эврика360?
+  <section id="prices" class="pt-[120px] -mt-[110px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top]">
+    <div class="wrapper overflow-hidden">
+      <div class="lg:mb-[130px] lg:mt-[35px] lg:flex lg:justify-center lg:items-center">
+        <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
+          <h3 class="mb-1 text-center">— Сколько стоит </h3>
+          <h3 class="text-center">
+            <b class="relative">
+              Эврика360?
 
-            <div class="absolute -inset-7 lg:-inset-4 lg:-bottom-1 lg:-left-2 flex justify-center items-center">
-              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.png" alt="">
-              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle-desktop.png" alt="">
-            </div>
-          </b>
-        </h3>
-      </div>
-
-      <div class="hidden lg:block">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-logo-258.png" alt="">
-      </div>
-    </div>
-
-
-    <div class="mb-10 lg:hidden">
-      <?php include 'parts/prices-slider.php' ?>
-    </div>
-
-
-    <div class="mb-[88px] hidden lg:block">
-      <div class="grid grid-cols-[200px_auto] gap-[38px]">
-        <div class="grid grid-cols-1 gap-[3px]">
-          <div class="price-table-unit table-heading">
-          </div>
-          <div class="price-table-unit table-title">Пункты чек-листа</div>
-          <div class="price-table-unit table-title">Минут</div>
-          <div class="mt-2 price-table-unit table-title">Интеграция с системами по API</div>
-          <div class="price-table-unit table-heading">
-          </div>
+              <div class="absolute -inset-7 lg:-inset-4 lg:-bottom-1 lg:-left-2 flex justify-center items-center">
+                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.png" alt="">
+                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle-desktop.png" alt="">
+              </div>
+            </b>
+          </h3>
         </div>
 
-        <div class="grid grid-cols-5 gap-[5px]">
-          <!-- BASIC plan -->
-          <div class="grid grid-cols-1 gap-[3px] text-grey-600">
+        <div class="hidden lg:block">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-logo-258.png" alt="">
+        </div>
+      </div>
+
+      <div class="mb-10 lg:hidden">
+        <?php include 'parts/prices-slider.php' ?>
+      </div>
+
+      <div class="mb-[88px] hidden lg:block">
+        <div class="grid grid-cols-[200px_auto] gap-[38px]">
+          <div class="grid grid-cols-1 gap-[3px]">
             <div class="price-table-unit table-heading">
-              BASIC
             </div>
-            <div class="price-table-unit bg-grey-50">15</div>
-            <div class="price-table-unit bg-grey-50">10 000</div>
-            <div class="price-table-unit bg-grey-50">1</div>
+            <div class="price-table-unit table-title">Пункты чек-листа</div>
+            <div class="price-table-unit table-title">Минут</div>
+            <div class="mt-2 price-table-unit table-title">Интеграция с системами по API</div>
             <div class="price-table-unit table-heading">
-              280$
             </div>
           </div>
 
-          <!-- STANDART plan -->
-          <div class="grid grid-cols-1 gap-[3px] text-blue-100">
-            <div class="price-table-unit table-heading">
-              STANDART
-            </div>
-            <div class="price-table-unit bg-light-blue-150">30</div>
-            <div class="price-table-unit bg-light-blue-150">30 000</div>
-            <div class="price-table-unit bg-light-blue-150">1</div>
-            <div class="price-table-unit table-heading">
-              590$
-            </div>
-          </div>
-
-          <!-- SILVER plan -->
-          <div class="grid grid-cols-1 gap-[3px] text-green-500">
-            <div class="relative price-table-unit table-heading">
-              SILVER
-
-              <div class="absolute left-0 right-0 bottom-0 py-[9px] flex justify-center h-[120px] bg-green-linear text-dark-blue-500 text-xl -z-10">
-                POPULAR
+          <div class="grid grid-cols-5 gap-[5px]">
+            <!-- BASIC plan -->
+            <div class="grid grid-cols-1 gap-[3px] text-grey-600">
+              <div class="price-table-unit table-heading">
+                BASIC
+              </div>
+              <div class="price-table-unit bg-grey-50">15</div>
+              <div class="price-table-unit bg-grey-50">10 000</div>
+              <div class="price-table-unit bg-grey-50">1</div>
+              <div class="price-table-unit table-heading">
+                280$
               </div>
             </div>
-            <div class="price-table-unit text-white bg-green-500">45</div>
-            <div class="price-table-unit text-white bg-green-500">60 000</div>
-            <div class="price-table-unit text-white bg-green-500">2</div>
-            <div class="price-table-unit table-heading">
-              850$
-            </div>
-          </div>
 
-          <!-- GOLD plan -->
-          <div class="grid grid-cols-1 gap-[3px] text-yellow-500">
-            <div class="price-table-unit table-heading">
-              GOLD
+            <!-- STANDART plan -->
+            <div class="grid grid-cols-1 gap-[3px] text-blue-100">
+              <div class="price-table-unit table-heading">
+                STANDART
+              </div>
+              <div class="price-table-unit bg-light-blue-150">30</div>
+              <div class="price-table-unit bg-light-blue-150">30 000</div>
+              <div class="price-table-unit bg-light-blue-150">1</div>
+              <div class="price-table-unit table-heading">
+                590$
+              </div>
             </div>
-            <div class="price-table-unit text-white bg-yellow-500">16ч</div>
-            <div class="price-table-unit text-white bg-yellow-500">100 000</div>
-            <div class="price-table-unit text-white bg-yellow-500">3</div>
-            <div class="price-table-unit table-heading">
-              1 360$
-            </div>
-          </div>
 
-          <!-- SPECIAL plan -->
-          <div class="grid grid-cols-1 gap-[3px] text-orange-400">
-            <div class="price-table-unit table-heading">
-              SPECIAL
+            <!-- SILVER plan -->
+            <div class="grid grid-cols-1 gap-[3px] text-green-500">
+              <div class="relative price-table-unit table-heading">
+                SILVER
+
+                <div class="absolute left-0 right-0 bottom-0 py-[9px] flex justify-center h-[120px] bg-green-linear text-dark-blue-500 text-xl -z-10">
+                  POPULAR
+                </div>
+              </div>
+              <div class="price-table-unit text-white bg-green-500">45</div>
+              <div class="price-table-unit text-white bg-green-500">60 000</div>
+              <div class="price-table-unit text-white bg-green-500">2</div>
+              <div class="price-table-unit table-heading">
+                850$
+              </div>
             </div>
-            <div class="price-table-unit text-white bg-orange-400">∞</div>
-            <div class="price-table-unit text-white bg-orange-400">200 000+</div>
-            <div class="price-table-unit text-white bg-orange-400">∞</div>
-            <div class="price-table-unit table-heading !text-[17px]">
-              обсуждается
-              индивидуально
+
+            <!-- GOLD plan -->
+            <div class="grid grid-cols-1 gap-[3px] text-yellow-500">
+              <div class="price-table-unit table-heading">
+                GOLD
+              </div>
+              <div class="price-table-unit text-white bg-yellow-500">16ч</div>
+              <div class="price-table-unit text-white bg-yellow-500">100 000</div>
+              <div class="price-table-unit text-white bg-yellow-500">3</div>
+              <div class="price-table-unit table-heading">
+                1 360$
+              </div>
+            </div>
+
+            <!-- SPECIAL plan -->
+            <div class="grid grid-cols-1 gap-[3px] text-orange-400">
+              <div class="price-table-unit table-heading">
+                SPECIAL
+              </div>
+              <div class="price-table-unit text-white bg-orange-400">∞</div>
+              <div class="price-table-unit text-white bg-orange-400">200 000+</div>
+              <div class="price-table-unit text-white bg-orange-400">∞</div>
+              <div class="price-table-unit table-heading !text-[17px]">
+                обсуждается
+                индивидуально
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="lg:flex lg:gap-6">
-      <div class="relative mb-9 px-4 py-6 h-fit lg:order-2 space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
-        <h4 class="lg:text-xl/[130%]">Что входит в состав каждого пакета?</h4>
 
-        <ul class="space-y-2">
-          <div class="flash-li">Отчеты по показателям сотрудников</div>
-          <div class="flash-li">Отчет владельца/руководства</div>
-          <div class="flash-li">Поиск по ключевым словам</div>
-          <div class="flash-li">Обучение использованию сервиса</div>
-        </ul>
+    <div class="lg:wrapper">
+      <div class="lg:flex lg:gap-6">
+        <div class="max-lg:wrapper-no-flex lg:order-2">
+          <div class="relative mb-9 px-4 py-6 h-fit space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
+            <h4 class="lg:text-xl/[130%]">Что входит в состав каждого пакета?</h4>
 
-        <label class="peer btn primary w-full flex items-center gap-2 hover:cursor-pointer">
-          <div>
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/help-circle-icon.png" alt="">
-          </div>
-          <input type="checkbox" class="hidden">
-          А что еще?
-        </label>
+            <ul class="space-y-2">
+              <div class="flash-li">Отчеты по показателям сотрудников</div>
+              <div class="flash-li">Отчет владельца/руководства</div>
+              <div class="flash-li">Поиск по ключевым словам</div>
+              <div class="flash-li">Обучение использованию сервиса</div>
+            </ul>
 
-        <div class="hidden max-lg:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-6 lg:translate-y-full lg:w-[380px]">
-          <div class="grid grid-cols-2 gap-2">
-            <div class="space-y-2">
-              <h5 class="font-bold">$0.015</h5>
-              <p class="description text-grey-400">Перерасчет за минуту</p>
+            <label class="peer btn primary w-full flex items-center gap-2 hover:cursor-pointer">
+              <div>
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/help-circle-icon.png" alt="">
+              </div>
+              <input type="checkbox" class="hidden">
+              А что еще?
+            </label>
+
+            <div class="hidden max-lg:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-4 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-6 lg:translate-y-full lg:w-[380px]">
+              <div class="grid grid-cols-2 gap-2">
+                <div class="space-y-2">
+                  <h5 class="font-bold">$0.015</h5>
+                  <p class="description text-grey-400">Перерасчет за минуту</p>
+                </div>
+
+                <div class="space-y-2">
+                  <h5 class="font-bold">$30</h5>
+                  <p class="description text-grey-400">Дополнительный пункт чек-листа</p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h5 class="font-bold">обсуждается индивидуально</h5>
+                <p class="description text-grey-400">
+                  Дополнительная интеграция с системой по API
+                </p>
+              </div>
             </div>
-
-            <div class="space-y-2">
-              <h5 class="font-bold">$30</h5>
-              <p class="description text-grey-400">Дополнительный пункт чек-листа</p>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <h5 class="font-bold">обсуждается индивидуально</h5>
-            <p class="description text-grey-400">
-              Дополнительная интеграция с системой по API
-            </p>
           </div>
         </div>
-      </div>
 
-      <div class="lg:grow lg:shrink-0 lg:w-[720px]">
-        <?php include 'parts/feature-price-slider.php' ?>
+        <div class="max-lg:wrapper overflow-hidden">
+          <div class="lg:grow lg:shrink-0 lg:w-[720px]">
+            <?php include 'parts/feature-price-slider.php' ?>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1270,7 +1500,7 @@
     </div>
 
     <div class="pt-12 pb-20 lg:pt-20 lg:pb-[65px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
-      <div class="lg:wrapper-no-flex lg:grid lg:grid-cols-[632px_auto] lg:justify-between">
+      <div class="lg:wrapper-no-flex lg:grid lg:grid-cols-[57%_auto] lg:justify-between">
         <div class="max-lg:wrapper">
           <h3 class="mb-8 lg:mb-12 leading-[140%]">
             Запишитесь на экскурсию по сервису <b>речевой аналитики</b> Эврика360
@@ -1282,7 +1512,7 @@
             <div class="flash-li">Найдём, в каких коммуникациях <b>заморожены деньги прямо сейчас</b></div>
           </ul>
 
-          <button class="btn primary lg:ml-0 flex items-center gap-2">
+          <button class="excursion-modal-toggle btn primary lg:ml-0 flex items-center gap-2">
             <div>
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.png" alt="">
             </div>
@@ -1291,7 +1521,7 @@
           </button>
         </div>
 
-        <div class="hidden lg:block w-fit -mr-[127px] mt-10">
+        <div class="hidden lg:block 2xl:-mr-[127px] mt-10">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-excursion.png" alt="">
         </div>
       </div>

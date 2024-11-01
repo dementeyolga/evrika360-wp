@@ -6,6 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php wp_title(); ?></title>
   <?php wp_head(); ?>
+
+  <!-- Marquiz script start -->
+  <script>
+    (function(w, d, s, o) {
+      var j = d.createElement(s);
+      j.async = true;
+      j.src = '//script.marquiz.ru/v2.js';
+      j.onload = function() {
+        if (document.readyState !== 'loading') Marquiz.init(o);
+        else document.addEventListener("DOMContentLoaded", function() {
+          Marquiz.init(o);
+        });
+      };
+      d.head.insertBefore(j, d.head.firstElementChild);
+    })(window, document, 'script', {
+      host: '//quiz.marquiz.ru',
+      region: 'eu',
+      id: '66e6d33b2fa5030026ac5480',
+      autoOpen: false,
+      autoOpenFreq: 'once',
+      openOnExit: false,
+      disableOnMobile: false
+    });
+  </script> <!-- Marquiz script end -->
 </head>
 
 <body <?php body_class(); ?> class="m-auto">
@@ -23,7 +47,7 @@
       </div>
     </div>
 
-    <div class="hidden lg:flex wrapper flex-row py-[33px] justify-between items-center gap-[22%] group-has-[:checked]:gap-3">
+    <div class="hidden lg:flex wrapper flex-row py-[33px] justify-between items-center gap-5 group-has-[:checked]:gap-3">
       <a href="/" class="text-white group-has-[:checked]:text-blue-100">
         <div class="group-has-[:checked]:hidden">
           <?php include 'parts/evrika-logo-desktop.php' ?>
@@ -87,7 +111,7 @@
         </div>
 
         <div class="flex gap-2">
-          <button class="btn shrink-0 group-has-[:checked]:bg-light-blue-100">Заказать звонок</button>
+          <button class="call-modal-toggle btn shrink-0 group-has-[:checked]:bg-light-blue-100">Заказать звонок</button>
           <button class="btn dark">Войти</button>
         </div>
       </div>
@@ -159,7 +183,7 @@
       </div>
 
       <div class="flex gap-2">
-        <button class="btn grow">Заказать звонок</button>
+        <button class="call-modal-toggle btn grow">Заказать звонок</button>
         <button class="btn dark grow">Войти</button>
       </div>
     </div>

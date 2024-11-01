@@ -1,5 +1,3 @@
-<?php wp_footer(); ?>
-
 <footer class="wrapper mt-[64px] pb-10 space-y-8 lg:space-y-10">
   <div class="flex flex-col gap-8 lg:flex-row lg:justify-between lg:items-center">
     <div>
@@ -12,13 +10,13 @@
       </p>
 
       <div class="flex gap-4 lg:gap-8 font-bold">
-        <p>+7 495 662-18-73</p>
-        <p> +375 29 388-55-12</p>
+        <a href="tel:+7 495 662-18-73">+7 495 662-18-73</a>
+        <a href="tel:+375 29 388-55-12">+375 29 388-55-12</a>
       </div>
     </div>
 
     <div class="flex gap-8 lg:gap-4">
-      <button class="mx-0 xs:shrink xs:grow-0 grow btn dark">Заказать звонок</button>
+      <button class="call-modal-toggle mx-0 xs:shrink xs:grow-0 grow btn dark">Заказать звонок</button>
 
       <div class="grow-0 flex gap-2 items-center justify-end">
         <a class="shrink-0">
@@ -48,6 +46,8 @@
     </p>
   </div>
 </footer>
+
+<?php wp_footer(); ?>
 </body>
 
 </html>

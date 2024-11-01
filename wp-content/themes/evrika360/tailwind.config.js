@@ -6,6 +6,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       white: 'var(--white-100)',
+      'white-transparent': 'var(--white-100-8)',
       grey: {
         50: 'var(--grey-50)',
         100: 'var(--grey-100)',

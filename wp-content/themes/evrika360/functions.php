@@ -36,6 +36,8 @@ class Evrika360_Theme {
     wp_enqueue_script('header-scroll', get_template_directory_uri() . '/assets/js/scroll/header-scroll.js', array(), false, true);
 
     wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/burger-menu/burger-menu.js', array(), false, true);
+
+    wp_enqueue_script('modals', get_template_directory_uri() . '/assets/js/popups/modals.js', array(), false, true);
   }
 
   public static function get_instance() {
