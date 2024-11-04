@@ -33,6 +33,7 @@ module.exports = {
         300: 'var(--dark-blue-300)',
         400: 'var(--dark-blue-400)',
         500: 'var(--dark-blue-500)',
+        '500-60': 'var(--dark-blue-500-60)',
         600: 'var(--dark-blue-600)',
         '600-80': 'var(--dark-blue-600-80)',
       },

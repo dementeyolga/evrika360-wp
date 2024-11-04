@@ -65,10 +65,11 @@ Text Domain: evrika
     --blue-50: #01a8db26;
     --blue-100: #01a8db;
     --blue-200: #2090ce;
-    --blue-200-32: rgba(140, 170, 220, 0.32);
+    --blue-200-32: #8caadc52;
     --dark-blue-300: #01548f;
     --dark-blue-400: #1a3563;
     --dark-blue-500: #162a4b;
+    --dark-blue-500-60: rgba(22, 42, 75, 0.6);
     --dark-blue-600: #0e2244;
     --dark-blue-600-80: #0e2244cc;
     --red-500: #fe0000;
@@ -222,7 +223,7 @@ Text Domain: evrika
   }
 
   .table-unit {
-    @apply h-[46px] py-[14px] px-4 description;
+    @apply min-h-[46px] py-[14px] px-4 description;
 
     &:nth-child(2n) {
       @apply bg-light-blue-100;
@@ -320,14 +321,38 @@ Text Domain: evrika
     @apply px-4 pt-5 pb-10 space-y-6 rounded-sm border border-grey-200 bg-grey-50;
   }
 
+  .embla__container:has(.feature-price-slide) {
+    align-items: stretch;
+  }
+
+  .feature-price-slide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-price-embla .embla__dots {
+    @media (min-width: 1280px) {
+      display: flex;
+    }
+  }
+
   .embla__slide:nth-child(1) .feature-price-slide {
     min-width: 282px;
     flex-grow: 1;
+
+    @media (min-width: 1024px) {
+      min-width: auto;
+    }
   }
 
   .embla__slide:nth-child(2) .feature-price-slide {
     min-width: 210px;
     flex-grow: 1;
+
+    @media (min-width: 1024px) {
+      min-width: auto;
+    }
   }
 
   .embla__slide:nth-child(1):has(.feature-price-slide) {
@@ -502,6 +527,10 @@ Text Domain: evrika
 
   .bg-green-linear {
     background: linear-gradient(180deg, #36b37f3d 0%, #ffffff3d 100%);
+  }
+
+  .bg-blue-linear {
+    background: linear-gradient(180deg, #3aabe75d 0%, #ffffff3d 100%);
   }
 
   .bg-fade-bottom {

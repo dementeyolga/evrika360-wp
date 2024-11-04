@@ -2,7 +2,7 @@
 
 <main class="flex flex-col gap-16 lg:gap-[140px]">
   <!-- Popup "Заказать консультацию" (большой) -->
-  <div id="popup-order-consultation" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+  <div id="popup-order-consultation" class="modal z-50 fixed w-screen h-screen flex justify-center items-center bg-blur-fade">
     <div class="relative wrapper items-center xl:my-10 xl:p-12 xl:pr-[25px] xl:border xl:border-grey-300 xl:bg-pattern xl:rounded-xl overflow-hidden">
       <button class="close hidden xl:block absolute top-0 right-3 p-4">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
@@ -62,34 +62,33 @@
   </div>
 
   <!-- Popup "Заказать экскурсию" (большой) -->
-  <div id="popup-order-excursion" class="modal hidden z-50 fixed w-screen h-screen flex justify-center items-center bg-blur-fade">
-    <div class="relative wrapper items-center xl:my-10 xl:p-12 xl:pr-[25px] xl:border xl:border-grey-300 xl:bg-pattern xl:rounded-xl overflow-hidden">
-      <button class="close hidden xl:block absolute top-0 right-3 p-4">
+  <div id="popup-order-excursion" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+    <div class="relative wrapper lg:my-10 lg:p-12 lg:pr-[25px] lg:border lg:border-grey-300 lg:bg-pattern lg:rounded-xl">
+      <button class="close hidden lg:block absolute top-2 right-3 p-4">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
       </button>
-      <div class="hidden xl:block absolute inset-0 -z-10 bg-dark-blue-500 rounded-xl"></div>
-      <div class="hidden xl:block absolute left-0 -bottom-14">
+      <div class="hidden lg:block absolute inset-0 -z-10 bg-dark-blue-500 rounded-xl"></div>
+      <div class="hidden lg:block absolute left-5 bottom-0">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-demo.png" alt="">
       </div>
 
-      <div class="xl:flex xl:gap-14">
-        <div class="hidden xl:block ">
-          <h4 class="mb-9 text-white">Запишитесь на <b class="text-yellow-500">онлайн-экскурсию</b> по сервису речевой аналитики и узнайте, как он может помочь в вашей компании</h4>
-          <p class="h-fit text-white px-10 py-4 shrink-0 bg-dark-blue-600-80 backdrop-blur-sm rounded-sm">
-            Расскажем о возможностях сервиса и рассчитаем целесообразность применения в вашей компании
-          </p>
-        </div>
+      <h3 class="hidden lg:block mb-9 text-white">Запишитесь на <b class="text-yellow-500">онлайн-экскурсию</b> по сервису речевой аналитики и узнайте, как он может помочь в вашей компании</h3>
 
-        <div class="max-w-[448px] relative my-5 xl:my-0 px-4 py-6 w-full rounded-xl border border-grey-400 bg-white">
-          <button class="close xl:hidden absolute top-2 right-0 p-4">
+      <div class="lg:flex gap-[75px]">
+        <p class="hidden lg:block h-fit text-white px-10 py-4 w-1/2 shrink-0 bg-white-transparent backdrop-blur-sm rounded-sm">
+          Расскажем о возможностях сервиса и рассчитаем целесообразность применения в вашей компании
+        </p>
+
+        <div class="relative my-11 lg:my-0 px-4 py-6 w-full rounded-xl border border-grey-400 bg-white">
+          <button class="close lg:hidden absolute top-2 right-0 p-4">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
           </button>
 
-          <h4 class="mb-8 max-xl:mr-7 md:text-xl/[130%]">
+          <h4 class="mb-8 max-lg:mr-7 md:text-xl/[130%]">
             <b>Заполните форму</b>, чтобы записаться на онлайн-экскурсию
           </h4>
 
-          <form class="mb-4 flex flex-col gap-5" onsubmit="event.preventDefault(); window.location.pathname = '/thank-you'">
+          <form class="mb-4 flex flex-col gap-7" onsubmit="event.preventDefault(); window.location.pathname = '/thank-you'">
             <div class="flex flex-col gap-2">
               <label for="exc-name">Ваше имя*</label>
               <input type="text" name="Имя" id="exc-name" placeholder="Введите имя" required>
