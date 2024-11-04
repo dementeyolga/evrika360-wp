@@ -266,7 +266,8 @@
 
         <div class="character-bg xl:w-[190px] xl:h-[190px] absolute right-0 xl:-right-[112px] top-[6px] xl:top-[47px] -translate-y-full"></div>
         <div class="absolute right-[11px] xl:-right-[90px] top-[15px] xl:top-[71px] -translate-y-full">
-          <img class="xl:w-[209px] xl:h-[209px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.png" alt="">
+          <img class="xl:hidden w-[137px] h-[137px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.png" alt="">
+          <img class="hidden xl:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink-desktop.png" alt="">
         </div>
       </div>
 
@@ -312,7 +313,8 @@
     <div class="flex flex-col gap-6 lg:flex-row lg:gap-[100px]">
       <div class="ml-3 flex flex-col gap-6 lg:bg-orange-circle lg:w-[448px] lg:shrink-0">
         <div class="relative mx-auto mb-[22px] w-fit">
-          <img class="lg:w-[250px] lg:h-[250px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
+          <img class="lg:hidden w-[161px] h-[161px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea-desktop.png" alt="">
           <div class="character-bg lg:w-[190px] lg:h-[190px] absolute w-[120px] h-[120px] top-5 lg:top-10 left-[calc(50%_-_8px)] -translate-x-1/2"></div>
           <div class="badge absolute -bottom-[22px] left-1/2 -translate-x-1/2">Эврика360</div>
         </div>
@@ -804,12 +806,14 @@
       <div class="flex flex-col items-center lg:mr-[53px]">
         <div class="badge hidden lg:flex mb-7 mx-auto">Эврика360</div>
 
-        <div class="-mb-1">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-hand.png" alt="">
+        <div class="-mb-0.5 relative">
+          <img class="lg:hidden w-[151px] h-[153px] relative z-10" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-hand.png" alt="">
+          <div class="lg:hidden character-bg w-[170px] h-[170px] bg-white z-0 absolute -top-2 -left-[6px] opacity-60"></div>
+
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-hand-desktop.png" alt="">
         </div>
 
-        <div class="chat">
+        <div class="chat z-20">
           — Да, и не только в этом!
         </div>
       </div>
@@ -1038,8 +1042,9 @@
       </h3>
 
       <div class="flex flex-col items-center">
-        <div class="lg:absolute left-0 bottom-0">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared.png" alt="">
+        <div class="relative lg:absolute left-0 bottom-0">
+          <img class="relative lg:hidden w-40 h-40 z-10" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared.png" alt="">
+          <div class="lg:hidden character-bg w-[140px] h-[140px] absolute top-0 left-2.5 z-0"></div>
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared-desktop.png" alt="">
         </div>
 
@@ -1069,8 +1074,10 @@
         </h3>
 
         <div class="flex flex-col items-center lg:max-w-[636px]">
-          <div>
-            <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret.png" alt="">
+          <div class="relative">
+            <img class="lg:hidden w-[150px] h-[150px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret.png" alt="">
+            <div class="lg:hidden character-bg w-[130px] h-[130px] absolute top-2 left-4"></div>
+
             <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret-desktop.png" alt="">
           </div>
 
@@ -1479,8 +1486,10 @@
   <section class="space-y-[60px] lg:space-y-[180px] ">
     <div class="wrapper flex flex-col gap-5 lg:flex-row lg:gap-[58px] lg:items-center">
       <div class="flex flex-col items-center shrink-0">
-        <div class="-mr-5 lg:mr-0 lg:ml-4">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy.png" alt="">
+        <div class="relative lg:ml-4">
+          <img class="lg:hidden w-[200px] h-[200px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy.png" alt="">
+          <div class="lg:hidden character-bg w-[200px] h-[200px] absolute top-0 left-2"></div>
+
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy-desktop.png" alt="">
         </div>
 

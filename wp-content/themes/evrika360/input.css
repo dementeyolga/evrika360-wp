@@ -198,7 +198,7 @@ Text Domain: evrika
   }
 
   .tab {
-    @apply relative description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-bold border-b-2 border-b-transparent hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(text)] after:text-dark-blue-500 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
+    @apply relative description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-bold border-b-2 border-b-grey-300 hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(text)] after:text-grey-400 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
   }
 
   .flash-li {
@@ -593,7 +593,7 @@ Text Domain: evrika
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 1px;
+    height: 2px;
     background-color: var(--grey-300);
     z-index: -10;
   }
@@ -650,6 +650,7 @@ Text Domain: evrika
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  transition: 0.1s;
 
   @media (min-width: 1280px) {
     display: none;
@@ -675,6 +676,7 @@ Text Domain: evrika
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: 0.1s;
 
   &:only-child {
     display: none;
@@ -687,6 +689,7 @@ Text Domain: evrika
   border-radius: 50%;
   background-color: var(--orange-400);
   opacity: 0.2;
+  transition: 0.1s;
 }
 .embla__dot--selected {
   width: 20px;
