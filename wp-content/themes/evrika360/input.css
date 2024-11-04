@@ -174,7 +174,7 @@ Text Domain: evrika
   }
 
   .btn {
-    @apply h-12 py-3 px-5 mx-auto w-full sm:w-fit flex justify-center items-center rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset hover:bg-light-blue-100 active:bg-light-blue-300 disabled:bg-grey-100 disabled:text-grey-400 disabled:shadow-none transition-colors duration-200;
+    @apply h-14 sm:h-12 py-3 px-5 mx-auto w-full sm:w-fit flex justify-center items-center rounded-3xl text-base/[130%] text-dark-blue-300 bg-white shadow-light-inset hover:bg-light-blue-100 active:bg-light-blue-300 disabled:bg-grey-100 disabled:text-grey-400 disabled:shadow-none transition-colors duration-200;
   }
 
   .btn.primary {
