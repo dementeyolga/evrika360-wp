@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./**/*.php'],
+  content: ['./**/*.php', './assets/js/**/*.js'],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -111,6 +111,15 @@ module.exports = {
       },
       gridTemplateColumns: {
         '2-1': '2fr 1fr',
+      },
+      animation: {
+        'fade-in-down': 'fade-in-down 0.5s ease-in forwards 1 0.3s',
+      },
+      keyframes: {
+        'fade-in-down': {
+          '0%': { transform: 'translateY(-100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
       },
     },
   },

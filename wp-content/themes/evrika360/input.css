@@ -187,11 +187,11 @@ Text Domain: evrika
   }
 
   .character-bg {
-    @apply w-[130px] h-[130px] rounded-full bg-light-blue-100 -z-10;
+    @apply w-[130px] h-[130px] rounded-full bg-light-blue-200 opacity-50 -z-10;
   }
 
   .chat {
-    @apply py-[15px] px-3 w-fit rounded-lg bg-blue-200 text-chat md:text-chat-desktop text-white;
+    @apply py-[15px] px-3 opacity-0 w-fit rounded-lg bg-blue-200 text-chat md:text-chat-desktop text-white;
   }
 
   .chat.secondary {
