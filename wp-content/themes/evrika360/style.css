@@ -638,7 +638,7 @@ video {
   --dark-blue-500-60: rgba(22, 42, 75, 0.6);
   --dark-blue-600: #0e2244;
   --dark-blue-600-80: #0e2244cc;
-  --red-500: #fe0000;
+  --red-500: #ff0000;
   --orange-50: #fffaf8;
   --orange-100: #f1eae6;
   --orange-100-50: #f0e9e580;
@@ -753,6 +753,10 @@ p {
 label {
   font-size: 0.875rem;
   line-height: 120%;
+}
+
+label:hover {
+  cursor: pointer;
 }
 
 input[type='text'] {
@@ -892,6 +896,17 @@ input[type='text']:disabled {
 .accent.small {
   font-size: 1.25rem;
   line-height: 110%;
+}
+
+.input-error {
+  font-size: 0.75rem;
+  line-height: 150%;
+  position: absolute;
+  bottom: -0.125rem;
+  left: 0px;
+  --tw-translate-y: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  color: var(--red-500);
 }
 
 .badge {
@@ -2829,6 +2844,10 @@ input[type='text']:disabled {
   border-top-width: 1px;
 }
 
+.\!border-red {
+  border-color: var(--red-500) !important;
+}
+
 .border-green-200 {
   border-color: var(--green-200);
 }
@@ -3236,6 +3255,11 @@ input[type='text']:disabled {
   --tw-shadow: var(--card-shadow);
   --tw-shadow-colored: var(--card-shadow);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.invert {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter {

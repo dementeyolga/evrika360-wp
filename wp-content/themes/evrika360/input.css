@@ -72,7 +72,7 @@ Text Domain: evrika
     --dark-blue-500-60: rgba(22, 42, 75, 0.6);
     --dark-blue-600: #0e2244;
     --dark-blue-600-80: #0e2244cc;
-    --red-500: #fe0000;
+    --red-500: #ff0000;
     --orange-50: #fffaf8;
     --orange-100: #f1eae6;
     --orange-100-50: #f0e9e580;
@@ -134,7 +134,7 @@ Text Domain: evrika
   }
 
   label {
-    @apply text-sm/[120%];
+    @apply text-sm/[120%] hover:cursor-pointer;
   }
 
   input[type='text'] {
@@ -168,6 +168,10 @@ Text Domain: evrika
 
   .accent.small {
     @apply text-xl/[110%];
+  }
+
+  .input-error {
+    @apply absolute -bottom-0.5 left-0 translate-y-full small-text text-red;
   }
 
   .badge {

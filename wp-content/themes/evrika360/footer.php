@@ -10,8 +10,8 @@
       </p>
 
       <div class="flex gap-4 lg:gap-8 font-bold">
-        <a class="link-dark" href="tel:+7 495 662-18-73">+7 495 662-18-73</a>
         <a class="link-dark" href="tel:+375 29 388-55-12">+375 29 388-55-12</a>
+        <a class="link-dark" href="tel:+7 495 662-18-73">+7 495 662-18-73</a>
       </div>
     </div>
 
