@@ -138,7 +138,7 @@ Text Domain: evrika
   }
 
   input[type='text'] {
-    @apply py-[7px] px-4 text-base/[150%] rounded-sm outline-none border border-grey-300 lg:hover:bg-light-blue-100 disabled:bg-grey-100 focus:border-blue-100 placeholder:text-grey-400;
+    @apply py-[7px] px-4 w-full text-base/[150%] rounded-sm outline-none border border-grey-300 lg:hover:bg-light-blue-100 disabled:bg-grey-100 focus:border-blue-100 placeholder:text-grey-400;
   }
 }
 

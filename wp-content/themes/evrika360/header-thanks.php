@@ -60,7 +60,7 @@
 
         <div class="flex gap-2">
           <button class="call-modal-toggle btn bg-light-blue-100 shrink-0">Заказать звонок</button>
-          <button class="btn dark">Войти</button>
+          <a href="https://cabinet.audio-control.by/login" target="_blank" class="btn dark">Войти</a>
         </div>
       </div>
     </div>
@@ -130,7 +130,7 @@
 
       <div class="flex gap-2">
         <button class="call-modal-toggle btn grow">Заказать звонок</button>
-        <button class="btn dark grow">Войти</button>
+        <a href="https://cabinet.audio-control.by/login" target="_blank" class="btn dark grow">Войти</a>
       </div>
     </div>
   </div>

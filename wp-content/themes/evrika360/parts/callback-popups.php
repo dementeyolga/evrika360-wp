@@ -22,11 +22,11 @@
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
         </button>
 
-        <h4 class="mb-8 max-xl:mr-7 md:text-xl/[130%]">
+        <h4 class="mb-5 max-xl:mr-7 md:text-xl/[130%]">
           <b>Заполните форму</b> и закажите консультацию специалиста
         </h4>
 
-        <form novalidate class="mb-4 flex flex-col gap-5">
+        <form novalidate class="mb-4 flex flex-col gap-4">
           <div class="relative flex flex-col gap-2">
             <label for="cons-name">Ваше имя*</label>
             <input type="text" name="Имя" id="cons-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-ЯЁё\- \(\)]+">
@@ -41,7 +41,7 @@
 
           <div class="relative flex flex-col gap-2">
             <label for="cons-phone">Ваш номер телефона*</label>
-            <input type="text" name="Телефон" id="cons-phone" placeholder="+375 ( _ _ ) _ _ _-_ _-_ _" required pattern="[+0-9\-_\(\) ]+">
+            <input data-phone type="text" name="Телефон" id="cons-phone" required pattern="[+0-9\-_\(\) ]+">
             <p class="input-error"></p>
           </div>
 
@@ -86,11 +86,11 @@
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
         </button>
 
-        <h4 class="mb-8 max-xl:mr-7 md:text-xl/[130%]">
+        <h4 class="mb-5 max-xl:mr-7 md:text-xl/[130%]">
           <b>Заполните форму</b>, чтобы записаться на онлайн-экскурсию
         </h4>
 
-        <form novalidate class="mb-4 flex flex-col gap-5">
+        <form novalidate class="mb-4 flex flex-col gap-4">
           <div class="relative flex flex-col gap-2">
             <label for="exc-name">Ваше имя*</label>
             <input type="text" name="Имя" id="exc-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-ЯЁё\- \(\)]+">
@@ -105,7 +105,7 @@
 
           <div class="relative flex flex-col gap-2">
             <label for="exc-phone">Ваш номер телефона*</label>
-            <input type="text" name="Телефон" id="exc-phone" placeholder="+375 ( _ _ ) _ _ _-_ _-_ _" required pattern="[+0-9\-_\(\) ]+">
+            <input data-phone type="text" name="Телефон" id="exc-phone" required pattern="[+0-9\-_\(\) ]+">
             <p class="input-error"></p>
           </div>
 
@@ -129,16 +129,16 @@
 <!-- Popup "Заказать Звонок" -->
 <div id="popup-order-call" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
   <div class="wrapper max-w-[448px]">
-    <div class="relative my-11 px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
+    <div class="relative px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
       <button class="close absolute top-2 right-0 p-4">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
       </button>
 
-      <h4 class="mb-8 mr-7 md:text-xl/[130%]">
+      <h4 class="mb-5 mr-7 md:text-xl/[130%]">
         <b>Заполните форму</b> и закажите консультацию специалиста
       </h4>
 
-      <form novalidate class="mb-4 flex flex-col gap-6">
+      <form novalidate class="mb-4 flex flex-col gap-4">
         <div class="relative flex flex-col gap-2">
           <label for="call-name">Ваше имя*</label>
           <input type="text" name="Имя" id="call-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-ЯЁё\- \(\)]+">
@@ -147,7 +147,7 @@
 
         <div class="relative flex flex-col gap-2">
           <label for="call-phone">Ваш номер телефона*</label>
-          <input type="text" name="Телефон" id="call-phone" placeholder="+375 ( _ _ ) _ _ _-_ _-_ _" required pattern="[+0-9\-_\(\) ]+">
+          <input data-phone type="text" name="Телефон" id="call-phone" required pattern="[+0-9\-_\(\) ]+">
           <p class="input-error"></p>
         </div>
 
@@ -170,16 +170,16 @@
 <!-- Popup "Протестировать сервис" -->
 <div id="popup-order-test" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
   <div class="wrapper max-w-[448px]">
-    <div class="relative my-11 px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
+    <div class="relative px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
       <button class="close absolute top-2 right-0 p-4">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
       </button>
 
-      <h4 class="mb-8 mr-7 md:text-xl/[130%]">
+      <h4 class="mb-5 mr-7 md:text-xl/[130%]">
         Чтобы протестировать сервис <b>на данных вашей компании</b>, заполните форму:
       </h4>
 
-      <form novalidate class="mb-4 flex flex-col gap-6">
+      <form novalidate class="mb-4 flex flex-col gap-4">
         <div class="relative flex flex-col gap-2">
           <label for="test-name">Ваше имя*</label>
           <input type="text" name="Имя" id="test-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-ЯЁё\- \(\)]+">
@@ -188,7 +188,7 @@
 
         <div class="relative flex flex-col gap-2">
           <label for="test-phone">Ваш номер телефона*</label>
-          <input type="text" name="Телефон" id="test-phone" placeholder="+375 ( _ _ ) _ _ _-_ _-_ _" required pattern="[+0-9\-_\(\) ]+">
+          <input data-phone type="text" name="Телефон" id="test-phone" required pattern="[+0-9\-_\(\) ]+">
           <p class="input-error"></p>
         </div>
 

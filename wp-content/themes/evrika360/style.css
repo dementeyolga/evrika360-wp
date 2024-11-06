@@ -760,6 +760,7 @@ label:hover {
 }
 
 input[type='text'] {
+  width: 100%;
   border-radius: var(--radius-sm);
   border-width: 1px;
   border-color: var(--grey-300);
@@ -3255,11 +3256,6 @@ input[type='text']:disabled {
   --tw-shadow: var(--card-shadow);
   --tw-shadow-colored: var(--card-shadow);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.invert {
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .filter {

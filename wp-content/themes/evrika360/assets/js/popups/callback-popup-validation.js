@@ -1,67 +1,67 @@
-// consultationModalWrapper
-// excursionModalWrapper
-// callModalWrapper
-// testModalWrapper
+// Implement form validation based on existing modals variables from 'callback-popups.js'
 
-function defineErrorMessage(input) {
-  if (input instanceof HTMLInputElement) {
-    if (input.validity.valueMissing) {
-      return 'Поле обязательно для заполнения';
-    }
+(function () {
+  const modals = [
+    consultationModalWrapper,
+    excursionModalWrapper,
+    callModalWrapper,
+    testModalWrapper,
+  ];
 
-    if (input.validity.tooShort) {
-      return `Поле должно содержать минимум ${input.minLength} символа`;
-    }
+  modals.forEach((modal) => {
+    const form = modal.querySelector('form');
 
-    if (input.validity.patternMismatch) {
-      return 'Неверный формат данных';
-    }
-  }
-}
+    const inputs = form?.querySelectorAll('input');
 
-function validateInput(input) {
-  const errorMessage = defineErrorMessage(input);
-  const errorEl = input.nextElementSibling;
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-  if (errorMessage) {
-    input.classList.add('!border-red');
-    input.parentElement.classList.add('mb-5');
-  } else {
-    input.classList.remove('!border-red');
-    input.parentElement.classList.remove('mb-5');
-  }
+      if (!e.target.checkValidity()) {
+        inputs.forEach((input) => {
+          validateInput(input);
+          input.oninput = () => validateInput(input);
+        });
 
-  if (errorEl instanceof HTMLParagraphElement) {
-    errorEl.textContent = errorMessage;
-  }
-}
+        return;
+      }
 
-const modals = [
-  consultationModalWrapper,
-  excursionModalWrapper,
-  callModalWrapper,
-  testModalWrapper,
-];
-
-modals.forEach((modal) => {
-  const form = modal.querySelector('form');
-
-  const inputs = form?.querySelectorAll('input');
-
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if (!e.target.checkValidity()) {
-      inputs.forEach((input) => {
-        validateInput(input);
-        input.oninput = () => validateInput(input);
-      });
-
-      return;
-    }
-
-    window.location.pathname = '/thank-you';
-    e.target.reset();
-    inputs.forEach((input) => (input.oninput = undefined));
+      window.location.pathname = '/thank-you';
+      e.target.reset();
+      inputs.forEach((input) => (input.oninput = undefined));
+    });
   });
-});
+
+  function defineErrorMessage(input) {
+    if (input instanceof HTMLInputElement) {
+      if (input.validity.valueMissing) {
+        return 'Поле обязательно для заполнения';
+      }
+
+      if (input.validity.tooShort) {
+        return `Поле должно содержать минимум ${input.minLength} символа`;
+      }
+
+      if (input.validity.patternMismatch) {
+        return 'Неверный формат данных';
+      }
+    }
+  }
+
+  function validateInput(input) {
+    const errorMessage = defineErrorMessage(input);
+    const fieldWrapper = input.closest('div.relative');
+    const errorEl = fieldWrapper.querySelector('p.input-error');
+
+    if (errorMessage) {
+      input.classList.add('!border-red');
+      fieldWrapper.classList.add('mb-5');
+    } else {
+      input.classList.remove('!border-red');
+      fieldWrapper.classList.remove('mb-5');
+    }
+
+    if (errorEl instanceof HTMLParagraphElement) {
+      errorEl.textContent = errorMessage;
+    }
+  }
+})();

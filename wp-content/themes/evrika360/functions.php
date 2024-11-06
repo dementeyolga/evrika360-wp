@@ -12,6 +12,7 @@ class Evrika360_Theme {
 
   public function enqueue_styles() {
     wp_enqueue_style('evrika-theme', get_stylesheet_uri());
+    wp_enqueue_style('intl-tel-input', get_template_directory_uri() . '/assets/lib/intl-tel-input/css/intlTelInput.css');
   }
 
   public function enqueue_scripts() {
@@ -42,6 +43,12 @@ class Evrika360_Theme {
     wp_enqueue_script('chat-animation', get_template_directory_uri() . '/assets/js/scroll/chat-animation.js', array(), false, true);
 
     wp_enqueue_script('callback-popup-validation', get_template_directory_uri() . '/assets/js/popups/callback-popup-validation.js', array('callback-popups'), false, true);
+
+    wp_enqueue_script('intl-tel-input-with-utils', get_template_directory_uri() . '/assets/lib/intl-tel-input/js/intlTelInputWithUtils.min.js', array(), false, true);
+
+    wp_enqueue_script('intl-phone-ru-translation', get_template_directory_uri() . '/assets/lib/intl-tel-input/js/intlTelInputRuTranslation.js', array(), false, true);
+
+    wp_enqueue_script('intl-phone-input', get_template_directory_uri() . '/assets/js/popups/intl-phone-input.js', array('intl-tel-input-with-utils', 'intl-phone-ru-translation', 'callback-popups'), false, true);
   }
 
   public static function get_instance() {
