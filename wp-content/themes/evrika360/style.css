@@ -2811,6 +2811,10 @@ input[type='text']:disabled {
   scroll-behavior: smooth;
 }
 
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
 .rounded-lg {
   border-radius: var(--radius-lg);
 }

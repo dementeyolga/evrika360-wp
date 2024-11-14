@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php get_header() ?>
 
 <main class="flex flex-col gap-16 lg:gap-[140px]">
   <!-- Попапы с формой ообртного звонка -->
@@ -13,26 +13,26 @@
   <!-- PROMO section -->
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[329px] lg:pb-[169px] rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper mb-8 lg:mb-[104px]">
-      <h2 class="mb-5 md:mb-6"><?= CFS()->get('hero_heading'); ?></h2>
-      <p class="subtitle"><?= CFS()->get('hero_subheading'); ?></p>
+      <h2 class="mb-5 md:mb-6"><?= CFS()->get('hero_heading') ?></h2>
+      <p class="subtitle"><?= CFS()->get('hero_subheading') ?></p>
     </div>
 
     <div class="hidden lg:block mb-[64px] bg-blue-fade-left">
       <div class="wrapper py-5">
         <p class="text-xl/[160%]">
-          <?= CFS()->get('hero_description'); ?>
+          <?= CFS()->get('hero_description') ?>
         </p>
       </div>
     </div>
 
     <div class="wrapper">
       <button class="consultation-modal-toggle btn ml-0">
-        <?= CFS()->get('hero_action_button_text'); ?>
+        <?= CFS()->get('hero_action_button_text') ?>
       </button>
     </div>
 
     <div class="lg:hidden absolute -bottom-[152px] left-1/2 -translate-x-1/2 w-max z-10">
-      <img class="min-w-max" src="<?= CFS()->get('hero_image_mobile'); ?>" alt="">
+      <img class="min-w-max" src="<?= CFS()->get('hero_image_mobile') ?>" alt="">
     </div>
 
     <div class="group lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 w-[230px] h-[230px] z-10 hover:cursor-pointer">
@@ -41,7 +41,7 @@
     </div>
 
     <div class="hidden lg:block absolute bottom-0 right-0 max-w-[67%]">
-      <img src="<?= CFS()->get('hero_image_desktop'); ?>" alt="">
+      <img src="<?= CFS()->get('hero_image_desktop') ?>" alt="">
 
       <div class="group absolute bottom-[4%] right-[13.5%] w-[34.17%] aspect-square z-10 hover:cursor-pointer">
         <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
@@ -65,13 +65,13 @@
 
       <div class="relative chat secondary mb-5 xl:mb-8 xl:max-w-[400px]">
         <div class="flex gap-1">
-          <?= CFS()->get('greeting_hi'); ?>
+          <?= CFS()->get('greeting_hi') ?>
           <div>
-            <img src="<?= CFS()->get('greeting_emoji'); ?>" alt="">
+            <img src="<?= CFS()->get('greeting_emoji') ?>" alt="">
           </div>
         </div>
 
-        <?= CFS()->get('greeting_text'); ?>
+        <?= CFS()->get('greeting_text') ?>
 
         <div class="character-bg xl:w-[190px] xl:h-[190px] absolute right-0 xl:-right-[112px] top-[6px] xl:top-[47px] -translate-y-full"></div>
         <div class="absolute right-[11px] xl:-right-[90px] top-[15px] xl:top-[71px] -translate-y-full">
@@ -81,7 +81,7 @@
       </div>
 
       <div class="chat self-end mb-[116px] xl:mb-5">
-        <?= CFS()->get('greeting_question'); ?>
+        <?= CFS()->get('greeting_question') ?>
       </div>
 
       <div class="xl:hidden relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
@@ -91,7 +91,7 @@
       </div>
 
       <div class="relative w-fit mx-auto mb-[50px] xl:mr-0">
-        <span class="accent text-center"><?= CFS()->get('greeting_arrow_text'); ?></span>
+        <span class="accent text-center"><?= CFS()->get('greeting_arrow_text') ?></span>
         <div class="absolute -right-[3px] xl:right-[111px] bottom-[11px] xl:-bottom-[11px] translate-y-full translate-x-full">
           <img class="xl:h-[88px]" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.png" alt="">
         </div>
@@ -105,12 +105,12 @@
       <div>
         <div class="flex gap-2">
           <div class="shrink-0 flex items-center">
-            <img src="<?= CFS()->get('dept_heading_emoji'); ?>" alt="">
+            <img src="<?= CFS()->get('dept_heading_emoji') ?>" alt="">
           </div>
-          <h3><?= CFS()->get('dept_heading_1'); ?></h3>
+          <h3><?= CFS()->get('dept_heading_1') ?></h3>
         </div>
         <h3>
-          <?= CFS()->get('dept_heading_2'); ?>
+          <?= CFS()->get('dept_heading_2') ?>
         </h3>
       </div>
       <?php include 'parts/dept-slider.php' ?>
@@ -129,17 +129,17 @@
         </div>
 
         <div class="chat self-end max-w-[86%]">
-          <?= CFS()->get('details_question'); ?>
+          <?= CFS()->get('details_question') ?>
         </div>
 
         <div class="chat secondary">
-          <?= CFS()->get('details_answer'); ?>
+          <?= CFS()->get('details_answer') ?>
         </div>
       </div>
 
       <div>
         <h3 class="relative mb-[54px] lg:mt-[18px] lg:mb-10">
-          <?= CFS()->get('details_heading'); ?>
+          <?= CFS()->get('details_heading') ?>
 
           <div class="absolute right-0 -bottom-8 lg:right-6 lg:-bottom-1" aria-hidden="true">
             <img class="lg:w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.png" alt="">
@@ -154,15 +154,15 @@
             <div class="space-y-2">
               <div class="flex gap-4 lg:gap-6 items-center">
                 <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
-                  <img class="lg:hidden" src="<?= $field['emoji_mobile']; ?>" alt="">
-                  <img class="hidden lg:block" src="<?= $field['emoji_desktop']; ?>" alt="">
+                  <img class="lg:hidden" src="<?= $field['emoji_mobile'] ?>" alt="">
+                  <img class="hidden lg:block" src="<?= $field['emoji_desktop'] ?>" alt="">
                 </div>
                 <div class="flex flex-col gap-1">
-                  <p><?= $field['position']; ?></p>
-                  <p class="hidden lg:block text-grey-400"><?= $field['advantage']; ?></p>
+                  <p><?= $field['position'] ?></p>
+                  <p class="hidden lg:block text-grey-400"><?= $field['advantage'] ?></p>
                 </div>
               </div>
-              <p class="lg:hidden text-grey-400"><?= $field['advantage']; ?></p>
+              <p class="lg:hidden text-grey-400"><?= $field['advantage'] ?></p>
             </div>
 
           <?php
@@ -178,190 +178,94 @@
     <div class="peer embla feature-tabs-embla">
       <div class="wrapper embla__viewport feature-tabs-embla__viewport">
         <div class="embla__container feature-tabs-embla__container">
-          <label class="tab" text="Отчет для руководителя">
-            Отчет для <br> руководителя
-            <input class="hidden" name="feature-tabs" type="radio" checked>
-          </label>
-
-          <label class="tab" text="Мониторинг упущенных лидов">
-            Мониторинг <br> упущенных лидов
-            <input class="hidden" name="feature-tabs" type="radio">
-          </label>
-
-          <label class="tab" text="Контроль соблюдения регламентов и скриптов">
-            Контроль соблюдения <br> регламентов и скриптов
-            <input class="hidden" name="feature-tabs" type="radio">
-          </label>
-
-          <label class="tab" text="Замена ручного контроля качества">
-            Замена ручного <br> контроля качества
-            <input class="hidden" name="feature-tabs" type="radio">
-          </label>
-
-          <label class="tab" text="Увеличение продаж">
-            Увеличение продаж
-            <input class="hidden" name="feature-tabs" type="radio">
-          </label>
+          <?php
+          $fields = CFS()->get('feature_tabs');
+          ?>
+          <?php foreach ($fields as $index => $field): ?>
+            <label class="tab" text="<?= $field['label_1'] . ' ' . $field['label_2'] ?>">
+              <?= $field['label_1'] ?> <br> <?= $field['label_2'] ?>
+              <input class="hidden" name="feature-tabs" type="radio" <?php if ($index == 0) echo 'checked' ?>>
+            </label>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
 
-    <!-- #1 feature tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
-      <div class="feature-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-          <div class="wrapper space-y-4">
-            <h3>Контролируйте состояние компании на одном экране</h3>
-            <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
-          </div>
+    <?php
+    $fields = CFS()->get('feature_tabs');
+    ?>
+    <?php foreach ($fields as $index => $field): ?>
 
-          <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
-          </div>
+      <div class="hidden lg:mx-10 peer-has-[label:nth-child(<?= $index + 1 ?>)_:checked]:block">
+        <div class="feature-tab">
 
-          <ul class="wrapper space-y-4 lg:space-y-5">
-            <li class="flash-li"><b>Отслеживайте изменения</b> по филиалам, отделам и сотрудникам  </li>
-            <li class="flash-li"><b>Будьте уверены</b> в точности данных <b>на 100%</b></li>
-            <li class="flash-li">Выявляйте проблемы в собеседованиях, <b>повышайте эффективность работы рекрутеров и ускоряйте найм</b></li>
-            <li class="flash-li">Получайте <b>объективную оценку качества делового общения</b>, исключая человеческий фактор</li>
-          </ul>
+          <?php if ($field['is_two_text_fields_block'] == 0): ?>
+
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+              <div class="wrapper space-y-4">
+                <h3><?= $field['title'] ?></h3>
+                <?php if (!empty($field['badge'])) { ?>
+                  <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
+                <?php } ?>
+              </div>
+
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+                <img src="<?= $field['image'] ?>" alt="">
+              </div>
+
+              <ul class="wrapper space-y-4 lg:space-y-5">
+                <?php
+                $features = $field['features'];
+                foreach ($features as $feature) {
+                ?>
+                  <li class="flash-li"><?= $feature['feature'] ?></li>
+                <?php
+                }
+                ?>
+              </ul>
+            </div>
+
+          <?php else: ?>
+
+            <div class="wrapper grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+              <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-grey-300 bg-light-wave">
+                <h3><?= $field['first_block_title'] ?></h3>
+                <ul class="space-y-3 lg:space-y-4">
+
+                  <?php
+                  $features = $field['first_block_features'];
+                  foreach ($features as $feature) {
+                  ?>
+                    <li class="flash-li"><?= $feature['feature'] ?></li>
+                  <?php
+                  }
+                  ?>
+
+                </ul>
+              </div>
+
+              <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
+                <h3 class="text-grey-400"><?= $field['second_block_title'] ?></h3>
+                <ul class="space-y-3 lg:space-y-4">
+
+                  <?php
+                  $features = $field['second_block_features'];
+                  foreach ($features as $feature) {
+                  ?>
+                    <li class="flash-li-disabled"><?= $feature['feature'] ?></li>
+                  <?php
+                  }
+                  ?>
+
+                </ul>
+              </div>
+            </div>
+
+          <?php endif ?>
         </div>
       </div>
-    </div>
 
-    <!-- #2 feature tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
-      <div class="feature-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-          <h3 class="wrapper">Выжимайте максимум из каждого обращения</h3>
-
-          <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-calls.png" alt="главный экран">
-          </div>
-
-          <ul class="wrapper space-y-4 lg:space-y-5">
-            <li class="flash-li">
-              Помогайте менеджерам <b>увеличивать продажи</b> и средний чек
-            </li>
-            <li class="flash-li">
-              Направляйте внимание менеджеров только на теплых лидов с помощью <b>системы скоринга</b>
-            </li>
-            <li class="flash-li">
-              Экономьте на рекламе благодаря <b>эффективной работе</b>
-              с лидами
-            </li>
-            <li class="flash-li">
-              <b>Спасайте сделки</b>, где клиент был готов купить, но менеджер недоработал
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- #3 feature tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
-      <div class="feature-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-          <h3 class="wrapper">Будьте спокойны за качество обработки обращений</h3>
-
-          <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-call-info.png" alt="главный экран">
-          </div>
-
-          <ul class="wrapper space-y-4 lg:space-y-5">
-            <li class="flash-li">
-              Получайте отчёты о процентах выполнения скриптов, чек-листов или регламентов
-            </li>
-            <li class="flash-li">
-              Выявляйте лучшие практики общения и переговоров для создания базы знаний
-            </li>
-            <li class="flash-li">
-              Контролируйте упоминания выгод по продукту или услуге
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- #4 feature tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
-      <div class="feature-tab">
-        <div class="wrapper grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-          <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-grey-300 bg-light-wave">
-            <h3>С Эврика360</h3>
-            <ul class="space-y-3 lg:space-y-4">
-              <li class="flash-li">
-                Анализ всех коммуникаций в цепочке продаж
-              </li>
-              <li class="flash-li">
-                Работает 24/7
-              </li>
-              <li class="flash-li">
-                Контроль 100% коммуникаций
-              </li>
-              <li class="flash-li">
-                Оплата за распознанные минуты, дешевле ручного метода в 2-10 раз
-              </li>
-              <li class="flash-li">
-                Оценка по заданным стандартам без человеческого фактора
-              </li>
-              <li class="flash-li">
-                Автоматическая система анализа и выводы по любому количеству критериев за считанные секунды
-              </li>
-            </ul>
-          </div>
-
-          <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
-            <h3 class="text-grey-400">Без Эврика360</h3>
-            <ul class="space-y-3 lg:space-y-4">
-              <li class="flash-li-disabled">
-                Анализ только 1-2 этапов в воронке продаж
-              </li>
-              <li class="flash-li-disabled">
-                Прослушка максимум 4-5 часов в день
-              </li>
-              <li class="flash-li-disabled">
-                Контроль до 15% коммуникаций
-              </li>
-              <li class="flash-li-disabled">
-                Постоянные затраты на персонал и организацию его рабочего места
-              </li>
-              <li class="flash-li-disabled">
-                Необъективность оценки
-              </li>
-              <li class="flash-li-disabled">
-                Огромное количество времени на сбор данных и формирование выводов
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- #5 feature tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(5)_:checked]:block">
-      <div class="feature-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
-          <h3 class="wrapper">Повышайте средний чек без доп.вложений в рекламу</h3>
-
-          <div class="lg:absolute lg:right-lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-call-analysis.png" alt="главный экран">
-          </div>
-
-          <ul class="wrapper space-y-4 lg:space-y-5">
-            <li class="flash-li">
-              Получайте точную информацию о запрашиваемых товарах и планируйте закупки
-            </li>
-            <li class="flash-li">
-              Контролируйте переговоры с предложением дополнительных товаров и альтернатив
-            </li>
-            <li class="flash-li">
-              Экономьте время на разборе звонков благодаря автоматической системе подготовки резюме после каждой коммуникации
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </section>
 
   <!-- TEST section -->
@@ -1358,4 +1262,4 @@
   </section>
 </main>
 
-<?php get_footer(); ?>
+<?php get_footer() ?>
