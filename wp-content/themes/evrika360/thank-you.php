@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Thank you Page
+  Template Name: Спасибо за заявку
  */
 ?>
 

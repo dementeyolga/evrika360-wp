@@ -175,7 +175,7 @@ Text Domain: evrika
   }
 
   .badge {
-    @apply h-8 px-4 w-fit flex justify-center items-center rounded-2xl bg-blue-200-32 text-sm/[140%] text-dark-blue-500 backdrop-blur-[8px];
+    @apply h-7 px-4 w-fit flex justify-center items-center rounded-2xl bg-blue-200-32 text-sm/[140%] text-dark-blue-500 backdrop-blur-[8px];
   }
 
   .btn {

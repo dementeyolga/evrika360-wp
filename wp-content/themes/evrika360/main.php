@@ -1,3 +1,9 @@
+<?php
+/*
+  Template Name: Главная
+ */
+?>
+
 <?php get_header(); ?>
 
 <main class="flex flex-col gap-16 lg:gap-[140px]">
@@ -7,27 +13,26 @@
   <!-- PROMO section -->
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[329px] lg:pb-[169px] rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper mb-8 lg:mb-[104px]">
-      <h2 class="mb-5 md:mb-6">Автоматически контролируйте <br>
-        все коммуникации <br class="lg:hidden"> в компании:</h2>
-      <p class="subtitle">увеличивайте продажи и повышайте <br class="hidden lg:block"> качество сервиса</p>
+      <h2 class="mb-5 md:mb-6"><?= CFS()->get('hero_heading'); ?></h2>
+      <p class="subtitle"><?= CFS()->get('hero_subheading'); ?></p>
     </div>
 
     <div class="hidden lg:block mb-[64px] bg-blue-fade-left">
       <div class="wrapper py-5">
         <p class="text-xl/[160%]">
-          Сервис речевой аналитики <b>на базе искусственного <br> интеллекта</b> для бизнеса, где есть <b>звонки, чаты или <br>записи оффлайн-общения</b>
+          <?= CFS()->get('hero_description'); ?>
         </p>
       </div>
     </div>
 
     <div class="wrapper">
       <button class="consultation-modal-toggle btn ml-0">
-        Получить видеообзор
+        <?= CFS()->get('hero_action_button_text'); ?>
       </button>
     </div>
 
     <div class="lg:hidden absolute -bottom-[152px] left-1/2 -translate-x-1/2 w-max z-10">
-      <img class="min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-dashboard-mobile.png" alt="">
+      <img class="min-w-max" src="<?= CFS()->get('hero_image_mobile'); ?>" alt="">
     </div>
 
     <div class="group lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 w-[230px] h-[230px] z-10 hover:cursor-pointer">
@@ -36,7 +41,7 @@
     </div>
 
     <div class="hidden lg:block absolute bottom-0 right-0 max-w-[67%]">
-      <img src="<?php echo get_template_directory_uri() ?>/assets/images/promo-dashboard-desktop.png" alt="">
+      <img src="<?= CFS()->get('hero_image_desktop'); ?>" alt="">
 
       <div class="group absolute bottom-[4%] right-[13.5%] w-[34.17%] aspect-square z-10 hover:cursor-pointer">
         <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
@@ -60,13 +65,13 @@
 
       <div class="relative chat secondary mb-5 xl:mb-8 xl:max-w-[400px]">
         <div class="flex gap-1">
-          — Привет
+          <?= CFS()->get('greeting_hi'); ?>
           <div>
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/hi-icon.png" alt="">
+            <img src="<?= CFS()->get('greeting_emoji'); ?>" alt="">
           </div>
         </div>
 
-        Меня зовут Эврика360, и сейчас я познакомлю тебя с речевой аналитикой для бизнеса!
+        <?= CFS()->get('greeting_text'); ?>
 
         <div class="character-bg xl:w-[190px] xl:h-[190px] absolute right-0 xl:-right-[112px] top-[6px] xl:top-[47px] -translate-y-full"></div>
         <div class="absolute right-[11px] xl:-right-[90px] top-[15px] xl:top-[71px] -translate-y-full">
@@ -76,7 +81,7 @@
       </div>
 
       <div class="chat self-end mb-[116px] xl:mb-5">
-        — Что это такое?
+        <?= CFS()->get('greeting_question'); ?>
       </div>
 
       <div class="xl:hidden relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
@@ -86,7 +91,7 @@
       </div>
 
       <div class="relative w-fit mx-auto mb-[50px] xl:mr-0">
-        <span class="accent text-center">Листай ниже, чтобы узнать!</span>
+        <span class="accent text-center"><?= CFS()->get('greeting_arrow_text'); ?></span>
         <div class="absolute -right-[3px] xl:right-[111px] bottom-[11px] xl:-bottom-[11px] translate-y-full translate-x-full">
           <img class="xl:h-[88px]" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.png" alt="">
         </div>
@@ -1067,10 +1072,11 @@
                 <li class="flash-li">Экономьте время менеджера на <b>внесении данных</b> после звонка</li>
                 <li class="flash-li"><b>Минимизируйте</b> ошибки и пропуски в CRM</li>
                 <li class="flash-li">Повышайте <b>эффективность менеджера</b> и шансы на закрытие сделки</li>
-                <li class="flash-li relative w-fit"><b>Получайте выводы</b> и рекомендации по итогам звонка
-                  с помощью ChatGPT
-                  <p class="badge absolute right-[3px] -top-[18px] translate-x-full bg-blue-100 text-white">New</p>
-                </li>
+                <div class="relative w-fit">
+                  <li class="flash-li relative inline-block"><b>Получайте выводы</b> и рекомендации по итогам звонка с помощью ChatGPT
+                  </li>
+                  <p class="badge absolute -right-5 sm:-right-10 -top-[22px] bg-blue-100 text-white">New</p>
+                </div>
               </ul>
             </div>
           </div>

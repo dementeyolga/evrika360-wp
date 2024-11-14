@@ -4,7 +4,15 @@
 <head>
   <meta charset=<?php bloginfo('charset'); ?>>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php wp_title(); ?></title>
+  <title>
+    <?php
+    if (is_404()) {
+      echo '404 | Страница не найдена';
+    } else {
+      the_title('', ' | Эврика360');
+    }
+    ?>
+  </title>
   <?php wp_head(); ?>
 
   <!-- Marquiz script start -->
@@ -79,13 +87,12 @@
 
       <div class="flex gap-8 items-center text-white">
         <div class="space-y-2 shrink-0 group-has-[:checked]:hidden">
-          <p class="small-text">Задайте нам <br>
-            вопрос напрямую!</p>
+          <p class="small-text"><?= CFS()->get('messengers_description_text'); ?></p>
           <div class="flex gap-2">
-            <a class="w-8 h-8" href="https://t.me/troyan_sanq" target="_blank">
+            <a class="w-8 h-8" href="<?= CFS()->get('telegram_link'); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
             </a>
-            <a class="w-8 h-8" href="https://api.whatsapp.com/send/?phone=375293885519" target="_blank">
+            <a class="w-8 h-8" href="<?= CFS()->get('whatsapp_link'); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
             </a>
           </div>
@@ -93,26 +100,26 @@
 
         <div class="shrink-0 space-y-3 group-has-[:checked]:hidden">
           <p class="small-text">
-            Пн-Пт 10:00 — 18:00
+            <?= CFS()->get('working_hours'); ?>
           </p>
 
           <div class="font-bold space-y-1">
             <h5>
-              <a class="link-white" href="tel:+375 29 388-55-12">
-                +375 29 388-55-12
+              <a class="link-white" href="tel:<?= CFS()->get('phone_belarus'); ?>">
+                <?= CFS()->get('phone_belarus'); ?>
               </a>
             </h5>
             <h5>
-              <a class="link-white" href="tel:+7 495 662-18-73">
-                +7 495 662-18-73
+              <a class="link-white" href="tel:<?= CFS()->get('phone_russia'); ?>">
+                <?= CFS()->get('phone_russia'); ?>
               </a>
             </h5>
           </div>
         </div>
 
         <div class="flex gap-2">
-          <button class="call-modal-toggle btn shrink-0 group-has-[:checked]:bg-light-blue-100">Заказать звонок</button>
-          <a href="https://cabinet.audio-control.by/login" target="_blank" class="btn dark">Войти</a>
+          <button class="call-modal-toggle btn shrink-0 group-has-[:checked]:bg-light-blue-100"><?= CFS()->get('action_button_text'); ?></button>
+          <a href="<?= CFS()->get('login_button_link'); ?>" target="_blank" class="btn dark"><?= CFS()->get('login_button_text'); ?></a>
         </div>
       </div>
     </div>
@@ -150,13 +157,12 @@
 
       <div class="mb-10 flex gap-8 text-white">
         <div class="space-y-2">
-          <p class="small-text">Задайте нам
-            вопрос напрямую!</p>
+          <p class="small-text"><?= CFS()->get('messengers_description_text'); ?></p>
           <div class="flex gap-2">
-            <a href="https://t.me/troyan_sanq" target="_blank">
+            <a href="<?= CFS()->get('telegram_link'); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
             </a>
-            <a href="https://api.whatsapp.com/send/?phone=375293885519" target="_blank">
+            <a href="<?= CFS()->get('whatsapp_link'); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
             </a>
           </div>
@@ -164,18 +170,18 @@
 
         <div class="shrink-0 space-y-3">
           <p class="small-text">
-            Пн-Пт 10:00 — 18:00
+            <?= CFS()->get('working_hours'); ?>
           </p>
 
           <div class="font-bold space-y-1">
             <h5>
-              <a href="tel:+375 29 388-55-12">
-                +375 29 388-55-12
+              <a href="tel:<?= CFS()->get('phone_belarus'); ?>">
+                <?= CFS()->get('phone_belarus'); ?>
               </a>
             </h5>
             <h5>
-              <a href="tel:+7 495 662-18-73">
-                +7 495 662-18-73
+              <a href="tel:<?= CFS()->get('phone_russia'); ?>">
+                <?= CFS()->get('phone_russia'); ?>
               </a>
             </h5>
           </div>
@@ -183,8 +189,8 @@
       </div>
 
       <div class="flex gap-2">
-        <button class="call-modal-toggle btn grow">Заказать звонок</button>
-        <a href="https://cabinet.audio-control.by/login" target="_blank" class="btn dark grow">Войти</a>
+        <button class="call-modal-toggle btn grow"><?= CFS()->get('action_button_text'); ?></button>
+        <a href="<?= CFS()->get('login_button_link'); ?>" target="_blank" class="btn dark grow"><?= CFS()->get('login_button_text'); ?></a>
       </div>
     </div>
   </div>

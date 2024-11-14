@@ -1,5 +1,5 @@
 <!-- 1. Popup "Заказать консультацию" (большой) -->
-<div id="popup-order-consultation" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+<div id="popup-order-consultation" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade overflow-auto">
   <div class="relative wrapper items-center xl:my-10 xl:p-12 xl:pr-[25px] xl:border xl:border-grey-300 xl:bg-pattern xl:rounded-xl overflow-hidden">
     <button class="close hidden xl:block absolute top-0 right-3 p-4">
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
@@ -63,7 +63,7 @@
 </div>
 
 <!-- Popup "Заказать экскурсию" (большой) -->
-<div id="popup-order-excursion" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+<div id="popup-order-excursion" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade overflow-auto">
   <div class="relative wrapper items-center xl:my-10 xl:p-12 xl:pr-[25px] xl:border xl:border-grey-300 xl:bg-pattern xl:rounded-xl overflow-hidden">
     <button class="close hidden xl:block absolute top-0 right-3 p-4">
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
@@ -127,7 +127,7 @@
 </div>
 
 <!-- Popup "Заказать Звонок" -->
-<div id="popup-order-call" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+<div id="popup-order-call" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade overflow-auto">
   <div class="wrapper max-w-[448px]">
     <div class="relative px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
       <button class="close absolute top-2 right-0 p-4">
@@ -168,7 +168,7 @@
 </div>
 
 <!-- Popup "Протестировать сервис" -->
-<div id="popup-order-test" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade">
+<div id="popup-order-test" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade overflow-auto">
   <div class="wrapper max-w-[448px]">
     <div class="relative px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
       <button class="close absolute top-2 right-0 p-4">

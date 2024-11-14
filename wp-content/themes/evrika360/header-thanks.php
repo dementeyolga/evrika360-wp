@@ -4,7 +4,15 @@
 <head>
   <meta charset=<?php bloginfo('charset'); ?>>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php wp_title(); ?></title>
+  <title>
+    <?php
+    if (is_404()) {
+      echo '404 | Страница не найдена';
+    } else {
+      the_title('', ' | Эврика360');
+    }
+    ?>
+  </title>
   <?php wp_head(); ?>
 </head>
 

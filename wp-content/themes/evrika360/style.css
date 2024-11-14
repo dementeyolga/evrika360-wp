@@ -912,7 +912,7 @@ input[type='text']:disabled {
 
 .badge {
   display: flex;
-  height: 2rem;
+  height: 1.75rem;
   width: -moz-fit-content;
   width: fit-content;
   align-items: center;
@@ -1922,6 +1922,10 @@ input[type='text']:disabled {
   right: -0.75rem;
 }
 
+.-right-5 {
+  right: -1.25rem;
+}
+
 .-right-6 {
   right: -1.5rem;
 }
@@ -1946,12 +1950,12 @@ input[type='text']:disabled {
   top: -1.25rem;
 }
 
-.-top-\[18px\] {
-  top: -18px;
-}
-
 .-top-\[20px\] {
   top: -20px;
+}
+
+.-top-\[22px\] {
+  top: -22px;
 }
 
 .-top-\[25px\] {
@@ -2040,10 +2044,6 @@ input[type='text']:disabled {
 
 .right-\[180px\] {
   right: 180px;
-}
-
-.right-\[3px\] {
-  right: 3px;
 }
 
 .top-0 {
@@ -2797,6 +2797,10 @@ input[type='text']:disabled {
 
 .self-center {
   align-self: center;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .overflow-hidden {
@@ -3830,6 +3834,10 @@ input[type='text']:disabled {
 }
 
 @media (min-width: 640px) {
+  .sm\:-right-10 {
+    right: -2.5rem;
+  }
+
   .sm\:flex {
     display: flex;
   }
