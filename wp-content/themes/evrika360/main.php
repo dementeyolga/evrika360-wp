@@ -105,12 +105,12 @@
       <div>
         <div class="flex gap-2">
           <div class="shrink-0 flex items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/light-icon.png" alt="">
+            <img src="<?= CFS()->get('dept_heading_emoji'); ?>" alt="">
           </div>
-          <h3><b>Эврика360</b> — один сервис для большинства</h3>
+          <h3><?= CFS()->get('dept_heading_1'); ?></h3>
         </div>
         <h3>
-          отделов в компании
+          <?= CFS()->get('dept_heading_2'); ?>
         </h3>
       </div>
       <?php include 'parts/dept-slider.php' ?>
@@ -129,17 +129,17 @@
         </div>
 
         <div class="chat self-end max-w-[86%]">
-          — Можно подробнее? Какие есть возможности?
+          <?= CFS()->get('details_question'); ?>
         </div>
 
         <div class="chat secondary">
-          — Рассказываю!
+          <?= CFS()->get('details_answer'); ?>
         </div>
       </div>
 
       <div>
         <h3 class="relative mb-[54px] lg:mt-[18px] lg:mb-10">
-          Всё нужное для принятия эффективных бизнес-решений <br class="hidden lg:block"> в одном месте
+          <?= CFS()->get('details_heading'); ?>
 
           <div class="absolute right-0 -bottom-8 lg:right-6 lg:-bottom-1" aria-hidden="true">
             <img class="lg:w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.png" alt="">
@@ -147,54 +147,30 @@
         </h3>
 
         <div class="space-y-6">
-          <div class="space-y-1">
-            <div class="flex gap-4 lg:gap-6 items-center">
-              <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
-                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/manager-emoji.png" alt="">
-                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/manager-emoji-desktop.png" alt="">
+          <?php
+          $fields = CFS()->get('details_advantages');
+          foreach ($fields as $field) {
+          ?>
+            <div class="space-y-2">
+              <div class="flex gap-4 lg:gap-6 items-center">
+                <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
+                  <img class="lg:hidden" src="<?= $field['emoji_mobile']; ?>" alt="">
+                  <img class="hidden lg:block" src="<?= $field['emoji_desktop']; ?>" alt="">
+                </div>
+                <div class="flex flex-col gap-1">
+                  <p><?= $field['position']; ?></p>
+                  <p class="hidden lg:block text-grey-400"><?= $field['advantage']; ?></p>
+                </div>
               </div>
-              <div class="flex flex-col gap-1">
-                <p>Руководителю</p>
-                <p class="hidden lg:block text-grey-400">отчёты и динамику изменений</p>
-              </div>
+              <p class="lg:hidden text-grey-400"><?= $field['advantage']; ?></p>
             </div>
-            <p class="lg:hidden text-grey-400">отчёты и динамику изменений</p>
-          </div>
 
-          <div class="space-y-2">
-            <div class="flex gap-4 lg:gap-6 items-center">
-              <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
-                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/sales-head-emoji.png" alt="">
-                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/sales-head-emoji-desktop.png" alt="">
-              </div>
-              <div class="flex flex-col gap-1">
-                <p>РОПу</p>
-                <p class="hidden lg:block text-grey-400">причины слива лидов и базу знаний
-                  для обучения</p>
-              </div>
-            </div>
-            <p class="lg:hidden text-grey-400">причины слива лидов и базу знаний
-              для обучения</p>
-          </div>
-
-          <div class="space-y-2">
-            <div class="flex gap-4 lg:gap-6 items-center">
-              <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
-                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/marketing-specialist-emoji.png" alt="">
-                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/marketing-specialist-emoji-desktop.png" alt="">
-              </div>
-              <div class="flex flex-col gap-1">
-                <p>Маркетологу</p>
-                <p class="hidden lg:block text-grey-400">данные по эффективности рекламных кампаний и информацию для исследования ЦА</p>
-              </div>
-            </div>
-            <p class="lg:hidden text-grey-400">данные по эффективности рекламных кампаний и информацию для исследования ЦА</p>
-          </div>
+          <?php
+          }
+          ?>
         </div>
       </div>
     </div>
-
-
   </section>
 
   <!-- FEATURES section -->
