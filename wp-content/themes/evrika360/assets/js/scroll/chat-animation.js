@@ -2,7 +2,7 @@
   const callback = (entries) => {
     entries.forEach(({ target, isIntersecting, intersectionRatio }) => {
       if (isIntersecting) {
-        if (intersectionRatio > 0.9) {
+        if (intersectionRatio > 0.2) {
           target.classList.add('animate-fade-in-down');
         }
 
@@ -15,7 +15,7 @@
 
   const options = {
     rootMargin: '0px',
-    threshold: [0, 1],
+    threshold: [0, 0.2],
   };
 
   // Create the observer

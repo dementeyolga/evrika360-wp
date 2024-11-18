@@ -41,6 +41,7 @@
 </head>
 
 <body <?php body_class(); ?> class="m-auto">
+  <?php wp_body_open(); ?>
   <header class="group has-[:checked]:bg-white-glass w-full fixed z-40 transition-colors duration-200">
     <!-- Header on scroll styles toggle  -->
     <input id="headerScrollToggle" class="hidden" type="checkbox">

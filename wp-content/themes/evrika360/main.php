@@ -273,19 +273,20 @@
     <div class="wrapper lg:flex-row lg:items-center lg:h-full">
       <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
       <div class="lg:static lg:w-1/4 lg:pt-[29px] lg:self-start absolute -bottom-[210px] left-0 right-0 flex justify-center lg:justify-start">
-        <img class="lg:max-w-[170px]" src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-demo.png" alt="">
+        <img class="lg:max-w-[170px]" src="<?= CFS()->get('test_image') ?>" alt="">
       </div>
 
       <div class="lg:w-1/2">
-        <p class="mb-4 lg:mb-5 mx-auto font-medium lg:text-2xl/[130%]">Пройдите простой тест и определите</p>
+        <p class="mb-4 lg:mb-5 mx-auto font-medium lg:text-2xl/[130%]"><?= CFS()->get('test_title_1') ?></p>
         <h4 class="mb-8 lg:mb-0 mx-auto lg:text-[32px]/[120%]">
-          насколько <span class="text-blue-100">речевая аналитика</span> <br class="hidden lg:block">
-          подходит вашему бизнесу
+          <?= CFS()->get('test_title_2') ?>
         </h4>
       </div>
 
       <div class="lg:w-1/4 lg:flex lg:justify-end">
-        <a href="#popup:marquiz_66e6d33b2fa5030026ac5480" class="btn lg:m-0">Пройти тест</a>
+        <a href="#popup:marquiz_66e6d33b2fa5030026ac5480" class="btn lg:m-0">
+          <?= CFS()->get('test_action_button_text') ?>
+        </a>
       </div>
     </div>
   </section>
@@ -293,15 +294,15 @@
   <!-- HOW IT WORKS section -->
   <section id="how-it-works" class="lg:mx-10 lg:rounded-2xl border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
     <div class="wrapper relative pt-[90px] pb-20 space-y-10 lg:space-y-10 lg:pt-20 lg:pb-[110px]">
-      <div class="chat secondary lg:mb-[37px]">— И как работает речевая аналитика?</div>
+      <div class="chat secondary lg:mb-[37px]"><?= CFS()->get('how_works_question') ?></div>
 
       <div class="relative space-y-4 lg:w-fit">
         <h3>
-          Речевая аналитика умеет слушать <br class="hidden lg:block"> <b>100% звонков</b> и мгновенно <br class="hidden lg:block"> анализировать их!
+          <?= CFS()->get('how_works_answer') ?>
         </h3>
 
         <div class="relative accent small lg:absolute lg:-top-[124px] lg:-right-[369px] text-end">
-          А также онлайн-встреч, коммуникаций в <br> торговом зале и переписок в соцсетях или <br>мессенджерах
+          <?= CFS()->get('how_works_next_text') ?>
           <div class="lg:hidden absolute -bottom-10 left-0">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.png" alt="">
           </div>
@@ -313,9 +314,9 @@
 
       <button class="btn primary flex gap-2 lg:ml-0">
         <div>
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.png" alt="">
+          <img src="<?= CFS()->get('how_works_action_button_icon') ?>" alt="">
         </div>
-        Смотреть видео
+        <?= CFS()->get('how_works_action_button_text') ?>
       </button>
 
       <div class="hidden lg:block absolute -right-3 top-[84px] z-0">
@@ -329,95 +330,91 @@
   <section>
     <div class="wrapper mb-[56px] lg:mb-[120px] flex flex-col gap-16 lg:gap-[94px]">
       <div class="relative flex flex-col lg:flex-row lg:gap-12">
-        <div class="absolute -bottom-[70px] right-8 lg:right-32 lg:-bottom-[62px]">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted.png" alt="">
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-desktop.png" alt="">
-        </div>
-
         <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0">
-          <img class="w-full lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/case-client.png" alt="клиент">
-          <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/case-client-desktop.png" alt="клиент">
+          <img class="w-full lg:hidden" src="<?= CFS()->get('case_buyer_image_mobile') ?>" alt="клиент">
+          <img class="w-full hidden lg:block" src="<?= CFS()->get('case_buyer_image_desktop') ?>" alt="клиент">
         </div>
 
         <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
           <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
             <h5>
-              <b>01.</b> Знакомьтесь, это Антон
+              <?= CFS()->get('case_buyer_title') ?>
             </h5>
           </div>
 
           <div class="relative">
+            <div class="absolute -bottom-[70px] right-8 lg:-right-24 lg:-bottom-16">
+              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted.png" alt="">
+              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-desktop.png" alt="">
+            </div>
+
             <div class="hidden lg:block absolute -top-[25px] -left-[22px]">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.png" alt="">
             </div>
 
             <p class="description">
-              Антон долго выбирал товар,
-              заказал доставку, но <b> заказ пришел
-                с опозданием и браком </b>.
-              <br> Он звонит в колл-центр магазина.
+              <?= CFS()->get('case_buyer_description') ?>
             </p>
           </div>
         </div>
       </div>
 
       <div class="relative flex flex-col lg:flex-row lg:gap-12 lg:justify-end">
-        <div class="absolute -bottom-[92px] right-6 lg:left-[109px] lg:-bottom-[61px]">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral.png" alt="">
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-right.png" alt="">
-        </div>
-
         <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0 lg:order-2">
-          <img class="w-full lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/case-operator.png" alt="оператор">
-          <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/case-operator-desktop.png" alt="оператор">
+          <img class="w-full lg:hidden" src="<?= CFS()->get('case_operator_image_mobile') ?>" alt="оператор">
+          <img class="w-full hidden lg:block" src="<?= CFS()->get('case_operator_image_desktop') ?>" alt="оператор">
         </div>
 
         <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
           <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
             <h5>
-              <b>02.</b> А это Марина, оператор колл-центра
+              <?= CFS()->get('case_operator_title') ?>
             </h5>
           </div>
 
           <div class="relative">
+            <div class="absolute -bottom-[92px] right-6 lg:-left-32 lg:-bottom-[68px]">
+              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral.png" alt="">
+              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-right.png" alt="">
+            </div>
+
             <div class="hidden lg:block absolute -top-[25px] right-0">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-right.png" alt="">
             </div>
 
             <p class="description">
-              Она приняла звонок, не поздоровалась, послушала Антона и сказала,
-              что это <b>его проблемы</b>, после чего повесила трубку.
+              <?= CFS()->get('case_operator_description') ?>
             </p>
           </div>
         </div>
       </div>
 
       <div class="relative flex flex-col lg:flex-row lg:gap-12">
-        <div class="hidden lg:block absolute -bottom-20 right-[154px]">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-2.png" alt="">
-        </div>
+
 
         <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0">
-          <img class="w-full lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/case-manager.png" alt="руководитель">
-          <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/case-manager-desktop.png" alt="руководитель">
+          <img class="w-full lg:hidden" src="<?= CFS()->get('case_manager_image_mobile') ?>" alt="руководитель">
+          <img class="w-full hidden lg:block" src="<?= CFS()->get('case_manager_image_desktop') ?>" alt="руководитель">
         </div>
 
         <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
           <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
             <h5>
-              <b>03.</b> А это Вы, руководитель компании
+              <?= CFS()->get('case_manager_title') ?>
             </h5>
           </div>
 
           <div class="relative">
+            <div class="hidden lg:block absolute -bottom-[86px] -right-[56px]">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-2.png" alt="">
+            </div>
+
             <div class="hidden lg:block absolute -top-[20px] -left-[22px]">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.png" alt="">
             </div>
 
             <p class="description">
-              Вы не знаете об этой ситуации и вряд ли узнаете, если <b>только Антон не напишет жалобу</b>.
-              Но вы точно потеряли <b><i>клиента</i></b>
-              и возможность заработать на его рекомендациях своим друзьям и знакомым.
+              <?= CFS()->get('case_manager_description') ?>
             </p>
           </div>
         </div>
@@ -433,27 +430,29 @@
         <div class="lg:w-[365px] lg:pb-[57px] z-10">
           <div class="mb-8 lg:mb-[68px] mx-auto lg:ml-0 py-3 px-5 xs:w-fit rounded-md text-dark-blue-500 bg-white">
             <h4>
-              <b>04.</b> А это речевая аналитика
+              <?= CFS()->get('case_analytics_title') ?>
             </h4>
           </div>
 
           <p class="mb-6 text-white">
-            Сразу после разговора она определит ошибку Марины и пришлёт вам уведомление.
+            <?= CFS()->get('case_analytics_description_1') ?>
           </p>
           <p class="mb-10 lg:mb-0 text-white">
-            Так вы сохраните клиента, деньги и улучшите скрипты общения, чтобы таких ситуаций больше не возникало.
+            <?= CFS()->get('case_analytics_description_2') ?>
           </p>
         </div>
 
         <div class="flex justify-center lg:w-[439px] lg:h-fit lg:self-end lg:mt-8 lg:mr-[113px] lg:z-10">
-          <img class="w-full sm:max-w-[70%] lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo.png" alt="">
-          <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/dialog-demo-desktop.png" alt="">
+          <img class="w-full sm:max-w-[70%] lg:hidden" src="<?= CFS()->get('case_analytics_image_mobile') ?>" alt="">
+          <img class="w-full hidden lg:block" src="<?= CFS()->get('case_analytics_image_desktop') ?>" alt="">
         </div>
       </div>
     </div>
 
     <div class="wrapper">
-      <button class="consultation-modal-toggle btn primary">Это интересно, хочу протестировать</button>
+      <button class="consultation-modal-toggle btn primary">
+        <?= CFS()->get('case_action_button_text') ?>
+      </button>
     </div>
   </section>
 
@@ -920,7 +919,7 @@
             <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
               <div class="wrapper space-y-4 lg:mt-[30px]">
                 <h3 class="md:text-2xl/[130%]">Простая интеграция с действующими системами и сервисами</h3>
-                <div class="p-2 w-fit description  text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Настраиваем самостоятельно или с минимальным участие ваших тех.специалистов</div>
+                <div class="p-2 w-fit description  text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Настраиваем самостоятельно или с минимальным участием ваших тех.специалистов</div>
               </div>
 
               <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
@@ -952,11 +951,7 @@
                 <li class="flash-li">Экономьте время менеджера на <b>внесении данных</b> после звонка</li>
                 <li class="flash-li"><b>Минимизируйте</b> ошибки и пропуски в CRM</li>
                 <li class="flash-li">Повышайте <b>эффективность менеджера</b> и шансы на закрытие сделки</li>
-                <div class="relative w-fit">
-                  <li class="flash-li relative inline-block"><b>Получайте выводы</b> и рекомендации по итогам звонка с помощью ChatGPT
-                  </li>
-                  <p class="badge absolute -right-5 sm:-right-10 -top-[22px] bg-blue-100 text-white">New</p>
-                </div>
+                <li class="flash-li"><b>Получайте выводы</b> и рекомендации по итогам звонка с помощью ChatGPT</li>
               </ul>
             </div>
           </div>
@@ -1032,7 +1027,7 @@
       </div>
 
       <div class="mb-[88px] hidden lg:block">
-        <div class="grid grid-cols-[160px_auto] gap-[38px]">
+        <div class="grid grid-cols-[220px_auto] gap-[38px]">
           <div class="grid grid-cols-1 gap-[3px]">
             <div class="price-table-unit table-heading">
             </div>
@@ -1043,87 +1038,61 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-6 gap-[5px]">
-            <!-- START plan -->
-            <div class="grid grid-cols-1 gap-[3px] text-grey-600">
-              <div class="price-table-unit table-heading">
-                START
-              </div>
-              <div class="price-table-unit bg-grey-50">15</div>
-              <div class="price-table-unit bg-grey-50">5 000</div>
-              <div class="price-table-unit bg-grey-50">1</div>
-              <div class="price-table-unit table-heading">
-                280$
-              </div>
-            </div>
+          <div class="grid grid-cols-4 gap-[5px]">
 
-            <!-- BASIC plan -->
-            <div class="grid grid-cols-1 gap-[3px] text-dark-blue-300">
-              <div class="price-table-unit table-heading">
-                BASE
-              </div>
-              <div class="price-table-unit bg-blue-200-32">20</div>
-              <div class="price-table-unit bg-blue-200-32">10 000</div>
-              <div class="price-table-unit bg-blue-200-32">1</div>
-              <div class="price-table-unit table-heading">
-                390$
-              </div>
-            </div>
-
-            <!-- STANDARD plan -->
+            <!-- Plan #1 -->
             <div class="grid grid-cols-1 gap-[3px] text-blue-100">
-              <div class="relative price-table-unit table-heading">
-                STANDARD
+              <div class="price-table-unit table-heading">
+                <?= CFS()->get('pricing_1_name') ?>
+              </div>
+              <div class="price-table-unit bg-light-blue-150"><?= CFS()->get('pricing_1_checklist_points') ?></div>
+              <div class="price-table-unit bg-light-blue-150"><?= CFS()->get('pricing_1_minutes') ?></div>
+              <div class="price-table-unit bg-light-blue-150"><?= CFS()->get('pricing_1_api_integrations') ?></div>
+              <div class="price-table-unit table-heading">
+                <?= CFS()->get('pricing_1_price') ?>
+              </div>
+            </div>
 
-                <div class="absolute left-0 right-0 bottom-0 py-[9px] flex justify-center h-[120px] bg-blue-linear text-dark-blue-500 text-xl -z-10">
+            <!-- Plan #2 -->
+            <div class="grid grid-cols-1 gap-[3px] text-green-500">
+              <div class="relative price-table-unit table-heading">
+                <?= CFS()->get('pricing_2_name') ?>
+
+                <div class="absolute left-0 right-0 bottom-0 py-[9px] flex justify-center h-[120px] bg-green-linear text-dark-blue-500 text-lg -z-10">
                   POPULAR
                 </div>
               </div>
-              <div class="price-table-unit bg-light-blue-150">30</div>
-              <div class="price-table-unit bg-light-blue-150">20 000</div>
-              <div class="price-table-unit bg-light-blue-150">2</div>
+              <div class="price-table-unit text-white bg-green-500"><?= CFS()->get('pricing_2_checklist_points') ?></div>
+              <div class="price-table-unit text-white bg-green-500"><?= CFS()->get('pricing_2_minutes') ?></div>
+              <div class="price-table-unit text-white bg-green-500"><?= CFS()->get('pricing_2_api_integrations') ?></div>
               <div class="price-table-unit table-heading">
-                640$
+                <?= CFS()->get('pricing_2_price') ?>
               </div>
             </div>
 
-            <!-- SILVER plan -->
-            <div class="grid grid-cols-1 gap-[3px] text-green-500">
-              <div class="price-table-unit table-heading">
-                SILVER
-              </div>
-              <div class="price-table-unit text-white bg-green-500">45</div>
-              <div class="price-table-unit text-white bg-green-500">40 000</div>
-              <div class="price-table-unit text-white bg-green-500">2</div>
-              <div class="price-table-unit table-heading">
-                890$
-              </div>
-            </div>
-
-            <!-- GOLD plan -->
+            <!-- Plan #3 -->
             <div class="grid grid-cols-1 gap-[3px] text-yellow-500">
               <div class="price-table-unit table-heading">
-                GOLD
+                <?= CFS()->get('pricing_3_name') ?>
               </div>
-              <div class="price-table-unit text-white bg-yellow-500">60</div>
-              <div class="price-table-unit text-white bg-yellow-500">60 000</div>
-              <div class="price-table-unit text-white bg-yellow-500">3</div>
+              <div class="price-table-unit text-white bg-yellow-500"><?= CFS()->get('pricing_3_checklist_points') ?> </div>
+              <div class="price-table-unit text-white bg-yellow-500"><?= CFS()->get('pricing_3_minutes') ?></div>
+              <div class="price-table-unit text-white bg-yellow-500"><?= CFS()->get('pricing_3_api_integrations') ?></div>
               <div class="price-table-unit table-heading">
-                1 410$
+                <?= CFS()->get('pricing_3_price') ?>
               </div>
             </div>
 
-            <!-- SPECIAL plan -->
+            <!-- Plan #4 -->
             <div class="grid grid-cols-1 gap-[3px] text-orange-400">
               <div class="price-table-unit table-heading">
-                SPECIAL
+                <?= CFS()->get('pricing_4_name') ?>
               </div>
-              <div class="price-table-unit text-white bg-orange-400">∞</div>
-              <div class="price-table-unit text-white bg-orange-400">100 000+</div>
-              <div class="price-table-unit text-white bg-orange-400">∞</div>
+              <div class="price-table-unit text-white bg-orange-400"><?= CFS()->get('pricing_4_checklist_points') ?></div>
+              <div class="price-table-unit text-white bg-orange-400"><?= CFS()->get('pricing_4_minutes') ?></div>
+              <div class="price-table-unit text-white bg-orange-400"><?= CFS()->get('pricing_4_api_integrations') ?></div>
               <div class="price-table-unit table-heading !text-[17px]">
-                обсуждается
-                индивидуально
+                <?= CFS()->get('pricing_4_price') ?>
               </div>
             </div>
           </div>
