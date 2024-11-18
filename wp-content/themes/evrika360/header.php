@@ -8,6 +8,8 @@
     <?php
     if (is_404()) {
       echo '404 | Страница не найдена';
+    } elseif (is_front_page()) {
+      echo 'Эврика 360 - речевая аналитика для бизнеса';
     } else {
       the_title('', ' | Эврика360');
     }
@@ -88,12 +90,12 @@
 
       <div class="flex gap-8 items-center text-white">
         <div class="space-y-2 shrink-0 group-has-[:checked]:hidden">
-          <p class="small-text"><?= CFS()->get('messengers_description_text'); ?></p>
+          <p class="small-text"><?= CFS()->get('messengers_description_text', 85); ?></p>
           <div class="flex gap-2">
-            <a class="w-8 h-8" href="<?= CFS()->get('telegram_link'); ?>" target="_blank">
+            <a class="w-8 h-8" href="<?= CFS()->get('telegram_link', 85); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
             </a>
-            <a class="w-8 h-8" href="<?= CFS()->get('whatsapp_link'); ?>" target="_blank">
+            <a class="w-8 h-8" href="<?= CFS()->get('whatsapp_link', 85); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
             </a>
           </div>
@@ -101,31 +103,33 @@
 
         <div class="shrink-0 space-y-3 group-has-[:checked]:hidden">
           <p class="small-text">
-            <?= CFS()->get('working_hours'); ?>
+            <?= CFS()->get('working_hours', 85); ?>
           </p>
 
           <div class="font-bold space-y-1">
             <h5>
-              <a class="link-white" href="tel:<?= CFS()->get('phone_belarus'); ?>">
-                <?= CFS()->get('phone_belarus'); ?>
+              <a class="link-white" href="tel:<?= CFS()->get('phone_belarus', 85); ?>">
+                <?= CFS()->get('phone_belarus', 85); ?>
               </a>
             </h5>
             <h5>
-              <a class="link-white" href="tel:<?= CFS()->get('phone_russia'); ?>">
-                <?= CFS()->get('phone_russia'); ?>
+              <a class="link-white" href="tel:<?= CFS()->get('phone_russia', 85); ?>">
+                <?= CFS()->get('phone_russia', 85); ?>
               </a>
             </h5>
           </div>
         </div>
 
         <div class="flex gap-2">
-          <button class="call-modal-toggle btn shrink-0 group-has-[:checked]:bg-light-blue-100"><?= CFS()->get('action_button_text'); ?></button>
-          <a href="<?= CFS()->get('login_button_link'); ?>" target="_blank" class="btn dark"><?= CFS()->get('login_button_text'); ?></a>
+          <button class="call-modal-toggle btn shrink-0 group-has-[:checked]:primary">
+            <?= CFS()->get('action_button_text', 85); ?>
+          </button>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- Burger menu -->
   <div id="burger-menu-wrapper" class="hidden z-50 fixed top-0 left-0 right-0 bottom-0">
     <div class="wrapper pt-[22px] pb-10 bg-dark-blue-600-80 backdrop-blur rounded-b-xl">
       <div class="mb-8 flex justify-between items-center text-white">
@@ -158,12 +162,12 @@
 
       <div class="mb-10 flex gap-8 text-white">
         <div class="space-y-2">
-          <p class="small-text"><?= CFS()->get('messengers_description_text'); ?></p>
+          <p class="small-text"><?= CFS()->get('messengers_description_text', 85); ?></p>
           <div class="flex gap-2">
-            <a href="<?= CFS()->get('telegram_link'); ?>" target="_blank">
+            <a href="<?= CFS()->get('telegram_link', 85); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
             </a>
-            <a href="<?= CFS()->get('whatsapp_link'); ?>" target="_blank">
+            <a href="<?= CFS()->get('whatsapp_link', 85); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
             </a>
           </div>
@@ -171,18 +175,18 @@
 
         <div class="shrink-0 space-y-3">
           <p class="small-text">
-            <?= CFS()->get('working_hours'); ?>
+            <?= CFS()->get('working_hours', 85); ?>
           </p>
 
           <div class="font-bold space-y-1">
             <h5>
-              <a href="tel:<?= CFS()->get('phone_belarus'); ?>">
-                <?= CFS()->get('phone_belarus'); ?>
+              <a href="tel:<?= CFS()->get('phone_belarus', 85); ?>">
+                <?= CFS()->get('phone_belarus', 85); ?>
               </a>
             </h5>
             <h5>
-              <a href="tel:<?= CFS()->get('phone_russia'); ?>">
-                <?= CFS()->get('phone_russia'); ?>
+              <a href="tel:<?= CFS()->get('phone_russia', 85); ?>">
+                <?= CFS()->get('phone_russia', 85); ?>
               </a>
             </h5>
           </div>
@@ -190,8 +194,9 @@
       </div>
 
       <div class="flex gap-2">
-        <button class="call-modal-toggle btn grow"><?= CFS()->get('action_button_text'); ?></button>
-        <a href="<?= CFS()->get('login_button_link'); ?>" target="_blank" class="btn dark grow"><?= CFS()->get('login_button_text'); ?></a>
+        <button class="call-modal-toggle btn primary ml-0">
+          <?= CFS()->get('action_button_text', 85); ?>
+        </button>
       </div>
     </div>
   </div>

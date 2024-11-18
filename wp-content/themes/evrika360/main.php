@@ -244,7 +244,7 @@
                 </ul>
               </div>
 
-              <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
+              <div class="p-6 lg:pb-10 space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
                 <h3 class="text-grey-400"><?= $field['second_block_title'] ?></h3>
                 <ul class="space-y-3 lg:space-y-4">
 
@@ -509,7 +509,7 @@
 
   </section>
 
-  <!-- IMMEDIATE ASSESMENT section -->
+  <!-- IMMEDIATE assessment section -->
   <section class="overflow-hidden">
     <div class="wrapper mt-[26px] mb-[56px] lg:mb-20 space-y-6 lg:space-y-10">
       <h3 class="relative lg:mx-auto lg:text-center">
@@ -551,7 +551,7 @@
       </div>
     </div>
 
-    <!-- #1 assesment tab -->
+    <!-- #1 assessment tab -->
     <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
       <div class="assessment-tab">
         <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
@@ -576,7 +576,7 @@
       </div>
     </div>
 
-    <!-- #2 assesment tab -->
+    <!-- #2 assessment tab -->
     <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
       <div class="assessment-tab">
         <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
@@ -601,7 +601,7 @@
       </div>
     </div>
 
-    <!-- #3 assesment tab -->
+    <!-- #3 assessment tab -->
     <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
       <div class="assessment-tab">
         <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
@@ -629,7 +629,7 @@
       </div>
     </div>
 
-    <!-- #4 assesment tab -->
+    <!-- #4 assessment tab -->
     <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
       <div class="assessment-tab">
         <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">

@@ -2619,6 +2619,10 @@ input[type='text']:disabled {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -2693,6 +2697,10 @@ input[type='text']:disabled {
 
 .gap-\[6px\] {
   gap: 6px;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-y-4 {
@@ -3132,6 +3140,10 @@ input[type='text']:disabled {
   padding-top: 90px;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -3524,6 +3536,22 @@ input[type='text']:disabled {
   background: rgba(255, 255, 255, 0.8);
 }
 
+.group:has(:checked) .group-has-\[\:checked\]\:primary.btn {
+  background-color: var(--blue-100);
+  color: var(--white-100);
+  --tw-shadow: var(--dark-inset-shadow);
+  --tw-shadow-colored: var(--dark-inset-shadow);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.group:has(:checked) .group-has-\[\:checked\]\:primary.btn:hover {
+  background-color: var(--blue-200);
+}
+
+.group:has(:checked) .group-has-\[\:checked\]\:primary.btn:active {
+  background-color: var(--dark-blue-300);
+}
+
 @media not all and (min-width: 1024px) {
   .max-lg\:wrapper {
     margin: auto;
@@ -3770,6 +3798,18 @@ input[type='text']:disabled {
 }
 
 .peer:has(label:nth-child(4) :checked) ~ .peer-has-\[label\:nth-child\(4\)_\:checked\]\:block {
+  display: block;
+}
+
+.peer:has(label:nth-child(5) :checked) ~ .peer-has-\[label\:nth-child\(5\)_\:checked\]\:block {
+  display: block;
+}
+
+.peer:has(label:nth-child(6) :checked) ~ .peer-has-\[label\:nth-child\(6\)_\:checked\]\:block {
+  display: block;
+}
+
+.peer:has(label:nth-child(7) :checked) ~ .peer-has-\[label\:nth-child\(7\)_\:checked\]\:block {
   display: block;
 }
 

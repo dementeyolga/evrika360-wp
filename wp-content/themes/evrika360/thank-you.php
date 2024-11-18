@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php get_header('thanks'); ?>
+<?php get_header('not-fixed'); ?>
 
 <main class="pt-[120px] lg:pt-[87px] max-lg:bg-blue-circle">
   <!-- Popup "Заказать Звонок" -->
@@ -62,7 +62,7 @@
     <div class="pt-8 lg:pt-6 pb-10 lg:pb-0 lg:flex lg:flex-row lg:gap-[82px]">
       <div class="lg:hidden absolute h-[222px] lg:rounded-2xl bottom-0 right-0 left-0 bg-fade-bottom"></div>
 
-      <div class="hidden lg:flex justify-center shrink-0">
+      <div class="hidden lg:flex justify-center items-end shrink-0">
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-instagram-desktop.png" alt="">
       </div>
 
