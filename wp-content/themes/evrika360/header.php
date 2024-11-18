@@ -90,7 +90,7 @@
 
       <div class="flex gap-8 items-center text-white">
         <div class="space-y-2 shrink-0 group-has-[:checked]:hidden">
-          <p class="small-text"><?= CFS()->get('messengers_description_text', 85); ?></p>
+          <p class="small-text"><?= CFS()->get('header_messengers_description_text', 85); ?></p>
           <div class="flex gap-2">
             <a class="w-8 h-8" href="<?= CFS()->get('telegram_link', 85); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
@@ -122,7 +122,7 @@
 
         <div class="flex gap-2">
           <button class="call-modal-toggle btn shrink-0 group-has-[:checked]:primary">
-            <?= CFS()->get('action_button_text', 85); ?>
+            <?= CFS()->get('header_action_button_text', 85); ?>
           </button>
         </div>
       </div>
@@ -162,7 +162,7 @@
 
       <div class="mb-10 flex gap-8 text-white">
         <div class="space-y-2">
-          <p class="small-text"><?= CFS()->get('messengers_description_text', 85); ?></p>
+          <p class="small-text"><?= CFS()->get('header_messengers_description_text', 85); ?></p>
           <div class="flex gap-2">
             <a href="<?= CFS()->get('telegram_link', 85); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
@@ -195,7 +195,7 @@
 
       <div class="flex gap-2">
         <button class="call-modal-toggle btn primary ml-0">
-          <?= CFS()->get('action_button_text', 85); ?>
+          <?= CFS()->get('header_action_button_text', 85); ?>
         </button>
       </div>
     </div>

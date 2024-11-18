@@ -180,8 +180,7 @@
         <div class="embla__container feature-tabs-embla__container">
           <?php
           $fields = CFS()->get('feature_tabs');
-          ?>
-          <?php foreach ($fields as $index => $field): ?>
+          foreach ($fields as $index => $field): ?>
             <label class="tab" text="<?= $field['label_1'] . ' ' . $field['label_2'] ?>">
               <?= $field['label_1'] ?> <br> <?= $field['label_2'] ?>
               <input class="hidden" name="feature-tabs" type="radio" <?php if ($index == 0) echo 'checked' ?>>
@@ -312,10 +311,7 @@
         </div>
       </div>
 
-      <button class="btn primary flex gap-2 lg:ml-0">
-        <div>
-          <img src="<?= CFS()->get('how_works_action_button_icon') ?>" alt="">
-        </div>
+      <button class="consultation-modal-toggle btn primary lg:ml-0">
         <?= CFS()->get('how_works_action_button_text') ?>
       </button>
 

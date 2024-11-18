@@ -57,7 +57,6 @@
     </div>
   </div>
 
-
   <div class="relative wrapper lg:px-[132px] lg:rounded-2xl bg-dark-blue-500 lg:bg-white-wave-right text-white overflow-hidden">
     <div class="pt-8 lg:pt-6 pb-10 lg:pb-0 lg:flex lg:flex-row lg:gap-[82px]">
       <div class="lg:hidden absolute h-[222px] lg:rounded-2xl bottom-0 right-0 left-0 bg-fade-bottom"></div>
