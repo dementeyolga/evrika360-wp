@@ -32,7 +32,7 @@
     </div>
 
     <div class="lg:hidden absolute -bottom-[152px] left-1/2 -translate-x-1/2 w-max z-10">
-      <img class="min-w-max" src="<?= CFS()->get('hero_image_mobile') ?>" alt="">
+      <img class="w-max max-w-[783px]" src="<?= CFS()->get('hero_image_mobile') ?>" alt="">
     </div>
 
     <div class="group lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 w-[230px] h-[230px] z-10 hover:cursor-pointer">
@@ -54,7 +54,7 @@
   <section class="wrapper overflow-hidden xl:overflow-visible pt-[64px] -mt-[64px] xl:mb-10 bg-orange-circle xl:bg-none xl:flex-row xl:gap-11">
     <div class="hidden xl:block xl:mt-[22px] xl:shrink-0 xl:w-[591px] relative h-[173px] xl:h-[588px] rounded-xl xl:rounded-2xl bg-light-blue-100 border border-light-blue-200">
       <div class="absolute top-[83px] left-0 w-max">
-        <img class="min-w-max" src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-desktop.png" alt="">
+        <img class="w-max max-w-[946px]" src="<?= CFS()->get('greeting_image_desktop') ?>" alt="">
       </div>
     </div>
 
@@ -66,7 +66,7 @@
       <div class="relative chat secondary mb-5 xl:mb-8 xl:max-w-[400px]">
         <div class="flex gap-1">
           <?= CFS()->get('greeting_hi') ?>
-          <div>
+          <div class="max-w-5">
             <img src="<?= CFS()->get('greeting_emoji') ?>" alt="">
           </div>
         </div>
@@ -86,14 +86,14 @@
 
       <div class="xl:hidden relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
         <div class="absolute -top-[54px] w-max sm:w-full sm:flex sm:justify-center">
-          <img class="sm:translate-x-6" src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-mobile.png" alt="">
+          <img class="sm:translate-x-6 max-w-[424px]" src="<?= CFS()->get('greeting_image_mobile') ?>" alt="">
         </div>
       </div>
 
       <div class="relative w-fit mx-auto mb-[50px] xl:mr-0">
         <span class="accent text-center"><?= CFS()->get('greeting_arrow_text') ?></span>
         <div class="absolute -right-[3px] xl:right-[111px] bottom-[11px] xl:-bottom-[11px] translate-y-full translate-x-full">
-          <img class="xl:h-[88px]" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.png" alt="">
+          <img class="xl:h-[88px]" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom.svg" alt="">
         </div>
       </div>
     </div>
@@ -104,7 +104,7 @@
     <div class="wrapper pt-10 pb-[75px] xl:pb-[150px] space-y-10 xl:space-y-[64px]">
       <div>
         <div class="flex gap-2">
-          <div class="shrink-0 flex items-center">
+          <div class="shrink-0 flex items-center max-w-5">
             <img src="<?= CFS()->get('dept_heading_emoji') ?>" alt="">
           </div>
           <h3><?= CFS()->get('dept_heading_1') ?></h3>
@@ -142,7 +142,7 @@
           <?= CFS()->get('details_heading') ?>
 
           <div class="absolute right-0 -bottom-8 lg:right-6 lg:-bottom-1" aria-hidden="true">
-            <img class="lg:w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.png" alt="">
+            <img class="lg:w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.svg" alt="">
           </div>
         </h3>
 
@@ -154,8 +154,7 @@
             <div class="space-y-2">
               <div class="flex gap-4 lg:gap-6 items-center">
                 <div class="w-12 h-12 lg:w-20 lg:h-20 shrink-0 flex justify-center items-center rounded-sm lg:rounded-md bg-light-blue-100">
-                  <img class="lg:hidden" src="<?= $field['emoji_mobile'] ?>" alt="">
-                  <img class="hidden lg:block" src="<?= $field['emoji_desktop'] ?>" alt="">
+                  <img class="w-5 lg:w-10" src="<?= $field['emoji'] ?>" alt="">
                 </div>
                 <div class="flex flex-col gap-1">
                   <p><?= $field['position'] ?></p>
@@ -204,11 +203,11 @@
               <div class="wrapper space-y-4">
                 <h3><?= $field['title'] ?></h3>
                 <?php if (!empty($field['badge'])) { ?>
-                  <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Дaшборд — главный экран для руководителя</div>
+                  <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200"><?= $field['badge'] ?></div>
                 <?php } ?>
               </div>
 
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
                 <img src="<?= $field['image'] ?>" alt="">
               </div>
 
@@ -271,8 +270,8 @@
   <section class="relative pt-12 pb-[263px] lg:py-0 lg:mx-10 lg:h-[288px] lg:rounded-2xl bg-pattern border border-light-blue-200 text-white overflow-hidden text-center">
     <div class="wrapper lg:flex-row lg:items-center lg:h-full">
       <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
-      <div class="lg:static lg:w-1/4 lg:pt-[29px] lg:self-start absolute -bottom-[210px] left-0 right-0 flex justify-center lg:justify-start">
-        <img class="lg:max-w-[170px]" src="<?= CFS()->get('test_image') ?>" alt="">
+      <div class="lg:static lg:w-1/4 lg:pt-[29px] lg:self-start absolute -bottom-[105px] left-0 right-0 flex justify-center lg:justify-start">
+        <img class="max-w-[200px] lg:max-w-[170px]" src="<?= CFS()->get('test_image') ?>" alt="">
       </div>
 
       <div class="lg:w-1/2">
@@ -303,10 +302,10 @@
         <div class="relative accent small lg:absolute lg:-top-[124px] lg:-right-[369px] text-end">
           <?= CFS()->get('how_works_next_text') ?>
           <div class="lg:hidden absolute -bottom-10 left-0">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.svg" alt="">
           </div>
           <div class="hidden lg:block absolute -bottom-[100px] -left-10">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-top-spiral.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-top-spiral.svg" alt="">
           </div>
         </div>
       </div>
@@ -326,7 +325,7 @@
   <section>
     <div class="wrapper mb-[56px] lg:mb-[120px] flex flex-col gap-16 lg:gap-[94px]">
       <div class="relative flex flex-col lg:flex-row lg:gap-12">
-        <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0">
+        <div class="mb-6 lg:mb-0 max-w-[450px] lg:w-[466px] lg:shrink-0">
           <img class="w-full lg:hidden" src="<?= CFS()->get('case_buyer_image_mobile') ?>" alt="клиент">
           <img class="w-full hidden lg:block" src="<?= CFS()->get('case_buyer_image_desktop') ?>" alt="клиент">
         </div>
@@ -340,12 +339,12 @@
 
           <div class="relative">
             <div class="absolute -bottom-[70px] right-8 lg:-right-24 lg:-bottom-16">
-              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted.png" alt="">
-              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-desktop.png" alt="">
+              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted.svg" alt="">
+              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-desktop.svg" alt="">
             </div>
 
             <div class="hidden lg:block absolute -top-[25px] -left-[22px]">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.svg" alt="">
             </div>
 
             <p class="description">
@@ -356,7 +355,7 @@
       </div>
 
       <div class="relative flex flex-col lg:flex-row lg:gap-12 lg:justify-end">
-        <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0 lg:order-2">
+        <div class="mb-6 lg:mb-0 max-w-[450px] lg:w-[466px] lg:shrink-0 lg:order-2">
           <img class="w-full lg:hidden" src="<?= CFS()->get('case_operator_image_mobile') ?>" alt="оператор">
           <img class="w-full hidden lg:block" src="<?= CFS()->get('case_operator_image_desktop') ?>" alt="оператор">
         </div>
@@ -369,13 +368,13 @@
           </div>
 
           <div class="relative">
-            <div class="absolute -bottom-[92px] right-6 lg:-left-32 lg:-bottom-[68px]">
-              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral.png" alt="">
-              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-right.png" alt="">
+            <div class="absolute -bottom-[100px] right-4 lg:-left-32 lg:-bottom-[68px]">
+              <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral.svg" alt="">
+              <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-right.svg" alt="">
             </div>
 
             <div class="hidden lg:block absolute -top-[25px] right-0">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-right.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-right.svg" alt="">
             </div>
 
             <p class="description">
@@ -388,7 +387,7 @@
       <div class="relative flex flex-col lg:flex-row lg:gap-12">
 
 
-        <div class="mb-6 lg:mb-0 lg:w-[466px] lg:shrink-0">
+        <div class="mb-6 lg:mb-0 max-w-[450px] lg:w-[466px] lg:shrink-0">
           <img class="w-full lg:hidden" src="<?= CFS()->get('case_manager_image_mobile') ?>" alt="руководитель">
           <img class="w-full hidden lg:block" src="<?= CFS()->get('case_manager_image_desktop') ?>" alt="руководитель">
         </div>
@@ -402,11 +401,11 @@
 
           <div class="relative">
             <div class="hidden lg:block absolute -bottom-[86px] -right-[56px]">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-2.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-2.svg" alt="">
             </div>
 
             <div class="hidden lg:block absolute -top-[20px] -left-[22px]">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.svg" alt="">
             </div>
 
             <p class="description">
@@ -459,7 +458,7 @@
         <h3 class="relative mb-20 lg:mb-14">
           — Я правильно понимаю, что речевая аналитика <br class="lg:hidden"> <b>полезна</b>, когда...
           <div class="absolute left-0 -bottom-[38px] lg:left-[152px] lg:-bottom-7">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-left.png" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-left.svg" alt="">
           </div>
         </h3>
 
@@ -512,10 +511,10 @@
         <b>Эврика360</b> даёт мгновенную объективную оценку <br class="hidden lg:block"> работы компании
 
         <div class="absolute -top-[30px] -left-[21px]">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown.png" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown.svg" alt="">
         </div>
         <div class="hidden lg:block absolute -top-4 -right-6">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown-right.png" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown-right.svg" alt="">
         </div>
       </h3>
       <p class="lg:mx-auto lg:text-center">Речевая аналитика минимизирует ручную работу, дополняет ваши <br class="hidden lg:block"> текущие отчёты новыми данными и упрощает управление компанией</p>
@@ -667,8 +666,8 @@
         У нас есть предложение!
 
         <div class="absolute -bottom-[64px] right-10 lg:-bottom-9 lg:-right-[136px]">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy.png" alt="">
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-desktop.png" alt="">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy.svg" alt="">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-desktop.svg" alt="">
         </div>
       </div>
     </div>
@@ -720,8 +719,8 @@
         — А что у вас с <b>безопасностью данных</b>?
 
         <div class="absolute -bottom-[28px] w-full flex justify-center">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.png" alt="">
-          <img class="hidden lg:block relative -right-10" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-desktop.png" alt="">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
+          <img class="hidden lg:block relative -right-10" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-desktop.svg" alt="">
         </div>
       </h3>
 
@@ -752,8 +751,8 @@
         <h3 class="relative h-fit lg:mt-[120px]">— Какие есть примеры <br class="hidden lg:block"> <b>использования</b>?
 
           <div class="absolute left-0 -bottom-8 lg:-bottom-6 lg:left-3">
-            <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.png" alt="">
-            <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-2.png" alt="">
+            <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
+            <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-2.svg" alt="">
           </div>
         </h3>
 
@@ -1006,8 +1005,8 @@
               Эврика360?
 
               <div class="absolute -inset-7 lg:-inset-4 lg:-bottom-1 lg:-left-2 flex justify-center items-center">
-                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.png" alt="">
-                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle-desktop.png" alt="">
+                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.svg" alt="">
+                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle-desktop.svg" alt="">
               </div>
             </b>
           </h3>
@@ -1190,7 +1189,7 @@
           с нашим менеджером</h3>
 
         <div class="hidden lg:block absolute -bottom-[124px] right-[180px]">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-2.png" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-2.svg" alt="">
         </div>
       </div>
     </div>

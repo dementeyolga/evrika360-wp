@@ -1,4 +1,4 @@
-const automatizationTabsSliderOptions = { align: "start", loop: false };
+const automatizationTabsSliderOptions = { align: "start", dragFree: true };
 
 const automatizationTabsSliderEmblaNode = document.querySelector(
   ".automatization-tabs-embla",
@@ -8,7 +8,16 @@ const automatizationTabsSliderViewportNode =
     ".automatization-tabs-embla__viewport",
   );
 
+const automatizationTabs =
+  automatizationTabsSliderEmblaNode.querySelectorAll(".tab");
+
 const automatizationTabsSliderEmblaApi = EmblaCarousel(
   automatizationTabsSliderViewportNode,
   automatizationTabsSliderOptions,
+);
+
+automatizationTabs.forEach((tab, index) =>
+  tab.addEventListener("click", () => {
+    automatizationTabsSliderEmblaApi.scrollTo(index);
+  }),
 );

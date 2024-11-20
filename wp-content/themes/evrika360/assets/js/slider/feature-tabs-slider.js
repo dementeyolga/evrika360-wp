@@ -1,4 +1,4 @@
-const featureTabsSliderOptions = { align: "start", loop: false };
+const featureTabsSliderOptions = { align: "start", dragFree: true };
 
 const featureTabsSliderEmblaNode = document.querySelector(
   ".feature-tabs-embla",
@@ -6,8 +6,15 @@ const featureTabsSliderEmblaNode = document.querySelector(
 const featureTabsSliderViewportNode = featureTabsSliderEmblaNode.querySelector(
   ".feature-tabs-embla__viewport",
 );
+const featureTabs = featureTabsSliderEmblaNode.querySelectorAll(".tab");
 
 const featureTabsSliderEmblaApi = EmblaCarousel(
   featureTabsSliderViewportNode,
   featureTabsSliderOptions,
+);
+
+featureTabs.forEach((tab, index) =>
+  tab.addEventListener("click", () => {
+    featureTabsSliderEmblaApi.scrollTo(index);
+  }),
 );

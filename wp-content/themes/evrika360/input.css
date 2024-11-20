@@ -14,7 +14,7 @@ Text Domain: evrika
 
 @layer base {
   @font-face {
-    font-family: 'Caveat';
+    font-family: "Caveat";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -22,21 +22,21 @@ Text Domain: evrika
   }
 
   @font-face {
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(/wp-content/themes/evrika360/assets/fonts/DMSans-Regular.ttf);
   }
   @font-face {
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-style: normal;
     font-weight: 500;
     font-display: swap;
     src: url(/wp-content/themes/evrika360/assets/fonts/DMSans-Medium.ttf);
   }
   @font-face {
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -46,8 +46,8 @@ Text Domain: evrika
 
 @layer base {
   :root {
-    --main-font: 'DM Sans', sans-serif;
-    --accent-font: 'Caveat', sans-serif;
+    --main-font: "DM Sans", sans-serif;
+    --accent-font: "Caveat", sans-serif;
 
     --white-100: #fff;
     --white-100-8: #ffffff14;
@@ -137,7 +137,7 @@ Text Domain: evrika
     @apply text-sm/[120%] hover:cursor-pointer;
   }
 
-  input[type='text'] {
+  input[type="text"] {
     @apply py-[7px] px-4 w-full text-base/[150%] rounded-sm outline-none border border-grey-300 lg:hover:bg-light-blue-100 disabled:bg-grey-100 focus:border-blue-100 placeholder:text-grey-400;
   }
 }
@@ -318,14 +318,14 @@ Text Domain: evrika
   }
 
   .data-security-slide {
-    @apply p-6 pb-10;
+    @apply p-6 pb-10 h-full;
   }
 
   .prices-slide {
     @apply px-4 pt-5 pb-10 space-y-6 rounded-sm border border-grey-200 bg-grey-50;
   }
 
-  .embla__container:has(.feature-price-slide) {
+  .embla__container:has(.feature-price-slide, .data-security-slide) {
     align-items: stretch;
   }
 
@@ -607,10 +607,6 @@ Text Domain: evrika
 
   @media (min-width: 1024px) {
     align-items: stretch;
-
-    .data-security-slide {
-      height: 100%;
-    }
   }
 }
 .feature-tabs-embla__container,
@@ -620,7 +616,7 @@ Text Domain: evrika
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -679,6 +675,7 @@ Text Domain: evrika
 }
 .embla__dots {
   margin-top: 20px;
+  height: 24px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -716,7 +713,7 @@ Text Domain: evrika
   }
 }
 .embla__dot:after {
-  content: '';
+  content: "";
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -744,7 +741,7 @@ Text Domain: evrika
 }
 
 /* Styles for loop sliders (to highlight first dot when the last dot is selected) */
-/* .embla__dot:first-child:has(+ .embla__dot--selected:last-child) {
+.embla__dot:first-child:has(+ .embla__dot--selected:last-child) {
   width: 16px;
   height: 16px;
 }
@@ -752,4 +749,4 @@ Text Domain: evrika
   height: 8px;
   width: 8px;
   opacity: 0.5;
-} */
+}

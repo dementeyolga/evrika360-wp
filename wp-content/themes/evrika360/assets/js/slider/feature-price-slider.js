@@ -1,4 +1,4 @@
-const featurePriceSliderOptions = { align: "start" };
+const featurePriceSliderOptions = { align: "start", loop: true };
 
 const featurePriceSliderEmblaNode = document.querySelector(
   ".feature-price-embla",

@@ -36,12 +36,12 @@
 
       <div class="flex gap-8 items-center text-dark-blue-500">
         <div class="space-y-2 shrink-0">
-          <p class="small-text"><?= CFS()->get('header_messengers_description_text', 85); ?></p>
+          <p class="small-text"><?= CFS()->get('header_messengers_description_text', 20); ?></p>
           <div class="flex gap-2">
-            <a class="w-8 h-8" href="<?= CFS()->get('telegram_link', 85); ?>" target="_blank">
+            <a class="w-8 h-8" href="<?= CFS()->get('telegram_link', 20); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon.png" alt="">
             </a>
-            <a class="w-8 h-8" href="<?= CFS()->get('whatsapp_link', 85); ?>" target="_blank">
+            <a class="w-8 h-8" href="<?= CFS()->get('whatsapp_link', 20); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon.png" alt="">
             </a>
           </div>
@@ -49,18 +49,18 @@
 
         <div class="shrink-0 space-y-3">
           <p class="small-text">
-            <?= CFS()->get('working_hours', 85); ?>
+            <?= CFS()->get('working_hours', 20); ?>
           </p>
 
           <div class="font-bold space-y-1">
             <h5>
-              <a href="tel:<?= CFS()->get('phone_belarus', 85); ?>">
-                <?= CFS()->get('phone_belarus', 85); ?>
+              <a href="tel:<?= CFS()->get('phone_belarus', 20); ?>">
+                <?= CFS()->get('phone_belarus', 20); ?>
               </a>
             </h5>
             <h5>
-              <a href="tel:<?= CFS()->get('phone_russia', 85); ?>">
-                <?= CFS()->get('phone_russia', 85); ?>
+              <a href="tel:<?= CFS()->get('phone_russia', 20); ?>">
+                <?= CFS()->get('phone_russia', 20); ?>
               </a>
             </h5>
           </div>
@@ -68,7 +68,7 @@
 
         <div class="flex gap-2">
           <button class="call-modal-toggle btn primary shrink-0">
-            <?= CFS()->get('header_action_button_text', 85); ?>
+            <?= CFS()->get('header_action_button_text', 20); ?>
           </button>
         </div>
       </div>
@@ -106,12 +106,12 @@
 
       <div class="mb-10 flex gap-8 text-white">
         <div class="space-y-2">
-          <p class="small-text"><?= CFS()->get('header_messengers_description_text', 85); ?></p>
+          <p class="small-text"><?= CFS()->get('header_messengers_description_text', 20); ?></p>
           <div class="flex gap-2">
-            <a href="<?= CFS()->get('telegram_link', 85); ?>" target="_blank">
+            <a href="<?= CFS()->get('telegram_link', 20); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
             </a>
-            <a href="<?= CFS()->get('whatsapp_link', 85); ?>" target="_blank">
+            <a href="<?= CFS()->get('whatsapp_link', 20); ?>" target="_blank">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
             </a>
           </div>
@@ -119,18 +119,18 @@
 
         <div class="shrink-0 space-y-3">
           <p class="small-text">
-            <?= CFS()->get('working_hours', 85); ?>
+            <?= CFS()->get('working_hours', 20); ?>
           </p>
 
           <div class="font-bold space-y-1">
             <h5>
-              <a href="tel:<?= CFS()->get('phone_belarus', 85); ?>">
-                <?= CFS()->get('phone_belarus', 85); ?>
+              <a href="tel:<?= CFS()->get('phone_belarus', 20); ?>">
+                <?= CFS()->get('phone_belarus', 20); ?>
               </a>
             </h5>
             <h5>
-              <a href="tel:<?= CFS()->get('phone_russia', 85); ?>">
-                <?= CFS()->get('phone_russia', 85); ?>
+              <a href="tel:<?= CFS()->get('phone_russia', 20); ?>">
+                <?= CFS()->get('phone_russia', 20); ?>
               </a>
             </h5>
           </div>
@@ -139,7 +139,7 @@
 
       <div class="flex gap-2">
         <button class="call-modal-toggle btn primary ml-0">
-          <?= CFS()->get('header_action_button_text', 85); ?>
+          <?= CFS()->get('header_action_button_text', 20); ?>
         </button>
       </div>
     </div>

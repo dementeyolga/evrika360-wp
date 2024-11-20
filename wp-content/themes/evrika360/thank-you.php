@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php get_header('not-fixed'); ?>
+<?php get_header('empty'); ?>
 
 <main class="pt-[120px] lg:pt-[87px] max-lg:bg-blue-circle">
   <!-- Popup "Заказать Звонок" -->
