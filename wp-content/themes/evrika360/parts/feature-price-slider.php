@@ -4,12 +4,18 @@
       <!-- FUNCTIONALITY -->
       <div class="embla__slide">
         <div class="feature-price-slide">
-          <div class="table-unit table-heading">Дополнительный <br class="hidden lg:block"> функционал</div>
+          <div class="table-unit table-heading">
+            <?= CFS()->get('prices_additional_features_1_title') ?>
+          </div>
+
           <div class="flex flex-col grow">
-            <div class="table-unit">Уведомления Telegram</div>
-            <div class="table-unit">Персонализированный отчет</div>
-            <div class="table-unit">Анализ эмоционального окраса</div>
-            <div class="table-unit grow">Анализ видеоконференций</div>
+            <?php
+            $fields = CFS()->get('prices_additional_features_1_points');
+            foreach ($fields as $index => $field): ?>
+              <div class="table-unit <?php if ($index == count($fields) - 1) echo 'grow' ?>">
+                <?= $field['point'] ?>
+              </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
@@ -18,35 +24,38 @@
       <div class="embla__slide">
         <div class="feature-price-slide grid grid-cols-2 gap-[1px]">
           <div class="flex flex-col">
-            <div class="table-unit table-heading lg:text-center">Стоимость <br class="hidden lg:block"> внедрения</div>
+            <div class="table-unit table-heading lg:text-center">
+              <?= CFS()->get('prices_additional_features_2_title') ?>
+            </div>
+
             <div class="flex flex-col grow lg:text-center">
-              <div class="table-unit">бесплатно</div>
-              <div class="table-unit">бесплатно</div>
-              <div class="table-unit">бесплатно</div>
-              <div class="table-unit grow">обсуждается <br> индивидуально</div>
+              <?php
+              $fields = CFS()->get('prices_additional_features_2_points');
+              foreach ($fields as $index => $field): ?>
+                <div class="table-unit <?php if ($index == count($fields) - 1) echo 'grow' ?>">
+                  <?= $field['point'] ?>
+                </div>
+              <?php endforeach; ?>
             </div>
           </div>
+
           <div class="flex flex-col">
-            <div class="table-unit table-heading lg:text-center">Абонплата<br class="hidden lg:block"> в месяц</div>
+            <div class="table-unit table-heading lg:text-center">
+              <?= CFS()->get('prices_additional_features_3_title') ?>
+            </div>
+
             <div class="flex flex-col grow font-bold lg:text-center">
-              <div class="table-unit">$50</div>
-              <div class="table-unit">$90</div>
-              <div class="table-unit">$80</div>
-              <div class="table-unit grow">согласно<br class="hidden lg:block"> минут в месяц</div>
+              <?php
+              $fields = CFS()->get('prices_additional_features_3_points');
+              foreach ($fields as $index => $field): ?>
+                <div class="table-unit <?php if ($index == count($fields) - 1) echo 'grow' ?>">
+                  <?= $field['point'] ?>
+                </div>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- COST of IMPLEMENTATION -->
-      <!-- <div class="embla__slide">
-
-      </div> -->
-
-      <!-- PRICE -->
-      <!-- <div class="embla__slide">
-
-      </div> -->
     </div>
   </div>
 

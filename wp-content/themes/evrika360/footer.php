@@ -20,7 +20,7 @@
     </div>
 
     <div class="flex gap-8 lg:gap-4">
-      <button class="call-modal-toggle mx-0 xs:shrink xs:grow-0 grow btn dark">Заказать звонок</button>
+      <button class="call-modal-toggle mx-0 xs:shrink xs:grow-0 grow btn small dark">Заказать звонок</button>
 
       <div class="grow-0 flex gap-2 items-center justify-end">
         <a class="shrink-0" href="<?= CFS()->get('telegram_link', 20); ?>" target="_blank">

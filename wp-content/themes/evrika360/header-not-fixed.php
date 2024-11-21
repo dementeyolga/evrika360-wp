@@ -67,7 +67,7 @@
         </div>
 
         <div class="flex gap-2">
-          <button class="call-modal-toggle btn primary shrink-0">
+          <button class="call-modal-toggle btn small primary shrink-0">
             <?= CFS()->get('header_action_button_text', 20); ?>
           </button>
         </div>
@@ -138,7 +138,7 @@
       </div>
 
       <div class="flex gap-2">
-        <button class="call-modal-toggle btn primary ml-0">
+        <button class="call-modal-toggle btn small primary ml-0">
           <?= CFS()->get('header_action_button_text', 20); ?>
         </button>
       </div>

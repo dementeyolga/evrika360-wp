@@ -9,11 +9,11 @@
   ];
 
   modals.forEach((modal) => {
-    const form = modal.querySelector('form');
+    const form = modal.querySelector("form");
 
-    const inputs = form?.querySelectorAll('input');
+    const inputs = form?.querySelectorAll("input");
 
-    form?.addEventListener('submit', (e) => {
+    form?.addEventListener("submit", (e) => {
       e.preventDefault();
 
       if (!e.target.checkValidity()) {
@@ -25,7 +25,7 @@
         return;
       }
 
-      window.location.pathname = '/thank-you';
+      window.location.pathname = "/thank-you";
       e.target.reset();
       inputs.forEach((input) => (input.oninput = undefined));
     });
@@ -34,7 +34,7 @@
   function defineErrorMessage(input) {
     if (input instanceof HTMLInputElement) {
       if (input.validity.valueMissing) {
-        return 'Поле обязательно для заполнения';
+        return "Поле обязательно для заполнения";
       }
 
       if (input.validity.tooShort) {
@@ -42,22 +42,20 @@
       }
 
       if (input.validity.patternMismatch) {
-        return 'Неверный формат данных';
+        return "Неверный формат данных";
       }
     }
   }
 
   function validateInput(input) {
     const errorMessage = defineErrorMessage(input);
-    const fieldWrapper = input.closest('div.relative');
-    const errorEl = fieldWrapper.querySelector('p.input-error');
+    const fieldWrapper = input.closest("div.relative");
+    const errorEl = fieldWrapper.querySelector("p.input-error");
 
     if (errorMessage) {
-      input.classList.add('!border-red');
-      fieldWrapper.classList.add('mb-5');
+      input.classList.add("!border-red");
     } else {
-      input.classList.remove('!border-red');
-      fieldWrapper.classList.remove('mb-5');
+      input.classList.remove("!border-red");
     }
 
     if (errorEl instanceof HTMLParagraphElement) {

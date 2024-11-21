@@ -16,9 +16,9 @@ class Evrika360_Theme {
   }
 
   public function enqueue_scripts() {
-    wp_enqueue_script('embla-carousel', get_template_directory_uri() . '/assets/js/slider/embla-carousel.umd.js');
+    wp_enqueue_script('embla-carousel', get_template_directory_uri() . '/assets/lib/embla-carousel/embla-carousel.umd.js');
 
-    wp_enqueue_script('embla-carousel-autoheight', get_template_directory_uri() . '/assets/js/slider/embla-carousel-auto-height.umd.js', array('embla-carousel'),);
+    wp_enqueue_script('embla-carousel-autoheight', get_template_directory_uri() . '/assets/lib/embla-carousel/embla-carousel-auto-height.umd.js', array('embla-carousel'),);
 
     wp_enqueue_script('dept-slider', get_template_directory_uri() . '/assets/js/slider/dept-slider.js', array('embla-carousel', 'embla-carousel-autoheight'), false, true);
 
@@ -38,17 +38,17 @@ class Evrika360_Theme {
 
     wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/burger-menu/burger-menu.js', array(), false, true);
 
-    wp_enqueue_script('callback-popups', get_template_directory_uri() . '/assets/js/popups/callback-popups.js', array(), false, true);
+    wp_enqueue_script('popups', get_template_directory_uri() . '/assets/js/popups/popups.js', array(), false, true);
 
     wp_enqueue_script('chat-animation', get_template_directory_uri() . '/assets/js/scroll/chat-animation.js', array(), false, true);
 
-    wp_enqueue_script('callback-popup-validation', get_template_directory_uri() . '/assets/js/popups/callback-popup-validation.js', array('callback-popups'), false, true);
+    wp_enqueue_script('callback-popup-validation', get_template_directory_uri() . '/assets/js/popups/callback-popup-validation.js', array('popups'), false, true);
 
     wp_enqueue_script('intl-tel-input-with-utils', get_template_directory_uri() . '/assets/lib/intl-tel-input/js/intlTelInputWithUtils.min.js', array(), false, true);
 
     wp_enqueue_script('intl-phone-ru-translation', get_template_directory_uri() . '/assets/lib/intl-tel-input/js/intlTelInputRuTranslation.js', array(), false, true);
 
-    wp_enqueue_script('intl-phone-input', get_template_directory_uri() . '/assets/js/popups/intl-phone-input.js', array('intl-tel-input-with-utils', 'intl-phone-ru-translation', 'callback-popups'), false, true);
+    wp_enqueue_script('intl-phone-input', get_template_directory_uri() . '/assets/js/popups/intl-phone-input.js', array('intl-tel-input-with-utils', 'intl-phone-ru-translation', 'popups'), false, true);
   }
 
   public static function get_instance() {

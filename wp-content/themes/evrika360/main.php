@@ -35,18 +35,18 @@
       <img class="w-max max-w-[783px]" src="<?= CFS()->get('hero_image_mobile') ?>" alt="">
     </div>
 
-    <div class="group lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 w-[230px] h-[230px] z-10 hover:cursor-pointer">
+    <a href="https://youtu.be/7lcUyYI6edg?si=vD4_R34aG-mFyVdN" target="_blank" class="group lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 w-[230px] h-[230px] z-10 hover:cursor-pointer">
       <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
       <img class="absolute inset-0 transition-opacity duration-200" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play-hover.png" alt="">
-    </div>
+    </a>
 
     <div class="hidden lg:block absolute bottom-0 right-0 max-w-[67%]">
       <img src="<?= CFS()->get('hero_image_desktop') ?>" alt="">
 
-      <div class="group absolute bottom-[4%] right-[13.5%] w-[34.17%] aspect-square z-10 hover:cursor-pointer">
+      <a href="https://youtu.be/7lcUyYI6edg?si=vD4_R34aG-mFyVdN" target="_blank" class="group absolute bottom-[4%] right-[13.5%] w-[34.17%] aspect-square z-10 hover:cursor-pointer">
         <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
         <img class="absolute inset-0 transition-opacity duration-200" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play-hover.png" alt="">
-      </div>
+      </a>
     </div>
   </section>
 
@@ -270,8 +270,8 @@
   <section class="relative pt-12 pb-[263px] lg:py-0 lg:mx-10 lg:h-[288px] lg:rounded-2xl bg-pattern border border-light-blue-200 text-white overflow-hidden text-center">
     <div class="wrapper lg:flex-row lg:items-center lg:h-full">
       <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
-      <div class="lg:static lg:w-1/4 lg:pt-[29px] lg:self-start absolute -bottom-[105px] left-0 right-0 flex justify-center lg:justify-start">
-        <img class="max-w-[200px] lg:max-w-[170px]" src="<?= CFS()->get('test_image') ?>" alt="">
+      <div class="lg:static lg:w-1/4 lg:pt-[29px] max-w-[200px] lg:max-w-[230px] lg:self-start absolute -bottom-[105px] left-1/2 -translate-x-1/2">
+        <img class="max-w-full" src="<?= CFS()->get('test_image') ?>" alt="">
       </div>
 
       <div class="lg:w-1/2">
@@ -385,8 +385,6 @@
       </div>
 
       <div class="relative flex flex-col lg:flex-row lg:gap-12">
-
-
         <div class="mb-6 lg:mb-0 max-w-[450px] lg:w-[466px] lg:shrink-0">
           <img class="w-full lg:hidden" src="<?= CFS()->get('case_manager_image_mobile') ?>" alt="руководитель">
           <img class="w-full hidden lg:block" src="<?= CFS()->get('case_manager_image_desktop') ?>" alt="руководитель">
@@ -999,10 +997,10 @@
     <div class="wrapper overflow-hidden">
       <div class="lg:mb-[130px] lg:mt-[35px] lg:flex lg:justify-center lg:items-center">
         <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
-          <h3 class="mb-1 text-center">— Сколько стоит </h3>
+          <h3 class="mb-1 text-center"><?= CFS()->get('prices_title_1') ?></h3>
           <h3 class="text-center">
             <b class="relative">
-              Эврика360?
+              <?= CFS()->get('prices_title_2') ?>
 
               <div class="absolute -inset-7 lg:-inset-4 lg:-bottom-1 lg:-left-2 flex justify-center items-center">
                 <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.svg" alt="">
@@ -1100,55 +1098,50 @@
       <div class="lg:flex lg:gap-6">
         <div class="max-lg:wrapper-no-flex lg:order-2">
           <div class="relative mb-9 lg:mb-0 px-4 py-6 h-fit space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
-            <h4 class="lg:text-xl/[130%]">Что входит в состав каждого пакета?</h4>
+            <h4 class="lg:text-xl/[130%]"><?= CFS()->get('prices_packets_title') ?></h4>
 
             <ul class="space-y-2">
-              <li class="flash-li">Отчеты по показателям сотрудников</li>
-              <li class="flash-li">Отчет для владельца/руководства</li>
-              <li class="flash-li">Поиск по ключевым словам</li>
-              <li class="flash-li">Обучение использованию сервиса</li>
-              <li class="flash-li">В тариф Base и выше входит адаптация чек-листов</li>
+              <?php
+              $fields = CFS()->get('prices_packets_features');
+              foreach ($fields as $field): ?>
+                <li class="flash-li"><?= $field['feature'] ?></li>
+              <?php endforeach; ?>
             </ul>
 
-            <label class="peer btn primary w-full flex items-center gap-2 hover:cursor-pointer">
+            <label class="peer price-more-toggle btn primary w-full flex items-center gap-2 hover:cursor-pointer">
               <div>
                 <img src="<?php echo get_template_directory_uri() ?>/assets/images/help-circle-icon.png" alt="">
               </div>
               <input type="checkbox" class="hidden">
-              А что еще?
+              <?= CFS()->get('prices_packets_button_text') ?>
             </label>
 
-            <div class="hidden max-lg:peer-has-[:checked]:block lg:peer-hover:block mt-6 lg:mt-0 p-4 space-y-3 rounded-md bg-white shadow-card lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-[76px] lg:w-[380px]">
+            <div class="hidden max-lg:peer-has-[:checked]:block mt-6 p-4 space-y-3 rounded-md bg-white shadow-card">
               <div class="space-y-2">
                 <div class="flex items-center gap-3">
-                  <h5 class="font-bold">$600*</h5>
-                  <p class="description text-xs lg:text-sm">В зависимости от сложности</p>
+                  <h5 class="font-bold"><?= CFS()->get('prices_more_1_price') ?></h5>
+                  <p class="description text-xs lg:text-sm"><?= CFS()->get('prices_more_1_disclaimer') ?></p>
                 </div>
-                <p class="description text-grey-400 leading-tight">Внедрение</p>
+                <p class="description text-grey-400 leading-tight"><?= CFS()->get('prices_more_1_title') ?></p>
               </div>
 
               <div class="grid grid-cols-2 gap-2">
                 <div class="space-y-2">
-                  <h5 class="font-bold">$0.015</h5>
-                  <p class="description text-grey-400 leading-tight">Перерасчет за минуту</p>
+                  <h5 class="font-bold"><?= CFS()->get('prices_more_2_price') ?></h5>
+                  <p class="description text-grey-400 leading-tight"><?= CFS()->get('prices_more_1_title') ?></p>
                 </div>
 
                 <div class="space-y-2">
-                  <h5 class="font-bold">$30</h5>
-                  <p class="description text-grey-400 leading-tight">Дополнительный пункт чек-листа</p>
+                  <h5 class="font-bold"><?= CFS()->get('prices_more_3_price') ?></h5>
+                  <p class="description text-grey-400 leading-tight"><?= CFS()->get('prices_more_3_title') ?></p>
                 </div>
               </div>
 
               <div class="space-y-2">
-                <h5 class="font-bold">обсуждается индивидуально</h5>
-                <div class="space-y-1">
-                  <p class="description text-grey-400 leading-tight">
-                    Разработка чек-листов
-                  </p>
-                  <p class="description text-grey-400 leading-tight">
-                    Дополнительная интеграция с системой по API
-                  </p>
-                </div>
+                <h5 class="font-bold"><?= CFS()->get('prices_more_4_price') ?></h5>
+                <p class="description text-grey-400">
+                  <?= CFS()->get('prices_more_4_title') ?>
+                </p>
               </div>
             </div>
           </div>
