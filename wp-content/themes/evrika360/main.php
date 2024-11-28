@@ -6,9 +6,9 @@
 
 <?php get_header() ?>
 
-<main class="flex flex-col gap-16 lg:gap-[140px]">
+<main class="flex flex-col gap-16 lg:gap-[110px]">
   <!-- Попапы с формой ообртного звонка -->
-  <?php include 'parts/callback-popups.php' ?>
+  <?php include 'parts/popups.php' ?>
 
   <!-- PROMO section -->
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[329px] lg:pb-[169px] rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
@@ -35,25 +35,25 @@
       <img class="w-max max-w-[783px]" src="<?= CFS()->get('hero_image_mobile') ?>" alt="">
     </div>
 
-    <a href="https://youtu.be/7lcUyYI6edg?si=vD4_R34aG-mFyVdN" target="_blank" class="group lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 w-[230px] h-[230px] z-10 hover:cursor-pointer">
+    <div class="video-promo-toggle group lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 w-[230px] h-[230px] z-10 hover:cursor-pointer animate-pulse-quick hover:animate-none">
       <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
       <img class="absolute inset-0 transition-opacity duration-200" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play-hover.png" alt="">
-    </a>
+    </div>
 
     <div class="hidden lg:block absolute bottom-0 right-0 max-w-[67%]">
       <img src="<?= CFS()->get('hero_image_desktop') ?>" alt="">
 
-      <a href="https://youtu.be/7lcUyYI6edg?si=vD4_R34aG-mFyVdN" target="_blank" class="group absolute bottom-[4%] right-[13.5%] w-[34.17%] aspect-square z-10 hover:cursor-pointer">
+      <div class="video-promo-toggle group absolute bottom-[4%] right-[13.5%] w-[34.17%] aspect-square z-10 hover:cursor-pointer animate-pulse-quick hover:animate-none">
         <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
         <img class="absolute inset-0 transition-opacity duration-200" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play-hover.png" alt="">
-      </a>
+      </div>
     </div>
   </section>
 
   <!-- GREETING section -->
-  <section class="wrapper overflow-hidden xl:overflow-visible pt-[64px] -mt-[64px] xl:mb-10 bg-orange-circle xl:bg-none xl:flex-row xl:gap-11">
-    <div class="hidden xl:block xl:mt-[22px] xl:shrink-0 xl:w-[591px] relative h-[173px] xl:h-[588px] rounded-xl xl:rounded-2xl bg-light-blue-100 border border-light-blue-200">
-      <div class="absolute top-[83px] left-0 w-max">
+  <section class="pb-8 -mb-8 wrapper overflow-hidden xl:overflow-visible pt-[64px] -mt-[64px] bg-orange-circle xl:bg-none xl:flex-row xl:gap-11">
+    <div class="hidden xl:block xl:shrink-0 xl:w-[591px] relative h-[173px] xl:h-[565px] rounded-xl xl:rounded-2xl bg-light-blue-100 border border-light-blue-200">
+      <div class="absolute top-[70px] left-0 w-max">
         <img class="w-max max-w-[946px]" src="<?= CFS()->get('greeting_image_desktop') ?>" alt="">
       </div>
     </div>
@@ -100,27 +100,40 @@
   </section>
 
   <!-- DEPARTMENTS section -->
-  <section id="departments" class="pt-[40px] -mt-[40px] lg:mx-10 lg:rounded-2xl bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
-    <div class="wrapper pt-10 pb-[75px] xl:pb-[150px] space-y-10 xl:space-y-[64px]">
-      <div>
-        <div class="flex gap-2">
-          <div class="shrink-0 flex items-center max-w-5">
-            <img src="<?= CFS()->get('dept_heading_emoji') ?>" alt="">
+  <section id="departments" class="pt-[80px] -mt-[80px]">
+    <div class="lg:mx-10 lg:rounded-2xl bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
+      <div class="wrapper pt-10 xl:pt-20 pb-[75px] xl:pb-[150px] space-y-10 xl:space-y-[64px]">
+        <div>
+          <div class="flex gap-2">
+            <div class="shrink-0 flex items-center max-w-5">
+              <img src="<?= CFS()->get('dept_heading_emoji') ?>" alt="">
+            </div>
+            <h3><?= CFS()->get('dept_heading_1') ?></h3>
           </div>
-          <h3><?= CFS()->get('dept_heading_1') ?></h3>
+          <h3>
+            <?= CFS()->get('dept_heading_2') ?>
+          </h3>
         </div>
-        <h3>
-          <?= CFS()->get('dept_heading_2') ?>
-        </h3>
+
+        <?php include 'parts/dept-slider.php' ?>
       </div>
-      <?php include 'parts/dept-slider.php' ?>
+    </div>
+
+    <div class="wrapper">
+      <a href="/" class="mt-14 btn primary flex items-center gap-2">
+        <div>
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.png" alt="">
+        </div>
+
+        <?= CFS()->get('dept_button_text') ?>
+      </a>
     </div>
   </section>
 
   <!-- IN DETAIL section -->
-  <section class="wrapper pt-[64px] -mt-[64px] lg:mb-[52px] bg-orange-circle lg:bg-none">
+  <section class="wrapper pt-[64px] -mt-[64px] bg-orange-circle lg:bg-none">
     <div class="flex flex-col gap-6 lg:flex-row lg:gap-[100px]">
-      <div class="ml-3 flex flex-col gap-6 lg:bg-orange-circle lg:w-[448px] lg:shrink-0">
+      <div class="flex flex-col gap-6 lg:bg-orange-circle lg:w-[448px] lg:shrink-0">
         <div class="relative mx-auto mb-[22px] w-fit">
           <img class="lg:hidden w-[161px] h-[161px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea-desktop.png" alt="">
@@ -173,7 +186,7 @@
   </section>
 
   <!-- FEATURES section -->
-  <section id="features" class="pt-[110px] -mt-[110px] overflow-hidden space-y-4 lg:space-y-12">
+  <section id="features" class="pt-[130px] -mt-[130px] overflow-hidden space-y-4 lg:space-y-12">
     <div class="peer embla feature-tabs-embla">
       <div class="wrapper embla__viewport feature-tabs-embla__viewport">
         <div class="embla__container feature-tabs-embla__container">
@@ -199,9 +212,9 @@
 
           <?php if ($field['is_two_text_fields_block'] == 0): ?>
 
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
               <div class="wrapper space-y-4">
-                <h3><?= $field['title'] ?></h3>
+                <h3 class="lg:text-2xl/[130%]"><?= $field['title'] ?></h3>
                 <?php if (!empty($field['badge'])) { ?>
                   <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200"><?= $field['badge'] ?></div>
                 <?php } ?>
@@ -226,7 +239,7 @@
           <?php else: ?>
 
             <div class="wrapper grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-              <div class="p-6 lg:pb-[83px] space-y-4 lg:space-y-8 bg-white rounded-xl border border-grey-300 bg-light-wave">
+              <div class="p-6 space-y-4 lg:space-y-8 bg-white rounded-xl border border-grey-300 bg-light-wave">
                 <h3><?= $field['first_block_title'] ?></h3>
                 <ul class="space-y-3 lg:space-y-4">
 
@@ -242,7 +255,7 @@
                 </ul>
               </div>
 
-              <div class="p-6 lg:pb-10 space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
+              <div class="p-6 space-y-4 lg:space-y-8 bg-white rounded-xl border border-light-blue-200">
                 <h3 class="text-grey-400"><?= $field['second_block_title'] ?></h3>
                 <ul class="space-y-3 lg:space-y-4">
 
@@ -270,7 +283,7 @@
   <section class="relative pt-12 pb-[263px] lg:py-0 lg:mx-10 lg:h-[288px] lg:rounded-2xl bg-pattern border border-light-blue-200 text-white overflow-hidden text-center">
     <div class="wrapper lg:flex-row lg:items-center lg:h-full">
       <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
-      <div class="lg:static lg:w-1/4 lg:pt-[29px] max-w-[200px] lg:max-w-[230px] lg:self-start absolute -bottom-[105px] left-1/2 -translate-x-1/2">
+      <div class="lg:static lg:w-1/4 lg:pt-[29px] max-w-[200px] lg:max-w-[230px] lg:self-start max-lg:absolute -bottom-[105px] max-lg:left-1/2 max-lg:-translate-x-1/2">
         <img class="max-w-full" src="<?= CFS()->get('test_image') ?>" alt="">
       </div>
 
@@ -290,48 +303,50 @@
   </section>
 
   <!-- HOW IT WORKS section -->
-  <section id="how-it-works" class="lg:mx-10 lg:rounded-2xl border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
-    <div class="wrapper relative pt-[90px] pb-20 space-y-10 lg:space-y-10 lg:pt-20 lg:pb-[110px]">
-      <div class="chat secondary lg:mb-[37px]"><?= CFS()->get('how_works_question') ?></div>
+  <section id="how-it-works" class="pt-[100px] -mt-[100px]">
+    <div class="lg:mx-10 lg:rounded-2xl border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
+      <div class="wrapper relative pt-[90px] pb-20 space-y-10 lg:space-y-10 lg:pt-20 lg:pb-[110px]">
+        <div class="chat secondary lg:mb-[37px]"><?= CFS()->get('how_works_question') ?></div>
 
-      <div class="relative space-y-4 lg:w-fit">
-        <h3>
-          <?= CFS()->get('how_works_answer') ?>
-        </h3>
+        <div class="relative space-y-4 lg:w-fit">
+          <h3>
+            <?= CFS()->get('how_works_answer') ?>
+          </h3>
 
-        <div class="relative accent small lg:absolute lg:-top-[124px] lg:-right-[369px] text-end">
-          <?= CFS()->get('how_works_next_text') ?>
-          <div class="lg:hidden absolute -bottom-10 left-0">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.svg" alt="">
-          </div>
-          <div class="hidden lg:block absolute -bottom-[100px] -left-10">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-top-spiral.svg" alt="">
+          <div class="relative accent small lg:absolute lg:-top-[124px] lg:-right-[369px] text-end">
+            <?= CFS()->get('how_works_next_text') ?>
+            <div class="lg:hidden absolute -bottom-10 left-0">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.svg" alt="">
+            </div>
+            <div class="hidden lg:block absolute -bottom-[100px] -left-10">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-top-spiral.svg" alt="">
+            </div>
           </div>
         </div>
-      </div>
 
-      <button class="consultation-modal-toggle btn primary lg:ml-0">
-        <?= CFS()->get('how_works_action_button_text') ?>
-      </button>
+        <button class="consultation-modal-toggle btn primary lg:ml-0">
+          <?= CFS()->get('how_works_action_button_text') ?>
+        </button>
 
-      <div class="hidden lg:block absolute -right-3 top-[84px] z-0">
-        <img class="mb-2" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-laptop.png" alt="">
-        <div class="badge mx-auto">Эврика360</div>
+        <div class="hidden lg:block absolute -right-3 top-[84px] z-0">
+          <img class="mb-2" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-laptop.png" alt="">
+          <div class="badge mx-auto">Эврика360</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- EXAMPLE CASE section -->
   <section>
-    <div class="wrapper mb-[56px] lg:mb-[120px] flex flex-col gap-16 lg:gap-[94px]">
+    <div class="wrapper lg:-mt-8 mb-[56px] lg:mb-[120px] flex flex-col gap-16 lg:gap-[94px]">
       <div class="relative flex flex-col lg:flex-row lg:gap-12">
         <div class="mb-6 lg:mb-0 max-w-[450px] lg:w-[466px] lg:shrink-0">
           <img class="w-full lg:hidden" src="<?= CFS()->get('case_buyer_image_mobile') ?>" alt="клиент">
           <img class="w-full hidden lg:block" src="<?= CFS()->get('case_buyer_image_desktop') ?>" alt="клиент">
         </div>
 
-        <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
-          <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
+        <div class="lg:w-[350px] lg:mt-[76px] flex flex-col gap-4 lg:gap-6">
+          <div class="py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
             <h5>
               <?= CFS()->get('case_buyer_title') ?>
             </h5>
@@ -343,7 +358,7 @@
               <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-desktop.svg" alt="">
             </div>
 
-            <div class="hidden lg:block absolute -top-[25px] -left-[22px]">
+            <div class="hidden lg:block absolute -top-4 -left-[22px]">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.svg" alt="">
             </div>
 
@@ -360,8 +375,8 @@
           <img class="w-full hidden lg:block" src="<?= CFS()->get('case_operator_image_desktop') ?>" alt="оператор">
         </div>
 
-        <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
-          <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
+        <div class="lg:w-[350px] lg:mt-[76px] flex flex-col gap-4 lg:gap-6">
+          <div class="py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
             <h5>
               <?= CFS()->get('case_operator_title') ?>
             </h5>
@@ -373,7 +388,7 @@
               <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-right.svg" alt="">
             </div>
 
-            <div class="hidden lg:block absolute -top-[25px] right-0">
+            <div class="hidden lg:block absolute -top-4 right-0">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-right.svg" alt="">
             </div>
 
@@ -390,8 +405,8 @@
           <img class="w-full hidden lg:block" src="<?= CFS()->get('case_manager_image_desktop') ?>" alt="руководитель">
         </div>
 
-        <div class="lg:w-[350px] lg:mt-[76px] lg:flex lg:flex-col lg:justify-between">
-          <div class="mb-4 py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
+        <div class="lg:w-[350px] lg:mt-[76px] flex flex-col gap-4 lg:gap-6">
+          <div class="py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
             <h5>
               <?= CFS()->get('case_manager_title') ?>
             </h5>
@@ -402,7 +417,7 @@
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-dotted-spiral-2.svg" alt="">
             </div>
 
-            <div class="hidden lg:block absolute -top-[20px] -left-[22px]">
+            <div class="hidden lg:block absolute -top-4 -left-[22px]">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/quotation-marks-left.svg" alt="">
             </div>
 
@@ -485,7 +500,7 @@
       </div>
 
       <div class="flex flex-col items-center lg:mr-[53px]">
-        <div class="badge hidden lg:flex mb-7 mx-auto">Эврика360</div>
+        <div class="badge hidden lg:flex mb-2 mx-auto">Эврика360</div>
 
         <div class="-mb-0.5 relative">
           <img class="lg:hidden w-[151px] h-[153px] relative z-10" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-hand.png" alt="">
@@ -547,7 +562,7 @@
     <!-- #1 assessment tab -->
     <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
       <div class="assessment-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
           <h3 class="wrapper lg:text-2xl/[130%]">Получайте объективную оценку причин отказа без эмоций менеджера</h3>
 
           <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
@@ -572,7 +587,7 @@
     <!-- #2 assessment tab -->
     <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
       <div class="assessment-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
           <h3 class="wrapper lg:text-2xl/[130%]">Повышайте эффективность рекрутеров</h3>
 
           <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
@@ -597,7 +612,7 @@
     <!-- #3 assessment tab -->
     <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
       <div class="assessment-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
           <h3 class="wrapper lg:text-2xl/[130%]">Знайте боли, потребности и возражения своей аудитории</h3>
 
           <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
@@ -625,7 +640,7 @@
     <!-- #4 assessment tab -->
     <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
       <div class="assessment-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
           <h3 class="wrapper lg:text-2xl/[130%]">Ускоряйте обучение и адаптацию новых менеджеров</h3>
 
           <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
@@ -655,7 +670,7 @@
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-transparent.png" alt="">
       </div>
 
-      <h3 class="mb-5 lg:mb-[122px]">
+      <h3 class="mb-5 lg:mb-[76px]">
         — Звучит интересно. <br>
         Как можно <b>протестировать</b>?
       </h3>
@@ -663,7 +678,7 @@
       <div class="mb-[86px] lg:mb-0 lg:ml-[93px] w-fit relative accent small">
         У нас есть предложение!
 
-        <div class="absolute -bottom-[64px] right-10 lg:-bottom-9 lg:-right-[136px]">
+        <div class="absolute -bottom-[64px] right-10 lg:-bottom-16 lg:-right-[136px]">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy.svg" alt="">
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-desktop.svg" alt="">
         </div>
@@ -851,7 +866,7 @@
       </div>
 
       <div>
-        <button class="test-modal-toggle btn primary lg:mt-[100px]">Протестировать на своих данных</button>
+        <button class="test-modal-toggle btn primary lg:mt-[56px]">Протестировать на своих данных</button>
       </div>
 
     </div>
@@ -859,7 +874,7 @@
 
   <!-- AUTOMATIZATION section -->
   <section class="overflow-hidden">
-    <div class="pt-[46px] space-y-[58px] lg:space-y-20">
+    <div class="space-y-[58px] lg:space-y-20">
       <div class="lg:wrapper-no-flex flex flex-col gap-y-[58px] lg:flex-row lg:justify-between">
         <div class="max-lg:wrapper flex flex-col gap-6 lg:w-[440px]">
           <div class="chat secondary">— Что-нибудь ещё?</div>
@@ -909,7 +924,7 @@
         <!-- #1 automatization tab -->
         <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
           <div class="automatization-tab">
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
               <div class="wrapper space-y-4 lg:mt-[30px]">
                 <h3 class="md:text-2xl/[130%]">Простая интеграция с действующими системами и сервисами</h3>
                 <div class="p-2 w-fit description  text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Настраиваем самостоятельно или с минимальным участием ваших тех.специалистов</div>
@@ -933,7 +948,7 @@
         <!-- #2 automatization tab -->
         <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
           <div class="automatization-tab">
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
               <h3 class="wrapper md:text-2xl/[130%]">Автоматическое заполнение CRM по итогам звонка</h3>
 
               <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
@@ -953,7 +968,7 @@
         <!-- #3 automatization tab -->
         <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
           <div class="automatization-tab max-lg:pb-0">
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
               <h3 class="wrapper md:text-2xl/[130%]">Получайте мгновенные уведомления с пометкой «ВАЖНО» </h3>
 
               <ul class="wrapper space-y-4 lg:space-y-3">
@@ -964,7 +979,7 @@
               </ul>
 
               <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[80%] self-center">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.png" alt="уведомления на телефон">
+                <img class="max-w-[340px]" src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.png" alt="уведомления на телефон">
               </div>
             </div>
           </div>
@@ -973,7 +988,7 @@
         <!-- #4 automatization tab -->
         <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
           <div class="automatization-tab">
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-14">
+            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
               <h3 class="wrapper md:text-2xl/[130%]">Готовые отчёты, адаптированные под вашу роль и потребности компании</h3>
 
               <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
@@ -993,9 +1008,9 @@
   </section>
 
   <!-- PRICES section -->
-  <section id="prices" class="pt-[120px] -mt-[110px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top]">
+  <section id="prices" class="pt-[130px] -mt-[130px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top]">
     <div class="wrapper overflow-hidden">
-      <div class="lg:mb-[130px] lg:mt-[35px] lg:flex lg:justify-center lg:items-center">
+      <div class="lg:mb-[130px] lg:mt-4 lg:flex lg:justify-center lg:items-center">
         <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
           <h3 class="mb-1 text-center"><?= CFS()->get('prices_title_1') ?></h3>
           <h3 class="text-center">
@@ -1021,13 +1036,14 @@
 
       <div class="mb-[88px] hidden lg:block">
         <div class="grid grid-cols-[220px_auto] gap-[38px]">
-          <div class="grid grid-cols-1 gap-[3px]">
+          <div class="h-fit grid grid-cols-1 gap-[3px]">
             <div class="price-table-unit table-heading">
             </div>
             <div class="price-table-unit table-title">Блоки чек-листа</div>
             <div class="price-table-unit table-title">Минут</div>
-            <div class="mt-2 price-table-unit table-title">Интеграция с системами по API</div>
-            <div class="price-table-unit table-heading">
+            <div class="price-table-unit table-title">Интеграция с системами по API</div>
+            <div class="price-table-unit table-title h-[60px] !text-xs">
+              Оплата производится в белорусских рублях по курсу НБ РБ на день оплаты
             </div>
           </div>
 

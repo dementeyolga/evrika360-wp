@@ -1,10 +1,11 @@
-<?php get_header(); ?>
+<?php get_header('not-fixed') ?>
 
-<?php echo 'updates are coming' ?>
+<main class="flex flex-col gap-16 lg:gap-[140px]">
+  <section class="wrapper pt-40 lg:pt-20 gap-10">
+    <h2 class="text-center mx-auto">
+      Эврика 360 - <br> речевая аналитика для бизнеса </h2>
+    <a href="/" class="btn primary">На главную</a>
+  </section>
+</main>
 
-<div class="bg-green-500">
-  <div>hello world</div>
-  <div class="btn">hello</div>
-</div>
-
-<?php get_footer(); ?>
+<?php get_footer('empty') ?>

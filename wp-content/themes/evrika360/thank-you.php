@@ -4,9 +4,9 @@
  */
 ?>
 
-<?php get_header('empty'); ?>
+<?php get_header('not-fixed'); ?>
 
-<main class="pt-[120px] lg:pt-[87px] max-lg:bg-blue-circle">
+<main class="pt-[120px] lg:pt-6 max-lg:bg-blue-circle">
   <!-- Popup "Заказать Звонок" -->
   <div id="popup-order-call" class="modal hidden z-50 fixed top-0 w-screen h-screen justify-center items-center bg-blur-fade">
     <div class="wrapper max-w-[448px]">
@@ -45,15 +45,15 @@
     </div>
   </div>
 
-  <div class="mb-[65px] lg:mb-0 wrapper lg:flex-row lg:gap-5 lg:bg-blue-circle-desktop">
-    <div class="space-y-6 lg:space-y-8">
+  <div class="mb-[65px] lg:mb-0 wrapper lg:flex-row lg:gap-5">
+    <div class="lg:mt-24 flex flex-col gap-y-3 lg:gap-y-12 mb-8">
       <h3 class="leading-[140%] lg:text-[40px]/[140%]">Отлично, мы <b>приняли вашу заявку</b> и скоро свяжемся с вами для консультации</h3>
 
       <p class="lg:text-2xl/[140%]">в рабочее время с 9-00 до 18-00</p>
     </div>
 
-    <div class="hidden lg:block mt-1 shrink-0 -mb-6 mr-[29px]">
-      <img src="<?php echo get_template_directory_uri() ?>/assets/images/discussion.png" alt="">
+    <div class="hidden lg:block mt-1 max-w-[480px] shrink-0 -mb-6 mr-[29px]">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/images/discussion.jpg" alt="">
     </div>
   </div>
 
@@ -100,4 +100,4 @@
 
 </main>
 
-<?php get_footer('thanks'); ?>
+<?php get_footer('empty'); ?>

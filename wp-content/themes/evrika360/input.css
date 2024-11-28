@@ -179,7 +179,7 @@ Text Domain: evrika
   }
 
   .btn {
-    @apply h-[76px] sm:h-20 py-3 px-8 sm:px-[68px] mx-auto w-full sm:w-fit flex justify-center items-center rounded-3xl text-xl text-dark-blue-300 bg-white shadow-light-inset hover:bg-light-blue-100 active:bg-light-blue-300 disabled:bg-grey-100 disabled:text-grey-400 disabled:shadow-none transition-colors duration-200;
+    @apply h-[76px] sm:h-20 py-3 px-8 sm:px-[68px] mx-auto w-full sm:w-fit flex justify-center items-center hover:cursor-pointer rounded-3xl text-xl text-dark-blue-300 bg-white shadow-light-inset hover:bg-light-blue-100 active:bg-light-blue-300 disabled:bg-grey-100 disabled:text-grey-400 disabled:shadow-none transition-colors duration-200;
   }
 
   .btn.small {
@@ -207,7 +207,7 @@ Text Domain: evrika
   }
 
   .tab {
-    @apply relative description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-bold border-b-2 border-b-grey-300 hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(text)] after:text-grey-400 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
+    @apply relative description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-black border-b-2 border-b-grey-300 hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(text)] after:text-grey-400 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
   }
 
   .flash-li {
@@ -228,6 +228,14 @@ Text Domain: evrika
 
   .card-badge {
     @apply py-2 px-3 w-fit text-xs/[150%] lg:text-base/[150%] text-white rounded-2xl bg-orange-400;
+  }
+
+  .responsive-iframe-container {
+    @apply relative overflow-hidden w-full pt-[56.25%];
+
+    iframe {
+      @apply absolute top-0 left-0 w-full h-full;
+    }
   }
 
   .table-unit {
@@ -251,7 +259,7 @@ Text Domain: evrika
   }
 
   .price-table-unit.table-title {
-    @apply text-base font-normal text-left justify-start px-0;
+    @apply text-base font-normal text-left justify-start px-0 leading-tight;
   }
 
   .dept-slide,
@@ -371,7 +379,7 @@ Text Domain: evrika
   }
 
   .feature-tab {
-    @apply relative lg:wrapper-no-flex pt-10 pb-[72px] lg:pt-12 lg:pb-14 lg:px-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden;
+    @apply relative lg:wrapper-no-flex lg:min-h-[502px] pt-10 pb-[72px] lg:pt-12 lg:pb-14 lg:px-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden;
   }
 
   .assessment-tab {

@@ -5,7 +5,7 @@
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
     </button>
     <div class="hidden xl:block absolute inset-0 -z-10 bg-dark-blue-500 rounded-xl"></div>
-    <div class="hidden xl:block absolute left-0 -bottom-14">
+    <div class="hidden xl:block max-w-[744px] absolute left-0 -bottom-12">
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-demo.png" alt="">
     </div>
 
@@ -23,19 +23,19 @@
         </button>
 
         <h4 class="mb-5 max-xl:mr-7 md:text-xl/[130%]">
-          <b>Заполните форму</b> и закажите консультацию специалиста
+          <b>Заполните форму,</b> чтобы записаться на онлайн-демонстрацию
         </h4>
 
         <form novalidate class="mb-4 flex flex-col gap-5">
           <div class="relative flex flex-col gap-2">
             <label for="cons-name">Ваше имя*</label>
-            <input type="text" name="Имя" id="cons-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-ЯЁё\- \(\)]+">
+            <input type="text" name="Имя" id="cons-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-Яa-zA-ZЁё\- \(\)]+">
             <p class="input-error absolute bottom-0 translate-y-full"></p>
           </div>
 
           <div class="relative flex flex-col gap-2">
             <label for="cons-role">Ваша роль в компании</label>
-            <input type="text" name="Роль" id="cons-role" placeholder="Например, СЕО" pattern="[а-яА-ЯЁё\- \(\)]+">
+            <input type="text" name="Роль" id="cons-role" placeholder="Например, СЕО" pattern="[а-яА-Яa-zA-ZЁё\- \(\)]+">
             <p class="input-error absolute bottom-0 translate-y-full"></p>
           </div>
 
@@ -62,14 +62,14 @@
   </div>
 </div>
 
-<!-- Попап "Заказать экскурсию" (большой) -->
+<!-- 2. Попап "Заказать экскурсию" (большой) -->
 <div id="popup-order-excursion" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade overflow-auto">
   <div class="relative wrapper items-center xl:my-10 xl:p-12 xl:pr-[25px] xl:border xl:border-grey-300 xl:bg-pattern xl:rounded-xl overflow-hidden">
     <button class="close hidden xl:block absolute top-0 right-3 p-4">
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
     </button>
     <div class="hidden xl:block absolute inset-0 -z-10 bg-dark-blue-500 rounded-xl"></div>
-    <div class="hidden xl:block absolute left-0 -bottom-14">
+    <div class="hidden xl:block max-w-[744px] absolute left-0 -bottom-12">
       <img src="<?php echo get_template_directory_uri() ?>/assets/images/laptop-demo.png" alt="">
     </div>
 
@@ -93,13 +93,13 @@
         <form novalidate class="mb-4 flex flex-col gap-5">
           <div class="relative flex flex-col gap-2">
             <label for="exc-name">Ваше имя*</label>
-            <input type="text" name="Имя" id="exc-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-ЯЁё\- \(\)]+">
+            <input type="text" name="Имя" id="exc-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-Яa-zA-ZЁё\- \(\)]+">
             <p class="input-error absolute bottom-0 translate-y-full"></p>
           </div>
 
           <div class="relative flex flex-col gap-2">
             <label for="exc-role">Ваша роль в компании</label>
-            <input type="text" name="Роль" id="exc-role" placeholder="Например, СЕО" pattern="[а-яА-ЯЁё\- \(\)]+">
+            <input type="text" name="Роль" id="exc-role" placeholder="Например, СЕО" pattern="[а-яА-Яa-zA-ZЁё\- \(\)]+">
             <p class="input-error absolute bottom-0 translate-y-full"></p>
           </div>
 
@@ -126,7 +126,7 @@
   </div>
 </div>
 
-<!-- Попап "Заказать Звонок" -->
+<!-- 3. Попап "Заказать Звонок" -->
 <div id="popup-order-call" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade overflow-auto">
   <div class="wrapper max-w-[448px]">
     <div class="relative px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
@@ -141,7 +141,7 @@
       <form novalidate class="mb-4 flex flex-col gap-5">
         <div class="relative flex flex-col gap-2">
           <label for="call-name">Ваше имя*</label>
-          <input type="text" name="Имя" id="call-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-ЯЁё\- \(\)]+">
+          <input type="text" name="Имя" id="call-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-Яa-zA-ZЁё\- \(\)]+">
           <p class="input-error absolute bottom-0 translate-y-full"></p>
         </div>
 
@@ -157,7 +157,7 @@
           <label for="call-agree-personal-data" class="text-grey-400">Даю согласие на обработку персональных данных</label>
         </div>
 
-        <button type="submit" class="btn primary w-full">Записаться</button>
+        <button type="submit" class="btn primary w-full">Заказать звонок</button>
       </form>
 
       <div class="p-4 small-text bg-light-blue-100">
@@ -167,7 +167,7 @@
   </div>
 </div>
 
-<!-- Попап "Протестировать сервис" -->
+<!-- 4. Попап "Протестировать сервис" -->
 <div id="popup-order-test" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade overflow-auto">
   <div class="wrapper max-w-[448px]">
     <div class="relative px-4 py-6 lg:px-6 lg:py-8 w-full rounded-xl border border-grey-400 bg-white">
@@ -182,7 +182,7 @@
       <form novalidate class="mb-4 flex flex-col gap-5">
         <div class="relative flex flex-col gap-2">
           <label for="test-name">Ваше имя*</label>
-          <input type="text" name="Имя" id="test-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-ЯЁё\- \(\)]+">
+          <input type="text" name="Имя" id="test-name" placeholder="Введите имя" required minlength="2" pattern="[а-яА-Яa-zA-ZЁё\- \(\)]+">
           <p class="input-error absolute bottom-0 translate-y-full"></p>
         </div>
 
@@ -204,7 +204,7 @@
           <label for="test-agree-personal-data" class="text-grey-400">Даю согласие на обработку персональных данных</label>
         </div>
 
-        <button type="submit" class="btn primary w-full">Записаться</button>
+        <button type="submit" class="btn primary w-full">Протестировать</button>
       </form>
 
       <div class="p-4 small-text bg-light-blue-100">
@@ -249,6 +249,22 @@
             <?= CFS()->get('prices_more_4_title') ?>
           </p>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Попап с видео в hero-секции -->
+<div id="popup-video-promo" class="modal hidden z-50 fixed w-screen h-screen justify-center items-center bg-blur-fade overflow-auto">
+  <div class="wrapper px-[3%] max-w-[850px] max-h-fit">
+    <div class="relative p-2 pt-10 md:p-4 md:pt-10 lg:p-6 lg:pt-10 w-full rounded-xl border border-grey-400 bg-white">
+      <button class="close absolute top-0 right-0 p-3">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-grey-icon.png" alt="">
+      </button>
+
+
+      <div class="responsive-iframe-container">
+        <iframe src="https://www.youtube.com/embed/<?= CFS()->get('hero_video_id'); ?>" title="Эврика360: Как работает речевая аналитика в бизнесе" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
   </div>

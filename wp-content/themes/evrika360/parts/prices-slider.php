@@ -153,4 +153,6 @@
   </div>
 
   <div class="hidden embla__dots prices-embla__dots"></div>
+
+  <p class="mt-5 text-sm">Оплата производится в белорусских рублях по курсу НБ РБ на день оплаты</p>
 </section>

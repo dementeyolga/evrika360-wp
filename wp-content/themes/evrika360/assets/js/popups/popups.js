@@ -5,6 +5,7 @@ const excursionModalWrapper = document.getElementById("popup-order-excursion");
 const callModalWrapper = document.getElementById("popup-order-call");
 const testModalWrapper = document.getElementById("popup-order-test");
 const priceMoreModalWrapper = document.getElementById("popup-whats-more");
+const videoPromoModalWrapper = document.getElementById("popup-video-promo");
 
 const callbackModals = document.querySelectorAll(".modal");
 
@@ -17,6 +18,7 @@ const excursionModalToggles = document.querySelectorAll(
 const callModalToggles = document.querySelectorAll(".call-modal-toggle");
 const testModalToggles = document.querySelectorAll(".test-modal-toggle");
 const priceMoreModalToggles = document.querySelectorAll(".price-more-toggle");
+const videoPromoModalToggles = document.querySelectorAll(".video-promo-toggle");
 
 const disableScroll = () => (document.body.style.overflow = "hidden");
 const enableScroll = () => (document.body.style.overflow = "");
@@ -26,7 +28,11 @@ callbackModals.forEach((wrapper) => {
   function closeModal() {
     wrapper.style.display = "none";
     const form = wrapper.querySelector("form");
-    form.reset();
+
+    if (form) {
+      form.reset();
+    }
+
     enableScroll();
   }
 
@@ -75,3 +81,10 @@ if (document.documentElement.clientWidth >= 1024) {
     });
   });
 }
+
+videoPromoModalToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    videoPromoModalWrapper.style.display = "flex";
+    disableScroll();
+  });
+});

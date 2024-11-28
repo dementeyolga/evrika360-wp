@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <div class="py-4 flex flex-col gap-y-4 lg:flex-row justify-between lg:gap-20 *:small-text border-t border-t-grey-100">
+  <div class="py-4 flex flex-col gap-y-6 lg:flex-row justify-between lg:gap-20 *:small-text border-t border-t-grey-100">
     <p class="text-grey-400">
       <?= CFS()->get('footer_requisites', 20); ?>
     </p>

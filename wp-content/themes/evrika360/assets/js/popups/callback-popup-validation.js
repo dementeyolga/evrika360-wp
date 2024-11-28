@@ -1,4 +1,4 @@
-// Implement form validation based on existing modals variables from 'callback-popups.js'
+// Implement form validation based on existing modals variables from 'popups.js'
 
 (function () {
   const modals = [
