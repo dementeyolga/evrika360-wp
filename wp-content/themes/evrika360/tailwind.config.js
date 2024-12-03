@@ -106,8 +106,8 @@ module.exports = {
         card: "var(--card-shadow)",
       },
       content: {
-        flash: 'url("./assets/images/flash-icon.png")',
-        "flash-disabled": 'url("./assets/images/flash-disabled-icon.png")',
+        flash: 'url("./assets/images/flash-icon.svg")',
+        "flash-disabled": 'url("./assets/images/flash-disabled-icon.svg")',
       },
       gridTemplateColumns: {
         "2-1": "2fr 1fr",

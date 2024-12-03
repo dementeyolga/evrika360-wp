@@ -1,25 +1,30 @@
-const assessmentTabsSliderOptions = {
-  align: "start",
-  dragFree: true,
-};
+(function () {
+  const assessmentTabsSliderOptions = {
+    align: "start",
+    dragFree: true,
+  };
 
-const assessmentTabsSliderEmblaNode = document.querySelector(
-  ".assessment-tabs-embla",
-);
-const assessmentTabsSliderViewportNode =
-  assessmentTabsSliderEmblaNode.querySelector(
-    ".assessment-tabs-embla__viewport",
+  const assessmentTabsSliderEmblaNode = document.querySelector(
+    ".assessment-tabs-embla",
   );
+  const assessmentTabsSliderViewportNode =
+    assessmentTabsSliderEmblaNode?.querySelector(
+      ".assessment-tabs-embla__viewport",
+    );
 
-const assessmentTabs = assessmentTabsSliderEmblaNode.querySelectorAll(".tab");
+  const assessmentTabs =
+    assessmentTabsSliderEmblaNode?.querySelectorAll(".tab");
 
-const assessmentTabsSliderEmblaApi = EmblaCarousel(
-  assessmentTabsSliderViewportNode,
-  assessmentTabsSliderOptions,
-);
+  if (assessmentTabsSliderViewportNode && assessmentTabsSliderOptions) {
+    const assessmentTabsSliderEmblaApi = EmblaCarousel(
+      assessmentTabsSliderViewportNode,
+      assessmentTabsSliderOptions,
+    );
 
-assessmentTabs.forEach((tab, index) =>
-  tab.addEventListener("click", () => {
-    assessmentTabsSliderEmblaApi.scrollTo(index);
-  }),
-);
+    assessmentTabs?.forEach((tab, index) =>
+      tab?.addEventListener("click", () => {
+        assessmentTabsSliderEmblaApi?.scrollTo(index);
+      }),
+    );
+  }
+})();

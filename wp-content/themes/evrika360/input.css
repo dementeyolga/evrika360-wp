@@ -113,8 +113,12 @@ Text Domain: evrika
     @apply bg-white text-dark-blue-500 font-main;
   }
 
-  h2 {
+  h1 {
     @apply w-fit text-[32px]/[130%] md:text-[40px]/[140%] font-bold;
+  }
+
+  h2 {
+    @apply w-fit text-2xl/[130%] md:text-[32px]/[130%];
   }
 
   h3 {
@@ -148,6 +152,22 @@ Text Domain: evrika
   }
   .wrapper-no-flex {
     @apply max-w-[1100px] w-full px-[6.4%] m-auto xl:px-0;
+  }
+
+  .h2 {
+    @apply w-fit text-[32px]/[130%] md:text-[40px]/[140%] font-bold;
+  }
+
+  .h3 {
+    @apply w-fit text-2xl/[130%] md:text-[32px]/[130%];
+  }
+
+  .h4 {
+    @apply w-fit text-xl/[130%] lg:text-2xl/[140%];
+  }
+
+  .h5 {
+    @apply w-fit text-lg/[130%] lg:text-xl/[130%];
   }
 
   .subtitle {
@@ -207,7 +227,7 @@ Text Domain: evrika
   }
 
   .tab {
-    @apply relative description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-black border-b-2 border-b-grey-300 hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(text)] after:text-grey-400 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
+    @apply relative description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-black border-b-2 border-b-grey-300 hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(data-text)] after:text-grey-400 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
   }
 
   .flash-li {
@@ -391,11 +411,11 @@ Text Domain: evrika
   }
 
   .bg-circles {
-    background-image: url(./assets/images/bg-circles.png);
+    background-image: url(./assets/images/bg-circles.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/bg-circles-desktop.png);
+      background-image: url(./assets/images/bg-circles-desktop.webp);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -403,7 +423,7 @@ Text Domain: evrika
   }
 
   .bg-orange-circle {
-    background-image: url(./assets/images/bg-orange-circle.png);
+    background-image: url(./assets/images/bg-orange-circle.webp);
     background-size: cover;
     background-position: center -10%;
     background-repeat: no-repeat;
@@ -424,7 +444,7 @@ Text Domain: evrika
   }
 
   .bg-lighter-orange-circle {
-    background-image: url(./assets/images/bg-lighter-orange-circle.png);
+    background-image: url(./assets/images/bg-lighter-orange-circle.webp);
     background-position: center -10%;
     background-repeat: no-repeat;
     background-size: 240%;
@@ -435,13 +455,13 @@ Text Domain: evrika
   }
 
   .bg-blue-circle {
-    background-image: url(./assets/images/bg-blue-circle.png);
+    background-image: url(./assets/images/bg-blue-circle.webp);
     background-position: center 6%;
     background-repeat: no-repeat;
     background-size: 80%;
     /* 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/bg-blue-circle-desktop.png);
+      background-image: url(./assets/images/bg-blue-circle-desktop.webp);
       background-position: right -10%;
       background-size: contain;
     }
@@ -452,82 +472,82 @@ Text Domain: evrika
   }
 
   .bg-blue-circle-desktop {
-    background-image: url(./assets/images/bg-blue-circle-desktop.png);
+    background-image: url(./assets/images/bg-blue-circle-desktop.webp);
     background-position: right -10%;
     background-repeat: no-repeat;
     background-size: 500px;
   }
 
   .bg-pattern {
-    background-image: url(./assets/images/evrika-bg-pattern.png);
+    background-image: url(./assets/images/evrika-bg-pattern.webp);
     background-repeat: repeat;
   }
 
   .bg-light-wave {
-    background-image: url(./assets/images/bg-light-wave.png);
+    background-image: url(./assets/images/bg-light-wave.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/bg-light-wave-desktop.png);
+      background-image: url(./assets/images/bg-light-wave-desktop.webp);
     }
   }
 
   .bg-white-wave-bottom {
-    background-image: url(./assets/images/bg-white-wave-bottom.png);
+    background-image: url(./assets/images/bg-white-wave-bottom.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/bg-white-wave-bottom-desktop.png);
+      background-image: url(./assets/images/bg-white-wave-bottom-desktop.webp);
     }
   }
 
   .bg-white-wave-right {
-    background-image: url(./assets/images/bg-white-wave-right.png);
+    background-image: url(./assets/images/bg-white-wave-right.webp);
     background-size: cover;
   }
 
   .bg-white-wave-top {
-    background-image: url(./assets/images/bg-white-wave-top.png);
+    background-image: url(./assets/images/bg-white-wave-top.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/high-arc.png);
+      background-image: url(./assets/images/high-arc.webp);
     }
   }
 
   .bg-white-wave-bottom-left {
-    background-image: url(./assets/images/bg-white-wave-bottom-left.png);
+    background-image: url(./assets/images/bg-white-wave-bottom-left.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/white-wave-right-desktop.png);
+      background-image: url(./assets/images/white-wave-right-desktop.webp);
     }
   }
 
   .bg-light-curve-to-top {
-    background-image: url(./assets/images/bg-curve-to-top.png);
+    background-image: url(./assets/images/bg-curve-to-top.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/bg-curve-to-top-desktop.png);
+      background-image: url(./assets/images/bg-curve-to-top-desktop.webp);
     }
   }
 
   .bg-light-wave-to-bottom {
-    background-image: url(./assets/images/bg-curve-to-bottom.png);
+    background-image: url(./assets/images/bg-curve-to-bottom.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/bg-curve-to-bottom-desktop.png);
+      background-image: url(./assets/images/bg-curve-to-bottom-desktop.webp);
     }
   }
 
   .bg-light-wave-to-top {
-    background-image: url(./assets/images/bg-wave-to-top.png);
+    background-image: url(./assets/images/bg-wave-to-top.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-image: url(./assets/images/bg-light-wave-to-top-desktop.png);
+      background-image: url(./assets/images/bg-light-wave-to-top-desktop.webp);
     }
   }
 

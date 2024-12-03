@@ -7,13 +7,13 @@
 <?php get_header() ?>
 
 <main class="flex flex-col gap-16 lg:gap-[110px]">
-  <!-- Попапы с формой ообртного звонка -->
+  <!-- Попапы -->
   <?php include 'parts/popups.php' ?>
 
   <!-- PROMO section -->
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[329px] lg:pb-[169px] rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper mb-8 lg:mb-[104px]">
-      <h2 class="mb-5 md:mb-6"><?= CFS()->get('hero_heading') ?></h2>
+      <h1 class="mb-5 md:mb-6"><?= CFS()->get('hero_heading') ?></h1>
       <p class="subtitle"><?= CFS()->get('hero_subheading') ?></p>
     </div>
 
@@ -32,20 +32,20 @@
     </div>
 
     <div class="lg:hidden absolute -bottom-[152px] left-1/2 -translate-x-1/2 w-max z-10">
-      <img class="w-max max-w-[783px]" src="<?= CFS()->get('hero_image_mobile') ?>" alt="">
+      <img class="w-max max-w-[783px]" src="<?= CFS()->get('hero_image_mobile') ?>" alt="изображение главного экрана Эврика360">
     </div>
 
     <div class="video-promo-toggle group lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 w-[230px] h-[230px] z-10 hover:cursor-pointer animate-pulse-quick hover:animate-none">
-      <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
-      <img class="absolute inset-0 transition-opacity duration-200" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play-hover.png" alt="">
+      <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.webp" alt="воспроизвести видео">
+      <img class="absolute inset-0 transition-opacity duration-200" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play-hover.webp" alt="воспроизвести видео">
     </div>
 
     <div class="hidden lg:block absolute bottom-0 right-0 max-w-[67%]">
-      <img src="<?= CFS()->get('hero_image_desktop') ?>" alt="">
+      <img src="<?= CFS()->get('hero_image_desktop') ?>" alt="изображение главного экрана Эврика360">
 
       <div class="video-promo-toggle group absolute bottom-[4%] right-[13.5%] w-[34.17%] aspect-square z-10 hover:cursor-pointer animate-pulse-quick hover:animate-none">
-        <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.png" alt="">
-        <img class="absolute inset-0 transition-opacity duration-200" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play-hover.png" alt="">
+        <img class="group-hover:opacity-0 absolute inset-0 transition-opacity duration-200 z-20" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play.webp" alt="воспроизвести видео">
+        <img class="absolute inset-0 transition-opacity duration-200" src="<?php echo get_template_directory_uri() ?>/assets/images/promo-play-hover.webp" alt="воспроизвести видео">
       </div>
     </div>
   </section>
@@ -54,7 +54,7 @@
   <section class="pb-8 -mb-8 wrapper overflow-hidden xl:overflow-visible pt-[64px] -mt-[64px] bg-orange-circle xl:bg-none xl:flex-row xl:gap-11">
     <div class="hidden xl:block xl:shrink-0 xl:w-[591px] relative h-[173px] xl:h-[565px] rounded-xl xl:rounded-2xl bg-light-blue-100 border border-light-blue-200">
       <div class="absolute top-[70px] left-0 w-max">
-        <img class="w-max max-w-[946px]" src="<?= CFS()->get('greeting_image_desktop') ?>" alt="">
+        <img class="w-max max-w-[946px]" src="<?= CFS()->get('greeting_image_desktop') ?>" alt="ноутбук с демонстрацией сервиса Эврика360">
       </div>
     </div>
 
@@ -66,7 +66,7 @@
       <div class="relative chat secondary mb-5 xl:mb-8 xl:max-w-[400px]">
         <div class="flex gap-1">
           <?= CFS()->get('greeting_hi') ?>
-          <div class="max-w-5">
+          <div class="shrink-0 flex items-center max-w-6">
             <img src="<?= CFS()->get('greeting_emoji') ?>" alt="">
           </div>
         </div>
@@ -75,8 +75,7 @@
 
         <div class="character-bg xl:w-[190px] xl:h-[190px] absolute right-0 xl:-right-[112px] top-[6px] xl:top-[47px] -translate-y-full"></div>
         <div class="absolute right-[11px] xl:-right-[90px] top-[15px] xl:top-[71px] -translate-y-full">
-          <img class="xl:hidden w-[137px] h-[137px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.png" alt="">
-          <img class="hidden xl:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink-desktop.png" alt="">
+          <img class="w-[137px] xl:w-[209px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-wink.webp" alt="персонаж Эврика360 подмигивает">
         </div>
       </div>
 
@@ -86,7 +85,7 @@
 
       <div class="xl:hidden relative h-[173px] mb-4 rounded-xl bg-light-blue-100 border border-light-blue-200">
         <div class="absolute -top-[54px] w-max sm:w-full sm:flex sm:justify-center">
-          <img class="sm:translate-x-6 max-w-[424px]" src="<?= CFS()->get('greeting_image_mobile') ?>" alt="">
+          <img class="sm:translate-x-6 max-w-[424px]" src="<?= CFS()->get('greeting_image_mobile') ?>" alt="ноутбук с демонстрацией сервиса Эврика360">
         </div>
       </div>
 
@@ -103,16 +102,11 @@
   <section id="departments" class="pt-[80px] -mt-[80px]">
     <div class="lg:mx-10 lg:rounded-2xl bg-pattern bg-light-blue-100 border border-light-blue-200 overflow-hidden">
       <div class="wrapper pt-10 xl:pt-20 pb-[75px] xl:pb-[150px] space-y-10 xl:space-y-[64px]">
-        <div>
-          <div class="flex gap-2">
-            <div class="shrink-0 flex items-center max-w-5">
-              <img src="<?= CFS()->get('dept_heading_emoji') ?>" alt="">
-            </div>
-            <h3><?= CFS()->get('dept_heading_1') ?></h3>
+        <div class="relative">
+          <div class="absolute left-0 top-0 flex items-center max-w-8">
+            <img src="<?= CFS()->get('dept_heading_emoji') ?>" alt="">
           </div>
-          <h3>
-            <?= CFS()->get('dept_heading_2') ?>
-          </h3>
+          <h2 class="indent-9"><?= CFS()->get('dept_heading') ?></h2>
         </div>
 
         <?php include 'parts/dept-slider.php' ?>
@@ -120,13 +114,13 @@
     </div>
 
     <div class="wrapper">
-      <a href="/" class="mt-14 btn primary flex items-center gap-2">
+      <button class="video-founders-toggle mt-14 btn primary flex items-center gap-2">
         <div>
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.png" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.svg" alt="">
         </div>
 
         <?= CFS()->get('dept_button_text') ?>
-      </a>
+      </button>
     </div>
   </section>
 
@@ -135,8 +129,7 @@
     <div class="flex flex-col gap-6 lg:flex-row lg:gap-[100px]">
       <div class="flex flex-col gap-6 lg:bg-orange-circle lg:w-[448px] lg:shrink-0">
         <div class="relative mx-auto mb-[22px] w-fit">
-          <img class="lg:hidden w-[161px] h-[161px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.png" alt="">
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea-desktop.png" alt="">
+          <img class="w-[161px] h-[161px] lg:w-[250px] lg:h-[250px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.webp" alt="персонаж Эврика360">
           <div class="character-bg lg:w-[190px] lg:h-[190px] absolute w-[120px] h-[120px] top-5 lg:top-10 left-[calc(50%_-_8px)] -translate-x-1/2"></div>
           <div class="badge absolute -bottom-[22px] left-1/2 -translate-x-1/2">Эврика360</div>
         </div>
@@ -151,13 +144,16 @@
       </div>
 
       <div>
-        <h3 class="relative mb-[54px] lg:mt-[18px] lg:mb-10">
-          <?= CFS()->get('details_heading') ?>
+        <div class="relative">
+          <h2 class="mb-[54px] lg:mt-[18px] lg:mb-10">
+            <?= CFS()->get('details_heading') ?>
+          </h2>
 
-          <div class="absolute right-0 -bottom-8 lg:right-6 lg:-bottom-1" aria-hidden="true">
+          <div class="absolute right-0 -bottom-8 lg:right-6 lg:-bottom-1">
             <img class="lg:w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.svg" alt="">
           </div>
-        </h3>
+        </div>
+
 
         <div class="space-y-6">
           <?php
@@ -193,7 +189,7 @@
           <?php
           $fields = CFS()->get('feature_tabs');
           foreach ($fields as $index => $field): ?>
-            <label class="tab" text="<?= $field['label_1'] . ' ' . $field['label_2'] ?>">
+            <label class="tab" data-text="<?= $field['label_1'] . ' ' . $field['label_2'] ?>">
               <?= $field['label_1'] ?> <br> <?= $field['label_2'] ?>
               <input class="hidden" name="feature-tabs" type="radio" <?php if ($index == 0) echo 'checked' ?>>
             </label>
@@ -221,7 +217,7 @@
               </div>
 
               <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
-                <img src="<?= $field['image'] ?>" alt="">
+                <img src="<?= $field['image'] ?>" alt="демо сервиса Эврика360">
               </div>
 
               <ul class="wrapper space-y-4 lg:space-y-5">
@@ -284,14 +280,14 @@
     <div class="wrapper lg:flex-row lg:items-center lg:h-full">
       <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
       <div class="lg:static lg:w-1/4 lg:pt-[29px] max-w-[200px] lg:max-w-[230px] lg:self-start max-lg:absolute -bottom-[105px] max-lg:left-1/2 max-lg:-translate-x-1/2">
-        <img class="max-w-full" src="<?= CFS()->get('test_image') ?>" alt="">
+        <img class="max-w-full" src="<?= CFS()->get('test_image') ?>" alt="демо сервиса Эврика360">
       </div>
 
       <div class="lg:w-1/2">
         <p class="mb-4 lg:mb-5 mx-auto font-medium lg:text-2xl/[130%]"><?= CFS()->get('test_title_1') ?></p>
-        <h4 class="mb-8 lg:mb-0 mx-auto lg:text-[32px]/[120%]">
+        <h2 class="h4 mb-8 lg:mb-0 mx-auto lg:text-[32px]/[120%]">
           <?= CFS()->get('test_title_2') ?>
-        </h4>
+        </h2>
       </div>
 
       <div class="lg:w-1/4 lg:flex lg:justify-end">
@@ -306,12 +302,14 @@
   <section id="how-it-works" class="pt-[100px] -mt-[100px]">
     <div class="lg:mx-10 lg:rounded-2xl border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
       <div class="wrapper relative pt-[90px] pb-20 space-y-10 lg:space-y-10 lg:pt-20 lg:pb-[110px]">
-        <div class="chat secondary lg:mb-[37px]"><?= CFS()->get('how_works_question') ?></div>
+        <div class="chat secondary lg:mb-[37px]">
+          <?= CFS()->get('how_works_question') ?>
+        </div>
 
         <div class="relative space-y-4 lg:w-fit">
-          <h3>
+          <h2>
             <?= CFS()->get('how_works_answer') ?>
-          </h3>
+          </h2>
 
           <div class="relative accent small lg:absolute lg:-top-[124px] lg:-right-[369px] text-end">
             <?= CFS()->get('how_works_next_text') ?>
@@ -329,7 +327,9 @@
         </button>
 
         <div class="hidden lg:block absolute -right-3 top-[84px] z-0">
-          <img class="mb-2" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-laptop.png" alt="">
+          <img class="mb-6 w-[237px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-laptop.webp" alt="персонаж Эврика360 за ноутбуком">
+          <div class="character-bg w-[264px] h-[264px] bg-white absolute -top-3 -left-2.5 opacity-90 -z-10"></div>
+
           <div class="badge mx-auto">Эврика360</div>
         </div>
       </div>
@@ -347,9 +347,9 @@
 
         <div class="lg:w-[350px] lg:mt-[76px] flex flex-col gap-4 lg:gap-6">
           <div class="py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
-            <h5>
+            <p class="h5">
               <?= CFS()->get('case_buyer_title') ?>
-            </h5>
+            </p>
           </div>
 
           <div class="relative">
@@ -377,9 +377,9 @@
 
         <div class="lg:w-[350px] lg:mt-[76px] flex flex-col gap-4 lg:gap-6">
           <div class="py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
-            <h5>
+            <p class="h5">
               <?= CFS()->get('case_operator_title') ?>
-            </h5>
+            </p>
           </div>
 
           <div class="relative">
@@ -407,9 +407,9 @@
 
         <div class="lg:w-[350px] lg:mt-[76px] flex flex-col gap-4 lg:gap-6">
           <div class="py-2 px-5 lg:py-3 xs:w-fit rounded-lg text-white bg-blue-200">
-            <h5>
+            <p class="h5">
               <?= CFS()->get('case_manager_title') ?>
-            </h5>
+            </p>
           </div>
 
           <div class="relative">
@@ -432,14 +432,14 @@
     <div class="mb-10 pt-12 lg:pt-9 lg:mb-[56px] lg:mx-10 lg:rounded-2xl bg-dark-linear border border-light-blue-200 overflow-hidden">
       <div class="relative wrapper lg:flex-row lg:justify-between">
         <div class="hidden lg:block absolute -right-[84px] -top-5 z-0">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/bg-chat.png" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/bg-chat.webp" alt="">
         </div>
 
         <div class="lg:w-[365px] lg:pb-[57px] z-10">
           <div class="mb-8 lg:mb-[68px] mx-auto lg:ml-0 py-3 px-5 xs:w-fit rounded-md text-dark-blue-500 bg-white">
-            <h4>
+            <p class="h4">
               <?= CFS()->get('case_analytics_title') ?>
-            </h4>
+            </p>
           </div>
 
           <p class="mb-6 text-white">
@@ -451,8 +451,8 @@
         </div>
 
         <div class="flex justify-center lg:w-[439px] lg:h-fit lg:self-end lg:mt-8 lg:mr-[113px] lg:z-10">
-          <img class="w-full sm:max-w-[70%] lg:hidden" src="<?= CFS()->get('case_analytics_image_mobile') ?>" alt="">
-          <img class="w-full hidden lg:block" src="<?= CFS()->get('case_analytics_image_desktop') ?>" alt="">
+          <img class="w-full sm:max-w-[70%] lg:hidden" src="<?= CFS()->get('case_analytics_image_mobile') ?>" alt="демо аналиики сервиса Эврика360">
+          <img class="w-full hidden lg:block" src="<?= CFS()->get('case_analytics_image_desktop') ?>" alt="демо аналиики сервиса Эврика360">
         </div>
       </div>
     </div>
@@ -468,31 +468,35 @@
   <section class="pt-10 pb-[56px] lg:py-[92px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-curve-to-top">
     <div class="wrapper lg:flex-row lg:justify-between lg:items-center">
       <div class="lg:max-w-[700px]">
-        <h3 class="relative mb-20 lg:mb-14">
-          — Я правильно понимаю, что речевая аналитика <br class="lg:hidden"> <b>полезна</b>, когда...
+        <div class="relative">
+          <h2 class="mb-20 lg:mb-14">
+            — Я правильно понимаю, что речевая аналитика <br class="lg:hidden"> <b>полезна</b>, когда...
+          </h2>
+
           <div class="absolute left-0 -bottom-[38px] lg:left-[152px] lg:-bottom-7">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-left.svg" alt="">
           </div>
-        </h3>
+        </div>
+
 
         <div class="mb-[30px] space-y-5 lg:space-y-4 lg:max-w-[520px]">
           <div class="flex gap-6 items-center">
             <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/chats-icon.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/chats-icon.svg" alt="">
             </div>
             <p>Нет полного контроля за звонками, чатами или встречами</p>
           </div>
 
           <div class="flex gap-6 items-center">
             <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/trend-down-icon.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/trend-down-icon.svg" alt="">
             </div>
             <p>Менеджеры сливают клиентов</p>
           </div>
 
           <div class="flex gap-6 items-center">
             <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/chart-icon.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/chart-icon.svg" alt="">
             </div>
             <p>Непонятно, какого качества приходят лиды с разных каналов рекламы</p>
           </div>
@@ -500,13 +504,11 @@
       </div>
 
       <div class="flex flex-col items-center lg:mr-[53px]">
-        <div class="badge hidden lg:flex mb-2 mx-auto">Эврика360</div>
+        <div class="badge hidden lg:flex mb-6 mx-auto">Эврика360</div>
 
         <div class="-mb-0.5 relative">
-          <img class="lg:hidden w-[151px] h-[153px] relative z-10" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-hand.png" alt="">
-          <div class="lg:hidden character-bg w-[170px] h-[170px] bg-white z-0 absolute -top-2 -left-[6px] opacity-60"></div>
-
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-hand-desktop.png" alt="">
+          <img class="ml-[5px] lg:ml-[15px] w-[151px] lg:w-[204px] relative z-10" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-hand.webp" alt="персонаж Эврика360">
+          <div class="character-bg w-[153px] h-[153px] lg:w-[207px] lg:h-[207px]  bg-white z-0 absolute -top-2 lg:left-2 opacity-60"></div>
         </div>
 
         <div class="chat z-20">
@@ -520,38 +522,42 @@
   <!-- IMMEDIATE assessment section -->
   <section class="overflow-hidden">
     <div class="wrapper mt-[26px] mb-[56px] lg:mb-20 space-y-6 lg:space-y-10">
-      <h3 class="relative lg:mx-auto lg:text-center">
-        <b>Эврика360</b> даёт мгновенную объективную оценку <br class="hidden lg:block"> работы компании
+      <div class="relative lg:mx-auto">
+        <h2 class="lg:text-center">
+          <b>Эврика360</b> даёт мгновенную объективную оценку <br class="hidden lg:block"> работы компании
+        </h2>
 
-        <div class="absolute -top-[30px] -left-[21px]">
+        <div class="absolute -top-5 -left-5">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown.svg" alt="">
         </div>
         <div class="hidden lg:block absolute -top-4 -right-6">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/crown-right.svg" alt="">
         </div>
-      </h3>
+      </div>
+
+
       <p class="lg:mx-auto lg:text-center">Речевая аналитика минимизирует ручную работу, дополняет ваши <br class="hidden lg:block"> текущие отчёты новыми данными и упрощает управление компанией</p>
     </div>
 
     <div class="peer embla assessment-tabs-embla mb-4 lg:mb-12">
       <div class="wrapper embla__viewport assessment-tabs-embla__viewport">
         <div class="embla__container assessment-tabs-embla__container">
-          <label class="tab" text="Определение причин слива лидов">
+          <label class="tab" data-text="Определение причин слива лидов">
             Определение <br> причин слива лидов
             <input class="hidden" name="assessment-tabs" type="radio" checked>
           </label>
 
-          <label class="tab" text="HR-помощник">
+          <label class="tab" data-text="HR-помощник">
             HR-помощник
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
 
-          <label class="tab" text="Изучение ЦА, рынка и конкурентов">
+          <label class="tab" data-text="Изучение ЦА, рынка и конкурентов">
             Изучение ЦА, рынка <br> и конкурентов
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
 
-          <label class="tab" text="Обучение менеджеров">
+          <label class="tab" data-text="Обучение менеджеров">
             Обучение менеджеров
             <input class="hidden" name="assessment-tabs" type="radio">
           </label>
@@ -565,8 +571,8 @@
         <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
           <h3 class="wrapper lg:text-2xl/[130%]">Получайте объективную оценку причин отказа без эмоций менеджера</h3>
 
-          <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
+          <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.webp" alt="анализ диалога">
           </div>
 
           <ul class="wrapper space-y-4 *:text-base/[150%]">
@@ -590,8 +596,8 @@
         <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
           <h3 class="wrapper lg:text-2xl/[130%]">Повышайте эффективность рекрутеров</h3>
 
-          <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.png" alt="анализ диалога">
+          <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.webp" alt="анализ диалога">
           </div>
 
           <ul class="wrapper space-y-4 *:text-base/[150%]">
@@ -615,8 +621,8 @@
         <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
           <h3 class="wrapper lg:text-2xl/[130%]">Знайте боли, потребности и возражения своей аудитории</h3>
 
-          <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-dictionary.png" alt="словарь">
+          <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-dictionary.webp" alt="словарь в сервисе">
           </div>
 
           <ul class="wrapper space-y-4 *:text-base/[150%]">
@@ -643,8 +649,8 @@
         <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
           <h3 class="wrapper lg:text-2xl/[130%]">Ускоряйте обучение и адаптацию новых менеджеров</h3>
 
-          <div class="w-fit max-w-[93%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+          <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.webp" alt="главный экран сервиса Эврика360">
           </div>
 
           <ul class="wrapper space-y-4 *:text-base/[150%]">
@@ -667,13 +673,13 @@
   <section class="lg:wrapper-no-flex lg:grid lg:grid-cols-2 lg:items-start lg:gap-5">
     <div class="wrapper flex flex-col items-center lg:items-start lg:mt-0">
       <div class="mb-6 lg:mb-10">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-transparent.png" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-transparent.webp" alt="логотип речевой аналитики Эврика360">
       </div>
 
-      <h3 class="mb-5 lg:mb-[76px]">
+      <h2 class="mb-5 lg:mb-[76px]">
         — Звучит интересно. <br>
-        Как можно <b>протестировать</b>?
-      </h3>
+        Как можно <b>протестировать</b> Speech Analytics?
+      </h2>
 
       <div class="mb-[86px] lg:mb-0 lg:ml-[93px] w-fit relative accent small">
         У нас есть предложение!
@@ -686,12 +692,12 @@
     </div>
 
     <div class="wrapper py-8 lg:p-8 lg:rounded-md bg-light-blue-100 border border-light-blue-200">
-      <h4 class="mb-8">«Ваш отчёт по эффективности менеджеров <b>просто бомба</b>»</h4>
+      <p class="h4 mb-8">«Ваш отчёт по эффективности менеджеров <b>просто бомба</b>»</p>
       <p class="mb-10">Раньше у меня просто не было этих данных, сейчас сократил количество МОПов с 8 до 6, а продажи только выросли. Мне нравится всё. Жду новых обновлений. </p>
 
       <div class="flex gap-6 items-center">
         <div class="w-[56px] h-[56px] shrink-0">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/ivan-gavrilov-review.png" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/ivan-gavrilov-review.webp" alt="фото автора отзыва">
         </div>
 
         <div class="space-y-1">
@@ -706,15 +712,15 @@
   <section class="relative mt-[75px] pb-[72px] lg:pb-0 lg:mx-10 lg:rounded-2xl bg-pattern border border-light-blue-200 text-white">
     <div class="absolute inset-0 -z-20 bg-dark-linear lg:rounded-2xl"></div>
 
-    <div class="wrapper lg:flex-row lg:gap-20">
-      <div class="-mt-[75px] lg:-mt-12 mb-[46px] scale-105 lg:scale-100 lg:-ml-24 shrink-0 flex justify-center items-start">
-        <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/conference.png" alt="онлайн-демо">
-        <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/conference-desktop.png" alt="онлайн-демо">
+    <div class="wrapper lg:flex-row lg:gap-16">
+      <div class="-mt-[75px] lg:-mt-12 mb-[46px] scale-105 lg:scale-100 lg:-ml-12 shrink-0 flex justify-center items-start">
+        <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/conference.webp" alt="онлайн-демо сервиса Эврика360">
+        <img class="hidden lg:block max-w-[580px]" src="<?php echo get_template_directory_uri() ?>/assets/images/conference-desktop.webp" alt="онлайн-демо сервиса Эврика360">
       </div>
 
       <div class="lg:pt-[72px] lg:pb-[90px]">
         <div class="mb-10 lg:mb-[56px] space-y-6 lg:space-y-8">
-          <h3>Записывайтесь на <b>бесплатную демонстрацию</b> с экспертом</h3>
+          <h2>Записывайтесь на <b>бесплатную демонстрацию</b> с экспертом</h2>
           <p>
             За 30 минут на примере звонков вашей компании эксперт покажет, чем будет полезна речевая аналитика, и рассчитает стоимость внедрения.
           </p>
@@ -728,20 +734,22 @@
   <!-- DATA SECURITY section -->
   <section class="overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle bg-[center_-40%] lg:bg-[center_-85px] lg:bg-[length:600px] xs:bg-[center_top]">
     <div class="wrapper relative mt-[38px] lg:mt-[50px] lg:pb-[68px] space-y-11 lg:items-end">
-      <h3 class="relative lg:mr-[169px]">
-        — А что у вас с <b>безопасностью данных</b>?
+      <div class="relative">
+        <h2 class="lg:mr-[169px]">
+          — А что у вас с <b>безопасностью данных</b>?
+        </h2>
 
         <div class="absolute -bottom-[28px] w-full flex justify-center">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
           <img class="hidden lg:block relative -right-10" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-desktop.svg" alt="">
         </div>
-      </h3>
+      </div>
+
 
       <div class="flex flex-col items-center">
         <div class="relative lg:absolute left-0 bottom-0">
-          <img class="relative lg:hidden w-40 h-40 z-10" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared.png" alt="">
-          <div class="lg:hidden character-bg w-[140px] h-[140px] absolute top-0 left-2.5 z-0"></div>
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared-desktop.png" alt="">
+          <img class="relative w-40 lg:w-60 z-10" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared.webp" alt="персонаж Эврика360">
+          <div class="character-bg w-[140px] h-[140px] lg:w-[210px] lg:h-[210px] absolute top-0 left-2.5 z-0"></div>
         </div>
 
         <div class="chat">
@@ -761,20 +769,22 @@
   <section id="cases" class="wrapper space-y-8 pt-[110px] -mt-[110px] bg-lighter-orange-circle">
     <div class="space-y-7 lg:space-y-9">
       <div class="flex flex-col gap-7 lg:flex-row lg:justify-between lg:gap-5">
-        <h3 class="relative h-fit lg:mt-[120px]">— Какие есть примеры <br class="hidden lg:block"> <b>использования</b>?
+        <div class="relative h-fit lg:mt-[120px]">
+          <h2 class="h-fit">
+            — Какие есть примеры <b>использования</b> анализа звонков и речи?
+          </h2>
 
           <div class="absolute left-0 -bottom-8 lg:-bottom-6 lg:left-3">
             <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
             <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-2.svg" alt="">
           </div>
-        </h3>
+        </div>
+
 
         <div class="flex flex-col items-center lg:max-w-[636px]">
           <div class="relative">
-            <img class="lg:hidden w-[150px] h-[150px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret.png" alt="">
-            <div class="lg:hidden character-bg w-[130px] h-[130px] absolute top-2 left-4"></div>
-
-            <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret-desktop.png" alt="">
+            <img class="w-[150px] lg:w-[220px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-secret.webp" alt="персонаж Эврика360">
+            <div class="character-bg w-[130px] h-[130px] lg:w-[194px] lg:h-[194px] absolute top-2 left-4 lg:left-5"></div>
           </div>
 
           <div class="chat">
@@ -788,39 +798,39 @@
         <div class="px-4 pt-8 pb-14 lg:px-10 lg:pt-8 lg:pb-[58px] lg:grid lg:grid-cols-2 lg:gap-[150px] rounded-xl lg:rounded-2xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
           <div>
             <div class="card-badge mb-4 lg:mb-8">Сфера: производство и продажа мебели</div>
-            <h4 class="mb-8">Взяли под контроль все звонки и подняли продажи на 27% <b>всего за 3 месяца</b></h4>
+            <p class="h4 mb-8">Взяли под контроль все звонки и подняли продажи на 27% <b>всего за 3 месяца</b></p>
           </div>
 
           <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6">
             <div class="space-y-1">
-              <h2 class="font-medium md:text-[32px]/[130%]">
+              <p class="h2 font-medium md:text-[32px]/[130%]">
                 +27%
-              </h2>
+              </p>
               <p>Рост выручки за 3 месяца</p>
             </div>
 
             <div class="space-y-1">
               <div>
-                <h2 class="font-medium md:text-[32px]/[130%] inline-block">
-                  +1900$
-                </h2>
-                <h4 class="inline-block">/мес</h4>
+                <p class="h2 font-medium md:text-[32px]/[130%] inline-block">
+                  +1900 у.е.
+                </p>
+                <p class="h4 inline-block">/мес</p>
               </div>
 
               <p>Экономия на ФОТ отдела контроля качества</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium md:text-[32px]/[130%]">
+              <p class="h2 font-medium md:text-[32px]/[130%]">
                 2 <span class="line-through opacity-40 font-normal">5</span>
-              </h2>
+              </p>
               <p>Человека в контроле качества</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium md:text-[32px]/[130%]">
+              <p class="h2 font-medium md:text-[32px]/[130%]">
                 100%
-              </h2>
+              </p>
               <p>Звонков слушают</p>
             </div>
           </div>
@@ -830,35 +840,35 @@
         <div class="px-4 pt-8 pb-14 lg:px-10 lg:pt-8 lg:pb-[58px] lg:grid lg:grid-cols-2 lg:gap-[150px] rounded-xl lg:rounded-2xl border border-orange-100 bg-dark-blue-400 bg-white-wave-top">
           <div class="lg:order-2">
             <div class="card-badge mb-4 lg:mb-8">Сфера: натяжные потолки</div>
-            <h4 class="mb-8">За 1 день выявили халатность менеджеров, обновили штат и повысили конверсию в замер с 6 до 14%</b></h4>
+            <p class="h4 mb-8">За 1 день выявили халатность менеджеров, обновили штат и повысили конверсию в замер с 6 до 14%</p>
           </div>
 
           <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6">
             <div class="space-y-1">
-              <h2 class="font-medium md:text-[32px]/[130%]">
+              <p class="h2 font-medium md:text-[32px]/[130%]">
                 +133%
-              </h2>
+              </p>
               <p>Рост конверсии в замер</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium md:text-[32px]/[130%]">
+              <p class="h2 font-medium md:text-[32px]/[130%]">
                 +118,8%
-              </h2>
+              </p>
               <p>Рост среднемесячной выручки</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium md:text-[32px]/[130%]">
+              <p class="h2 font-medium md:text-[32px]/[130%]">
                 1 чел
-              </h2>
+              </p>
               <p>Контроль качества + речевая аналитика</p>
             </div>
 
             <div class="space-y-1">
-              <h2 class="font-medium md:text-[32px]/[130%]">
-                -1900$
-              </h2>
+              <p class="h2 font-medium md:text-[32px]/[130%]">
+                -1900 у.е.
+              </p>
               <p>Снижение бюджета на рекламу</p>
             </div>
           </div>
@@ -875,16 +885,16 @@
   <!-- AUTOMATIZATION section -->
   <section class="overflow-hidden">
     <div class="space-y-[58px] lg:space-y-20">
-      <div class="lg:wrapper-no-flex flex flex-col gap-y-[58px] lg:flex-row lg:justify-between">
+      <div class="lg:wrapper-no-flex flex flex-col gap-y-[58px] lg:flex-row lg:justify-between lg:gap-x-4">
         <div class="max-lg:wrapper flex flex-col gap-6 lg:w-[440px]">
           <div class="chat secondary">— Что-нибудь ещё?</div>
           <div class="chat self-end">— Да, есть ещё кое-что...</div>
         </div>
 
         <div class="max-lg:wrapper space-y-[22px] lg:max-w-[565px]">
-          <h3>
+          <h2>
             <b>Эврика360</b> <br class="lg:hidden"> автоматизирует рутину
-          </h3>
+          </h2>
 
           <p class="text-grey-400">
             Делегируйте важные, но скучные задачи речевой аналитике и освободите больше времени для принятия важных управленческих решений
@@ -898,22 +908,22 @@
         <div class="peer embla automatization-tabs-embla">
           <div class="wrapper embla__viewport automatization-tabs-embla__viewport">
             <div class="embla__container automatization-tabs-embla__container">
-              <label class="tab" text="Готовые интеграции">
+              <label class="tab" data-text="Готовые интеграции">
                 Готовые <br class="lg:hidden"> интеграции
                 <input class="hidden" name="automatization-tabs" type="radio" checked>
               </label>
 
-              <label class="tab" text="Заполнение CRM">
+              <label class="tab" data-text="Заполнение CRM">
                 Заполнение CRM
                 <input class="hidden" name="automatization-tabs" type="radio">
               </label>
 
-              <label class="tab" text="Уведомления о критических ситациях">
+              <label class="tab" data-text="Уведомления о критических ситациях">
                 Уведомления о <br> критических ситациях
                 <input class="hidden" name="automatization-tabs" type="radio">
               </label>
 
-              <label class="tab" text="Отчёты и аналитика коммуникаций">
+              <label class="tab" data-text="Отчёты и аналитика коммуникаций">
                 Отчёты и аналитика <br> коммуникаций
                 <input class="hidden" name="automatization-tabs" type="radio">
               </label>
@@ -930,9 +940,8 @@
                 <div class="p-2 w-fit description  text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Настраиваем самостоятельно или с минимальным участием ваших тех.специалистов</div>
               </div>
 
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-                <img class="md:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps.png" alt="главный экран">
-                <img class="hidden md:block" src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps-desktop.png" alt="главный экран">
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps.webp" alt="главный экран сервиса Эврика360">
               </div>
 
               <ul class="wrapper space-y-4 lg:space-y-3">
@@ -951,8 +960,8 @@
             <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
               <h3 class="wrapper md:text-2xl/[130%]">Автоматическое заполнение CRM по итогам звонка</h3>
 
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/bitrix-24.png" alt=",битрикс-24">
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/bitrix-24.webp" alt="битрикс-24">
               </div>
 
               <ul class="wrapper space-y-4 lg:space-y-3">
@@ -979,7 +988,7 @@
               </ul>
 
               <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[80%] self-center">
-                <img class="max-w-[340px]" src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.png" alt="уведомления на телефон">
+                <img class="max-w-[340px]" src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.webp" alt="уведомления на телефон">
               </div>
             </div>
           </div>
@@ -991,8 +1000,8 @@
             <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
               <h3 class="wrapper md:text-2xl/[130%]">Готовые отчёты, адаптированные под вашу роль и потребности компании</h3>
 
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] self-end">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.png" alt="главный экран">
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.webp" alt="главный экран">
               </div>
 
               <ul class="wrapper space-y-4 lg:space-y-3">
@@ -1009,24 +1018,25 @@
 
   <!-- PRICES section -->
   <section id="prices" class="pt-[130px] -mt-[130px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top]">
-    <div class="wrapper overflow-hidden">
+    <div class="wrapper max-lg:overflow-hidden">
       <div class="lg:mb-[130px] lg:mt-4 lg:flex lg:justify-center lg:items-center">
         <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
-          <h3 class="mb-1 text-center"><?= CFS()->get('prices_title_1') ?></h3>
-          <h3 class="text-center">
-            <b class="relative">
+          <h2 class="mb-1 text-center">
+            <?= CFS()->get('prices_title_1') ?> <br>
+
+            <span class="relative leading-relaxed lg:block lg:mt-6 font-bold">
               <?= CFS()->get('prices_title_2') ?>
 
-              <div class="absolute -inset-7 lg:-inset-4 lg:-bottom-1 lg:-left-2 flex justify-center items-center">
+              <span class="absolute -inset-7 lg:-inset-4 lg:-bottom-1 lg:-left-2 flex justify-center items-center">
                 <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.svg" alt="">
                 <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle-desktop.svg" alt="">
-              </div>
-            </b>
-          </h3>
+              </span>
+            </span>
+          </h2>
         </div>
 
-        <div class="hidden lg:block">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-logo-258.png" alt="">
+        <div class="hidden lg:block text-blue-100">
+          <?php include 'parts/evrika-logo-medium.php' ?>
         </div>
       </div>
 
@@ -1043,7 +1053,7 @@
             <div class="price-table-unit table-title">Минут</div>
             <div class="price-table-unit table-title">Интеграция с системами по API</div>
             <div class="price-table-unit table-title h-[60px] !text-xs">
-              Оплата производится в белорусских рублях по курсу НБ РБ на день оплаты
+              Оплата производится в белорусских рублях по курсу НБ РБ на день оплаты <br> Не является публичной офертой
             </div>
           </div>
 
@@ -1114,7 +1124,7 @@
       <div class="lg:flex lg:gap-6">
         <div class="max-lg:wrapper-no-flex lg:order-2">
           <div class="relative mb-9 lg:mb-0 px-4 py-6 h-fit space-y-6 bg-orange-100-50 rounded-md border border-orange-100">
-            <h4 class="lg:text-xl/[130%]"><?= CFS()->get('prices_packets_title') ?></h4>
+            <h3 class="h4 lg:text-xl/[130%]"><?= CFS()->get('prices_packets_title') ?></h3>
 
             <ul class="space-y-2">
               <?php
@@ -1124,18 +1134,21 @@
               <?php endforeach; ?>
             </ul>
 
-            <label class="peer price-more-toggle btn primary w-full flex items-center gap-2 hover:cursor-pointer">
+            <div class="peer price-more-toggle relative btn primary w-full flex items-center gap-2 hover:cursor-pointer">
               <div>
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/help-circle-icon.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/images/help-circle-icon.svg" alt="">
               </div>
-              <input type="checkbox" class="hidden">
               <?= CFS()->get('prices_packets_button_text') ?>
-            </label>
+
+              <label class="absolute top-0 bottom-0 right-0 left-0">
+                <input type="checkbox" class="hidden">
+              </label>
+            </div>
 
             <div class="hidden max-lg:peer-has-[:checked]:block mt-6 p-4 space-y-3 rounded-md bg-white shadow-card">
               <div class="space-y-2">
                 <div class="flex items-center gap-3">
-                  <h5 class="font-bold"><?= CFS()->get('prices_more_1_price') ?></h5>
+                  <p class="h5 font-bold"><?= CFS()->get('prices_more_1_price') ?></p>
                   <p class="description text-xs lg:text-sm"><?= CFS()->get('prices_more_1_disclaimer') ?></p>
                 </div>
                 <p class="description text-grey-400 leading-tight"><?= CFS()->get('prices_more_1_title') ?></p>
@@ -1143,18 +1156,18 @@
 
               <div class="grid grid-cols-2 gap-2">
                 <div class="space-y-2">
-                  <h5 class="font-bold"><?= CFS()->get('prices_more_2_price') ?></h5>
+                  <p class="h5 font-bold"><?= CFS()->get('prices_more_2_price') ?></p>
                   <p class="description text-grey-400 leading-tight"><?= CFS()->get('prices_more_1_title') ?></p>
                 </div>
 
                 <div class="space-y-2">
-                  <h5 class="font-bold"><?= CFS()->get('prices_more_3_price') ?></h5>
+                  <p class="h5 font-bold"><?= CFS()->get('prices_more_3_price') ?></p>
                   <p class="description text-grey-400 leading-tight"><?= CFS()->get('prices_more_3_title') ?></p>
                 </div>
               </div>
 
               <div class="space-y-2">
-                <h5 class="font-bold"><?= CFS()->get('prices_more_4_price') ?></h5>
+                <p class="h5 font-bold"><?= CFS()->get('prices_more_4_price') ?></p>
                 <p class="description text-grey-400">
                   <?= CFS()->get('prices_more_4_title') ?>
                 </p>
@@ -1177,10 +1190,8 @@
     <div class="wrapper flex flex-col gap-5 lg:flex-row lg:gap-[58px] lg:items-center">
       <div class="flex flex-col items-center shrink-0">
         <div class="relative lg:ml-4">
-          <img class="lg:hidden w-[200px] h-[200px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy.png" alt="">
-          <div class="lg:hidden character-bg w-[200px] h-[200px] absolute top-0 left-2"></div>
-
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy-desktop.png" alt="">
+          <img class="w-[200px] lg:w-[260px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-happy.webp" alt="персонаж Эврика360">
+          <div class="character-bg w-[200px] h-[200px] absolute -top-1 left-3 lg:w-[260px] lg:h-[260px]"></div>
         </div>
 
         <div class="badge -mt-3 lg:hidden">
@@ -1193,9 +1204,9 @@
           Эврика360
         </div>
 
-        <h3 class="leading-[150%]">— Я честно рассказала о <b>речевой аналитике</b>.
+        <h2 class="leading-[150%]">— Я честно рассказала о <b>речевой аналитике</b>.
           Предлагаю записаться на <b>онлайн-экскурсию</b>
-          с нашим менеджером</h3>
+          с нашим менеджером</h2>
 
         <div class="hidden lg:block absolute -bottom-[124px] right-[180px]">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-2.svg" alt="">
@@ -1206,27 +1217,25 @@
     <div class="pt-12 pb-20 lg:pt-20 lg:pb-[65px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
       <div class="lg:wrapper-no-flex lg:grid lg:grid-cols-[57%_auto] lg:justify-between">
         <div class="max-lg:wrapper">
-          <h3 class="mb-8 lg:mb-12 leading-[140%]">
+          <h2 class="mb-8 lg:mb-12 leading-[140%]">
             Запишитесь на экскурсию по сервису <b>речевой аналитики</b> Эврика360
-          </h3>
+          </h2>
 
           <ul class="mb-10 lg:mb-[64px] space-y-3 *:text-base/[150%] lg:*:text-xl/[150%]">
-            <div class="flash-li">Покажем, <b>как работает сервис</b> изнутри</div>
-            <div class="flash-li">Расскажем, как речевая аналитика может быть полезна <b>вашей компании</b></div>
-            <div class="flash-li">Найдём, в каких коммуникациях <b>заморожены деньги прямо сейчас</b></div>
+            <li class="flash-li">Покажем, <b>как работает сервис</b> изнутри</li>
+            <li class="flash-li">Расскажем, как речевая аналитика может быть полезна <b>вашей компании</b></li>
+            <li class="flash-li">Найдём, в каких коммуникациях <b>заморожены деньги прямо сейчас</b></li>
           </ul>
 
           <button class="excursion-modal-toggle btn primary lg:ml-0 flex items-center gap-2">
-            <div>
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.png" alt="">
-            </div>
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.svg" alt="">
 
             Записаться на экскурсию
           </button>
         </div>
 
         <div class="hidden lg:block 2xl:-mr-[127px] mt-10">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-excursion.png" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-excursion.webp" alt="польза сервиса Эврика360 для разных отделов компании">
         </div>
       </div>
 

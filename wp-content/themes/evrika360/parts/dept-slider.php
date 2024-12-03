@@ -8,10 +8,10 @@
         <div class="embla__slide">
           <div class="dept-slide">
             <div class="image-container">
-              <img src="<?= $field['slide_image']; ?>" alt="">
+              <img src="<?= $field['slide_image']; ?>" alt="изображение - <?= $field['slide_title']; ?>">
             </div>
             <div class="content">
-              <h3><?= $field['slide_title']; ?></h3>
+              <p class="h3"><?= $field['slide_title']; ?></p>
               <ul>
                 <?php
                 $advantages = $field['slide_advantages'];

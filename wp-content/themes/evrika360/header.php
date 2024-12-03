@@ -4,17 +4,6 @@
 <head>
   <meta charset=<?php bloginfo('charset'); ?>>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <?php
-    if (is_404()) {
-      echo '404 | Страница не найдена';
-    } elseif (is_front_page()) {
-      echo 'Эврика 360 - речевая аналитика для бизнеса';
-    } else {
-      the_title('', ' | Эврика360');
-    }
-    ?>
-  </title>
   <?php wp_head(); ?>
 
   <!-- Marquiz script start -->
@@ -42,7 +31,7 @@
   </script> <!-- Marquiz script end -->
 </head>
 
-<body <?php body_class(); ?> class="m-auto">
+<body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <header class="group has-[:checked]:bg-white-glass w-full fixed z-40 transition-colors duration-200">
     <!-- Header on scroll styles toggle  -->
@@ -93,10 +82,10 @@
           <p class="small-text"><?= CFS()->get('header_messengers_description_text', 20); ?></p>
           <div class="flex gap-2">
             <a class="w-8 h-8" href="<?= CFS()->get('telegram_link', 20); ?>" target="_blank">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.svg" alt="логотип телеграм">
             </a>
             <a class="w-8 h-8" href="<?= CFS()->get('whatsapp_link', 20); ?>" target="_blank">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.svg" alt="логотип whatsapp">
             </a>
           </div>
         </div>
@@ -107,16 +96,16 @@
           </p>
 
           <div class="font-bold space-y-1">
-            <h5>
-              <a class="link-white" href="tel:<?= CFS()->get('phone_belarus', 20); ?>">
+            <p class="h5">
+              <a class="link-white" href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_belarus', 20)) ?>">
                 <?= CFS()->get('phone_belarus', 20); ?>
               </a>
-            </h5>
-            <h5>
-              <a class="link-white" href="tel:<?= CFS()->get('phone_russia', 20); ?>">
+            </p>
+            <p class="h5">
+              <a class="link-white" href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_russia', 20)) ?>">
                 <?= CFS()->get('phone_russia', 20); ?>
               </a>
-            </h5>
+            </p>
           </div>
         </div>
 
@@ -136,7 +125,7 @@
         <?php include 'parts/evrika-logo.php' ?>
 
         <button id="burger-close-btn" class="p-2 -mr-2">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.png" alt="">
+          <img src="<?php echo get_template_directory_uri() ?>/assets/images/close-circle-icon.svg" alt="закрыть меню">
         </button>
       </div>
 
@@ -165,10 +154,10 @@
           <p class="small-text"><?= CFS()->get('header_messengers_description_text', 20); ?></p>
           <div class="flex gap-2">
             <a href="<?= CFS()->get('telegram_link', 20); ?>" target="_blank">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-light-icon.svg" alt="логотип телеграм">
             </a>
             <a href="<?= CFS()->get('whatsapp_link', 20); ?>" target="_blank">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.png" alt="">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-light-icon.svg" alt="логотип whatsapp">
             </a>
           </div>
         </div>
@@ -179,16 +168,16 @@
           </p>
 
           <div class="font-bold space-y-1">
-            <h5>
-              <a href="tel:<?= CFS()->get('phone_belarus', 20); ?>">
+            <p class="h5">
+              <a href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_belarus', 20)) ?>">
                 <?= CFS()->get('phone_belarus', 20); ?>
               </a>
-            </h5>
-            <h5>
-              <a href="tel:<?= CFS()->get('phone_russia', 20); ?>">
+            </p>
+            <p class="h5">
+              <a href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_russia', 20)) ?>">
                 <?= CFS()->get('phone_russia', 20); ?>
               </a>
-            </h5>
+            </p>
           </div>
         </div>
       </div>

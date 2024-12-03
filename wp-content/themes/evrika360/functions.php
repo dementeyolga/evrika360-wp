@@ -8,6 +8,10 @@ class Evrika360_Theme {
   private function __construct() {
     add_action('wp_enqueue_scripts', [$this, 'enqueue_styles']);
     add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
+    add_action(
+      'after_setup_theme',
+      [$this, 'add_support']
+    );
   }
 
   public function enqueue_styles() {
@@ -49,6 +53,11 @@ class Evrika360_Theme {
     wp_enqueue_script('intl-phone-ru-translation', get_template_directory_uri() . '/assets/lib/intl-tel-input/js/intlTelInputRuTranslation.js', array(), false, true);
 
     wp_enqueue_script('intl-phone-input', get_template_directory_uri() . '/assets/js/popups/intl-phone-input.js', array('intl-tel-input-with-utils', 'intl-phone-ru-translation', 'popups'), false, true);
+  }
+
+  public function add_support() {
+    add_theme_support('html5', ['script', 'style']);
+    add_theme_support('title-tag');
   }
 
   public static function get_instance() {

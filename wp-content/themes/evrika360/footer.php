@@ -1,7 +1,7 @@
 <footer class="wrapper mt-[64px] pb-10 space-y-8 lg:space-y-10">
   <div class="flex flex-col gap-8 lg:flex-row lg:justify-between lg:items-center">
-    <div>
-      <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-logo-footer.png" alt="">
+    <div class="w-[225px] text-blue-100 *:w-full">
+      <?php include 'parts/evrika-logo-medium.php' ?>
     </div>
 
     <div class="space-y-1">
@@ -10,10 +10,10 @@
       </p>
 
       <div class="flex gap-4 lg:gap-8 font-bold">
-        <a class="link-dark" href="tel:<?= CFS()->get('phone_belarus', 20); ?>">
+        <a class="link-dark" href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_belarus', 20)) ?>">
           <?= CFS()->get('phone_belarus', 20); ?>
         </a>
-        <a class="link-dark" href="tel:<?= CFS()->get('phone_russia', 20); ?>">
+        <a class="link-dark" href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_russia', 20)) ?>">
           <?= CFS()->get('phone_russia', 20); ?>
         </a>
       </div>
@@ -24,12 +24,12 @@
 
       <div class="grow-0 flex gap-2 items-center justify-end">
         <a class="shrink-0" href="<?= CFS()->get('telegram_link', 20); ?>" target="_blank">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon.png" alt="">
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon-desktop.png" alt="">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon.svg" alt="логотип телеграм">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon-desktop.svg" alt="логотип телеграм">
         </a>
         <a class="shrink-0" href="<?= CFS()->get('whatsapp_link', 20); ?>" target="_blank">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon.png" alt="">
-          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon-desktop.png" alt="">
+          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon.svg" alt="логотип whatsapp">
+          <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon-desktop.svg" alt="логотип whatsapp">
         </a>
       </div>
     </div>
@@ -50,7 +50,7 @@
         $fields = CFS()->get('social_media', 20);
         foreach ($fields as $field): ?>
           <a href="<?= $field['social_media_link'] ?>">
-            <img src="<?= $field['social_media_logo'] ?>" alt="">
+            <img src="<?= $field['social_media_logo'] ?>" alt="ссылка на соц. сеть <?= $field['social_media_link'] ?>">
           </a>
         <?php endforeach; ?>
       </div>
