@@ -18,7 +18,7 @@
     </div>
 
     <div class="hidden lg:block mt-1 max-w-[480px] shrink-0 -mb-6 mr-[29px]">
-      <img src="<?php echo get_template_directory_uri() ?>/assets/images/discussion.jpg" alt="мы приняли вашу заявку">
+      <img src="<?php echo get_template_directory_uri() ?>/assets/images/discussion.webp" alt="мы приняли вашу заявку">
     </div>
   </div>
 

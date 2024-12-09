@@ -10,7 +10,7 @@
   <!-- Попапы -->
   <?php include 'parts/popups.php' ?>
 
-  <!-- PROMO section -->
+  <!-- HERO section -->
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[329px] lg:pb-[169px] rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper mb-8 lg:mb-[104px]">
       <h1 class="mb-5 md:mb-6"><?= CFS()->get('hero_heading') ?></h1>

@@ -1,20 +1,20 @@
 <footer class="wrapper mt-[64px] pb-10 space-y-8 lg:space-y-10">
   <div class="flex flex-col gap-8 lg:flex-row lg:justify-between lg:items-center">
-    <div class="w-[225px] text-blue-100 *:w-full">
+    <a href="/" class="w-[225px] text-blue-100 *:w-full">
       <?php include 'parts/evrika-logo-medium.php' ?>
-    </div>
+    </a>
 
     <div class="space-y-1">
       <p class="small-text">
-        <?= CFS()->get('working_hours', 20); ?>
+        <?= CFS()->get('working_hours', 117); ?>
       </p>
 
       <div class="flex gap-4 lg:gap-8 font-bold">
-        <a class="link-dark" href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_belarus', 20)) ?>">
-          <?= CFS()->get('phone_belarus', 20); ?>
+        <a class="link-dark" href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_belarus', 117)) ?>">
+          <?= CFS()->get('phone_belarus', 117); ?>
         </a>
-        <a class="link-dark" href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_russia', 20)) ?>">
-          <?= CFS()->get('phone_russia', 20); ?>
+        <a class="link-dark" href="tel:<?= preg_replace('/\s+/', '', CFS()->get('phone_russia', 117)) ?>">
+          <?= CFS()->get('phone_russia', 117); ?>
         </a>
       </div>
     </div>
@@ -23,11 +23,11 @@
       <button class="call-modal-toggle mx-0 xs:shrink xs:grow-0 grow btn small dark">Заказать звонок</button>
 
       <div class="grow-0 flex gap-2 items-center justify-end">
-        <a class="shrink-0" href="<?= CFS()->get('telegram_link', 20); ?>" target="_blank">
+        <a class="shrink-0" href="<?= CFS()->get('telegram_link', 117); ?>" target="_blank">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon.svg" alt="логотип телеграм">
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/telegram-icon-desktop.svg" alt="логотип телеграм">
         </a>
-        <a class="shrink-0" href="<?= CFS()->get('whatsapp_link', 20); ?>" target="_blank">
+        <a class="shrink-0" href="<?= CFS()->get('whatsapp_link', 117); ?>" target="_blank">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon.svg" alt="логотип whatsapp">
           <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/whatsapp-icon-desktop.svg" alt="логотип whatsapp">
         </a>
@@ -37,17 +37,17 @@
 
   <div class="py-4 flex flex-col gap-y-6 lg:flex-row justify-between lg:gap-20 *:small-text border-t border-t-grey-100">
     <p class="text-grey-400">
-      <?= CFS()->get('footer_requisites', 20); ?>
+      <?= CFS()->get('footer_requisites', 117); ?>
     </p>
 
     <div class="flex flex-col gap-2 items-start lg:items-center">
       <p>
-        <?= CFS()->get('social_media_title', 20); ?>
+        <?= CFS()->get('social_media_title', 117); ?>
       </p>
 
       <div class="flex gap-2">
         <?php
-        $fields = CFS()->get('social_media', 20);
+        $fields = CFS()->get('social_media', 117);
         foreach ($fields as $field): ?>
           <a href="<?= $field['social_media_link'] ?>">
             <img src="<?= $field['social_media_logo'] ?>" alt="ссылка на соц. сеть <?= $field['social_media_link'] ?>">
@@ -56,9 +56,15 @@
       </div>
     </div>
 
-    <p class="text-blue-200 underline">
-      Политика конфиденциальности
-    </p>
+    <div class="space-y-2">
+      <p class="text-blue-200 underline">
+        Политика конфиденциальности
+      </p>
+      <a href='/cookie-policy' class="text-base text-blue-200 underline">
+        Политика в отношении обработки cookie
+      </a>
+    </div>
+
   </div>
 </footer>
 
