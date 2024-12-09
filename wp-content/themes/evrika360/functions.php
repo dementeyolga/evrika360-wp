@@ -38,6 +38,8 @@ class Evrika360_Theme {
 
     wp_enqueue_script('automatization-tabs-slider', get_template_directory_uri() . '/assets/js/slider/automatization-tabs-slider.js', array('embla-carousel'), false, true);
 
+    wp_enqueue_script('owner-service-slider', get_template_directory_uri() . '/assets/js/slider/owner-service-slider.js', array('embla-carousel', 'embla-carousel-autoheight'), false, true);
+
     wp_enqueue_script('header-scroll', get_template_directory_uri() . '/assets/js/scroll/header-scroll.js', array(), false, true);
 
     wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/burger-menu/burger-menu.js', array(), false, true);

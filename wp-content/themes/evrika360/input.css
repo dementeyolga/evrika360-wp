@@ -398,6 +398,13 @@ Text Domain: evrika
     flex-grow: 1;
   }
 
+  .owner-service-embla.embla {
+    --slide-size: 100% !important;
+  }
+  .owner-service-slide {
+    @apply relative lg:wrapper-no-flex lg:h-[488px] px-6 pt-10 pb-6 lg:pt-12 lg:pb-14 lg:px-10 lg:rounded-2xl lg:bg-light-blue-100 lg:border lg:border-light-blue-200 overflow-hidden;
+  }
+
   .feature-tab {
     @apply relative lg:wrapper-no-flex lg:min-h-[502px] pt-10 pb-[72px] lg:pt-12 lg:pb-14 lg:px-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden;
   }
@@ -549,6 +556,13 @@ Text Domain: evrika
     @media (min-width: 1024px) {
       background-image: url(./assets/images/bg-light-wave-to-top-desktop.webp);
     }
+  }
+
+  .bg-vertical-arc {
+    background-image: url(./assets/images/bg-vertical-arc.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
   }
 
   .bg-blur-fade {

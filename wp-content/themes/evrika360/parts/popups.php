@@ -261,7 +261,7 @@
         </div>
 
         <div class="space-y-2">
-          <p class="h5 font-bold"><?= CFS()->get('prices_more_4_price') ?></h5>
+          <p class="h5 font-bold"><?= CFS()->get('prices_more_4_price') ?></p>
           <p class="description text-grey-400">
             <?= CFS()->get('prices_more_4_title') ?>
           </p>

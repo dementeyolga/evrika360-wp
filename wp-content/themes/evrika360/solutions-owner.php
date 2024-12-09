@@ -42,6 +42,13 @@
       </div>
     </div>
   </section>
+
+  <!-- ONE SERVICE section -->
+  <section class="overflow-hidden max-lg:bg-light-blue-100 max-lg:border max-lg:border-light-blue-200">
+    <div class="lg:wrapper">
+      <?php include 'parts/owner-service-slider.php' ?>
+    </div>
+  </section>
 </main>
 
 <?php get_footer() ?>
