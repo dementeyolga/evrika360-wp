@@ -1,4 +1,4 @@
-<section class="embla prices-embla">
+<div class="embla prices-embla">
   <div class="embla__viewport prices-embla__viewport">
     <div class="embla__container">
 
@@ -155,4 +155,4 @@
   <div class="hidden embla__dots prices-embla__dots"></div>
 
   <p class="mt-5 text-sm">Оплата производится в белорусских рублях по курсу НБ РБ на день оплаты <br> Не является публичной офертой</p>
-</section>
+</div>

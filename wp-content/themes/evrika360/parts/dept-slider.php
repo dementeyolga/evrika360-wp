@@ -1,4 +1,4 @@
-<section class="embla dept-embla">
+<div class="embla dept-embla">
   <div class="embla__viewport dept-embla__viewport">
     <div class="embla__container">
       <?php
@@ -42,4 +42,4 @@
   </div>
 
   <div class="embla__dots dept-embla__dots"></div>
-</section>
+</div>

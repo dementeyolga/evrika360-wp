@@ -1,4 +1,4 @@
-<section class="embla owner-service-embla">
+<div class="embla owner-service-embla">
   <div class="embla__viewport owner-service-embla__viewport">
     <div class="embla__container">
       <?php
@@ -14,12 +14,12 @@
                 <?= $field['owner_features_slider_subtitle'] ?>
               </p>
 
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-full md:max-w-[70%] lg:max-w-[48%] self-end">
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full flex <?php if ($field['owner_features_slider_has_arc']) echo 'justify-center' ?> items-center w-full lg:max-w-[48%] self-end">
                 <img class="<?php
                             if ($field['owner_features_slider_has_arc']) {
-                              echo 'max-lg:w-full max-lg:h-auto lg:max-h-[360px]';
+                              echo 'max-lg:max-w-full max-lg:w-auto max-lg:h-auto max-lg:max-h-[550px] lg:max-h-[360px]';
                             } else {
-                              echo 'max-lg:h-[350px] max-lg:max-w-max ';
+                              echo 'max-lg:max-w-max max-lg:min-h-[350px] max-lg:max-h-[550px]';
                             }
                             ?>
                             " src="<?= $field['owner_features_slider_image'] ?>" alt="демо сервиса Эврика360">
@@ -43,5 +43,5 @@
     </button>
   </div>
 
-  <div class="embla__dots owner-service-embla__dots !mt-0 max-lg:mb-20"></div>
-</section>
+  <div class="embla__dots owner-service-embla__dots lg:mt-6 max-lg:mb-20"></div>
+</div>

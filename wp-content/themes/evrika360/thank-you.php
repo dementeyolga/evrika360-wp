@@ -6,12 +6,14 @@
 
 <?php get_header('not-fixed'); ?>
 
-<main class="pt-[120px] lg:pt-6 max-lg:bg-blue-circle">
+<main class="pt-[120px] lg:pt-6 overflow-hidden">
   <!-- Попапы -->
   <?php include 'parts/popups.php' ?>
 
   <div class="mb-[65px] lg:mb-0 wrapper lg:flex-row lg:gap-5">
-    <div class="lg:mt-24 flex flex-col gap-y-3 lg:gap-y-12 mb-8">
+    <div class="relative lg:mt-24 flex flex-col gap-y-3 lg:gap-y-12 mb-8">
+      <div class="lg:hidden absolute bg-blue-circle -inset-24"></div>
+
       <h3 class="leading-[140%] lg:text-[40px]/[140%]">Отлично, мы <b>приняли вашу заявку</b> и скоро свяжемся с вами для консультации</h3>
 
       <p class="lg:text-2xl/[140%]">в рабочее время с 9-00 до 18-00</p>

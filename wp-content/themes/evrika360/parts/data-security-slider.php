@@ -1,4 +1,4 @@
-<section class="embla data-security-embla">
+<div class="embla data-security-embla">
   <div class="embla__viewport data-security-embla__viewport">
     <div class="embla__container">
       <div class="embla__slide">
@@ -76,4 +76,4 @@
   </div>
 
   <div class="embla__dots data-security-embla__dots"></div>
-</section>
+</div>

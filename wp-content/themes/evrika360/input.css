@@ -94,7 +94,7 @@ Text Domain: evrika
       inset -4px -4px 8px 0 #112444;
     --light-inset-shadow: inset 4px 4px 8px 0 #dbf6ff,
       inset -4px -4px 8px 0 #8ed8f080;
-    --card-shadow: 0 4px 8px 0 rgba(0, 84, 144, 0.1);
+    --card-shadow: 0 4px 12px 0 rgba(66, 127, 170, 0.2);
 
     --radius-2xs: 0.125rem; /* 2px */
     --radius-xs: 0.25rem; /* 4px */
@@ -227,7 +227,7 @@ Text Domain: evrika
   }
 
   .tab {
-    @apply relative description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-black border-b-2 border-b-grey-300 hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(data-text)] after:text-grey-400 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
+    @apply relative -bottom-[3px] description flex items-center px-3 lg:px-6 pb-3 shrink-0 w-fit h-[58px] text-transparent font-black border-b-[3px] border-b-grey-300 hover:cursor-pointer after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:px-3 lg:after:px-6 after:pb-3 after:content-[attr(data-text)] after:text-grey-400 after:font-normal after:flex after:items-center after:justify-center after:hover:font-bold after:hover:text-orange-500 hover:border-b-orange-500 active:after:font-bold active:after:text-orange-500 active:border-b-orange-500 has-[:checked]:border-b-orange-400 has-[:checked]:after:text-orange-400 has-[:checked]:after:font-bold transition-all duration-200 after:transition-all after:duration-200;
   }
 
   .flash-li {
@@ -431,58 +431,30 @@ Text Domain: evrika
 
   .bg-orange-circle {
     background-image: url(./assets/images/bg-orange-circle.webp);
-    background-size: cover;
-    background-position: center -10%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: 200%;
-
-    @media (min-width: 500px) {
-      background-position: center;
-    }
-
-    @media (min-width: 768px) {
-      background-size: 100%;
-    }
-
-    @media (min-width: 1024px) {
-      background-position: center 40%;
-      background-size: contain;
-    }
+    background-position: center;
   }
 
   .bg-lighter-orange-circle {
     background-image: url(./assets/images/bg-lighter-orange-circle.webp);
-    background-position: center -10%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: 240%;
-
-    @media (min-width: 500px) {
-      background-position: center;
-    }
+    background-position: center;
   }
 
   .bg-blue-circle {
     background-image: url(./assets/images/bg-blue-circle.webp);
-    background-position: center 6%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: 80%;
-    /* 
-    @media (min-width: 1024px) {
-      background-image: url(./assets/images/bg-blue-circle-desktop.webp);
-      background-position: right -10%;
-      background-size: contain;
-    }
-
-    @media (min-width: 1524px) {
-      background-position: 80% -10%;
-    } */
+    background-position: center;
   }
 
   .bg-blue-circle-desktop {
     background-image: url(./assets/images/bg-blue-circle-desktop.webp);
-    background-position: right -10%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: 500px;
+    background-position: center;
   }
 
   .bg-pattern {
@@ -533,6 +505,15 @@ Text Domain: evrika
 
   .bg-light-curve-to-top {
     background-image: url(./assets/images/bg-curve-to-top.webp);
+    background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/bg-curve-to-top-desktop.webp);
+    }
+  }
+
+  .bg-long-curve-to-top {
+    background-image: url(./assets/images/long-curve-to-top.webp);
     background-size: cover;
 
     @media (min-width: 1024px) {
@@ -659,18 +640,7 @@ Text Domain: evrika
 .automatization-tabs-embla__container {
   margin-left: 0;
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--grey-300);
-    z-index: -10;
-  }
+  border-bottom: 3px solid var(--grey-300);
 }
 .embla__slide {
   transform: translate3d(0, 0, 0);

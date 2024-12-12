@@ -55,22 +55,22 @@
 
     <div class="flex gap-3">
       <a href="https://support.mozilla.org/ru/kb/udalenie-kukov-dlya-udaleniya-informacii-kotoruyu-" target="_blank">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/firefox-icon.webp" alt="firefox иконка браузера">
+        <img class="h-10 w-10" src="<?php echo get_template_directory_uri() ?>/assets/images/firefox-icon.svg" alt="firefox иконка браузера">
       </a>
       <a href="https://support.google.com/chrome/answer/95647?hl=ru" target="_blank">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/chrome-icon.webp" alt="chrome иконка браузера">
+        <img class="h-10 w-10" src="<?php echo get_template_directory_uri() ?>/assets/images/chrome-icon.svg" alt="chrome иконка браузера">
       </a>
       <a href="https://support.apple.com/ru-ru/guide/safari/sfri11471/mac" target="_blank">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/safari-icon.webp" alt="safari иконка браузера">
+        <img class="h-10 w-10" src="<?php echo get_template_directory_uri() ?>/assets/images/safari-icon.svg" alt="safari иконка браузера">
       </a>
       <a href="https://help.opera.com/ru/latest/web-preferences/#Управление-файлами-cookie" target="_blank">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/opera-icon.webp" alt="opera иконка браузера">
+        <img class="h-10 w-10" src="<?php echo get_template_directory_uri() ?>/assets/images/opera-icon.svg" alt="opera иконка браузера">
       </a>
       <a href="https://support.microsoft.com/ru-ru/microsoft-edge/ удаление-файлов-cookie-в-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/edge-icon.webp" alt="иконка edge">
+        <img class="h-10 w-10" src="<?php echo get_template_directory_uri() ?>/assets/images/edge-icon.svg" alt="иконка edge">
       </a>
       <a href="https://support.microsoft.com/ru-ru/windows/удаление-файлов-cookie-и-управление-ими-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/ie-icon.webp" alt="internet explorer иконка браузера">
+        <img class="h-10 w-10" src="<?php echo get_template_directory_uri() ?>/assets/images/ie-icon.svg" alt="internet explorer иконка браузера">
       </a>
     </div>
   </div>

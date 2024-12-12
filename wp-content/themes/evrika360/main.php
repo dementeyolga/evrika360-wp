@@ -6,7 +6,7 @@
 
 <?php get_header() ?>
 
-<main class="flex flex-col gap-16 lg:gap-[110px]">
+<main class="flex flex-col gap-16 lg:gap-[110px] overflow-hidden">
   <!-- Попапы -->
   <?php include 'parts/popups.php' ?>
 
@@ -51,14 +51,16 @@
   </section>
 
   <!-- GREETING section -->
-  <section class="pb-8 -mb-8 wrapper overflow-hidden xl:overflow-visible pt-[64px] -mt-[64px] bg-orange-circle xl:bg-none xl:flex-row xl:gap-11">
+  <div class="pb-8 -mb-8 wrapper overflow-hidden xl:overflow-visible pt-[64px] -mt-[64px] xl:flex-row xl:gap-11">
     <div class="hidden xl:block xl:shrink-0 xl:w-[591px] relative h-[173px] xl:h-[565px] rounded-xl xl:rounded-2xl bg-light-blue-100 border border-light-blue-200">
       <div class="absolute top-[70px] left-0 w-max">
         <img class="w-max max-w-[946px]" src="<?= CFS()->get('greeting_image_desktop') ?>" alt="ноутбук с демонстрацией сервиса Эврика360">
       </div>
     </div>
 
-    <div class="flex flex-col xl:shrink-0 xl:grow">
+    <div class="relative flex flex-col xl:shrink-0 xl:grow">
+      <div class="absolute bg-orange-circle -inset-44 lg:-inset-52 -z-10"></div>
+
       <div class="badge mt-[74px] xl:mt-[86px] mb-[18px]">
         Эврика360
       </div>
@@ -96,7 +98,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- DEPARTMENTS section -->
   <section id="departments" class="pt-[80px] -mt-[80px]">
@@ -115,9 +117,8 @@
 
     <div class="wrapper">
       <button class="video-founders-toggle mt-14 btn primary flex items-center gap-2">
-        <div>
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.svg" alt="">
-        </div>
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/play-arrow-right.svg" alt="">
+
 
         <?= CFS()->get('dept_button_text') ?>
       </button>
@@ -125,9 +126,11 @@
   </section>
 
   <!-- IN DETAIL section -->
-  <section class="wrapper pt-[64px] -mt-[64px] bg-orange-circle lg:bg-none">
+  <section class="wrapper pt-[64px] -mt-[64px]">
     <div class="flex flex-col gap-6 lg:flex-row lg:gap-[100px]">
-      <div class="flex flex-col gap-6 lg:bg-orange-circle lg:w-[448px] lg:shrink-0">
+      <div class="relative flex flex-col gap-6 lg:w-[448px] lg:shrink-0">
+        <div class="absolute bg-orange-circle -inset-60 -z-10"></div>
+
         <div class="relative mx-auto mb-[22px] w-fit">
           <img class="w-[161px] h-[161px] lg:w-[250px] lg:h-[250px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.webp" alt="персонаж Эврика360">
           <div class="character-bg lg:w-[190px] lg:h-[190px] absolute w-[120px] h-[120px] top-5 lg:top-10 left-[calc(50%_-_8px)] -translate-x-1/2"></div>
@@ -277,7 +280,7 @@
 
   <!-- TEST section -->
   <section class="relative pt-12 pb-[263px] lg:py-0 lg:mx-10 lg:h-[288px] lg:rounded-2xl bg-pattern border border-light-blue-200 text-white overflow-hidden text-center">
-    <div class="wrapper lg:flex-row lg:items-center lg:h-full">
+    <div class="wrapper lg:flex-row lg:items-center lg:justify-between lg:h-full">
       <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
       <div class="lg:static lg:w-1/4 lg:pt-[29px] max-w-[200px] lg:max-w-[230px] lg:self-start max-lg:absolute -bottom-[105px] max-lg:left-1/2 max-lg:-translate-x-1/2">
         <img class="max-w-full" src="<?= CFS()->get('test_image') ?>" alt="демо сервиса Эврика360">
@@ -299,7 +302,7 @@
   </section>
 
   <!-- HOW IT WORKS section -->
-  <section id="how-it-works" class="pt-[100px] -mt-[100px]">
+  <section id="how-it-works" class="pt-[100px] -mt-[100px] overflow-hidden">
     <div class="lg:mx-10 lg:rounded-2xl border border-light-blue-200 bg-light-blue-100 bg-white-wave-bottom">
       <div class="wrapper relative pt-[90px] pb-20 space-y-10 lg:space-y-10 lg:pt-20 lg:pb-[110px]">
         <div class="chat secondary lg:mb-[37px]">
@@ -311,7 +314,7 @@
             <?= CFS()->get('how_works_answer') ?>
           </h2>
 
-          <div class="relative accent small lg:absolute lg:-top-[124px] lg:-right-[369px] text-end">
+          <div class="relative accent small lg:absolute lg:-top-[124px] lg:-right-[369px] text-end z-10">
             <?= CFS()->get('how_works_next_text') ?>
             <div class="lg:hidden absolute -bottom-10 left-0">
               <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-spiral.svg" alt="">
@@ -327,7 +330,7 @@
         </button>
 
         <div class="hidden lg:block absolute -right-3 top-[84px] z-0">
-          <img class="mb-6 w-[237px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-laptop.webp" alt="персонаж Эврика360 за ноутбуком">
+          <img class="mb-6 w-[237px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-laptop.webp" alt="персонаж Эврика360 с ноутбуком">
           <div class="character-bg w-[264px] h-[264px] bg-white absolute -top-3 -left-2.5 opacity-90 -z-10"></div>
 
           <div class="badge mx-auto">Эврика360</div>
@@ -337,7 +340,7 @@
   </section>
 
   <!-- EXAMPLE CASE section -->
-  <section>
+  <div>
     <div class="wrapper lg:-mt-8 mb-[56px] lg:mb-[120px] flex flex-col gap-16 lg:gap-[94px]">
       <div class="relative flex flex-col lg:flex-row lg:gap-12">
         <div class="mb-6 lg:mb-0 max-w-[450px] lg:w-[466px] lg:shrink-0">
@@ -462,10 +465,10 @@
         <?= CFS()->get('case_action_button_text') ?>
       </button>
     </div>
-  </section>
+  </div>
 
   <!-- USEFUL section -->
-  <section class="pt-10 pb-[56px] lg:py-[92px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-curve-to-top">
+  <section class="pt-10 pb-[56px] lg:py-[92px] lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-curve-to-top overflow-hidden">
     <div class="wrapper lg:flex-row lg:justify-between lg:items-center">
       <div class="lg:max-w-[700px]">
         <div class="relative">
@@ -516,7 +519,6 @@
         </div>
       </div>
     </div>
-
   </section>
 
   <!-- IMMEDIATE assessment section -->
@@ -732,9 +734,11 @@
   </section>
 
   <!-- DATA SECURITY section -->
-  <section class="overflow-hidden pt-[64px] -mt-[64px] bg-orange-circle bg-[center_-40%] lg:bg-[center_-85px] lg:bg-[length:600px] xs:bg-[center_top]">
-    <div class="wrapper relative mt-[38px] lg:mt-[50px] lg:pb-[68px] space-y-11 lg:items-end">
+  <section class="pt-[64px] -mt-[64px]">
+    <div class="relative wrapper mt-[38px] lg:mt-[50px] lg:pb-[68px] space-y-11 lg:items-end">
       <div class="relative">
+        <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
+
         <h2 class="lg:mr-[169px]">
           — А что у вас с <b>безопасностью данных</b>?
         </h2>
@@ -766,10 +770,12 @@
   </section>
 
   <!-- CASES section -->
-  <section id="cases" class="wrapper space-y-8 pt-[110px] -mt-[110px] bg-lighter-orange-circle">
+  <section id="cases" class="wrapper space-y-8 pt-[110px] -mt-[110px] overflow-hidden">
     <div class="space-y-7 lg:space-y-9">
       <div class="flex flex-col gap-7 lg:flex-row lg:justify-between lg:gap-5">
         <div class="relative h-fit lg:mt-[120px]">
+          <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
+
           <h2 class="h-fit">
             — Какие есть примеры <b>использования</b> анализа звонков и речи?
           </h2>
@@ -987,8 +993,8 @@
                 </li>
               </ul>
 
-              <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[80%] self-center">
-                <img class="max-w-[340px]" src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.webp" alt="уведомления на телефон">
+              <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[60%] lg:max-w-[80%] self-center">
+                <img class="lg:max-w-[340px]" src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.webp" alt="уведомления на телефон">
               </div>
             </div>
           </div>
@@ -1017,10 +1023,12 @@
   </section>
 
   <!-- PRICES section -->
-  <section id="prices" class="pt-[130px] -mt-[130px] bg-lighter-orange-circle bg-[center_-40%] xs:bg-[center_top] lg:bg-[length:40%] lg:bg-[left_top]">
-    <div class="wrapper max-lg:overflow-hidden">
+  <section id="prices" class="pt-[130px] -mt-[130px]">
+    <div class="wrapper">
       <div class="lg:mb-[130px] lg:mt-4 lg:flex lg:justify-center lg:items-center">
-        <div class="mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
+        <div class="relative mb-10 lg:mb-0 mx-auto lg:ml-0 w-fit flex flex-col lg:flex-row items-center lg:justify-center lg:gap-3">
+          <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
+
           <h2 class="mb-1 text-center">
             <?= CFS()->get('prices_title_1') ?> <br>
 
@@ -1186,7 +1194,7 @@
   </section>
 
   <!-- ONLINE EXCURSION section -->
-  <section class="space-y-[60px] lg:space-y-[180px] ">
+  <section class="space-y-[60px] lg:space-y-[180px] overflow-hidden">
     <div class="wrapper flex flex-col gap-5 lg:flex-row lg:gap-[58px] lg:items-center">
       <div class="flex flex-col items-center shrink-0">
         <div class="relative lg:ml-4">

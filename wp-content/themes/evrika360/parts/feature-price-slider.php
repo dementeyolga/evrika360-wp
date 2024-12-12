@@ -1,4 +1,4 @@
-<section class="embla feature-price-embla">
+<div class="embla feature-price-embla">
   <div class="embla__viewport feature-price-embla__viewport">
     <div class="embla__container">
       <!-- FUNCTIONALITY -->
@@ -68,4 +68,4 @@
   </div>
 
   <div class="hidden embla__dots feature-price-embla__dots"></div>
-</section>
+</div>

@@ -60,7 +60,7 @@
       <p class="text-blue-200 underline">
         Политика конфиденциальности
       </p>
-      <a href='/cookie-policy' class="text-base text-blue-200 underline">
+      <a href='/cookie-policy/' class="text-base text-blue-200 underline">
         Политика в отношении обработки cookie
       </a>
     </div>
