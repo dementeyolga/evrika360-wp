@@ -149,14 +149,15 @@
     <div class="grow">
       <h2 class="mb-6 lg:mb-10 relative">
         <?= CFS()->get('owner_automatization_title_1') ?> <br>
-        <span class="inline-block relative font-bold">
+        <span class="inline relative font-bold">
           <?= CFS()->get('owner_automatization_title_2') ?>
 
-          <div class="absolute -right-14 bottom-0.5 translate-y-full">
-            <img class="w-[183px] lg:w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.svg" alt="">
+          <div class="absolute -right-4 lg:-right-14 bottom-0.5 translate-y-full">
+            <img class="lg:hidden w-[183px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right-small.svg" alt="">
+            <img class="hidden lg:block w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.svg" alt="">
           </div>
         </span>
-        <br>
+        <br class="hidden sm:block">
         <?= CFS()->get('owner_automatization_title_3') ?>
       </h2>
 
@@ -180,6 +181,104 @@
           </div>
         <?php endforeach; ?>
       </div>
+    </div>
+  </section>
+
+  <!-- CASES section -->
+  <section id="cases" class="wrapper space-y-8 pt-[110px] -mt-[110px]">
+    <div class="space-y-6 lg:space-y-8">
+      <div class="space-y-5">
+        <h2 class="h-fit">
+          <?= CFS()->get('owner_case_title') ?>
+        </h2>
+
+        <p class="text-grey-400">
+          <?= CFS()->get('owner_case_description') ?>
+        </p>
+      </div>
+
+      <div class="space-y-6 text-white">
+        <!-- Case #1 -->
+        <div class="px-4 pt-8 pb-14 lg:px-10 lg:pt-8 lg:pb-[58px] lg:grid lg:grid-cols-2 lg:gap-[150px] rounded-xl lg:rounded-2xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
+          <div>
+            <div class="card-badge mb-4 lg:mb-8"><?= CFS()->get('owner_case_1_badge') ?></div>
+            <p class="h4 mb-8"><?= CFS()->get('owner_case_1_description') ?></p>
+          </div>
+
+          <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6">
+            <?php
+            $fields = CFS()->get('owner_case_1_indicators');
+            foreach ($fields as $field): ?>
+              <div class="space-y-1">
+                <div class="flex gap-1 items-center">
+                  <p class="h2 font-medium md:text-[32px]/[130%]">
+                    <?= $field['owner_case_1_indicators_title'] ?>
+
+                    <?php if (!empty($field['owner_case_1_indicators_title_crossed'])): ?>
+                      <span class="line-through opacity-40 font-normal">
+                        <?= $field['owner_case_1_indicators_title_crossed'] ?>
+                      </span>
+                    <?php endif; ?>
+                  </p>
+
+                  <?php if (!empty($field['owner_case_1_indicators_title_little'])): ?>
+                    <p class="h4 inline-block">
+                      <?= $field['owner_case_1_indicators_title_little'] ?>
+                    </p>
+                  <?php endif; ?>
+                </div>
+
+                <p>
+                  <?= $field['owner_case_1_indicators_description'] ?>
+                </p>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+
+        <!-- Case #2 -->
+        <div class="px-4 pt-8 pb-14 lg:px-10 lg:pt-8 lg:pb-[58px] lg:grid lg:grid-cols-2 lg:gap-[150px] rounded-xl lg:rounded-2xl border border-orange-100 bg-dark-blue-400 bg-white-wave-top">
+          <div class="lg:order-2">
+            <div class="card-badge mb-4 lg:mb-8"><?= CFS()->get('owner_case_2_badge') ?></div>
+            <p class="h4 mb-8"><?= CFS()->get('owner_case_2_description') ?></p>
+          </div>
+
+          <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6">
+            <?php
+            $fields = CFS()->get('owner_case_2_indicators');
+            foreach ($fields as $field): ?>
+              <div class="space-y-1">
+                <div class="flex gap-1 items-center">
+                  <p class="h2 font-medium md:text-[32px]/[130%]">
+                    <?= $field['owner_case_2_indicators_title'] ?>
+
+                    <?php if (!empty($field['owner_case_2_indicators_title_crossed'])): ?>
+                      <span class="line-through opacity-40 font-normal">
+                        <?= $field['owner_case_2_indicators_title_crossed'] ?>
+                      </span>
+                    <?php endif; ?>
+                  </p>
+
+                  <?php if (!empty($field['owner_case_2_indicators_title_little'])): ?>
+                    <p class="h4 inline-block">
+                      <?= $field['owner_case_2_indicators_title_little'] ?>
+                    </p>
+                  <?php endif; ?>
+                </div>
+
+                <p>
+                  <?= $field['owner_case_2_indicators_description'] ?>
+                </p>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="test-modal-toggle btn primary lg:mt-[56px]">Протестировать на своих данных</button>
+      </div>
+
     </div>
   </section>
 </main>

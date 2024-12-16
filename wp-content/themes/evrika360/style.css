@@ -2094,12 +2094,12 @@ input[type="text"]:disabled {
   right: -2.5rem;
 }
 
-.-right-14 {
-  right: -3.5rem;
-}
-
 .-right-3 {
   right: -0.75rem;
+}
+
+.-right-4 {
+  right: -1rem;
 }
 
 .-right-6 {
@@ -2488,6 +2488,10 @@ input[type="text"]:disabled {
   display: inline-block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -2676,6 +2680,10 @@ input[type="text"]:disabled {
 
 .w-\[237px\] {
   width: 237px;
+}
+
+.w-\[263px\] {
+  width: 263px;
 }
 
 .w-\[264px\] {
@@ -2962,10 +2970,6 @@ input[type="text"]:disabled {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-\[10\%\] {
-  gap: 10%;
 }
 
 .gap-\[1px\] {
@@ -4212,6 +4216,10 @@ input[type="text"]:disabled {
 }
 
 @media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -4253,14 +4261,6 @@ input[type="text"]:disabled {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
-  .md\:gap-\[10\%\] {
-    gap: 10%;
   }
 
   .md\:p-4 {
@@ -4340,6 +4340,10 @@ input[type="text"]:disabled {
 
   .lg\:-left-32 {
     left: -8rem;
+  }
+
+  .lg\:-right-14 {
+    right: -3.5rem;
   }
 
   .lg\:-right-24 {
@@ -4881,20 +4885,16 @@ input[type="text"]:disabled {
     gap: 58px;
   }
 
+  .lg\:gap-\[8\%\] {
+    gap: 8%;
+  }
+
   .lg\:gap-\[82px\] {
     gap: 82px;
   }
 
   .lg\:gap-\[94px\] {
     gap: 94px;
-  }
-
-  .lg\:gap-\[10\%\] {
-    gap: 10%;
-  }
-
-  .lg\:gap-\[8\%\] {
-    gap: 8%;
   }
 
   .lg\:gap-x-4 {

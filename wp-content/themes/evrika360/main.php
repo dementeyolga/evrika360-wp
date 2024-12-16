@@ -1194,7 +1194,7 @@
   </section>
 
   <!-- ONLINE EXCURSION section -->
-  <section class="space-y-[60px] lg:space-y-[180px] overflow-hidden">
+  <section class="space-y-[60px] lg:space-y-[180px]">
     <div class="wrapper flex flex-col gap-5 lg:flex-row lg:gap-[58px] lg:items-center">
       <div class="flex flex-col items-center shrink-0">
         <div class="relative lg:ml-4">
@@ -1246,8 +1246,6 @@
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-excursion.webp" alt="польза сервиса Эврика360 для разных отделов компании">
         </div>
       </div>
-
-
     </div>
   </section>
 </main>
