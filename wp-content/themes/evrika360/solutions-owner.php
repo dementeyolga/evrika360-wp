@@ -274,11 +274,34 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div>
-        <button class="test-modal-toggle btn primary lg:mt-[56px]">Протестировать на своих данных</button>
+  <!-- QUESTIONS section -->
+  <section class="mt-20">
+    <div class="pb-20 lg:pt-20 lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
+      <div class="wrapper lg:flex-row items-center lg:justify-between gap-8 lg:gap-16">
+        <div class="lg:order-2 max-w-[400px] lg:max-w-[589px] -mt-20 lg:-mt-[152px]">
+          <img class="lg:hidden" src="<?= CFS()->get('owner_questions_image_mobile') ?>" alt="">
+          <img class="hidden lg:block" src="<?= CFS()->get('owner_questions_image_desktop') ?>" alt="">
+        </div>
+
+        <div class="md:min-w-[400px]">
+          <h2 class="mb-6 lg:mb-12">
+            <?= CFS()->get('owner_questions_title') ?>
+          </h2>
+
+          <p class="h5 mb-10 lg:mb-16">
+            <?= CFS()->get('owner_questions_subtitle') ?>
+          </p>
+
+          <button class="consultation-modal-toggle btn primary ml-0 flex items-center gap-2">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.svg" alt="">
+
+            <?= CFS()->get('owner_questions_button_text') ?>
+          </button>
+        </div>
       </div>
-
     </div>
   </section>
 </main>

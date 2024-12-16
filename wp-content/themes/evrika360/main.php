@@ -716,7 +716,7 @@
 
     <div class="wrapper lg:flex-row lg:gap-16">
       <div class="-mt-[75px] lg:-mt-12 mb-[46px] scale-105 lg:scale-100 lg:-ml-12 shrink-0 flex justify-center items-start">
-        <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/conference.webp" alt="онлайн-демо сервиса Эврика360">
+        <img class="lg:hidden max-w-[400px]" src="<?php echo get_template_directory_uri() ?>/assets/images/conference.webp" alt="онлайн-демо сервиса Эврика360">
         <img class="hidden lg:block max-w-[580px]" src="<?php echo get_template_directory_uri() ?>/assets/images/conference-desktop.webp" alt="онлайн-демо сервиса Эврика360">
       </div>
 
