@@ -47,6 +47,40 @@
     </div>
   </section>
 
+  <!-- PROBLEMS section -->
+  <section class="py-14 lg:py-18 lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-long-curve-to-top overflow-hidden">
+    <div class="wrapper">
+      <h2 class="mb-8 grow relative max-w-[550px] max-lg:mb-6">
+        <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
+
+        <?= CFS()->get('hos_problems_title_1') ?>
+        <span class="inline-block relative font-bold">
+          <?= CFS()->get('hos_problems_title_2') ?>
+
+          <div class="hidden md:block absolute -right-3 -left-1 -bottom-1">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-3.svg" alt="">
+          </div>
+        </span>
+        <?= CFS()->get('hos_problems_title_3') ?>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <?php
+        $fields = CFS()->get('hos_problems_loop');
+        foreach ($fields as $field): ?>
+          <div>
+            <p class="mb-3 text-lg lg:text-[22px] font-medium">
+              <?= $field['hos_problems_loop_title'] ?>
+            </p>
+            <p class="description">
+              <?= $field['hos_problems_loop_description'] ?>
+            </p>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
   <!-- QUESTIONS section -->
   <section class="mt-20">
     <div class="pb-20 lg:pt-20 lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
