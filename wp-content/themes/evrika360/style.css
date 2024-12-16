@@ -2266,6 +2266,14 @@ input[type="text"]:disabled {
   bottom: -0.25rem;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
+.top-14 {
+  top: 3.5rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -2617,6 +2625,14 @@ input[type="text"]:disabled {
   height: 100vh;
 }
 
+.h-\[270px\] {
+  height: 270px;
+}
+
+.h-\[250px\] {
+  height: 250px;
+}
+
 .max-h-fit {
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -2742,6 +2758,18 @@ input[type="text"]:disabled {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[333px\] {
+  width: 333px;
+}
+
+.w-\[270px\] {
+  width: 270px;
+}
+
+.w-\[250px\] {
+  width: 250px;
 }
 
 .max-w-6 {
@@ -2976,6 +3004,10 @@ input[type="text"]:disabled {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -3054,6 +3086,15 @@ input[type="text"]:disabled {
 
 .gap-y-\[58px\] {
   row-gap: 58px;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -4464,6 +4505,10 @@ input[type="text"]:disabled {
 
   .lg\:order-2 {
     order: 2;
+  }
+
+  .lg\:-order-1 {
+    order: -1;
   }
 
   .lg\:m-0 {

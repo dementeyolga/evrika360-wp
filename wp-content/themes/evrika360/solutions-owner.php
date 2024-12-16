@@ -94,7 +94,7 @@
   <!-- BUSINESS TASKS section -->
   <section class="py-14 lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-long-curve-to-top overflow-hidden">
     <div class="wrapper">
-      <h2 class="mb-8 grow relative max-w-[550px] max-lg:mb-6">
+      <h2 class="mb-6 lg:mb-8 grow relative max-w-[550px]">
         <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
 
         <?= CFS()->get('owner_business_tasks_title_1') ?>
@@ -149,7 +149,7 @@
     <div class="grow">
       <h2 class="mb-6 lg:mb-10 relative">
         <?= CFS()->get('owner_automatization_title_1') ?> <br>
-        <span class="inline relative font-bold">
+        <span class="relative font-bold">
           <?= CFS()->get('owner_automatization_title_2') ?>
 
           <div class="absolute -right-4 lg:-right-14 bottom-0.5 translate-y-full">

@@ -50,7 +50,7 @@
   <!-- PROBLEMS section -->
   <section class="py-14 lg:py-18 lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-long-curve-to-top overflow-hidden">
     <div class="wrapper">
-      <h2 class="mb-8 grow relative max-w-[550px] max-lg:mb-6">
+      <h2 class="mb-6 lg:mb-8 grow relative max-w-[550px]">
         <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
 
         <?= CFS()->get('hos_problems_title_1') ?>
@@ -75,6 +75,72 @@
             <p class="description">
               <?= $field['hos_problems_loop_description'] ?>
             </p>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS section -->
+  <section class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-5">
+    <div>
+      <h2 class="mb-8 lg:mb-10 relative">
+        <?= CFS()->get('hos_solve_title_1') ?> <br>
+        <span class="relative font-bold">
+          <?= CFS()->get('hos_solve_title_2') ?>
+
+          <div class="absolute -right-4 lg:-right-14 bottom-0.5 translate-y-full">
+            <img class="lg:hidden w-[183px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right-small.svg" alt="">
+            <img class="hidden lg:block w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.svg" alt="">
+          </div>
+        </span>
+      </h2>
+
+      <div class="grid grid-cols-1 gap-6 lg:gap-4">
+        <?php
+        $fields = CFS()->get('hos_solve_solutions_2');
+        foreach ($fields as $field): ?>
+          <div class="flex flex-col lg:flex-row gap-3 lg:gap-6">
+            <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-light-blue-100 rounded-md">
+              <img class="w-6 h-6" src="<?= $field['hos_solve_solutions_2_icon'] ?>" alt="">
+            </div>
+
+            <div>
+              <p class="mb-1 text-lg lg:text-[22px] font-medium">
+                <?= $field['hos_solve_solutions_2_title'] ?>
+              </p>
+              <p class="description">
+                <?= $field['hos_solve_solutions_2_description'] ?>
+              </p>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+
+    <div class="lg:-order-1 flex flex-col justify-around">
+      <div class="hidden lg:block relative mx-auto mb-3 w-fit">
+        <img class="w-[333px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-idea.webp" alt="персонаж Эврика360">
+        <div class="character-bg w-[250px] h-[250px] absolute top-14 left-[calc(50%_-_8px)] -translate-x-1/2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 lg:gap-4">
+        <?php
+        $fields = CFS()->get('hos_solve_solutions_1');
+        foreach ($fields as $field): ?>
+          <div class="flex flex-col lg:flex-row gap-3 lg:gap-6">
+            <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-light-blue-100 rounded-md">
+              <img class="w-6 h-6" src="<?= $field['hos_solve_solutions_1_icon'] ?>" alt="">
+            </div>
+
+            <div>
+              <p class="mb-1 text-lg lg:text-[22px] font-medium">
+                <?= $field['hos_solve_solutions_1_title'] ?>
+              </p>
+              <p class="description">
+                <?= $field['hos_solve_solutions_1_description'] ?>
+              </p>
+            </div>
           </div>
         <?php endforeach; ?>
       </div>
