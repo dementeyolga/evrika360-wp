@@ -147,6 +147,36 @@
     </div>
   </section>
 
+  <!-- INCREASE EFFICIENCY section -->
+  <section class="relative py-12 lg:py-20 lg:mx-10 lg:rounded-2xl bg-pattern border border-light-blue-200 text-white overflow-hidden">
+    <div class="wrapper">
+      <div class="absolute inset-0 -z-20 bg-dark-linear"></div>
+
+      <div class="relative">
+        <div class="space-y-6 md:max-w-[calc(100%_-_250px)] lg:max-w-[57%]">
+          <h2>
+            <?= CFS()->get('hos_efficiency_title_1') ?>
+            <span class="text-blue-100 font-bold"><?= CFS()->get('hos_efficiency_title_2') ?></span>
+            <?= CFS()->get('hos_efficiency_title_3') ?>
+          </h2>
+
+          <p class="min-w-[210px] max-md:max-w-[calc(100%_-_125px)]">
+            <?= CFS()->get('hos_efficiency_subtitle') ?>
+          </p>
+
+          <button class="btn m-0">
+            <?= CFS()->get('hos_efficiency_button_text') ?>
+          </button>
+        </div>
+
+        <div class="absolute bottom-[76px] right-1.5 sm:-bottom-12 lg:-bottom-20 sm:right-0 lg:right-24">
+          <img class="w-[140px] sm:w-[190px] md:w-[237px]" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-laptop.webp" alt="персонаж Эврика360 с ноутбуком">
+          <div class="character-bg w-[120px] h-[120px] sm:w-[190px] sm:h-[190px] md:w-[264px] md:h-[264px] bg-white absolute top-0 left-2.5 sm:-top-3 sm:left-0 md:-left-2.5 opacity-10 -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- QUESTIONS section -->
   <section class="mt-20">
     <div class="pb-20 lg:pt-20 lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-light-wave-to-top">
