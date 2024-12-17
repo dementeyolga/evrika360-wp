@@ -231,7 +231,7 @@ Text Domain: evrika
   }
 
   .flash-li {
-    @apply relative pl-8 description lg:text-base/[150%] before:w-4 before:h-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-flash;
+    @apply relative pl-8 description lg:text-base/[150%] list-none before:w-4 before:h-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:content-flash;
   }
 
   .flash-li-disabled {
