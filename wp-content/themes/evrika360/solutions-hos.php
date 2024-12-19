@@ -13,8 +13,8 @@
   <!-- HERO section -->
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[100px] lg:pb-40 rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper relative z-10">
-      <div class="mb-10">
-        <h1 class="mb-10 xl:max-w-[67%]">
+      <div class="mb-8 lg:mb-10">
+        <h1 class="mb-5 lg:mb-8 xl:max-w-[67%]">
           <?= CFS()->get('hos_hero_title_1') ?>
 
           <span class="w-fit relative">
@@ -207,6 +207,41 @@
     </div>
   </div>
 
+  <!-- CAREER INSTUMENT section -->
+  <section class="wrapper lg:grid lg:grid-cols-2 lg:gap-6">
+    <div class="max-lg:hidden">
+      <img src="<?= CFS()->get('hos_career_image') ?>" alt="">
+    </div>
+
+    <div class="space-y-6">
+      <h2 class="relative">
+        <?= CFS()->get('hos_career_title_1') ?>
+        <span class="relative font-bold">
+          <?= CFS()->get('hos_career_title_2') ?>
+
+          <div class="absolute left-0 right-0 bottom-0 translate-y-full">
+            <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
+          </div>
+        </span>
+      </h2>
+
+      <p class="text-grey-400">
+        <?= CFS()->get('hos_career_description') ?>
+      </p>
+
+      <p class="text-lg lg:text-[22px]">
+        <?= CFS()->get('hos_career_list_title') ?>
+      </p>
+
+      <ul class="space-y-4 lg:space-y-5">
+        <?php
+        $fields = CFS()->get('hos_career_list');
+        foreach ($fields as $field): ?>
+          <li class="flash-li"><?= $field['hos_career_list_item'] ?></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  </section>
 
   <!-- QUESTIONS section -->
   <section class="mt-20">

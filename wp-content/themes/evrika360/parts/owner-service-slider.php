@@ -1,5 +1,5 @@
 <div class="embla owner-service-embla">
-  <div class="embla__viewport owner-service-embla__viewport">
+  <div class="embla__viewport owner-service-embla__viewport lg:mb-6 xl:mb-0">
     <div class="embla__container">
       <?php
       $fields = CFS()->get('owner_features_slider');
@@ -14,12 +14,17 @@
                 <?= $field['owner_features_slider_subtitle'] ?>
               </p>
 
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full flex <?php if ($field['owner_features_slider_has_arc']) echo 'justify-center' ?> items-center w-full lg:max-w-[48%] self-end">
+              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full flex <?php
+                                                                          if ($field['owner_features_slider_has_arc']) {
+                                                                            echo 'justify-center';
+                                                                          } else {
+                                                                            echo 'min-[535px]:justify-end max-lg:-mr-6';
+                                                                          } ?> items-center w-full lg:max-w-[48%] self-end">
                 <img class="<?php
                             if ($field['owner_features_slider_has_arc']) {
-                              echo 'max-lg:max-w-full max-lg:w-auto max-lg:h-auto max-lg:max-h-[550px] lg:max-h-[360px]';
+                              echo 'max-lg:max-w-full max-lg:w-auto max-lg:h-auto max-h-[360px]';
                             } else {
-                              echo 'max-lg:max-w-max max-lg:min-h-[350px] max-lg:max-h-[550px]';
+                              echo 'max-lg:max-w-max max-lg:min-h-[350px] max-lg:max-h-[360px]';
                             }
                             ?>
                             " src="<?= $field['owner_features_slider_image'] ?>" alt="демо сервиса Эврика360">
@@ -43,5 +48,5 @@
     </button>
   </div>
 
-  <div class="embla__dots owner-service-embla__dots lg:mt-6 max-lg:mb-20"></div>
+  <div class="embla__dots owner-service-embla__dots !mt-0 max-lg:mb-20"></div>
 </div>

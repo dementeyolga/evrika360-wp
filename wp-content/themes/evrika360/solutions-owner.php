@@ -14,7 +14,8 @@
   <section class="relative overflow-hidden pt-[123px] lg:pt-[227px] pb-[100px] lg:pb-60 rounded-b-2xl lg:rounded-b-5xl border border-grey-100 bg-blue-100 text-white bg-circles">
     <div class="wrapper relative z-10">
       <div class="mb-10 lg:max-w-[63%]">
-        <h1 class="mb-10"><?= CFS()->get('owner_hero_title') ?> <br>
+        <h1 class="mb-8 lg:mb-10">
+          <?= CFS()->get('owner_hero_title') ?> <br>
           <span class="block w-fit relative">
             <?= CFS()->get('owner_hero_title_highlight') ?>
 
@@ -23,7 +24,9 @@
             </div>
           </span>
         </h1>
-        <p class="subtitle"><?= CFS()->get('owner_hero_subtitle') ?></p>
+        <p class="subtitle">
+          <?= CFS()->get('owner_hero_subtitle') ?>
+        </p>
       </div>
 
       <div class="w-fit flex flex-col gap-5">
@@ -98,7 +101,7 @@
         <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
 
         <?= CFS()->get('owner_business_tasks_title_1') ?>
-        <span class="inline-block relative font-bold">
+        <span class="relative font-bold">
           <?= CFS()->get('owner_business_tasks_title_2') ?>
 
           <div class="hidden md:block absolute -right-3 -left-1 -bottom-2">

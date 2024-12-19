@@ -56,10 +56,10 @@
       </div>
     </div>
 
-    <div class="space-y-2">
-      <p class="text-blue-200 underline">
+    <div class="flex flex-col gap-y-3">
+      <a href='/privacy-policy/' class="text-base text-blue-200 underline">
         Политика конфиденциальности
-      </p>
+      </a>
       <a href='/cookie-policy/' class="text-base text-blue-200 underline">
         Политика в отношении обработки cookie
       </a>

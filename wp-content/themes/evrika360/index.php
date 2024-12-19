@@ -4,7 +4,13 @@
   <section class="wrapper pt-40 lg:pt-20 gap-10">
     <h2 class="text-center mx-auto">
       Эврика 360 - <br> речевая аналитика для бизнеса </h2>
-    <a href="/" class="btn primary">На главную</a>
+    <?php
+    if (!empty(get_the_content())) {
+      the_content();
+    } else {
+      echo  '<a href="/" class="btn primary">На главную</a>';
+    }
+    ?>
   </section>
 </main>
 

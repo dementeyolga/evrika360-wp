@@ -1012,8 +1012,8 @@ input[type="text"]:disabled {
   background-color: var(--white-100);
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: var(--dark-blue-300);
@@ -1387,6 +1387,37 @@ input[type="text"]:disabled {
     height: 100%;
   }
   iframe {
+    width: 100%;
+  }
+}
+
+.pdf-embed-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 130%;
+}
+
+@media (min-width: 768px) {
+  .pdf-embed-container {
+    padding-top: 120%;
+  }
+}
+
+.pdf-embed-container {
+  > div {
+    position: absolute;
+  }
+  > div {
+    top: 0px;
+  }
+  > div {
+    left: 0px;
+  }
+  > div {
+    height: 100%;
+  }
+  > div {
     width: 100%;
   }
 }
@@ -2063,10 +2094,6 @@ input[type="text"]:disabled {
   bottom: -28px;
 }
 
-.-bottom-\[38px\] {
-  bottom: -38px;
-}
-
 .-bottom-\[64px\] {
   bottom: -64px;
 }
@@ -2185,6 +2212,10 @@ input[type="text"]:disabled {
 
 .left-0 {
   left: 0px;
+}
+
+.left-1 {
+  left: 0.25rem;
 }
 
 .left-1\/2 {
@@ -2315,6 +2346,10 @@ input[type="text"]:disabled {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.\!mt-0 {
+  margin-top: 0px !important;
 }
 
 .-mb-0\.5 {
@@ -2630,6 +2665,10 @@ input[type="text"]:disabled {
   height: 100vh;
 }
 
+.max-h-\[360px\] {
+  max-height: 360px;
+}
+
 .max-h-fit {
   max-height: -moz-fit-content;
   max-height: fit-content;
@@ -2649,6 +2688,10 @@ input[type="text"]:disabled {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-40 {
@@ -2765,10 +2808,6 @@ input[type="text"]:disabled {
   width: 100vw;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .min-w-\[210px\] {
   min-width: 210px;
 }
@@ -2839,6 +2878,10 @@ input[type="text"]:disabled {
 
 .max-w-\[67\%\] {
   max-width: 67%;
+}
+
+.max-w-\[700px\] {
+  max-width: 700px;
 }
 
 .max-w-\[744px\] {
@@ -4218,6 +4261,10 @@ input[type="text"]:disabled {
     right: 0px;
   }
 
+  .max-lg\:-mr-6 {
+    margin-right: -1.5rem;
+  }
+
   .max-lg\:mb-20 {
     margin-bottom: 5rem;
   }
@@ -4226,12 +4273,16 @@ input[type="text"]:disabled {
     margin-bottom: 1.5rem;
   }
 
+  .max-lg\:hidden {
+    display: none;
+  }
+
   .max-lg\:h-auto {
     height: auto;
   }
 
-  .max-lg\:max-h-\[550px\] {
-    max-height: 550px;
+  .max-lg\:max-h-\[360px\] {
+    max-height: 360px;
   }
 
   .max-lg\:min-h-\[350px\] {
@@ -4291,6 +4342,13 @@ input[type="text"]:disabled {
   }
 }
 
+@media not all and (min-width: 640px) {
+  .max-sm\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 @media (min-width: 500px) {
   .xs\:w-fit {
     width: -moz-fit-content;
@@ -4303,6 +4361,12 @@ input[type="text"]:disabled {
 
   .xs\:grow-0 {
     flex-grow: 0;
+  }
+}
+
+@media (min-width: 535px) {
+  .min-\[535px\]\:justify-end {
+    justify-content: flex-end;
   }
 }
 
@@ -4402,6 +4466,10 @@ input[type="text"]:disabled {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .md\:p-4 {
     padding: 1rem;
   }
@@ -4469,10 +4537,6 @@ input[type="text"]:disabled {
     bottom: -1.5rem;
   }
 
-  .lg\:-bottom-7 {
-    bottom: -1.75rem;
-  }
-
   .lg\:-bottom-\[68px\] {
     bottom: -68px;
   }
@@ -4527,10 +4591,6 @@ input[type="text"]:disabled {
 
   .lg\:left-5 {
     left: 1.25rem;
-  }
-
-  .lg\:left-\[152px\] {
-    left: 152px;
   }
 
   .lg\:right-0 {
@@ -4625,6 +4685,10 @@ input[type="text"]:disabled {
 
   .lg\:mb-5 {
     margin-bottom: 1.25rem;
+  }
+
+  .lg\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
   .lg\:mb-8 {
@@ -4792,10 +4856,6 @@ input[type="text"]:disabled {
     height: 100%;
   }
 
-  .lg\:max-h-\[360px\] {
-    max-height: 360px;
-  }
-
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -4921,6 +4981,10 @@ input[type="text"]:disabled {
     max-width: 589px;
   }
 
+  .lg\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
   .lg\:max-w-\[63\%\] {
     max-width: 63%;
   }
@@ -4935,6 +4999,10 @@ input[type="text"]:disabled {
 
   .lg\:max-w-\[80\%\] {
     max-width: 80%;
+  }
+
+  .lg\:max-w-\[860px\] {
+    max-width: 860px;
   }
 
   .lg\:shrink-0 {
@@ -5402,6 +5470,10 @@ input[type="text"]:disabled {
   .xl\:my-10 {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+  }
+
+  .xl\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .xl\:mb-5 {

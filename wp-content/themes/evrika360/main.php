@@ -201,10 +201,10 @@
       </div>
     </div>
 
+    <!-- Feature tabs -->
     <?php
     $fields = CFS()->get('feature_tabs');
-    ?>
-    <?php foreach ($fields as $index => $field): ?>
+    foreach ($fields as $index => $field): ?>
 
       <div class="hidden lg:mx-10 peer-has-[label:nth-child(<?= $index + 1 ?>)_:checked]:block">
         <div class="feature-tab">
@@ -473,36 +473,30 @@
       <div class="lg:max-w-[700px]">
         <div class="relative">
           <h2 class="mb-20 lg:mb-14">
-            — Я правильно понимаю, что речевая аналитика <br class="lg:hidden"> <b>полезна</b>, когда...
-          </h2>
+            <?= CFS()->get('useful_title_1') ?>
+            <span class="relative font-bold">
+              <?= CFS()->get('useful_title_2') ?>
 
-          <div class="absolute left-0 -bottom-[38px] lg:left-[152px] lg:-bottom-7">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-left.svg" alt="">
-          </div>
+              <div class="absolute -left-1 right-0 -bottom-1 translate-y-full">
+                <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-left.svg" alt="">
+              </div>
+            </span>
+
+            <?= CFS()->get('useful_title_3') ?>
+          </h2>
         </div>
 
-
         <div class="mb-[30px] space-y-5 lg:space-y-4 lg:max-w-[520px]">
-          <div class="flex gap-6 items-center">
-            <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/chats-icon.svg" alt="">
+          <?php
+          $fields = CFS()->get('useful_cases');
+          foreach ($fields as $field): ?>
+            <div class="flex gap-6 items-center">
+              <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
+                <img src="<?= $field['useful_cases_icon'] ?>" alt="">
+              </div>
+              <p><?= $field['useful_cases_text'] ?></p>
             </div>
-            <p>Нет полного контроля за звонками, чатами или встречами</p>
-          </div>
-
-          <div class="flex gap-6 items-center">
-            <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/trend-down-icon.svg" alt="">
-            </div>
-            <p>Менеджеры сливают клиентов</p>
-          </div>
-
-          <div class="flex gap-6 items-center">
-            <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-white rounded-md">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/chart-icon.svg" alt="">
-            </div>
-            <p>Непонятно, какого качества приходят лиды с разных каналов рекламы</p>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
 
@@ -515,7 +509,7 @@
         </div>
 
         <div class="chat z-20">
-          — Да, и не только в этом!
+          <?= CFS()->get('useful_answer') ?>
         </div>
       </div>
     </div>
@@ -525,8 +519,8 @@
   <section class="overflow-hidden">
     <div class="wrapper mt-[26px] mb-[56px] lg:mb-20 space-y-6 lg:space-y-10">
       <div class="relative lg:mx-auto">
-        <h2 class="lg:text-center">
-          <b>Эврика360</b> даёт мгновенную объективную оценку <br class="hidden lg:block"> работы компании
+        <h2 class="lg:text-center lg:max-w-[860px]">
+          <?= CFS()->get('immediate_title') ?>
         </h2>
 
         <div class="absolute -top-5 -left-5">
@@ -537,138 +531,54 @@
         </div>
       </div>
 
-
-      <p class="lg:mx-auto lg:text-center">Речевая аналитика минимизирует ручную работу, дополняет ваши <br class="hidden lg:block"> текущие отчёты новыми данными и упрощает управление компанией</p>
+      <p class="lg:mx-auto lg:text-center lg:max-w-[600px]">
+        <?= CFS()->get('immediate_description') ?>
+      </p>
     </div>
 
     <div class="peer embla assessment-tabs-embla mb-4 lg:mb-12">
       <div class="wrapper embla__viewport assessment-tabs-embla__viewport">
         <div class="embla__container assessment-tabs-embla__container">
-          <label class="tab" data-text="Определение причин слива лидов">
-            Определение <br> причин слива лидов
-            <input class="hidden" name="assessment-tabs" type="radio" checked>
-          </label>
-
-          <label class="tab" data-text="HR-помощник">
-            HR-помощник
-            <input class="hidden" name="assessment-tabs" type="radio">
-          </label>
-
-          <label class="tab" data-text="Изучение ЦА, рынка и конкурентов">
-            Изучение ЦА, рынка <br> и конкурентов
-            <input class="hidden" name="assessment-tabs" type="radio">
-          </label>
-
-          <label class="tab" data-text="Обучение менеджеров">
-            Обучение менеджеров
-            <input class="hidden" name="assessment-tabs" type="radio">
-          </label>
+          <?php
+          $fields = CFS()->get('immediate_tabs');
+          foreach ($fields as $index => $field): ?>
+            <label class="tab" data-text="<?= $field['immediate_tabs_label_1'] . ' ' . $field['immediate_tabs_label_2'] ?>">
+              <?= $field['immediate_tabs_label_1'] ?> <br> <?= $field['immediate_tabs_label_2'] ?>
+              <input class="hidden" name="assessment-tabs" type="radio" <?php if ($index == 0) echo 'checked' ?>>
+            </label>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
 
-    <!-- #1 assessment tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
-      <div class="assessment-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-          <h3 class="wrapper lg:text-2xl/[130%]">Получайте объективную оценку причин отказа без эмоций менеджера</h3>
+    <!-- Assessment tabs -->
+    <?php
+    $fields = CFS()->get('immediate_tabs');
+    foreach ($fields as $index => $field): ?>
+      <div class="hidden lg:mx-10 peer-has-[label:nth-child(<?= $index + 1 ?>)_:checked]:block">
+        <div class="assessment-tab">
+          <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
+            <h3 class="wrapper lg:text-2xl/[130%]">
+              <?= $field['immediate_tabs_title'] ?>
+            </h3>
 
-          <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.webp" alt="анализ диалога">
+            <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
+              <img src="<?= $field['immediate_tabs_image'] ?>" alt="анализ диалога">
+            </div>
+
+            <ul class="wrapper space-y-4 *:text-base/[150%]">
+              <?php
+              $advantages = $field['immediate_tabs_advantages'];
+              foreach ($advantages as $advantage): ?>
+                <li class="flash-li">
+                  <?= $advantage['immediate_tabs_advantage'] ?>
+                </li>
+              <?php endforeach; ?>
+            </ul>
           </div>
-
-          <ul class="wrapper space-y-4 *:text-base/[150%]">
-            <li class="flash-li">
-              Убедитесь, что все <b>возражения клиента</b> были обработаны
-            </li>
-            <li class="flash-li">
-              Автоматизируйте проверку качества общения, чтобы быстрее находить <b>ошибки в диалогах</b>  
-            </li>
-            <li class="flash-li">
-              Отслеживайте <b>длительные сделки</b>, чтобы помочь менеджеру, когда это нужно
-            </li>
-          </ul>
         </div>
       </div>
-    </div>
-
-    <!-- #2 assessment tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
-      <div class="assessment-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-          <h3 class="wrapper lg:text-2xl/[130%]">Повышайте эффективность рекрутеров</h3>
-
-          <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-reject.webp" alt="анализ диалога">
-          </div>
-
-          <ul class="wrapper space-y-4 *:text-base/[150%]">
-            <li class="flash-li">
-              <b>Предотвращайте</b> выгорание сотрудников с помощью контроля эмоций через речевую аналитику
-            </li>
-            <li class="flash-li">
-              <b>Экономьте время</b> на оценке итогов собеседований с каждым кандидатом
-            </li>
-            <li class="flash-li">
-              Отслеживайте <b>динамику изменений</b> сотрудников и назначайте премии на основе точных данных
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- #3 assessment tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
-      <div class="assessment-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-          <h3 class="wrapper lg:text-2xl/[130%]">Знайте боли, потребности и возражения своей аудитории</h3>
-
-          <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-assessment-dictionary.webp" alt="словарь в сервисе">
-          </div>
-
-          <ul class="wrapper space-y-4 *:text-base/[150%]">
-            <li class="flash-li">
-              Отслеживайте <b>частоту упоминаний</b> тем и вопросов, чтобы корректировать контент для аудитории
-            </li>
-            <li class="flash-li">
-              Оценивайте <b>качество заявок</b> с каждого рекламного канала и перераспределяйте бюджет на самые эффективные
-            </li>
-            <li class="flash-li">
-              Анализируйте <b>эффективность</b> акций и корректируйте стратегию
-            </li>
-            <li class="flash-li">
-              <b>Узнавайте</b> о новых запросах клиентов и трендах быстрее конкурентов
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- #4 assessment tab -->
-    <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
-      <div class="assessment-tab">
-        <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-          <h3 class="wrapper lg:text-2xl/[130%]">Ускоряйте обучение и адаптацию новых менеджеров</h3>
-
-          <div class="w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.webp" alt="главный экран сервиса Эврика360">
-          </div>
-
-          <ul class="wrapper space-y-4 *:text-base/[150%]">
-            <li class="flash-li">
-              Создавайте базу <b>успешных продаж</b> для обучения новичков
-            </li>
-            <li class="flash-li">
-              <b>Отслеживайте</b> все коммуникации и давайте обратную связь сотрудникам
-            </li>
-            <li class="flash-li">
-              Снижайте текучку и расходы на найм с помощью <b>эффективного онбординга</b>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </section>
 
   <!-- REVIEW section -->
@@ -716,7 +626,7 @@
 
     <div class="wrapper lg:flex-row lg:gap-16">
       <div class="-mt-[75px] lg:-mt-12 mb-[46px] scale-105 lg:scale-100 lg:-ml-12 shrink-0 flex justify-center items-start">
-        <img class="lg:hidden max-w-[400px]" src="<?php echo get_template_directory_uri() ?>/assets/images/conference.webp" alt="онлайн-демо сервиса Эврика360">
+        <img class="lg:hidden w-full max-w-[400px]" src="<?php echo get_template_directory_uri() ?>/assets/images/conference.webp" alt="онлайн-демо сервиса Эврика360">
         <img class="hidden lg:block max-w-[580px]" src="<?php echo get_template_directory_uri() ?>/assets/images/conference-desktop.webp" alt="онлайн-демо сервиса Эврика360">
       </div>
 
@@ -1032,12 +942,12 @@
           <h2 class="mb-1 text-center">
             <?= CFS()->get('prices_title_1') ?> <br>
 
-            <span class="relative leading-relaxed lg:block lg:mt-6 font-bold">
+            <span class="relative leading-relaxed lg:block lg:mt-6 lg:w-fit lg:mx-auto font-bold">
               <?= CFS()->get('prices_title_2') ?>
 
               <span class="absolute -inset-7 lg:-inset-4 lg:-bottom-1 lg:-left-2 flex justify-center items-center">
-                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.svg" alt="">
-                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle-desktop.svg" alt="">
+                <img class="w-full lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle.svg" alt="">
+                <img class="w-full hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-circle-desktop.svg" alt="">
               </span>
             </span>
           </h2>
