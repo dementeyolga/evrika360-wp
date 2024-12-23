@@ -215,7 +215,7 @@
               <div class="wrapper space-y-4">
                 <h3 class="lg:text-2xl/[130%]"><?= $field['title'] ?></h3>
                 <?php if (!empty($field['badge'])) { ?>
-                  <div class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200"><?= $field['badge'] ?></div>
+                  <p class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200"><?= $field['badge'] ?></p>
                 <?php } ?>
               </div>
 
@@ -226,12 +226,9 @@
               <ul class="wrapper space-y-4 lg:space-y-5">
                 <?php
                 $features = $field['features'];
-                foreach ($features as $feature) {
-                ?>
+                foreach ($features as $feature): ?>
                   <li class="flash-li"><?= $feature['feature'] ?></li>
-                <?php
-                }
-                ?>
+                <?php endforeach; ?>
               </ul>
             </div>
 
@@ -589,12 +586,11 @@
       </div>
 
       <h2 class="mb-5 lg:mb-[76px]">
-        — Звучит интересно. <br>
-        Как можно <b>протестировать</b> Speech Analytics?
+        <?= CFS()->get('review_title') ?>
       </h2>
 
       <div class="mb-[86px] lg:mb-0 lg:ml-[93px] w-fit relative accent small">
-        У нас есть предложение!
+        <?= CFS()->get('review_subtitle') ?>
 
         <div class="absolute -bottom-[64px] right-10 lg:-bottom-16 lg:-right-[136px]">
           <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy.svg" alt="">
@@ -604,17 +600,25 @@
     </div>
 
     <div class="wrapper py-8 lg:p-8 lg:rounded-md bg-light-blue-100 border border-light-blue-200">
-      <p class="h4 mb-8">«Ваш отчёт по эффективности менеджеров <b>просто бомба</b>»</p>
-      <p class="mb-10">Раньше у меня просто не было этих данных, сейчас сократил количество МОПов с 8 до 6, а продажи только выросли. Мне нравится всё. Жду новых обновлений. </p>
+      <p class="h4 mb-8">
+        <?= CFS()->get('review_review_title') ?>
+      </p>
+      <p class="mb-10">
+        <?= CFS()->get('review_review_text') ?>
+      </p>
 
       <div class="flex gap-6 items-center">
         <div class="w-[56px] h-[56px] shrink-0">
-          <img src="<?php echo get_template_directory_uri() ?>/assets/images/ivan-gavrilov-review.webp" alt="фото автора отзыва">
+          <img src="<?= CFS()->get('review_review_author_image') ?>">
         </div>
 
         <div class="space-y-1">
-          <p>Иван</p>
-          <p class="text-grey-400">CEO сети дилерских центров по продаже автомобилей</p>
+          <p>
+            <?= CFS()->get('review_review_author_name') ?>
+          </p>
+          <p class="text-grey-400">
+            <?= CFS()->get('review_review_author_position') ?>
+          </p>
         </div>
       </div>
     </div>
@@ -626,19 +630,23 @@
 
     <div class="wrapper lg:flex-row lg:gap-16">
       <div class="-mt-[75px] lg:-mt-12 mb-[46px] scale-105 lg:scale-100 lg:-ml-12 shrink-0 flex justify-center items-start">
-        <img class="lg:hidden w-full max-w-[400px]" src="<?php echo get_template_directory_uri() ?>/assets/images/conference.webp" alt="онлайн-демо сервиса Эврика360">
-        <img class="hidden lg:block max-w-[580px]" src="<?php echo get_template_directory_uri() ?>/assets/images/conference-desktop.webp" alt="онлайн-демо сервиса Эврика360">
+        <img class="lg:hidden w-full max-w-[400px]" src="<?= CFS()->get('demo_image_mobile') ?>" alt="онлайн-демо сервиса Эврика360">
+        <img class="hidden lg:block max-w-[580px]" src="<?= CFS()->get('demo_image_desktop') ?>" alt="онлайн-демо сервиса Эврика360">
       </div>
 
       <div class="lg:pt-[72px] lg:pb-[90px]">
         <div class="mb-10 lg:mb-[56px] space-y-6 lg:space-y-8">
-          <h2>Записывайтесь на <b>бесплатную демонстрацию</b> с экспертом</h2>
+          <h2>
+            <?= CFS()->get('demo_title') ?>
+          </h2>
           <p>
-            За 30 минут на примере звонков вашей компании эксперт покажет, чем будет полезна речевая аналитика, и рассчитает стоимость внедрения.
+            <?= CFS()->get('demo_description') ?>
           </p>
         </div>
 
-        <button class="consultation-modal-toggle btn primary lg:ml-0">Записаться на демо</button>
+        <button class="consultation-modal-toggle btn primary lg:ml-0">
+          <?= CFS()->get('demo_button_text') ?>
+        </button>
       </div>
     </div>
   </section>
@@ -649,25 +657,28 @@
       <div class="relative">
         <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
 
-        <h2 class="lg:mr-[169px]">
-          — А что у вас с <b>безопасностью данных</b>?
-        </h2>
+        <h2 class="lg:mr-20 xl:mr-[169px]">
+          <?= CFS()->get('safety_title_1') ?> <br class="lg:hidden">
+          <span class="relative font-bold">
+            <?= CFS()->get('safety_title_2') ?>
 
-        <div class="absolute -bottom-[28px] w-full flex justify-center">
-          <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
-          <img class="hidden lg:block relative -right-10" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-desktop.svg" alt="">
-        </div>
+            <div class="absolute left-0 -right-2 -bottom-1 translate-y-full lg:w-[250px]">
+              <img class="lg:hidden w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
+              <img class="hidden lg:block w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-desktop.svg" alt="">
+            </div>
+          </span>
+        </h2>
       </div>
 
 
       <div class="flex flex-col items-center">
-        <div class="relative lg:absolute left-0 bottom-0">
+        <div class="relative lg:absolute left-10 bottom-0">
           <img class="relative w-40 lg:w-60 z-10" src="<?php echo get_template_directory_uri() ?>/assets/images/evrika-scared.webp" alt="персонаж Эврика360">
           <div class="character-bg w-[140px] h-[140px] lg:w-[210px] lg:h-[210px] absolute top-0 left-2.5 z-0"></div>
         </div>
 
         <div class="chat">
-          — Хороший вопрос. Ваши данные под защитой 24/7
+          <?= CFS()->get('safety_answer') ?>
         </div>
       </div>
     </div>
@@ -687,13 +698,18 @@
           <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
 
           <h2 class="h-fit">
-            — Какие есть примеры <b>использования</b> анализа звонков и речи?
-          </h2>
+            <?= CFS()->get('cases_title_1') ?>
+            <span class="relative font-bold">
+              <?= CFS()->get('cases_title_2') ?>
 
-          <div class="absolute left-0 -bottom-8 lg:-bottom-6 lg:left-3">
-            <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
-            <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-2.svg" alt="">
-          </div>
+              <div class="absolute left-0 -right-2 bottom-0 translate-y-full">
+                <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
+                <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-2.svg" alt="">
+              </div>
+            </span>
+
+            <?= CFS()->get('cases_title_3') ?>
+          </h2>
         </div>
 
 
@@ -704,7 +720,7 @@
           </div>
 
           <div class="chat">
-            — Речевая аналитика применима в любой сфере, где нужно общаться с клиентами
+            <?= CFS()->get('cases_answer') ?>
           </div>
         </div>
       </div>
@@ -713,88 +729,85 @@
         <!-- Case #1 -->
         <div class="px-4 pt-8 pb-14 lg:px-10 lg:pt-8 lg:pb-[58px] lg:grid lg:grid-cols-2 lg:gap-[150px] rounded-xl lg:rounded-2xl border border-orange-100 bg-dark-blue-400 bg-white-wave-bottom-left">
           <div>
-            <div class="card-badge mb-4 lg:mb-8">Сфера: производство и продажа мебели</div>
-            <p class="h4 mb-8">Взяли под контроль все звонки и подняли продажи на 27% <b>всего за 3 месяца</b></p>
+            <div class="card-badge mb-4 lg:mb-8"><?= CFS()->get('cases_case_1_badge') ?></div>
+            <p class="h4 mb-8"><?= CFS()->get('cases_case_1_description') ?></p>
           </div>
 
           <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6">
-            <div class="space-y-1">
-              <p class="h2 font-medium md:text-[32px]/[130%]">
-                +27%
-              </p>
-              <p>Рост выручки за 3 месяца</p>
-            </div>
+            <?php
+            $fields = CFS()->get('cases_case_1_indicators');
+            foreach ($fields as $field): ?>
+              <div class="space-y-1">
+                <div class="flex gap-1 items-center">
+                  <p class="h2 font-medium md:text-[32px]/[130%]">
+                    <?= $field['cases_case_1_indicators_title'] ?>
 
-            <div class="space-y-1">
-              <div>
-                <p class="h2 font-medium md:text-[32px]/[130%] inline-block">
-                  +1900 у.е.
+                    <?php if (!empty($field['cases_case_1_indicators_title_crossed'])): ?>
+                      <span class="line-through opacity-40 font-normal">
+                        <?= $field['cases_case_1_indicators_title_crossed'] ?>
+                      </span>
+                    <?php endif; ?>
+                  </p>
+
+                  <?php if (!empty($field['cases_case_1_indicators_title_small'])): ?>
+                    <p class="h4 inline-block">
+                      <?= $field['cases_case_1_indicators_title_small'] ?>
+                    </p>
+                  <?php endif; ?>
+                </div>
+
+                <p>
+                  <?= $field['cases_case_1_indicators_description'] ?>
                 </p>
-                <p class="h4 inline-block">/мес</p>
               </div>
-
-              <p>Экономия на ФОТ отдела контроля качества</p>
-            </div>
-
-            <div class="space-y-1">
-              <p class="h2 font-medium md:text-[32px]/[130%]">
-                2 <span class="line-through opacity-40 font-normal">5</span>
-              </p>
-              <p>Человека в контроле качества</p>
-            </div>
-
-            <div class="space-y-1">
-              <p class="h2 font-medium md:text-[32px]/[130%]">
-                100%
-              </p>
-              <p>Звонков слушают</p>
-            </div>
+            <?php endforeach; ?>
           </div>
         </div>
 
         <!-- Case #2 -->
         <div class="px-4 pt-8 pb-14 lg:px-10 lg:pt-8 lg:pb-[58px] lg:grid lg:grid-cols-2 lg:gap-[150px] rounded-xl lg:rounded-2xl border border-orange-100 bg-dark-blue-400 bg-white-wave-top">
           <div class="lg:order-2">
-            <div class="card-badge mb-4 lg:mb-8">Сфера: натяжные потолки</div>
-            <p class="h4 mb-8">За 1 день выявили халатность менеджеров, обновили штат и повысили конверсию в замер с 6 до 14%</p>
+            <div class="card-badge mb-4 lg:mb-8"><?= CFS()->get('cases_case_2_badge') ?></div>
+            <p class="h4 mb-8"><?= CFS()->get('cases_case_2_description') ?></p>
           </div>
 
           <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6">
-            <div class="space-y-1">
-              <p class="h2 font-medium md:text-[32px]/[130%]">
-                +133%
-              </p>
-              <p>Рост конверсии в замер</p>
-            </div>
+            <?php
+            $fields = CFS()->get('cases_case_2_indicators');
+            foreach ($fields as $field): ?>
+              <div class="space-y-1">
+                <div class="flex gap-1 items-center">
+                  <p class="h2 font-medium md:text-[32px]/[130%]">
+                    <?= $field['cases_case_2_indicators_title'] ?>
 
-            <div class="space-y-1">
-              <p class="h2 font-medium md:text-[32px]/[130%]">
-                +118,8%
-              </p>
-              <p>Рост среднемесячной выручки</p>
-            </div>
+                    <?php if (!empty($field['cases_case_2_indicators_title_crossed'])): ?>
+                      <span class="line-through opacity-40 font-normal">
+                        <?= $field['cases_case_2_indicators_title_crossed'] ?>
+                      </span>
+                    <?php endif; ?>
+                  </p>
 
-            <div class="space-y-1">
-              <p class="h2 font-medium md:text-[32px]/[130%]">
-                1 чел
-              </p>
-              <p>Контроль качества + речевая аналитика</p>
-            </div>
+                  <?php if (!empty($field['cases_case_2_indicators_title_small'])): ?>
+                    <p class="h4 inline-block">
+                      <?= $field['cases_case_2_indicators_title_small'] ?>
+                    </p>
+                  <?php endif; ?>
+                </div>
 
-            <div class="space-y-1">
-              <p class="h2 font-medium md:text-[32px]/[130%]">
-                -1900 у.е.
-              </p>
-              <p>Снижение бюджета на рекламу</p>
-            </div>
+                <p>
+                  <?= $field['cases_case_2_indicators_description'] ?>
+                </p>
+              </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
 
       <div>
-        <button class="test-modal-toggle btn primary lg:mt-[56px]">Протестировать на своих данных</button>
+        <button class="test-modal-toggle btn primary lg:mt-[56px]">
+          <?= CFS()->get('cases_button_text') ?>
+        </button>
       </div>
-
     </div>
   </section>
 
@@ -803,131 +816,105 @@
     <div class="space-y-[58px] lg:space-y-20">
       <div class="lg:wrapper-no-flex flex flex-col gap-y-[58px] lg:flex-row lg:justify-between lg:gap-x-4">
         <div class="max-lg:wrapper flex flex-col gap-6 lg:w-[440px]">
-          <div class="chat secondary">— Что-нибудь ещё?</div>
-          <div class="chat self-end">— Да, есть ещё кое-что...</div>
+          <div class="chat secondary"><?= CFS()->get('automate_question') ?></div>
+          <div class="chat self-end"><?= CFS()->get('automate_answer') ?></div>
         </div>
 
         <div class="max-lg:wrapper space-y-[22px] lg:max-w-[565px]">
           <h2>
-            <b>Эврика360</b> <br class="lg:hidden"> автоматизирует рутину
+            <?= CFS()->get('automate_title') ?>
           </h2>
 
           <p class="text-grey-400">
-            Делегируйте важные, но скучные задачи речевой аналитике и освободите больше времени для принятия важных управленческих решений
+            <?= CFS()->get('automate_description') ?>
           </p>
         </div>
       </div>
 
-
-      <!-- Automatization tabs -->
+      <!-- Automate tabs -->
       <div class="space-y-4 lg:space-y-12">
         <div class="peer embla automatization-tabs-embla">
           <div class="wrapper embla__viewport automatization-tabs-embla__viewport">
             <div class="embla__container automatization-tabs-embla__container">
-              <label class="tab" data-text="Готовые интеграции">
-                Готовые <br class="lg:hidden"> интеграции
-                <input class="hidden" name="automatization-tabs" type="radio" checked>
-              </label>
-
-              <label class="tab" data-text="Заполнение CRM">
-                Заполнение CRM
-                <input class="hidden" name="automatization-tabs" type="radio">
-              </label>
-
-              <label class="tab" data-text="Уведомления о критических ситациях">
-                Уведомления о <br> критических ситациях
-                <input class="hidden" name="automatization-tabs" type="radio">
-              </label>
-
-              <label class="tab" data-text="Отчёты и аналитика коммуникаций">
-                Отчёты и аналитика <br> коммуникаций
-                <input class="hidden" name="automatization-tabs" type="radio">
-              </label>
+              <?php
+              $fields = CFS()->get('automate_tabs');
+              foreach ($fields as $index => $field): ?>
+                <label class="tab" data-text="<?= $field['automate_tabs_label_1'] . ' ' . $field['automate_tabs_label_2'] ?>">
+                  <?= $field['automate_tabs_label_1'] ?> <br> <?= $field['automate_tabs_label_2'] ?>
+                  <input class="hidden" name="automatization-tabs" type="radio" <?php if ($index == 0) echo 'checked' ?>>
+                </label>
+              <?php endforeach; ?>
             </div>
           </div>
         </div>
 
-        <!-- #1 automatization tab -->
-        <div class="hidden lg:mx-10 peer-has-[label:nth-child(1)_:checked]:block">
-          <div class="automatization-tab">
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-              <div class="wrapper space-y-4 lg:mt-[30px]">
-                <h3 class="md:text-2xl/[130%]">Простая интеграция с действующими системами и сервисами</h3>
-                <div class="p-2 w-fit description  text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">Настраиваем самостоятельно или с минимальным участием ваших тех.специалистов</div>
+        <!-- Automatization tabs -->
+        <?php
+        $fields = CFS()->get('automate_tabs');
+        foreach ($fields as $index => $field): ?>
+
+          <div class="hidden lg:mx-10 peer-has-[label:nth-child(<?= $index + 1 ?>)_:checked]:block">
+
+            <?php if ($field['automate_tabs_image_is_bottom'] == 0): ?>
+
+              <div class="automatization-tab">
+                <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
+                  <div class="wrapper space-y-4 lg:mt-[30px]">
+                    <h3 class="md:text-2xl/[130%]">
+                      <?= $field['automate_tabs_title'] ?>
+                    </h3>
+
+                    <?php if (!empty($field['badge'])) { ?>
+                      <p class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">
+                        <?= $field['automate_tabs_badge'] ?>
+                      </p>
+                    <?php } ?>
+                  </div>
+
+                  <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
+                    <img src="<?= $field['automate_tabs_image'] ?>" alt="демонстрация сервиса Эврика">
+                  </div>
+
+                  <ul class="wrapper space-y-4 lg:space-y-3">
+                    <?php
+                    $features = $field['automate_tabs_list'];
+                    foreach ($features as $feature): ?>
+                      <li class="flash-li">
+                        <?= $feature['automate_tabs_list_item'] ?>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
               </div>
 
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard-apps.webp" alt="главный экран сервиса Эврика360">
+            <?php else: ?>
+
+              <div class="automatization-tab max-lg:pb-0">
+                <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
+                  <h3 class="wrapper md:text-2xl/[130%]">
+                    <?= $field['automate_tabs_title'] ?>
+                  </h3>
+
+                  <ul class="wrapper space-y-4 lg:space-y-3">
+                    <?php
+                    $features = $field['automate_tabs_list'];
+                    foreach ($features as $feature): ?>
+                      <li class="flash-li">
+                        <?= $feature['automate_tabs_list_item'] ?>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+
+                  <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[60%] lg:max-w-[80%] self-center">
+                    <img class="lg:max-w-[340px]" src="<?= $field['automate_tabs_image'] ?>" alt="функции сервиса Эврика360">
+                  </div>
+                </div>
               </div>
 
-              <ul class="wrapper space-y-4 lg:space-y-3">
-                <li class="flash-li">CRM</li>
-                <li class="flash-li">Чаты и мессенджеры</li>
-                <li class="flash-li">Телефония</li>
-                <li class="flash-li">Индивидуальные интеграции по API</li>
-              </ul>
-            </div>
+            <?php endif ?>
           </div>
-        </div>
 
-        <!-- #2 automatization tab -->
-        <div class="hidden lg:mx-10 peer-has-[label:nth-child(2)_:checked]:block">
-          <div class="automatization-tab">
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-              <h3 class="wrapper md:text-2xl/[130%]">Автоматическое заполнение CRM по итогам звонка</h3>
-
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/bitrix-24.webp" alt="битрикс-24">
-              </div>
-
-              <ul class="wrapper space-y-4 lg:space-y-3">
-                <li class="flash-li">Экономьте время менеджера на <b>внесении данных</b> после звонка</li>
-                <li class="flash-li"><b>Минимизируйте</b> ошибки и пропуски в CRM</li>
-                <li class="flash-li">Повышайте <b>эффективность менеджера</b> и шансы на закрытие сделки</li>
-                <li class="flash-li"><b>Получайте выводы</b> и рекомендации по итогам звонка с помощью ChatGPT</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- #3 automatization tab -->
-        <div class="hidden lg:mx-10 peer-has-[label:nth-child(3)_:checked]:block">
-          <div class="automatization-tab max-lg:pb-0">
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-              <h3 class="wrapper md:text-2xl/[130%]">Получайте мгновенные уведомления с пометкой «ВАЖНО» </h3>
-
-              <ul class="wrapper space-y-4 lg:space-y-3">
-                <li class="flash-li">Если менеджер произнес <b>«перезвоню с личного»</b>, вам придет мгновенное уведомление</li>
-                <li class="flash-li">Клиент пригрозил, что будет подавать в суд? <br>
-                  <b>Узнайте об этом раньше</b>, чем менеджер положил трубку, и урегулируйте ситуацию
-                </li>
-              </ul>
-
-              <div class="lg:absolute lg:right-[37px] lg:bottom-0 lg:h-full lg:flex lg:items-end w-fit max-w-[60%] lg:max-w-[80%] self-center">
-                <img class="lg:max-w-[340px]" src="<?php echo get_template_directory_uri() ?>/assets/images/iphone-notification.webp" alt="уведомления на телефон">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- #4 automatization tab -->
-        <div class="hidden lg:mx-10 peer-has-[label:nth-child(4)_:checked]:block">
-          <div class="automatization-tab">
-            <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-              <h3 class="wrapper md:text-2xl/[130%]">Готовые отчёты, адаптированные под вашу роль и потребности компании</h3>
-
-              <div class="lg:absolute lg:right-0 lg:top-0 lg:h-full lg:flex lg:items-center w-fit max-w-[93%] md:max-w-[70%] lg:max-w-[48%] self-end">
-                <img src="<?php echo get_template_directory_uri() ?>/assets/images/dashboard.webp" alt="главный экран">
-              </div>
-
-              <ul class="wrapper space-y-4 lg:space-y-3">
-                <li class="flash-li"><b>Подробная расшифровка</b> каждого звонка с разделением на реплики сотрудника и клиента</li>
-                <li class="flash-li"><b>Анализ звонка</b>: в каком тоне состоялся диалог, кто доминировал, кто перебивал и насколько часто</li>
-                <li class="flash-li">Узнавайте, как <b>сотрудник презентовал</b> компанию и предложил ли дополнительные товары</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
@@ -1037,7 +1024,6 @@
       </div>
     </div>
 
-
     <div class="lg:wrapper">
       <div class="lg:flex lg:gap-6">
         <div class="max-lg:wrapper-no-flex lg:order-2">
@@ -1122,9 +1108,9 @@
           Эврика360
         </div>
 
-        <h2 class="leading-[150%]">— Я честно рассказала о <b>речевой аналитике</b>.
-          Предлагаю записаться на <b>онлайн-экскурсию</b>
-          с нашим менеджером</h2>
+        <h2 class="leading-[150%]">
+          <?= CFS()->get('excursion_title_1') ?>
+        </h2>
 
         <div class="hidden lg:block absolute -bottom-[124px] right-[180px]">
           <img src="<?php echo get_template_directory_uri() ?>/assets/images/arrow-bottom-wavy-2.svg" alt="">
@@ -1136,19 +1122,23 @@
       <div class="lg:wrapper-no-flex lg:grid lg:grid-cols-[57%_auto] lg:justify-between">
         <div class="max-lg:wrapper">
           <h2 class="mb-8 lg:mb-12 leading-[140%]">
-            Запишитесь на экскурсию по сервису <b>речевой аналитики</b> Эврика360
+            <?= CFS()->get('excursion_title_2') ?>
           </h2>
 
           <ul class="mb-10 lg:mb-[64px] space-y-3 *:text-base/[150%] lg:*:text-xl/[150%]">
-            <li class="flash-li">Покажем, <b>как работает сервис</b> изнутри</li>
-            <li class="flash-li">Расскажем, как речевая аналитика может быть полезна <b>вашей компании</b></li>
-            <li class="flash-li">Найдём, в каких коммуникациях <b>заморожены деньги прямо сейчас</b></li>
+            <?php
+            $items = CFS()->get('excursion_contents');
+            foreach ($items as $item): ?>
+              <li class="flash-li">
+                <?= $item['excursion_contents_item'] ?>
+              </li>
+            <?php endforeach; ?>
           </ul>
 
           <button class="excursion-modal-toggle btn primary lg:ml-0 flex items-center gap-2">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.svg" alt="">
 
-            Записаться на экскурсию
+            <?= CFS()->get('excursion_button_text') ?>
           </button>
         </div>
 

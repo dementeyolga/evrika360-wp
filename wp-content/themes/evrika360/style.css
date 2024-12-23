@@ -2090,10 +2090,6 @@ input[type="text"]:disabled {
   bottom: -22px;
 }
 
-.-bottom-\[28px\] {
-  bottom: -28px;
-}
-
 .-bottom-\[64px\] {
   bottom: -64px;
 }
@@ -2126,8 +2122,8 @@ input[type="text"]:disabled {
   left: -22px;
 }
 
-.-right-10 {
-  right: -2.5rem;
+.-right-2 {
+  right: -0.5rem;
 }
 
 .-right-3 {
@@ -2212,10 +2208,6 @@ input[type="text"]:disabled {
 
 .left-0 {
   left: 0px;
-}
-
-.left-1 {
-  left: 0.25rem;
 }
 
 .left-1\/2 {
@@ -2304,6 +2296,10 @@ input[type="text"]:disabled {
 
 .top-\[84px\] {
   top: 84px;
+}
+
+.left-10 {
+  left: 2.5rem;
 }
 
 .-z-10 {
@@ -4743,12 +4739,12 @@ input[type="text"]:disabled {
     margin-left: 93px;
   }
 
-  .lg\:mr-\[113px\] {
-    margin-right: 113px;
+  .lg\:mr-\[100px\] {
+    margin-right: 100px;
   }
 
-  .lg\:mr-\[169px\] {
-    margin-right: 169px;
+  .lg\:mr-\[113px\] {
+    margin-right: 113px;
   }
 
   .lg\:mr-\[53px\] {
@@ -4797,6 +4793,10 @@ input[type="text"]:disabled {
 
   .lg\:mt-\[76px\] {
     margin-top: 76px;
+  }
+
+  .lg\:mr-20 {
+    margin-right: 5rem;
   }
 
   .lg\:block {
@@ -5486,6 +5486,10 @@ input[type="text"]:disabled {
 
   .xl\:mr-0 {
     margin-right: 0px;
+  }
+
+  .xl\:mr-\[169px\] {
+    margin-right: 169px;
   }
 
   .xl\:mt-\[136px\] {
