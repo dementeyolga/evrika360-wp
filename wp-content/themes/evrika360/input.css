@@ -443,6 +443,10 @@ Text Domain: evrika
     @apply relative lg:wrapper-no-flex lg:h-[488px] px-6 pt-10 pb-6 lg:pt-12 lg:pb-14 lg:px-10 lg:rounded-2xl lg:bg-light-blue-100 lg:border lg:border-light-blue-200 overflow-hidden;
   }
 
+  .increase-sales-embla.embla {
+    --slide-size: 100% !important;
+  }
+
   .feature-tab {
     @apply relative lg:wrapper-no-flex lg:min-h-[502px] pt-10 pb-[72px] lg:pt-12 lg:pb-14 lg:px-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 overflow-hidden;
   }

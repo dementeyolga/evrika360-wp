@@ -2817,6 +2817,14 @@ input[type="text"]:disabled {
   margin-top: 75px;
 }
 
+.-ml-\[92px\] {
+  margin-left: -92px;
+}
+
+.-ml-20 {
+  margin-left: -5rem;
+}
+
 .block {
   display: block;
 }
@@ -3181,6 +3189,10 @@ input[type="text"]:disabled {
   max-width: 100%;
 }
 
+.max-w-\[56\%\] {
+  max-width: 56%;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -3400,6 +3412,11 @@ input[type="text"]:disabled {
 
 .gap-y-\[58px\] {
   row-gap: 58px;
+}
+
+.gap-x-7 {
+  -moz-column-gap: 1.75rem;
+       column-gap: 1.75rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {

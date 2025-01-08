@@ -164,6 +164,54 @@
       </div>
     </div>
   </section>
+
+  <!-- Секция функций -->
+  <section class="wrapper">
+    <h2 class="mb-8">
+      <?= CFS()->get('sales_features_title_1') ?> <br>
+      <span class="relative font-bold">
+        <?= CFS()->get('sales_features_title_2') ?>
+
+        <div class="absolute right-0 lg:-right-3 left-0 lg:-left-1 -bottom-2">
+          <img class="lg:hidden" src="<?= get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-2.svg" alt="">
+          <img class="hidden lg:block" src="<?= get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-3.svg" alt="">
+        </div>
+      </span>
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-7">
+      <div class="hidden lg:block -ml-[12%]">
+        <img src="<?= CFS()->get('sales_features_image') ?>" alt="">
+      </div>
+
+      <div class="hidden lg:grid grid-cols-1 gap-6 lg:gap-5">
+        <?php
+        $fields = CFS()->get('sales_features_loop');
+        foreach ($fields as $field): ?>
+          <div class="flex flex-col lg:flex-row gap-3 lg:gap-6">
+            <div class="shrink-0 w-16 h-16 flex justify-center items-center bg-light-blue-100 rounded-md">
+              <img class="w-6 h-6" src="<?= $field['sales_features_loop_icon'] ?>" alt="">
+            </div>
+
+            <div>
+              <p class="mb-1 text-lg lg:text-[22px] font-medium">
+                <?= $field['sales_features_loop_title'] ?>
+              </p>
+              <p class="description">
+                <?= $field['sales_features_loop_description'] ?>
+              </p>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+
+      <div class="lg:hidden">
+        <?php include 'parts/increase-sales-slider.php' ?>
+      </div>
+    </div>
+
+
+  </section>
 </main>
 
 <?php get_footer() ?>
