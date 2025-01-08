@@ -42,7 +42,9 @@ class Evrika360_Theme {
 
     wp_enqueue_script('header-scroll', get_template_directory_uri() . '/assets/js/scroll/header-scroll.js', array(), false, true);
 
-    wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/burger-menu/burger-menu.js', array(), false, true);
+    wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/menu/burger-menu.js', array(), false, true);
+
+    wp_enqueue_script('menu', get_template_directory_uri() . '/assets/js/menu/nav-menu.js', array(), false, true);
 
     wp_enqueue_script('popups', get_template_directory_uri() . '/assets/js/popups/popups.js', array(), false, true);
 

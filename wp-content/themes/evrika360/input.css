@@ -51,6 +51,8 @@ Text Domain: evrika
 
     --white-100: #fff;
     --white-100-8: #ffffff14;
+    --white-100-30: #ffffff4d;
+    --white-100-60: #ffffff99;
     --grey-50: #d4d4d442;
     --grey-100: #ececec;
     --grey-200: #e4e4e8;
@@ -196,6 +198,34 @@ Text Domain: evrika
 
   .badge {
     @apply h-7 px-4 w-fit flex justify-center items-center rounded-2xl bg-blue-200-32 text-sm/[140%] text-dark-blue-500 backdrop-blur-[8px];
+  }
+
+  .menu-item {
+    @apply h-9 px-3 flex justify-center items-center text-lg text-white hover:bg-blue-200 has-[:checked]:bg-blue-200 rounded-md transition-colors;
+  }
+
+  .menu-item-secondary {
+    @apply menu-item text-dark-blue-500 hover:bg-blue-50 has-[:checked]:text-white has-[:checked]:hover:bg-blue-200;
+  }
+
+  .menu-item-disabled {
+    @apply menu-item text-white-600 gap-1 relative hover:bg-transparent hover:cursor-not-allowed;
+  }
+
+  .menu-item-secondary-disabled {
+    @apply menu-item-disabled text-dark-blue-500-60;
+  }
+
+  .menu-item-tooltip {
+    @apply menu-item bg-white-300 hover:bg-white-300 backdrop-blur-md;
+  }
+
+  .menu-item-secondary-tooltip {
+    @apply menu-item-tooltip text-dark-blue-500-60 bg-grey-50 hover:bg-grey-50;
+  }
+
+  .submenu {
+    @apply px-3 py-2.5 space-y-2 rounded-md w-max bg-blue-200 absolute top-10;
   }
 
   .btn {

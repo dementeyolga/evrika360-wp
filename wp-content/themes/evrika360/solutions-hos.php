@@ -31,9 +31,9 @@
       </div>
 
       <div class="w-fit flex flex-col gap-5">
-        <button class="consultation-modal-toggle btn small w-full ml-0">
+        <a href="#problems" class="btn small w-full ml-0">
           <?= CFS()->get('hos_hero_button_1_text') ?>
-        </button>
+        </a>
         <button class="consultation-modal-toggle btn small dark w-full ml-0">
           <?= CFS()->get('hos_hero_button_2_text') ?>
         </button>
@@ -48,7 +48,7 @@
   </section>
 
   <!-- PROBLEMS section -->
-  <section class="py-14 lg:py-18 lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-long-curve-to-top overflow-hidden">
+  <section id="problems" class="pt-52 -mt-36 pb-14 lg:pb-18 lg:mx-10 lg:rounded-2xl bg-light-blue-100 border border-light-blue-200 bg-long-curve-to-top overflow-hidden">
     <div class="wrapper">
       <h2 class="mb-6 lg:mb-8 grow relative max-w-[550px]">
         <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
@@ -89,10 +89,10 @@
         <span class="relative font-bold">
           <?= CFS()->get('hos_solve_title_2') ?>
 
-          <div class="absolute -right-4 lg:-right-14 bottom-0.5 translate-y-full">
+          <span class="absolute -right-4 lg:-right-14 bottom-0.5 translate-y-full">
             <img class="lg:hidden w-[183px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right-small.svg" alt="">
             <img class="hidden lg:block w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.svg" alt="">
-          </div>
+          </span>
         </span>
       </h2>
 
@@ -219,9 +219,9 @@
         <span class="relative font-bold">
           <?= CFS()->get('hos_career_title_2') ?>
 
-          <div class="absolute left-0 right-0 bottom-0 translate-y-full">
+          <span class="absolute left-0 right-0 bottom-0 translate-y-full">
             <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
-          </div>
+          </span>
         </span>
       </h2>
 
@@ -261,7 +261,7 @@
             <?= CFS()->get('hos_questions_description') ?>
           </p>
 
-          <button class="consultation-modal-toggle btn primary ml-0 flex items-center gap-2">
+          <button class="excursion-modal-toggle btn primary ml-0 flex items-center gap-2">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.svg" alt="">
 
             <?= CFS()->get('hos_questions_button_text') ?>

@@ -474,9 +474,9 @@
             <span class="relative font-bold">
               <?= CFS()->get('useful_title_2') ?>
 
-              <div class="absolute -left-1 right-0 -bottom-1 translate-y-full">
+              <span class="absolute -left-1 right-0 -bottom-1 translate-y-full">
                 <img class="w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-left.svg" alt="">
-              </div>
+              </span>
             </span>
 
             <?= CFS()->get('useful_title_3') ?>
@@ -609,7 +609,7 @@
 
       <div class="flex gap-6 items-center">
         <div class="w-[56px] h-[56px] shrink-0">
-          <img src="<?= CFS()->get('review_review_author_image') ?>">
+          <img src="<?= CFS()->get('review_review_author_image') ?>" alt="автор отзыва">
         </div>
 
         <div class="space-y-1">
@@ -662,10 +662,10 @@
           <span class="relative font-bold">
             <?= CFS()->get('safety_title_2') ?>
 
-            <div class="absolute left-0 -right-2 -bottom-1 translate-y-full lg:w-[250px]">
+            <span class="absolute left-0 -right-2 -bottom-1 translate-y-full block lg:w-[250px]">
               <img class="lg:hidden w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
               <img class="hidden lg:block w-full" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-desktop.svg" alt="">
-            </div>
+            </span>
           </span>
         </h2>
       </div>
@@ -702,10 +702,10 @@
             <span class="relative font-bold">
               <?= CFS()->get('cases_title_2') ?>
 
-              <div class="absolute left-0 -right-2 bottom-0 translate-y-full">
+              <span class="absolute left-0 -right-2 bottom-0 translate-y-full">
                 <img class="lg:hidden" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
                 <img class="hidden lg:block" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-2.svg" alt="">
-              </div>
+              </span>
             </span>
 
             <?= CFS()->get('cases_title_3') ?>
@@ -831,7 +831,7 @@
         </div>
       </div>
 
-      <!-- Automate tabs -->
+      <!-- Automate tab labels -->
       <div class="space-y-4 lg:space-y-12">
         <div class="peer embla automatization-tabs-embla">
           <div class="wrapper embla__viewport automatization-tabs-embla__viewport">
@@ -859,12 +859,12 @@
 
               <div class="automatization-tab">
                 <div class="lg:max-w-[45.5%] flex flex-col gap-y-8 lg:gap-y-12">
-                  <div class="wrapper space-y-4 lg:mt-[30px]">
+                  <div class="wrapper space-y-4">
                     <h3 class="md:text-2xl/[130%]">
                       <?= $field['automate_tabs_title'] ?>
                     </h3>
 
-                    <?php if (!empty($field['badge'])) { ?>
+                    <?php if (!empty($field['automate_tabs_badge'])) { ?>
                       <p class="p-2 w-fit description text-dark-blue-300 bg-white rounded-sm border border-light-blue-200">
                         <?= $field['automate_tabs_badge'] ?>
                       </p>

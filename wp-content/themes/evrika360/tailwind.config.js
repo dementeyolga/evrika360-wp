@@ -5,8 +5,12 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      white: "var(--white-100)",
-      "white-transparent": "var(--white-100-8)",
+      white: {
+        DEFAULT: "var(--white-100)",
+        transparent: "var(--white-100-8)",
+        600: "var(--white-100-60)",
+        300: "var(--white-100-30)",
+      },
       grey: {
         50: "var(--grey-50)",
         100: "var(--grey-100)",
@@ -108,6 +112,7 @@ module.exports = {
       content: {
         flash: 'url("./assets/images/flash-icon.svg")',
         "flash-disabled": 'url("./assets/images/flash-disabled-icon.svg")',
+        lock: 'url("./assets/images/lock-icon.svg")',
       },
       gridTemplateColumns: {
         "2-1": "2fr 1fr",

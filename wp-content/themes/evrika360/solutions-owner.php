@@ -30,9 +30,9 @@
       </div>
 
       <div class="w-fit flex flex-col gap-5">
-        <button class="consultation-modal-toggle btn small w-full ml-0">
+        <a href="#one-service" class="btn small w-full ml-0">
           <?= CFS()->get('owner_hero_button_1_text') ?>
-        </button>
+        </a>
         <button class="consultation-modal-toggle btn small dark w-full ml-0">
           <?= CFS()->get('owner_hero_button_2_text') ?>
         </button>
@@ -47,7 +47,7 @@
   </section>
 
   <!-- ONE SERVICE section -->
-  <section class="overflow-hidden max-lg:bg-light-blue-100 max-lg:border max-lg:border-light-blue-200">
+  <section id="one-service" class="pt-36 -mt-36 overflow-hidden max-lg:bg-light-blue-100 max-lg:border max-lg:border-light-blue-200">
     <div class="lg:wrapper">
       <?php include 'parts/owner-service-slider.php' ?>
     </div>
@@ -68,11 +68,12 @@
         <span class="inline-block relative font-bold">
           <?= CFS()->get('owner_pains_title_2') ?>
 
-          <div class="absolute max-lg:-right-5 lg:left-1/2 lg:-translate-x-1/2 bottom-0 translate-y-1/2">
+          <span class="absolute max-lg:-right-5 lg:left-1/2 lg:-translate-x-1/2 bottom-0 translate-y-1/2">
             <img class="hidden lg:block max-w-[257px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc.svg" alt="">
             <img class="lg:hidden max-w-[193px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-thin-2.svg" alt="">
-          </div>
+          </span>
         </span>
+
         <?= CFS()->get('owner_pains_title_3') ?>
       </h2>
     </div>
@@ -101,13 +102,15 @@
         <div class="absolute bg-lighter-orange-circle -inset-60 -z-10"></div>
 
         <?= CFS()->get('owner_business_tasks_title_1') ?>
+
         <span class="relative font-bold">
           <?= CFS()->get('owner_business_tasks_title_2') ?>
 
-          <div class="hidden md:block absolute -right-3 -left-1 -bottom-2">
+          <span class="hidden md:block absolute -right-3 -left-1 -bottom-2">
             <img class="" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-arc-3.svg" alt="">
-          </div>
+          </span>
         </span>
+
         <?= CFS()->get('owner_business_tasks_title_3') ?>
       </h2>
 
@@ -155,10 +158,10 @@
         <span class="relative font-bold">
           <?= CFS()->get('owner_automatization_title_2') ?>
 
-          <div class="absolute -right-4 lg:-right-14 bottom-0.5 translate-y-full">
+          <span class="absolute -right-4 lg:-right-14 bottom-0.5 translate-y-full">
             <img class="lg:hidden w-[183px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right-small.svg" alt="">
             <img class="hidden lg:block w-[263px]" src="<?php echo get_template_directory_uri() ?>/assets/images/text-highlight-bottom-right.svg" alt="">
-          </div>
+          </span>
         </span>
         <br class="hidden sm:block">
         <?= CFS()->get('owner_automatization_title_3') ?>
@@ -298,7 +301,7 @@
             <?= CFS()->get('owner_questions_subtitle') ?>
           </p>
 
-          <button class="consultation-modal-toggle btn primary ml-0 flex items-center gap-2">
+          <button class="excursion-modal-toggle btn primary ml-0 flex items-center gap-2">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.svg" alt="">
 
             <?= CFS()->get('owner_questions_button_text') ?>
