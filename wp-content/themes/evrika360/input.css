@@ -541,6 +541,15 @@ Text Domain: evrika
     }
   }
 
+  .bg-white-wave-bottom-high {
+    background-image: url(./assets/images/bg-white-wave-bottom-high.webp);
+    background-size: cover;
+
+    @media (min-width: 1024px) {
+      background-image: url(./assets/images/bg-white-wave-bottom-high-desktop.webp);
+    }
+  }
+
   .bg-light-curve-to-top {
     background-image: url(./assets/images/bg-curve-to-top.webp);
     background-size: cover;
