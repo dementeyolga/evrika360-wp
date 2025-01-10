@@ -261,7 +261,7 @@
             <?= CFS()->get('hos_questions_description') ?>
           </p>
 
-          <button class="excursion-modal-toggle btn primary ml-0 flex items-center gap-2">
+          <button class="excursion-modal-toggle btn primary lg:px-6 ml-0 flex items-center gap-2">
             <img src="<?php echo get_template_directory_uri() ?>/assets/images/share-icon.svg" alt="">
 
             <?= CFS()->get('hos_questions_button_text') ?>
